@@ -1,0 +1,18 @@
+<Zilox>
+
+<remove xpath="//window[@name='mainMenuLogo']"/>
+
+<set xpath="//window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Textures/UI/DistrictZeroMenu.jpg</set>
+
+<set xpath="//window[@name='mainMenuPlayerName']/@anchor">LeftTop</set>
+
+<!-- INCREASE THE SIZE OF THE MESSAGE BOX (for notes like "A Note from The Resistance") -->
+<set xpath="//window[@name='messageBox']/@width">1000</set>
+<set xpath="//window[@name='messageBox']/@height">600</set>
+<set xpath="//window[@name='messageBox']/@pos">-500,190</set>
+<set xpath="//window[@name='messageBox']/panel[@name='content']/@height">500</set>
+<set xpath="//window[@name='messageBox']/panel[@name='header']/label/@width">700</set>
+<set xpath="//window[@name='messageBox']/rect[@name='buttons']/@pos">0,-550</set>
+<set xpath="//window[@name='messageBox']/rect[@name='buttons']/rect[@name='btnRight']/@pos">800,0</set>
+
+</Zilox>

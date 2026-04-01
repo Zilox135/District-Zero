@@ -1,0 +1,189 @@
+<Zilox>
+
+<!-- ADD A TAG TO BLOCK REFLEX SIGHTS FROM BEING INSTALLED -->
+<csv xpath="//item_modifier[@name='modGunReflexSight']/@blocked_tags" delim="," op="add">noHolosight</csv>
+
+<!-- MAKE CIGAR MOD GRANT A POINT INTO MINER 69R -->
+<set xpath="//item_modifier[@name='modArmorCigar']/effect_group/passive_effect[@tags='attStrength']/@name">PerkLevel</set>
+<set xpath="//item_modifier[@name='modArmorCigar']/effect_group/passive_effect[@name='PerkLevel']/@tags">perkMiner69r</set>
+
+<!-- REMOVE ATTRIBUTE ARMOR MODS -->
+<remove xpath="//item_modifier[@name='modArmorPerception']"/>
+<remove xpath="//item_modifier[@name='modArmorStrength']"/>
+<remove xpath="//item_modifier[@name='modArmorFortitude']"/>
+<remove xpath="//item_modifier[@name='modArmorAgility']"/>
+<remove xpath="//item_modifier[@name='modArmorIntellect']"/>
+
+<!-- ALLOW EXTERMINATOR MOD TO BE INSTALLED WITH RAD REMOVER -->
+<set xpath="//item_modifier[@name='modGunMeleeTheHunter']/@modifier_tags">specialDamage1</set>
+
+<!-- MAKE EXTERMINATOR MOD WORK FOR DROIDS AND MECHS ONLY -->
+<set xpath="//item_modifier[@name='modGunMeleeTheHunter']/effect_group">			
+	<passive_effect name="EntityDamage" operation="perc_add" value=".25">
+		<requirement name="EntityTagCompare" target="other" tags="mech,droid"/>				
+	</passive_effect>
+</set>
+
+<!-- HIDE IRON SIGHTS WHEN REFLEX SIGHT IS INSTALLED -->
+<append xpath="//item_modifier[@name='modGunReflexSight']">
+		<effect_group tiered="false" name="hide plasma shotgun iron sight">
+			<requirement name="HoldingItemHasTags" tags="plasmaShotgunSight"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Ironsight_Front"/>
+		</effect_group>	
+		
+		<effect_group tiered="false" name="hide plasma assault rifle iron sight">
+			<requirement name="HoldingItemHasTags" tags="plasmaARSight"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="IronSight"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="IronSight.001"/>	
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="IronSight.002"/>			
+		</effect_group>		
+</append>
+
+<append xpath="//item_modifier[@name='modGunReflexSight']">
+<!-- MISC -->	
+		<item_property_overrides name="gunHandgunT1Flaregun">
+			<property name="ScopeCameraOffset" value="-0.0004,-.0094,-.1"/> <!-- Left/Right, Down/Up, Back/Front -->
+		</item_property_overrides>
+		
+<!-- LASER -->		
+		<item_property_overrides name="gunHandgunT2LaserPistol">
+			<property name="ScopeCameraOffset" value=".0001,-.0095,0"/>
+		</item_property_overrides>		
+		
+		<item_property_overrides name="gunHandgunT2LaserMagnum">
+			<property name="ScopeCameraOffset" value="-.0001,-.0095,-.03"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT2LaserShotgun">
+			<property name="ScopeCameraOffset" value="0,-.01,0"/>
+		</item_property_overrides>		
+		
+		<item_property_overrides name="gunMGT2LaserAssaultRifle">
+			<property name="ScopeCameraOffset" value="-.00007,-.0068,.1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT2LaserSniperRifle">
+			<property name="ScopeCameraOffset" value="0,.0086,0"/>
+		</item_property_overrides>
+
+<!-- PLASMA -->		
+		<item_property_overrides name="gunHandgunT3PlasmaPistol">
+			<property name="ScopeCameraOffset" value=".0006,-.0015,0"/>
+		</item_property_overrides>				
+
+		<item_property_overrides name="gunHandgunT3PlasmaMagnum">
+			<property name="ScopeCameraOffset" value="-.00009,-.003,-.03"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="gunShotgunT3PlasmaShotgun">
+			<property name="ScopeCameraOffset" value="0,-.008,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT3PlasmaAssaultRifle">
+			<property name="ScopeCameraOffset" value="-.00045,-.0013,.2"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT3PlasmaSniperRifle">
+			<property name="ScopeCameraOffset" value="0,.0042,-.05"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunExplosivesT3PlasmaGrenadeLauncher">
+			<property name="ScopeCameraOffset" value="0,-.0085,0"/>
+		</item_property_overrides>		
+</append>
+
+<append xpath="//item_modifier[@name='modGunSoundSuppressorSilencer']">
+<!-- LASER -->
+		<item_property_overrides name="gunHandgunT2LaserPistol">
+			<property name="Sound_start" value="laser_pistol_s_fire"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT2LaserMagnum">
+			<property name="Sound_start" value="laser_magnum_s_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="gunHandgunT2LaserSMG">
+			<property name="Sound_start" value="laser_smg_s_fire"/>
+			<property name="Sound_loop" value="laser_smg_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>			
+		</item_property_overrides>		
+
+		<item_property_overrides name="gunShotgunT2LaserShotgun">
+			<property name="Sound_start" value="laser_shotgun_s_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="gunMGT2LaserAssaultRifle">
+			<property name="Sound_start" value="laser_rifle_s_fire"/>
+			<property name="Sound_loop" value="laser_rifle_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>			
+		</item_property_overrides>		
+
+		<item_property_overrides name="gunRifleT2LaserSniperRifle">
+			<property name="Sound_start" value="laser_sniper_s_fire"/>
+			<property name="Sound_loop" value="laser_sniper_s_fire"/>
+		</item_property_overrides>
+
+<!-- PLASMA -->
+		<item_property_overrides name="gunHandgunT3PlasmaPistol">
+			<property name="Sound_start" value="laser_pistol_s_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="gunHandgunT3PlasmaMagnum">
+			<property name="Sound_start" value="laser_magnum_s_fire"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3PlasmaSMG">
+			<property name="Sound_start" value="laser_smg_s_fire"/>
+			<property name="Sound_loop" value="laser_smg_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>			
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT3PlasmaShotgun">
+			<property name="Sound_start" value="laser_shotgun_s_fire"/>
+		</item_property_overrides>		
+
+		<item_property_overrides name="gunMGT3PlasmaAssaultRifle">
+			<property name="Sound_start" value="laser_rifle_s_fire"/>
+			<property name="Sound_loop" value="laser_rifle_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>			
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT3PlasmaSniperRifle">
+			<property name="Sound_start" value="laser_sniper_s_fire"/>
+			<property name="Sound_loop" value="laser_sniper_s_fire"/>
+		</item_property_overrides>		
+</append>
+
+<append xpath="//item_modifier[@name='modMeleeClubBurningShaft']">		
+<!-- LASER -->
+		<item_property_overrides name="meleeWpnClubT2LaserClub">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_club_flamePrefab.prefab"/>
+		</item_property_overrides>			
+
+		<item_property_overrides name="meleeWpnSledgeT2LaserSledgehammer">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_sledge_flamePrefab.prefab"/>
+		</item_property_overrides>		
+
+		<item_property_overrides name="meleeWpnSpearT2LaserSpear">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_spear_iron_flamePrefab.prefab"/>
+		</item_property_overrides>
+
+<!-- PLASMA -->
+		<item_property_overrides name="meleeWpnClubT3PlasmaClub">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_club_flamePrefab.prefab"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="meleeWpnSledgeT3PlasmaSledgehammer">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_sledge_flamePrefab.prefab"/>
+		</item_property_overrides>		
+		
+		<item_property_overrides name="meleeWpnSpearT3PlasmaSpear">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_spear_iron_flamePrefab.prefab"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="meleeToolAxeT3PlasmaFireaxe">
+			<property name="FlameEffect" value="@:ItemModEffects/mod_fireaxe_flamePrefab.prefab"/>
+		</item_property_overrides>		
+</append>
+
+</Zilox>		

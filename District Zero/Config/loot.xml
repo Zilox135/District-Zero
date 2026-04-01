@@ -1,0 +1,706 @@
+<Zilox>
+
+<!-- REMOVE THE HUNTERS JOURNAL BOOK SERIES -->
+<remove xpath="//item[starts-with(@name,'bookHuntingJournal')]"/>
+
+<!-- REMOVE ATTRIBUTE ARMOR MODS -->
+<remove xpath="//item[@name='modArmorPerception']"/>
+<remove xpath="//item[@name='modArmorStrength']"/>
+<remove xpath="//item[@name='modArmorFortitude']"/>
+<remove xpath="//item[@name='modArmorAgility']"/>
+<remove xpath="//item[@name='modArmorIntellect']"/>
+
+<!-- REMOVE LEGENDARY PARTS -->
+<remove xpath="//item[@name='resourceLegendaryParts']"/>
+
+<!-- INCREASE CHANCE OF FINDING ANTIBIOTICS -->
+<set xpath="//item[starts-with(@name,'drugAntibiotics') or (contains(@name,'Antibiotics'))]/@loot_prob_template">low</set>
+
+<!-- ADJUST THE SIZE OF THE PLAYER DROPPED BACKPACK -->
+<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">11,11</set>
+
+<!-- ALWAYS GET AMMO IN AMMO PILES -->
+<set xpath="//lootgroup[@name='groupAmmoPileSmall']/item[@group='groupSmallAmmoLowHigh']/@loot_prob_template">guaranteed</set>
+<set xpath="//lootgroup[@name='groupAmmoPileSmall']/item[@group='groupWeaponsMedMedLow']/@loot_prob_template">guaranteed</set>
+
+<set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupSmallAmmoMedMed']/@loot_prob_template">guaranteed</set>
+<set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupSmallAmmoLowHigh']/@loot_prob_template">guaranteed</set>
+<set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupWeaponsMedMedMed']/@loot_prob_template">guaranteed</set>
+
+<!-- INCREASE BIRD NEST FEATHER LOOT -->
+<set xpath="//lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">10,15</set>
+<set xpath="//lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">4,6</set>
+
+<!-- REPLACE EGG WITH ROTTEN EGG -->
+<set xpath="//lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@name">foodEggRotten</set>
+
+<!-- BETTER LOOT FOR INTRO BURIED SUPPLIES -->
+<append xpath="//lootgroup[@name='groupIntroBuriedSupplies']">
+	<item group="groupFoodLarge01" count="3,4"/>
+	<item group="groupValuablesLarge" count="1,3"/>	
+</append>
+
+<!-- T4 LOOT TEMPLATE -->
+<insertAfter xpath="//lootprobtemplates/lootprobtemplate[@name='ProbT3']">  
+	<lootprobtemplate name="ProbT4">
+		<loot level="0,250" prob="0"/>
+		<loot level="251,253" prob="0.05"/>
+		<loot level="254,255" prob="0.05"/>
+		<loot level="256,257" prob="0.06"/>
+		<loot level="258,260" prob="0.06"/>
+		<loot level="261,262" prob="0.07"/>
+		<loot level="262,264" prob="0.08"/>
+		<loot level="265,266" prob="0.13"/>
+		<loot level="266,267" prob="0.14"/>
+		<loot level="268,270" prob="0.15"/>
+		<loot level="271,272" prob="0.16"/>
+		<loot level="273,275" prob="0.17"/>
+		<loot level="276,277" prob="0.19"/>
+		<loot level="278,279" prob="0.25"/>
+		<loot level="280,281" prob="0.27"/>
+		<loot level="282,283" prob="0.28"/>
+		<loot level="284,286" prob="0.3"/>
+		<loot level="287,288" prob="0.31"/>
+		<loot level="289,290" prob="0.38"/>
+		<loot level="291,293" prob="0.4"/>
+		<loot level="294,295" prob="0.42"/>
+		<loot level="296,298" prob="0.44"/>
+		<loot level="299,300" prob="0.47"/>
+		<loot level="301,302" prob="0.49"/>
+		<loot level="302,304" prob="0.56"/>
+		<loot level="304,305" prob="0.59"/>
+		<loot level="306,308" prob="0.61"/>
+		<loot level="309,310" prob="0.64"/>
+		<loot level="310,312" prob="0.67"/>
+		<loot level="313,315" prob="0.74"/>
+		<loot level="316,317" prob="0.78"/>
+		<loot level="318,320" prob="0.81"/>
+		<loot level="321,322" prob="0.84"/>
+		<loot level="323,324" prob="0.87"/>
+		<loot level="325,327" prob="0.9"/>
+		<loot level="328,329" prob="0.94"/>
+		<loot level="330,332" prob="0.97"/>
+		<loot level="333,999999" prob="1"/>
+	</lootprobtemplate>
+</insertAfter>
+
+<insertAfter xpath="//lootqualitytemplates/lootqualitytemplate[@name='QLTemplateT3']">
+	<lootqualitytemplate name="QLTemplateT4">
+		<qualitytemplate level="254,265" default_quality="1">
+			<loot quality="1" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="266,267" default_quality="1">
+			<loot quality="1" prob="0.612"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="268,269" default_quality="1">
+			<loot quality="1" prob="0.604"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="270,272" default_quality="1">
+			<loot quality="1" prob="0.597"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="273,274" default_quality="1">
+			<loot quality="1" prob="0.59"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="275,277" default_quality="1">
+			<loot quality="1" prob="0.585"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="278,279" default_quality="1">
+			<loot quality="1" prob="0.58"/>
+			<loot quality="2" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="280,281" default_quality="1">
+			<loot quality="1" prob="0.452"/>
+			<loot quality="2" prob="0.608"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="282,284" default_quality="1">
+			<loot quality="1" prob="0.445"/>
+			<loot quality="2" prob="0.6"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="285,286" default_quality="1">
+			<loot quality="1" prob="0.438"/>
+			<loot quality="2" prob="0.594"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="287,299" default_quality="1">
+			<loot quality="1" prob="0.433"/>
+			<loot quality="2" prob="0.588"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="300,301" default_quality="1">
+			<loot quality="1" prob="0.428"/>
+			<loot quality="2" prob="0.583"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="302,303" default_quality="1">
+			<loot quality="1" prob="0.367"/>
+			<loot quality="2" prob="0.456"/>
+			<loot quality="3" prob="0.613"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="304,306" default_quality="1">
+			<loot quality="1" prob="0.361"/>
+			<loot quality="2" prob="0.449"/>
+			<loot quality="3" prob="0.605"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="307,308" default_quality="1">
+			<loot quality="1" prob="0.355"/>
+			<loot quality="2" prob="0.442"/>
+			<loot quality="3" prob="0.597"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="309,311" default_quality="1">
+			<loot quality="1" prob="0.35"/>
+			<loot quality="2" prob="0.436"/>
+			<loot quality="3" prob="0.591"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="312,313" default_quality="1">
+			<loot quality="1" prob="0.345"/>
+			<loot quality="2" prob="0.431"/>
+			<loot quality="3" prob="0.585"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="314,315" default_quality="1">
+			<loot quality="1" prob="0.341"/>
+			<loot quality="2" prob="0.426"/>
+			<loot quality="3" prob="0.58"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="316,318" default_quality="1">
+			<loot quality="1" prob="0.306"/>
+			<loot quality="2" prob="0.364"/>
+			<loot quality="3" prob="0.453"/>
+			<loot quality="4" prob="0.609"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="319,320" default_quality="1">
+			<loot quality="1" prob="0.301"/>
+			<loot quality="2" prob="0.358"/>
+			<loot quality="3" prob="0.446"/>
+			<loot quality="4" prob="0.601"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="321,323" default_quality="1">
+			<loot quality="1" prob="0.296"/>
+			<loot quality="2" prob="0.353"/>
+			<loot quality="3" prob="0.439"/>
+			<loot quality="4" prob="0.594"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="324,325" default_quality="1">
+			<loot quality="1" prob="0.292"/>
+			<loot quality="2" prob="0.348"/>
+			<loot quality="3" prob="0.433"/>
+			<loot quality="4" prob="0.588"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="326,327" default_quality="1">
+			<loot quality="1" prob="0.289"/>
+			<loot quality="2" prob="0.344"/>
+			<loot quality="3" prob="0.428"/>
+			<loot quality="4" prob="0.583"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="328,330" default_quality="1">
+			<loot quality="1" prob="0.266"/>
+			<loot quality="2" prob="0.308"/>
+			<loot quality="3" prob="0.368"/>
+			<loot quality="4" prob="0.457"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="331,332" default_quality="1">
+			<loot quality="1" prob="0.262"/>
+			<loot quality="2" prob="0.303"/>
+			<loot quality="3" prob="0.361"/>
+			<loot quality="4" prob="0.449"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="333,335" default_quality="1">
+			<loot quality="1" prob="0.258"/>
+			<loot quality="2" prob="0.299"/>
+			<loot quality="3" prob="0.356"/>
+			<loot quality="4" prob="0.443"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="336,337" default_quality="1">
+			<loot quality="1" prob="0.255"/>
+			<loot quality="2" prob="0.295"/>
+			<loot quality="3" prob="0.351"/>
+			<loot quality="4" prob="0.437"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="338,339" default_quality="1">
+			<loot quality="1" prob="0.252"/>
+			<loot quality="2" prob="0.291"/>
+			<loot quality="3" prob="0.346"/>
+			<loot quality="4" prob="0.431"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="340,342" default_quality="1">
+			<loot quality="1" prob="0.249"/>
+			<loot quality="2" prob="0.287"/>
+			<loot quality="3" prob="0.342"/>
+			<loot quality="4" prob="0.426"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="343,344" default_quality="1">
+			<loot quality="1" prob="0.246"/>
+			<loot quality="2" prob="0.284"/>
+			<loot quality="3" prob="0.338"/>
+			<loot quality="4" prob="0.422"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="345,347" default_quality="1">
+			<loot quality="1" prob="0.243"/>
+			<loot quality="2" prob="0.281"/>
+			<loot quality="3" prob="0.334"/>
+			<loot quality="4" prob="0.418"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="348,349" default_quality="1">
+			<loot quality="1" prob="0.241"/>
+			<loot quality="2" prob="0.278"/>
+			<loot quality="3" prob="0.331"/>
+			<loot quality="4" prob="0.414"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="350,351" default_quality="1">
+			<loot quality="2" prob="0.275"/>
+			<loot quality="3" prob="0.328"/>
+			<loot quality="4" prob="0.411"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="352,354" default_quality="1">
+			<loot quality="2" prob="0.273"/>
+			<loot quality="3" prob="0.325"/>
+			<loot quality="4" prob="0.408"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="355,356" default_quality="1">
+			<loot quality="2" prob="0.271"/>
+			<loot quality="3" prob="0.323"/>
+			<loot quality="4" prob="0.405"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="357,359" default_quality="1">
+			<loot quality="2" prob="0.268"/>
+			<loot quality="3" prob="0.32"/>
+			<loot quality="4" prob="0.402"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="360,361" default_quality="1">
+			<loot quality="2" prob="0.266"/>
+			<loot quality="3" prob="0.318"/>
+			<loot quality="4" prob="0.4"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="362,363" default_quality="1">
+			<loot quality="2" prob="0.264"/>
+			<loot quality="3" prob="0.316"/>
+			<loot quality="4" prob="0.397"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="364,366" default_quality="1">
+			<loot quality="3" prob="0.314"/>
+			<loot quality="4" prob="0.395"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="367,368" default_quality="1">
+			<loot quality="3" prob="0.312"/>
+			<loot quality="4" prob="0.393"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="369,371" default_quality="1">
+			<loot quality="3" prob="0.31"/>
+			<loot quality="4" prob="0.391"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="372,373" default_quality="1">
+			<loot quality="3" prob="0.308"/>
+			<loot quality="4" prob="0.39"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="374,375" default_quality="1">
+			<loot quality="3" prob="0.307"/>
+			<loot quality="4" prob="0.388"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="376,378" default_quality="1">
+			<loot quality="4" prob="0.386"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="379,380" default_quality="1">
+			<loot quality="4" prob="0.385"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="381,383" default_quality="1">
+			<loot quality="4" prob="0.383"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="384,385" default_quality="1">
+			<loot quality="4" prob="0.382"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="386,387" default_quality="1">
+			<loot quality="4" prob="0.381"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="388,390" default_quality="1">
+			<loot quality="4" prob="0.38"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="391,392" default_quality="1">
+			<loot quality="4" prob="0.324"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="393,395" default_quality="1">
+			<loot quality="4" prob="0.319"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="396,999999" default_quality="1">
+			<loot quality="4" prob="0.30"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+	</lootqualitytemplate>
+</insertAfter>
+
+<!-- WORKSTATION TOOLS -->
+<append xpath="//lootgroup[@name='workstationToolsScaled']">
+	<item name="toolBustlePipe" loot_prob_template="ProbT3"/>
+	<item name="toolPreHeater" loot_prob_template="ProbT3"/>	
+</append>
+
+<!-- AMMO -->
+<append xpath="//lootgroup[@name='group9mmSmall']">
+	<item name="ammoNanoEnergyCell" count="6,8" loot_stage_count_mod="0.01"/>	
+</append>
+
+<append xpath="//lootgroup[@name='group9mmMedium']">
+	<item name="ammoNanoEnergyCell" count="10,20" loot_stage_count_mod="0.01"/>	
+</append>
+
+<append xpath="//lootgroup[@name='group9mmLarge']">
+	<item name="ammoNanoEnergyCell" count="25,35" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='group762mmSmall']">
+	<item name="ammoHeavyEnergyCell" count="5,7" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='group762mmMedium']">
+	<item name="ammoHeavyEnergyCell" count="8,15" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='group762mmLarge']">
+	<item name="ammoHeavyEnergyCell" count="20,30" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupShotgunShellSmall']">
+	<item name="ammoShotgunEnergyCell" count="2,4" loot_stage_count_mod="0.01"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupShotgunShellMedium']">
+	<item name="ammoShotgunEnergyCell" count="4,6" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupShotgunShellLarge']">
+	<item name="ammoShotgunEnergyCell" count="6,10" loot_stage_count_mod="0.01"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupAmmoRocket']">
+	<item name="ammoGrenadeEnergyCell" count="6,10"/>
+	<item name="ammoRocketEnergyCell" count="6,10"/>
+	<item name="thrownGrenadeEMP" count="2,3"/>	
+</append>
+
+<!-- DRINKS -->
+<append xpath="//lootgroup[@name='groupFoodTrashCommon']">
+	<item name="drinkJarEmpty" count="1,3" loot_prob_template="med"/>
+</append>
+
+<!-- VEHICLES -->
+<append xpath="//lootgroup[@name='motorcycleParts']">
+	<item name="vehicleLuxurySedanChassis"/>
+</append>
+
+<append xpath="//lootgroup[@name='4x4Parts']">
+	<item name="vehicleMuscleCarChassis"/>
+	<item name="vehiclePickupTruckChassis"/>
+</append>
+
+<append xpath="//lootgroup[@name='gyroCopterParts']">
+	<item name="vehicleHoverCarChassis"/>
+</append>
+
+<!-- MEDICAL -->
+<append xpath="//lootgroup[@name='groupMedicalRare']">
+	<item name="drugAntiRadiation" loot_prob_template="low"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupChemistryStationLoot02']">
+	<item name="drugAntiRadiation"/>
+</append>
+
+<append xpath="//lootgroup[@name='airdropMedicine']">
+	<item name="drugAntiRadiation" count="1"/>
+</append>
+
+<!-- DISTRICT ZERO CUSTOM AIRDROP LOOT GROUP -->
+<append xpath="/lootcontainers">
+	<lootgroup name="groupAirDropDZ" count="all">
+		<item group="groupAirDrop01" count="3"/>
+		<item group="groupAirDrop02" count="2"/>
+		<item group="groupAirDrop03" count="3"/>
+	</lootgroup>
+</append>
+
+<!-- DISTRICT ZERO CUSTOM AIRDROP CONTAINER -->
+<append xpath="/lootcontainers">
+	<lootcontainer name="airDropDZ" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+		<item group="groupAirDropDZ"/>
+	</lootcontainer>
+</append>
+
+<!-- WEAPONS -->
+<append xpath="//lootgroup[@name='groupWeaponsT2_Melee']">
+	<item name="meleeWpnClubT2LaserClub"/>
+	<item name="meleeWpnBladeT2LaserKnife"/>
+	<item name="meleeWpnSledgeT2LaserSledgehammer"/>
+	<item name="meleeWpnBladeT2LaserSword"/>
+	<item name="meleeWpnBatonT2LaserStunBaton"/>
+	<item name="meleeWpnSpearT2LaserSpear"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">
+	<item group="groupWeaponsT1"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsT2_Ranged']">
+	<item group="groupWeaponsT2"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsRangedScaled']">
+	<item group="groupWeaponsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsRangedScaledTPlus']">
+	<item group="groupWeaponsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsRangedScaledNoStone']">
+	<item group="groupWeaponsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsMeleeScaled']">
+	<item group="groupWeaponsT4_Melee" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsMeleeScaledTPlus']">
+	<item group="groupWeaponsT4_Melee" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupWeaponsMeleeScaledNoStone']">
+	<item group="groupWeaponsT4_Melee" loot_prob_template="ProbT4"/>
+</append>
+
+<!-- TOOLS -->
+<append xpath="//lootgroup[@name='groupToolsTiered']">
+	<item group="groupToolsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupRareToolsTiered']">
+	<item group="groupToolsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupToolsTieredBonus']">
+	<item group="groupToolsT4" loot_prob_template="ProbT4"/>
+</append>
+
+<!-- QUEST GROUPS -->
+<append xpath="//lootgroup[@name='groupQuestToolsT3']">
+	<item name="meleeToolAxeT3PlasmaFireaxe"/>
+	<item name="meleeToolPickT3PlasmaPickaxe"/>
+	<item name="meleeToolShovelT3PlasmaShovel"/>
+	<item name="meleeToolPickT3PlasmaMiningTool"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']">
+	<item name="meleeWpnClubT2LaserClub"/>
+	<item name="meleeWpnBladeT2LaserKnife"/>
+	<item name="meleeWpnSledgeT2LaserSledgehammer"/>
+	<item name="meleeWpnBladeT2LaserSword"/>
+	<item name="meleeWpnBatonT2LaserStunBaton"/>
+	<item name="meleeWpnSpearT2LaserSpear"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsMelee']">
+	<item group="groupQuestWeaponsMeleeT3" loot_prob_template="QuestT3Prob"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">
+	<item name="gunHandgunT1Flaregun"/>
+	<item name="gunHandgunFarmT1LaserFarmingTool"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']">
+	<item name="gunMGT2LaserAssaultRifle"/>
+	<item name="gunRifleT2LaserSniperRifle"/>
+	<item name="gunHandgunT2LaserPistol"/>
+	<item name="gunHandgunT2LaserSMG"/>
+	<item name="gunShotgunT2LaserShotgun"/>
+	<item name="gunHandgunT2LaserMagnum"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">
+	<item name="gunHandgunT3PlasmaPistol"/>
+	<item name="gunHandgunT3PlasmaMagnum"/>
+	<item name="gunShotgunT3PlasmaShotgun"/>
+	<item name="gunHandgunT3PlasmaSMG"/>
+	<item name="gunMGT3PlasmaAssaultRifle"/>
+	<item name="gunRifleT3PlasmaSniperRifle"/>
+	<item name="gunExplosivesT3PlasmaGrenadeLauncher"/>
+	<item name="gunExplosivesT3PlasmaRocketLauncher"/>		
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestAmmo']">	
+	<item name="ammoNanoEnergyCellAP" count="100" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoHeavyEnergyCellAP" count="100" loot_prob_template="QuestT3Prob"/>	
+	<item name="ammoShotgunEnergyCellAP" count="60" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoGrenadeEnergyCell" count="30" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoRocketEnergyCell" count="30" loot_prob_template="QuestT3Prob"/>
+	<item name="thrownGrenadeEMP" count="15" loot_prob_template="QuestT3Prob"/>	
+	
+	<item name="ammoNanoEnergyCellAP" count="100" loot_prob_template="QuestT2Prob"/>
+	<item name="ammoHeavyEnergyCellAP" count="100" loot_prob_template="QuestT2Prob"/>	
+	<item name="ammoShotgunEnergyCellAP" count="60" loot_prob_template="QuestT2Prob"/>
+	<item name="ammoGrenadeEnergyCell" count="20" loot_prob_template="QuestT2Prob"/>	
+	<item name="ammoRocketEnergyCell" count="20" loot_prob_template="QuestT2Prob"/>
+	<item name="thrownGrenadeEMP" count="10" loot_prob_template="QuestT2Prob"/>	
+
+	<item name="ammoNanoEnergyCell" count="100" loot_prob_template="QuestT1Prob"/>
+	<item name="ammoHeavyEnergyCell" count="100" loot_prob_template="QuestT1Prob"/>	
+	<item name="ammoShotgunEnergyCell" count="60" loot_prob_template="QuestT1Prob"/>	
+	<item name="thrownGrenadeEMP" count="5" loot_prob_template="QuestT1Prob"/>	
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestMedical']">
+	<item name="drugAntiRadiation" count="1" loot_prob_template="QuestT2Prob"/>
+	<item name="drugAdvancedAntiRadiation" count="1" loot_prob_template="QuestT3Prob"/>	
+</append>
+
+<insertBefore xpath="/lootcontainers/lootgroup[@name='empty']">
+
+<!-- WEAPON GROUPS -->
+<lootgroup name="groupWeaponsT1" loot_quality_template="QLTemplateT1">
+	<item name="gunHandgunT1Flaregun"/>
+	<item name="gunHandgunFarmT1LaserFarmingTool"/>
+</lootgroup>
+
+<lootgroup name="groupWeaponsT2" loot_quality_template="QLTemplateT2">
+	<item name="gunMGT2LaserAssaultRifle"/>
+	<item name="gunRifleT2LaserSniperRifle"/>
+	<item name="gunHandgunT2LaserPistol"/>
+	<item name="gunHandgunT2LaserSMG"/>
+	<item name="gunShotgunT2LaserShotgun"/>
+	<item name="gunHandgunT2LaserMagnum"/>	
+</lootgroup>
+
+<lootgroup name="groupWeaponsT4" loot_quality_template="QLTemplateT4">
+	<item name="gunHandgunT3PlasmaPistol"/>
+	<item name="gunHandgunT3PlasmaMagnum"/>
+	<item name="gunShotgunT3PlasmaShotgun"/>
+	<item name="gunHandgunT3PlasmaSMG"/>
+	<item name="gunMGT3PlasmaAssaultRifle"/>
+	<item name="gunRifleT3PlasmaSniperRifle"/>
+	<item name="gunExplosivesT3PlasmaGrenadeLauncher"/>
+	<item name="gunExplosivesT3PlasmaRocketLauncher"/>	
+</lootgroup>
+
+<lootgroup name="groupWeaponsT4_Melee" loot_quality_template="QLTemplateT4">
+	<item name="meleeWpnClubT3PlasmaClub"/>
+	<item name="meleeWpnBladeT3PlasmaKnife"/>
+	<item name="meleeWpnSledgeT3PlasmaSledgehammer"/>
+	<item name="meleeWpnBladeT3PlasmaSword"/>
+	<item name="meleeWpnBatonT3PlasmaBaton"/>
+	<item name="meleeWpnSpearT3PlasmaSpear"/>
+</lootgroup>
+
+<!-- TOOL GROUPS -->
+<lootgroup name="groupToolsT4" loot_quality_template="QLTemplateT4">
+	<item name="meleeToolAxeT3PlasmaFireaxe"/>
+	<item name="meleeToolPickT3PlasmaPickaxe"/>
+	<item name="meleeToolShovelT3PlasmaShovel"/>
+	<item name="meleeToolPickT3PlasmaMiningTool"/>
+</lootgroup>
+
+<!-- QUEST GROUPS -->
+<lootgroup name="groupQuestWeaponsMeleeT3" loot_quality_template="questT3QualTemplate">	
+	<item name="meleeWpnClubT3PlasmaClub"/>
+	<item name="meleeWpnBladeT3PlasmaKnife"/>
+	<item name="meleeWpnSledgeT3PlasmaSledgehammer"/>
+	<item name="meleeWpnBladeT3PlasmaSword"/>
+	<item name="meleeWpnBatonT3PlasmaBaton"/>
+	<item name="meleeWpnSpearT3PlasmaSpear"/>	
+</lootgroup>
+	
+</insertBefore>
+
+<append xpath="/lootcontainers">
+
+<!-- Military Pallets -->
+<lootcontainer name="ammoPalletCartonSmall" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item group="groupAmmoPileSmall"/>
+</lootcontainer>
+
+<lootcontainer name="ammoPalletCartonMedium" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item group="groupAmmoPileMed"/>
+</lootcontainer>
+
+<!-- Storage Containers -->
+<lootcontainer name="footlockerClosed" size="6,2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<lootcontainer name="militaryFootlockerClosed" size="6,2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<lootcontainer name="toolBoxClosed" count="1" size="6,2" sound_open="UseActions/open_toolbox" sound_close="UseActions/close_toolbox" loot_quality_template="qualBaseTemplate" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<lootcontainer name="rollingToolBoxClosed" count="1" size="6,2" sound_open="UseActions/open_toolchest" sound_close="UseActions/close_toolchest" loot_quality_template="qualBaseTemplate" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<lootcontainer name="gunSafeClosed" size="8,9" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<lootcontainer name="smallSafeClosed" size="8,5" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template" destroy_on_close="false">
+	<item name="cobweb" count="0"/>
+</lootcontainer>
+
+<!-- VEHICLE CONTAINERS -->
+<lootcontainer name="vehicleHoverCar" count="0" size="9,12" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+
+<lootcontainer name="vehiclePickupTruck" count="0" size="9,10" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+
+<lootcontainer name="vehicleMuscleCar" count="0" size="9,5" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+
+<lootcontainer name="vehicleLuxurySedan" count="0" size="9,8" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+
+</append>
+</Zilox>

@@ -1,0 +1,7 @@
+<Zilox>
+
+<remove xpath="//township[starts-with(@name,'oldwest')]"/>
+<remove xpath="//district[starts-with(@name,'oldwest')]"/>
+<remove xpath="//property[starts-with(@class,'oldwest')]"/>
+
+</Zilox>

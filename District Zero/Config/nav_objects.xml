@@ -1,0 +1,88 @@
+<Zilox>
+
+<append xpath="/nav_object_classes">
+
+<nav_object_class name="vehicleNavMaster">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_bicycle"/>
+		<property name="min_distance" value="0"/>
+		<property name="max_distance" value="-1"/>
+		<property name="max_scale_distance" value="1024"/>
+		<property name="color" value="255,255,0,255"/>
+		<property name="has_pulse" value="true"/>
+		<property name="icon_clamped" value="false" />
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_bicycle"/>
+		<property name="min_distance" value="0"/>
+		<property name="max_distance" value="20"/>
+		<property name="max_scale_distance" value="64"/>
+		<property name="color" value="255,255,0,255"/>
+		<property name="has_pulse" value="false"/>
+	</onscreen_settings>
+</nav_object_class>
+
+<nav_object_class name="muscleCar" extends="vehicleNavMaster">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_musclecar"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_musclecar"/>
+	</onscreen_settings>
+</nav_object_class>
+
+<nav_object_class name="pickupTruck" extends="vehicleNavMaster">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_pickuptruck"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_pickuptruck"/>
+	</onscreen_settings>
+</nav_object_class>
+
+<nav_object_class name="sedan" extends="vehicleNavMaster">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_sedan"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_sedan"/>
+	</onscreen_settings>
+</nav_object_class>
+
+<nav_object_class name="flyingCar" extends="vehicleNavMaster">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_flyingcar"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_flyingcar"/>
+	</onscreen_settings>
+</nav_object_class>
+
+		<nav_object_class name="no_weapon">
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_no_weapons"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="200"/>
+				<property name="text_type" value="SpawnName"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,2,0" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+</append>		
+</Zilox>

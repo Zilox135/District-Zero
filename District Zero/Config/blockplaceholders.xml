@@ -1,0 +1,89 @@
+<Zilox>
+
+<set xpath="//placeholder[starts-with(@name,'car') or (starts-with(@name,'cntCar'))]">
+	<block name="cntSedanCarInsecure" prob="1"/>
+	<block name="cntTruckInsecure" prob="0.2"/>
+	<block name="cntGarbageTruckInsecure" prob="0.2"/>	
+	<block name="cntMuscleCarInsecure" prob="1"/>
+	<block name="cntPickupTruckInsecure" prob="1"/>
+	<block name="cntSedanCar2Insecure" prob="1"/>
+	<block name="cntHoverCarInsecure" prob="1"/>
+	<block name="cntRacingCarInsecure" prob="1"/>
+	<block name="cntArmoredHoverCarInsecure" prob="1"/>
+	<block name="cntBlackMuscleCarInsecure" prob="1"/>
+	<block name="cntPoliceVehicleInsecure" prob="0.5"/>
+	<block name="cntMotorcycleInsecure" prob="0.5"/>	
+</set>
+
+<!-- Override vanilla tree helpers to use District Zero trees -->
+<set xpath="//placeholder[@name='treeLargeRandomHelper']">
+	<block name="treeForestFir08" prob="1" biome="pine_forest" randomrotation="true"/>
+	<block name="treeForestBeech09" prob="1" biome="pine_forest" randomrotation="true"/>
+	<block name="treeWinterFir08" prob="1" biome="snow" randomrotation="true"/>
+	<block name="treeCactus03" prob=".15" biome="desert" randomrotation="true"/>
+	<block name="treeCactus02" prob=".15" biome="desert" randomrotation="true"/>
+	<block name="treeOakMed01" prob="1" biome="desert" randomrotation="false"/>
+	<block name="treeBurntMaple03" prob="1" biome="wasteland" randomrotation="true"/>
+	<block name="treeMountainPineDry21m" prob="1" biome="wasteland" randomrotation="true"/>
+	<block name="treeBurntMaple03" prob="1" biome="burnt_forest" randomrotation="true"/>
+</set>
+
+<set xpath="//placeholder[@name='treeMediumRandomHelper']">
+	<block name="treeForestFir05" prob="1" biome="pine_forest" randomrotation="true"/>
+	<block name="treeForestBeech05" prob="1" biome="pine_forest" randomrotation="true"/>
+	<block name="treeWinterFir05" prob="1" biome="snow" randomrotation="true"/>
+	<block name="treeCactus02" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeCactus01" prob=".5" biome="desert" randomrotation="true"/>
+	<block name="treeOakSml01" prob="1" biome="desert" randomrotation="true"/>
+	<block name="treeBurntMaple02" prob="1" biome="wasteland" randomrotation="true"/>
+	<block name="treeBurntMaple02" prob="1" biome="burnt_forest" randomrotation="true"/>
+</set>
+
+<append xpath="/blockplaceholders">
+
+<placeholder name="terrOreStoneCobaltRandom">
+	<block name="terrOreCobalt" prob=".73"/>
+	<block name="terrStone" prob=".6" biome="snow"/>
+	<block name="terrStone" prob=".6" biome="pine_forest"/>
+	<block name="terrSandStone" prob=".6" biome="desert"/>
+	<block name="terrStone" prob=".6" biome="water"/>
+	<block name="terrStone" prob=".6" biome="wasteland"/>
+	<block name="terrStone" prob=".6" biome="burnt_forest"/>
+	<block name="terrStone" prob=".6" biome="water"/>
+</placeholder>
+	
+<placeholder name="decoRoadRandomHelper">
+<!-- SMALL STONES -->		
+	<block name="rockSmallResource00" prob="1"/>
+	<block name="rockSmallResource01" prob="1"/>
+	<block name="rockSmallResource02" prob="1"/>
+	<block name="rockSmallResource03" prob="1"/>	
+<!-- BRANCHES -->	
+	<block name="branch00" prob="1"/>
+	<block name="branch01" prob="1"/>	
+	<block name="branch02" prob="1"/>	
+	<block name="branch03" prob="1"/>	
+	<block name="branch04" prob="1" biome="pine_forest"/>	
+	<block name="branch05" prob="1"/>	
+	<block name="branch06" prob="1"/>	
+	<block name="branch07" prob="1"/>
+	<block name="branch08" prob="1"/>
+</placeholder>
+
+<placeholder name="decoRoadGrassRandomHelper">		
+	<block name="treeTallGrassDiagonal" prob="0.5" biome="pine_forest"/>
+	<block name="treeDesertShrub" prob="0.3" biome="desert"/>
+	<block name="treeDesertShrub" prob="0.3" biome="wasteland"/>	
+	<block name="treeForestGrassDiagonal" prob="0.5" biome="pine_forest"/>
+	<block name="treeGreenBrownGrassDiagonal" prob="0.5" biome="desert"/>
+	<block name="treeGreenBrownGrassDiagonal" prob="0.5" biome="snow"/>
+	<block name="treeGreenBrownGrassDiagonal" prob="0.5" biome="wasteland"/>
+	<block name="treeDeadPineLeaf" prob="0.1" biome="pine_forest"/>	
+	<block name="treeDeadPineLeaf" prob="0.1" biome="wasteland"/>
+	<block name="treeDeadPineLeaf" prob="0.1" biome="desert"/>
+	<block name="treeSnowyDeadBush" prob="0.1" biome="snow"/>	
+	<block name="forestFlower" prob="0.2" biome="pine_forest"/>	
+</placeholder>	
+
+</append>
+</Zilox>

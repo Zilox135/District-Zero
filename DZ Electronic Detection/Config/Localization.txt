@@ -1,0 +1,12 @@
+Key,english
+
+buffDetectionGraceName,Robot sense
+buffDetectionGraceDesc,"You are carrying electronics parts, robots and mechs will be able to sense you."
+buffDetectionName,Robot Detection
+buffDetectionDesc,"You are carrying electronics parts,You are Detected by robots and mechs."
+resourceElectricPartsBundle,Electric Parts Bundle
+resourceElectricPartsBundleDesc,"Bundle the electric parts in a bundle of 5."
+resourceMechanicalPartsBundle,Mechanical Parts Bundle
+resourceMechanicalPartsBundleDesc,"Bundle the Mechanical parts in a bundle of 5."
+resourceNanoChipBundle,Nano Chip Bundle
+resourceNanoChipBundleDesc,"Bundle the Nano Chip in a bundle of 5."

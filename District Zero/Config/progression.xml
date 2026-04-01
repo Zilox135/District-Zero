@@ -1,0 +1,1624 @@
+<Zilox>
+
+<remove xpath="//attribute[not(@name='attBooks' or (@name='attCrafting'))]"/>
+<remove xpath="//skills/skill"/>
+
+<remove xpath="//book_group[@name='skillHuntingJournal']"/>
+<remove xpath="//book[starts-with(@name,'perkHuntingJournal')]"/>
+
+<set xpath="//attributes/@min_level">0</set>
+<set xpath="//attributes/@max_level">5</set>
+<set xpath="//attributes/@cost_multiplier_per_level">0</set>
+<set xpath="//perks/@cost_multiplier_per_level">0</set>
+
+<!-- 100% LOCKPICKING CHANCE WITH GREAT HEIST COMPLETION -->
+<set xpath="//book[@name='perkGreatHeistComplete']/effect_group/passive_effect[@name='LockPickBreakChance']/@value">1</set>
+
+<!-- SET NEVER ENCUMBERED AT NIGHT FOR THE LARGER BACKPACK -->
+<set xpath="//book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">48</set>
+
+<!-- ADD AP ENERGY AMMO TO AP BOOKS -->
+<csv xpath="//book[@name='perkPistolPeteAPAmmo']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoNanoEnergyCellAP</csv>
+<csv xpath="//book[@name='perkSniperAPAmmo']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoHeavyEnergyCellAP</csv>
+<csv xpath="//book[@name='perkShotgunMessiahSlugs']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoShotgunEnergyCellAP</csv>
+
+<csv xpath="//book[@name='perkPistolPeteComplete']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoBundleNanoEnergyCell,ammoBundleNanoEnergyCellAP</csv>
+<csv xpath="//book[@name='perkSniperComplete']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoBundleHeavyEnergyCell,ammoBundleHeavyEnergyCellAP</csv>
+<csv xpath="//book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">ammoBundleShotgunEnergyCell,ammoBundleShotgunEnergyCellAP</csv>
+
+<csv xpath="//book[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags" delim="," op="add">resourceCobaltBundle,resourceClayLumpBundle,resourceCrushedSandBundle</csv>
+
+<set xpath="//crafting_skill[@name='craftingHarvestingTools']">		
+		<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="true" unlock_level="1,2,4,6,8,10" >
+			<unlock_entry item="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="meleeToolPickT1IronPickaxe" name_key="harvestToolsIron" has_quality="true" unlock_level="11,13,16,19,22,25" >
+			<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="true" unlock_level="26,32,39,46,53,60" >
+			<unlock_entry item="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="meleeToolPickT3PlasmaPickaxe" name_key="harvestToolsPlasma" has_quality="true" unlock_level="61,68,76,84,92,100" >
+			<unlock_entry item="meleeToolPickT3PlasmaPickaxe,meleeToolShovelT3PlasmaShovel,meleeToolAxeT3PlasmaFireaxe,meleeToolPickT3PlasmaMiningTool" unlock_tier="1" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="meleeToolPickT3PlasmaPickaxe,meleeToolShovelT3PlasmaShovel,meleeToolAxeT3PlasmaFireaxe,meleeToolPickT3PlasmaMiningTool"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="meleeToolPickT3PlasmaPickaxe,meleeToolShovelT3PlasmaShovel,meleeToolAxeT3PlasmaFireaxe,meleeToolPickT3PlasmaMiningTool"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingBlades']">		
+		<display_entry item="meleeWpnBladeT0BoneKnife" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="meleeWpnBladeT1HuntingKnife" unlock_level="11,15,20,25,30,35" />
+		<display_entry item="meleeWpnBladeT2LaserKnife" unlock_level="30,40,45,50,55,60" />		
+		<display_entry item="meleeWpnBladeT3PlasmaKnife" unlock_level="50,55,60,65,70,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnBladeT1HuntingKnife"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnBladeT2LaserKnife"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="meleeWpnBladeT3PlasmaKnife"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnife"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,45,50,55,60,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT2LaserKnife"/>			
+			<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75" value="1,2,3,4,5" tags="meleeWpnBladeT3PlasmaKnife"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingClubs']">
+		<display_entry item="meleeWpnClubT0WoodenClub" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="meleeWpnClubT1BaseballBat" unlock_level="11,15,20,25,30,35" />
+		<display_entry item="meleeWpnClubT2LaserClub" unlock_level="30,40,45,50,55,60" />		
+		<display_entry item="meleeWpnClubT3PlasmaClub" unlock_level="50,55,60,65,70,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnClubT0WoodenClub"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnClubT1BaseballBat"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnClubT2LaserClub"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="meleeWpnClubT3PlasmaClub"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnClubT0WoodenClub"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnClubT1BaseballBat"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,45,50,55,60,75" value="1,2,3,4,5,5" tags="meleeWpnClubT2LaserClub"/>			
+			<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75" value="1,2,3,4,5" tags="meleeWpnClubT3PlasmaClub"/>
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingSledgehammers']">
+		<display_entry item="meleeWpnSledgeT0StoneSledgehammer" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="meleeWpnSledgeT1IronSledgehammer" unlock_level="11,15,20,25,30,35" />
+		<display_entry item="meleeWpnSledgeT2LaserSledgehammer" unlock_level="30,40,45,50,55,60" />		
+		<display_entry item="meleeWpnSledgeT3PlasmaSledgehammer" unlock_level="50,55,60,65,70,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnSledgeT0StoneSledgehammer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnSledgeT1IronSledgehammer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnSledgeT2LaserSledgehammer"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="meleeWpnSledgeT3PlasmaSledgehammer"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnSledgeT0StoneSledgehammer"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnSledgeT1IronSledgehammer"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,45,50,55,60,75" value="1,2,3,4,5,5" tags="meleeWpnSledgeT2LaserSledgehammer"/>			
+			<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75" value="1,2,3,4,5" tags="meleeWpnSledgeT3PlasmaSledgehammer"/>
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingSpears']">
+		<display_entry item="meleeWpnSpearT0StoneSpear" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="meleeWpnSpearT1IronSpear" unlock_level="11,15,20,25,30,35" />
+		<display_entry item="meleeWpnSpearT2LaserSpear" unlock_level="30,40,45,50,55,60" />		
+		<display_entry item="meleeWpnSpearT3PlasmaSpear" unlock_level="50,55,60,65,70,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnSpearT0StoneSpear"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnSpearT1IronSpear"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,75" value="1" tags="meleeWpnSpearT2LaserSpear"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="meleeWpnSpearT3PlasmaSpear"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnSpearT0StoneSpear"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnSpearT1IronSpear"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,45,50,55,60,75" value="1,2,3,4,5,5" tags="meleeWpnSpearT2LaserSpear"/>			
+			<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75" value="1,2,3,4,5" tags="meleeWpnSpearT3PlasmaSpear"/>
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingHandguns']">		
+		<display_entry icon="gunHandgunT0PipePistol" name_key="handgunsPrimitive" has_quality="true" unlock_level="1,2,4,6,8,10" >
+			<unlock_entry item="gunHandgunT0PipePistol" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="gunHandgunT1Pistol" name_key="handgunsBasic" has_quality="true" unlock_level="11,13,16,19,22,25" >
+			<unlock_entry item="gunHandgunT1Pistol" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="gunHandgunT2LaserPistol" name_key="handgunsLaser" has_quality="true" unlock_level="26,32,39,46,53,60" >
+			<unlock_entry item="gunHandgunT2LaserPistol,gunHandgunT2LaserMagnum,gunHandgunT2LaserSMG" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="gunHandgunT3PlasmaPistol" name_key="handgunsPlasma" has_quality="true" unlock_level="61,68,76,84,92,100" >
+			<unlock_entry item="gunHandgunT3PlasmaPistol,gunHandgunT3PlasmaMagnum,gunHandgunT3PlasmaSMG" unlock_tier="1" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunHandgunT0PipePistol"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunHandgunT1Pistol"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="gunHandgunT2LaserPistol,gunHandgunT2LaserMagnum,gunHandgunT2LaserSMG"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="gunHandgunT3PlasmaPistol,gunHandgunT3PlasmaMagnum,gunHandgunT3PlasmaSMG"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="gunHandgunT0PipePistol"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunHandgunT1Pistol"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="gunHandgunT2LaserPistol,gunHandgunT2LaserMagnum,gunHandgunT2LaserSMG"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="gunHandgunT3PlasmaPistol,gunHandgunT3PlasmaMagnum,gunHandgunT3PlasmaSMG"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingShotguns']">		
+		<display_entry item="gunShotgunT0PipeShotgun" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="gunShotgunT1DoubleBarrel" unlock_level="11,13,16,19,22,25" />
+		<display_entry item="gunShotgunT2LaserShotgun" unlock_level="26,32,39,46,53,60" />
+		<display_entry item="gunShotgunT3PlasmaShotgun" unlock_level="61,68,76,84,92,100" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunShotgunT0PipeShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="gunShotgunT2LaserShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="gunShotgunT3PlasmaShotgun"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="gunShotgunT0PipeShotgun"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="gunShotgunT2LaserShotgun"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="gunShotgunT3PlasmaShotgun"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingRifles']">
+		<display_entry item="gunRifleT0PipeRifle" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="gunRifleT1HuntingRifle" unlock_level="11,13,16,19,22,25" />
+		<display_entry item="gunRifleT2LaserSniperRifle" unlock_level="26,32,39,46,53,60" />
+		<display_entry item="gunRifleT3PlasmaSniperRifle" unlock_level="61,68,76,84,92,100" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunRifleT0PipeRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunRifleT1HuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="gunRifleT2LaserSniperRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="gunRifleT3PlasmaSniperRifle"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="gunRifleT0PipeRifle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunRifleT1HuntingRifle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="gunRifleT2LaserSniperRifle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="gunRifleT3PlasmaSniperRifle"/>
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingMachineGuns']">
+		<display_entry item="gunMGT0PipeMachineGun" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="gunMGT1AK47" unlock_level="11,13,16,19,22,25" />
+		<display_entry item="gunMGT2LaserAssaultRifle" unlock_level="26,32,39,46,53,60" />
+		<display_entry item="gunMGT3PlasmaAssaultRifle" unlock_level="61,68,76,84,92,100" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunMGT0PipeMachineGun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunMGT1AK47"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="gunMGT2LaserAssaultRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="gunMGT3PlasmaAssaultRifle"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="gunMGT0PipeMachineGun"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunMGT1AK47"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,100" value="1,2,3,4,5,5" tags="gunMGT2LaserAssaultRifle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="gunMGT3PlasmaAssaultRifle"/>
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingExplosives']">		
+		<display_entry icon="thrownAmmoPipeBomb,thrownGrenade,mineCookingPot" name_key="explosivesT1-1,explosivesT1-2,explosivesT1-3" has_quality="false" unlock_level="2,5,10" >
+			<unlock_entry item="thrownAmmoPipeBomb" unlock_tier="1" />
+			<unlock_entry item="thrownGrenade" unlock_tier="2" />
+			<unlock_entry item="mineCookingPot" unlock_tier="3" />
+		</display_entry>
+		<display_entry icon="thrownDynamite,mineHubcap,mineEMP,thrownGrenadeContact,thrownGrenadeEMP" name_key="explosivesT2-1,explosivesT2-2,explosivesT2-3" has_quality="false" unlock_level="12,16,20" >
+			<unlock_entry item="thrownDynamite" unlock_tier="1" />
+			<unlock_entry item="mineHubcap,mineEMP" unlock_tier="3" />			
+			<unlock_entry item="thrownGrenadeContact,thrownGrenadeEMP" unlock_tier="2" />
+		</display_entry>
+		<display_entry icon="mineAirFilter,resourceGunPowder,thrownTimedCharge" name_key="explosivesT3-1,explosivesT3-2,explosivesT3-3" has_quality="false" unlock_level="25,30,35" >
+			<unlock_entry item="mineAirFilter" unlock_tier="1" />
+			<unlock_entry item="resourceGunPowderBundle" unlock_tier="2" />
+			<unlock_entry item="thrownTimedCharge" unlock_tier="3" />
+		</display_entry>
+				<display_entry icon="ammoRocketFrag,ammoRocketEnergyCell,ammoGrenadeEnergyCell" name_key="explosivesT4" has_quality="false" unlock_level="45" >
+			<unlock_entry item="resourceRocketTip,resourceRocketCasing,ammoRocketFrag,ammoRocketHE,ammoRocketEnergyCell,ammoGrenadeEnergyCell" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="gunExplosivesT3PlasmaRocketLauncher,gunExplosivesT3PlasmaGrenadeLauncher" name_key="explosivesT5" has_quality="true" unlock_level="50,60,70,80,90,100" >
+			<unlock_entry item="gunExplosivesT3PlasmaRocketLauncher,gunExplosivesT3PlasmaGrenadeLauncher" unlock_tier="1" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="thrownAmmoPipeBomb"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="thrownGrenade"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="mineCookingPot"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,100" value="1" tags="thrownDynamite"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,100" value="1" tags="thrownGrenadeContact,thrownGrenadeEMP"/>		
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="mineHubcap,mineEMP"/>			
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="mineAirFilter"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="resourceGunPowderBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="thrownTimedCharge"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="resourceRocketTip,resourceRocketCasing,ammoRocketFrag,ammoRocketHE,ammoRocketEnergyCell,ammoGrenadeEnergyCell"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="gunExplosivesT3PlasmaRocketLauncher,gunExplosivesT3PlasmaGrenadeLauncher"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="60,70,80,90,100" value="1,2,3,4,5" tags="gunExplosivesT3PlasmaRocketLauncher,gunExplosivesT3PlasmaGrenadeLauncher"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingRobotics']">		
+		<display_entry item="meleeWpnBatonT0PipeBaton" unlock_level="1,2,4,6,8,10" />
+		<display_entry item="gunBotT1JunkSledge" unlock_level="11,13,16,19,22,25" />
+		<display_entry item="meleeWpnBatonT2LaserStunBaton" unlock_level="26,30,35,40,45,50" />
+		<display_entry item="gunBotT2JunkTurret" unlock_level="51,55,60,65,70,75" />
+		<display_entry item="meleeWpnBatonT3PlasmaBaton" unlock_level="60,61,66,77,81,86" />		
+		<display_entry item="gunBotT3JunkDrone" unlock_level="76,80,85,90,95,100" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="meleeWpnBatonT0PipeBaton"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBotT1JunkSledge"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="meleeWpnBatonT2LaserStunBaton"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="gunBotT2JunkTurret"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="meleeWpnBatonT3PlasmaBaton"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="76,100" value="1" tags="gunBotT3JunkDrone"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="meleeWpnBatonT0PipeBaton"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunBotT1JunkSledge"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="30,35,40,45,50,100" value="1,2,3,4,5,5" tags="meleeWpnBatonT2LaserStunBaton"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75,100" value="1,2,3,4,5,5" tags="gunBotT2JunkTurret"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="61,66,77,81,86,100" value="1,2,3,4,5,5" tags="meleeWpnBatonT3PlasmaBaton"/>			
+			<passive_effect name="CraftingTier" operation="base_add" level="80,85,90,95,100" value="1,2,3,4,5" tags="gunBotT3JunkDrone"/>
+		</effect_group>		
+</set>
+
+<set xpath="//crafting_skill[@name='craftingMedical']">
+		<display_entry icon="medicalFirstAidBandage,drugFortBites,drugAntiRadiation" name_key="medicalT1-1,medicalT1-2,medicalT1-3" has_quality="false" unlock_level="5,10,11" >
+			<unlock_entry item="medicalFirstAidBandage" unlock_tier="1" />
+			<unlock_entry item="drugFortBites" unlock_tier="2" />
+			<unlock_entry item="drugAntiRadiation" unlock_tier="3" />			
+		</display_entry>
+		<display_entry icon="medicalPlasterCast,drugRecog,drugHerbalAntibiotics,drugAdvancedAntiRadiation" name_key="medicalT2-1,medicalT2-2,medicalT2-3" has_quality="false" unlock_level="20,30,35" >
+			<unlock_entry item="medicalPlasterCast" unlock_tier="1" />
+			<unlock_entry item="drugRecog,drugHerbalAntibiotics" unlock_tier="2" />
+			<unlock_entry item="drugAdvancedAntiRadiation" unlock_tier="3" />			
+		</display_entry>
+		<display_entry icon="medicalFirstAidKit,drugAntibiotics,drugSteroids" name_key="medicalT3-1,medicalT3-2,medicalT3-3" has_quality="false" unlock_level="50,60,75" >
+			<unlock_entry item="medicalFirstAidKit" unlock_tier="1" />
+			<unlock_entry item="drugAntibiotics" unlock_tier="2" />
+			<unlock_entry item="drugSteroids" unlock_tier="3" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="medicalFirstAidBandage"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="drugFortBites"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="drugAntiRadiation"/>			
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="medicalPlasterCast"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="drugRecog"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="drugHerbalAntibiotics"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="drugAdvancedAntiRadiation"/>			
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="medicalFirstAidKit"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="drugAntibiotics"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="drugSteroids"/>
+		</effect_group>	
+</set>
+
+<set xpath="//crafting_skill[@name='craftingWorkstations']/@max_level">80</set>
+<set xpath="//crafting_skill[@name='craftingWorkstations']">
+		<display_entry icon="cntDewCollector,forge" name_key="workstationsT1-1,workstationsT1-2" has_quality="false" unlock_level="2,5" >
+			<unlock_entry item="cntDewCollector" unlock_tier="1" />
+			<unlock_entry item="fabricator" unlock_tier="1" />				
+			<unlock_entry item="forge" unlock_tier="2" />			
+		</display_entry>
+		<display_entry icon="workbench,resourceLockPick,toolBellows,toolAnvil" name_key="workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-4" has_quality="false" unlock_level="10,15,20,25" >
+			<unlock_entry item="workbench" unlock_tier="1" />		
+			<unlock_entry item="resourceLockPick" unlock_tier="2" />
+			<unlock_entry item="toolBellows" unlock_tier="3" />
+			<unlock_entry item="toolAnvil" unlock_tier="4" />
+		</display_entry>		
+		<display_entry icon="cementMixer" name_key="workstationsT3-1" has_quality="false" unlock_level="30" >
+			<unlock_entry item="cementMixer" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="cntApiary,toolApiaryExtractor,toolApiaryBroodBox,toolApiarySmoker" name_key="workstationsApiary-1,workstationsApiary-2,workstationsApiary-3,workstationsApiary-4" has_quality="false" unlock_level="30,40,45,55" >
+			<unlock_entry item="cntApiary" unlock_tier="1" />
+			<unlock_entry item="toolApiaryExtractor" unlock_tier="2" />
+			<unlock_entry item="toolApiaryBroodBox" unlock_tier="3" />
+			<unlock_entry item="toolApiarySmoker" unlock_tier="4" />
+		</display_entry>
+		<display_entry icon="chemistryStation" name_key="workstationsT4" has_quality="false" unlock_level="50" >
+			<unlock_entry item="chemistryStation" unlock_tier="1" />		
+		</display_entry>
+		<display_entry icon="toolForgeCrucible" name_key="workstationsT5" has_quality="false" unlock_level="65" >
+			<unlock_entry item="toolForgeCrucible" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="blastFurnace,toolBustlePipe,toolPreHeater" name_key="workstationsT6" has_quality="false" unlock_level="75" >
+			<unlock_entry item="blastFurnace" unlock_tier="1" />
+			<unlock_entry item="toolBustlePipe" unlock_tier="1" />
+			<unlock_entry item="toolPreHeater" unlock_tier="1" />			
+		</display_entry>		
+		<display_entry icon="autoMiner" name_key="workstationsT7" has_quality="false" unlock_level="80" >
+			<unlock_entry item="autoMiner" unlock_tier="1" />
+		</display_entry>		
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,80" value="1" tags="cntDewCollector"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,80" value="1" tags="forge"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,80" value="1" tags="workbench"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,80" value="1" tags="resourceLockPick"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,80" value="1" tags="toolBellows"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,80" value="1" tags="toolAnvil"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,80" value="1" tags="cementMixer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,80" value="1" tags="cntApiary"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,80" value="1" tags="toolApiaryExtractor"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,80" value="1" tags="toolApiaryBroodBox"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,80" value="1" tags="chemistryStation"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,80" value="1" tags="toolApiarySmoker"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,80" value="1" tags="toolForgeCrucible"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,80" value="1" tags="fabricator"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,80" value="1" tags="blastFurnace,toolBustlePipe,toolPreHeater"/>			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,80" value="1" tags="autoMiner"/>			
+		</effect_group>
+</set>
+
+<set xpath="//crafting_skill[@name='craftingVehicles']">
+		<display_entry icon="vehicleBicyclePlaceable" name_key="vehiclesT1" has_quality="false" unlock_level="5" >
+			<unlock_entry item="vehicleBicycleChassis,vehicleBicycleHandlebars,vehicleWheels" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="vehicleMinibikePlaceable" name_key="vehiclesT2" has_quality="false" unlock_level="20" >
+			<unlock_entry item="vehicleMinibikeChassis,vehicleMinibikeHandlebars,resourceOil,ammoGasCan,ammoGasCanBundle" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="vehicleMotorcyclePlaceable" name_key="vehiclesT3" has_quality="false" unlock_level="45" >
+			<unlock_entry item="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="vehiclePickupTruckPlaceable" name_key="vehiclesT4" has_quality="false" unlock_level="70" >
+			<unlock_entry item="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories" unlock_tier="1" />
+			<unlock_entry item="vehicleMuscleCarChassis" unlock_tier="1" />	
+			<unlock_entry item="vehiclePickupTruckChassis" unlock_tier="1" />
+			<unlock_entry item="vehicleLuxurySedanChassis" unlock_tier="1" />			
+		</display_entry>
+		<display_entry icon="vehicleHoverCarPlaceable" name_key="vehiclesT5" has_quality="false" unlock_level="100" >
+			<unlock_entry item="vehicleGyroCopterChassis,vehicleGyroCopterAccessories" unlock_tier="1" />
+			<unlock_entry item="vehicleHoverCarChassis" unlock_tier="1" />			
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="vehicleBicycleChassis,vehicleBicycleHandlebars,vehicleWheels"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="vehicleMinibikeChassis,vehicleMinibikeHandlebars,carBattery,resourceOil,ammoGasCan,ammoGasCanBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="vehicleGyroCopterChassis,vehicleGyroCopterAccessories"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="vehicleMuscleCarChassis,vehiclePickupTruckChassis,vehicleLuxurySedanChassis"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="vehicleHoverCarChassis"/>			
+		</effect_group>
+</set>
+
+<insertBefore xpath="//attribute[@name='attBooks']">
+
+	<attribute name="attUniversalPerks" min_level="0" max_level="0" name_key="attUniversalPerksName" desc_key="attUniversalPerksDesc" icon="ui_game_symbol_universal">
+
+		<effect_group>
+		</effect_group>
+		
+	</attribute>
+
+	<attribute name="attEmpath" name_key="attEmpathName" desc_key="attEmpathDesc" icon="ui_game_symbol_empath">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attEmpath"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+
+			<effect_description level="1" desc_key="attEmpathRank1Desc" long_desc_key="attEmpathRank1LongDesc"/>
+			<effect_description level="2" desc_key="attEmpathRank2Desc" long_desc_key="attEmpathRank2LongDesc"/>
+			<effect_description level="3" desc_key="attEmpathRank3Desc" long_desc_key="attEmpathRank3LongDesc"/>
+			<effect_description level="4" desc_key="attEmpathRank4Desc" long_desc_key="attEmpathRank4LongDesc"/>
+			<effect_description level="5" desc_key="attEmpathRank5Desc" long_desc_key="attEmpathRank5LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>
+	
+	<attribute name="attCybernetician" name_key="attCyberneticianName" desc_key="attCyberneticianDesc" icon="ui_game_symbol_cybernetician">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attCybernetician"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+
+			<effect_description level="1" desc_key="attCyberneticianRank1Desc" long_desc_key="attCyberneticianRank1LongDesc"/>
+			<effect_description level="2" desc_key="attCyberneticianRank2Desc" long_desc_key="attCyberneticianRank2LongDesc"/>
+			<effect_description level="3" desc_key="attCyberneticianRank3Desc" long_desc_key="attCyberneticianRank3LongDesc"/>
+			<effect_description level="4" desc_key="attCyberneticianRank4Desc" long_desc_key="attCyberneticianRank4LongDesc"/>
+			<effect_description level="5" desc_key="attCyberneticianRank5Desc" long_desc_key="attCyberneticianRank5LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>
+	
+	<attribute name="attCosmotech" name_key="attCosmotechName" desc_key="attCosmotechDesc" icon="ui_game_symbol_cosmotech">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attCosmotech"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+		</effect_group>
+
+		<effect_group>
+			<effect_description level="1" desc_key="attCosmotechRank01Desc" long_desc_key="attCosmotechRank01LongDesc"/>
+			<effect_description level="2" desc_key="attCosmotechRank02Desc" long_desc_key="attCosmotechRank02LongDesc"/>
+			<effect_description level="3" desc_key="attCosmotechRank03Desc" long_desc_key="attCosmotechRank03LongDesc"/>
+			<effect_description level="4" desc_key="attCosmotechRank04Desc" long_desc_key="attCosmotechRank04LongDesc"/>
+			<effect_description level="5" desc_key="attCosmotechRank05Desc" long_desc_key="attCosmotechRank05LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>
+
+	<attribute name="attExomedic" name_key="attExomedicName" desc_key="attExomedicDesc" icon="ui_game_symbol_exomedic">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attExomedic"/>
+			<requirement name="!IsAttachedToEntity" />
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+		</effect_group>
+
+		<effect_group>
+			<effect_description level="1" desc_key="attExomedicRank01Desc" long_desc_key="attExomedicRank01LongDesc"/>
+			<effect_description level="2" desc_key="attExomedicRank02Desc" long_desc_key="attExomedicRank02LongDesc"/>
+			<effect_description level="3" desc_key="attExomedicRank03Desc" long_desc_key="attExomedicRank03LongDesc"/>
+			<effect_description level="4" desc_key="attExomedicRank04Desc" long_desc_key="attExomedicRank04LongDesc"/>
+			<effect_description level="5" desc_key="attExomedicRank05Desc" long_desc_key="attExomedicRank05LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>	
+
+	<attribute name="attAstrominer" name_key="attAstrominerName" desc_key="attAstrominerDesc" icon="ui_game_symbol_astrominer">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attAstrominer"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+
+			<effect_description level="1" desc_key="attAstrominerRank01Desc" long_desc_key="attAstrominerRank01LongDesc"/>
+			<effect_description level="2" desc_key="attAstrominerRank02Desc" long_desc_key="attAstrominerRank02LongDesc"/>
+			<effect_description level="3" desc_key="attAstrominerRank03Desc" long_desc_key="attAstrominerRank03LongDesc"/>
+			<effect_description level="4" desc_key="attAstrominerRank04Desc" long_desc_key="attAstrominerRank04LongDesc"/>
+			<effect_description level="5" desc_key="attAstrominerRank05Desc" long_desc_key="attAstrominerRank05LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>
+
+	<attribute name="attNeonaut" name_key="attNeonautName" desc_key="attNeonautDesc" icon="ui_game_symbol_neonaut">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attNeonaut"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="1,4" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="4,5" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.45"/>
+
+			<effect_description level="1" desc_key="attNeonautRank01Desc" long_desc_key="attNeonautRank01LongDesc"/>
+			<effect_description level="2" desc_key="attNeonautRank02Desc" long_desc_key="attNeonautRank02LongDesc"/>
+			<effect_description level="3" desc_key="attNeonautRank03Desc" long_desc_key="attNeonautRank03LongDesc"/>
+			<effect_description level="4" desc_key="attNeonautRank04Desc" long_desc_key="attNeonautRank04LongDesc"/>
+			<effect_description level="5" desc_key="attNeonautRank05Desc" long_desc_key="attNeonautRank05LongDesc"/>
+		</effect_group>
+		
+		<effect_group>
+			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="1,5" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
+			</passive_effect>
+
+			<!-- Once armor crafting skill reaches 100, set the probability bonus of finding armor crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="armorCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="Equals" value="100"/>
+			</passive_effect>
+		</effect_group>		
+	</attribute>	
+
+</insertBefore>
+
+	<!-- *** DEAD_EYE -->
+<setattribute xpath="//perk[@name='perkDeadEye']" name="parent">attEmpath</setattribute>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attEmpath</set>
+
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='1']/requirement/@desc_key">reqEmpathLevel01</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='2']/requirement/@desc_key">reqEmpathLevel02</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='3']/requirement/@desc_key">reqEmpathLevel03</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='4']/requirement/@desc_key">reqEmpathLevel04</set>
+<set xpath="//perk[@name='perkDeadEye']/level_requirements[@level='5']/requirement/@desc_key">reqEmpathLevel05</set>
+
+	<!-- *** DEMOLITIONS_EXPERT -->
+<setattribute xpath="//perk[@name='perkDemolitionsExpert']" name="parent">attAstrominer</setattribute>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attAstrominer</set>
+
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='1']/requirement/@desc_key">reqAstrominerLevel01</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='2']/requirement/@desc_key">reqAstrominerLevel02</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='3']/requirement/@desc_key">reqAstrominerLevel03</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='4']/requirement/@desc_key">reqAstrominerLevel04</set>
+<set xpath="//perk[@name='perkDemolitionsExpert']/level_requirements[@level='5']/requirement/@desc_key">reqAstrominerLevel05</set>
+
+	<!-- *** JAVELIN_MASTER (Moved to Empath) -->
+<setattribute xpath="//perk[@name='perkJavelinMaster']" name="parent">attEmpath</setattribute>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attEmpath</set>
+
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='1']/requirement/@desc_key">reqEmpathLevel01</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='2']/requirement/@desc_key">reqEmpathLevel02</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='3']/requirement/@desc_key">reqEmpathLevel03</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='4']/requirement/@desc_key">reqEmpathLevel04</set>
+<set xpath="//perk[@name='perkJavelinMaster']/level_requirements[@level='5']/requirement/@desc_key">reqEmpathLevel05</set>
+
+	<!-- *** FLURRY_OF_PERCEPTION -->
+<remove xpath="//perk[@name='perkFlurryOfPerception']"/>
+
+	<!-- *** INFILTRATOR (Moved to Neonaut) -->
+<setattribute xpath="//perk[@name='perkInfiltrator']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='2']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='3']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='4']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel05</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel05</set>
+<set xpath="//perk[@name='perkInfiltrator']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** ANIMAL_TRACKER -->
+<remove xpath="//perk[@name='perkAnimalTracker']"/>	
+
+	<!-- *** PENETRATOR -->
+<setattribute xpath="//perk[@name='perkPenetrator']" name="parent">attEmpath</setattribute>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attEmpath</set>
+
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='4']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='1']/requirement/@desc_key">reqEmpathLevel01</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='2']/requirement/@desc_key">reqEmpathLevel02</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='3']/requirement/@desc_key">reqEmpathLevel03</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='4']/requirement/@desc_key">reqEmpathLevel05</set>
+<set xpath="//perk[@name='perkPenetrator']/level_requirements[@level='5']/requirement/@desc_key">reqEmpathLevel05</set>
+
+	<!-- *** LUCKY_LOOTER -->
+<setattribute xpath="//perk[@name='perkLuckyLooter']" name="parent">attNeonaut</setattribute>
+
+<!-- Add level_requirements back since vanilla commented them out -->
+<append xpath="//perk[@name='perkLuckyLooter']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="1" desc_key="reqNeonautLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="2" desc_key="reqNeonautLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="3" desc_key="reqNeonautLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="4" desc_key="reqNeonautLevel04"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+</append>
+
+	<!-- *** TREASURE_HUNTER -->
+<setattribute xpath="//perk[@name='perkTreasureHunter']" name="parent">attUniversalPerks</setattribute>
+<remove xpath="//perk[@name='perkTreasureHunter']//level_requirements"/>
+
+	<!-- *** SALVAGE_OPERATIONS -->
+<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attCosmotech</setattribute>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements//requirement[@progression_name='attPerception']/@progression_name">attCosmotech</set>
+
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='1']/requirement/@desc_key">reqCosmotechLevel01</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='2']/requirement/@desc_key">reqCosmotechLevel02</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='3']/requirement/@desc_key">reqCosmotechLevel03</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='4']/requirement/@desc_key">reqCosmotechLevel04</set>
+<set xpath="//perk[@name='perkSalvageOperations']/level_requirements[@level='5']/requirement/@desc_key">reqCosmotechLevel05</set>
+
+<append xpath="//perk[@name='perkSalvageOperations']/effect_group[1]">
+	<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkSalvageOperations">
+		<requirement name="IsDead, DZCore" target="other"/>
+		<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+		<requirement name="EntityTagCompare" target="other" tags="robot,mech"/>			
+	</passive_effect>
+</append>
+
+	<!-- *** BOOMSTICK -->
+<setattribute xpath="//perk[@name='perkBoomstick']" name="parent">attCosmotech</setattribute>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attCosmotech</set>
+
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='1']/requirement/@desc_key">reqCosmotechLevel01</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='2']/requirement/@desc_key">reqCosmotechLevel02</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='3']/requirement/@desc_key">reqCosmotechLevel03</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='4']/requirement/@desc_key">reqCosmotechLevel04</set>
+<set xpath="//perk[@name='perkBoomstick']/level_requirements[@level='5']/requirement/@desc_key">reqCosmotechLevel05</set>
+
+	<!-- *** PUMMEL_PETE -->
+<setattribute xpath="//perk[@name='perkPummelPete']" name="parent">attCosmotech</setattribute>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attCosmotech</set>
+
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='1']/requirement/@desc_key">reqCosmotechLevel01</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='2']/requirement/@desc_key">reqCosmotechLevel02</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='3']/requirement/@desc_key">reqCosmotechLevel03</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='4']/requirement/@desc_key">reqCosmotechLevel04</set>
+<set xpath="//perk[@name='perkPummelPete']/level_requirements[@level='5']/requirement/@desc_key">reqCosmotechLevel05</set>
+
+	<!-- *** SKULL_CRUSHER -->
+<setattribute xpath="//perk[@name='perkSkullCrusher']" name="parent">attAstrominer</setattribute>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attAstrominer</set>
+
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='1']/requirement/@desc_key">reqAstrominerLevel01</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='2']/requirement/@desc_key">reqAstrominerLevel02</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='3']/requirement/@desc_key">reqAstrominerLevel03</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='4']/requirement/@desc_key">reqAstrominerLevel04</set>
+<set xpath="//perk[@name='perkSkullCrusher']/level_requirements[@level='5']/requirement/@desc_key">reqAstrominerLevel05</set>
+
+	<!-- *** FLURRY_OF_STRENGTH -->
+<remove xpath="//perk[@name='perkFlurryOfStrength']"/>
+
+	<!-- *** HEAVY_ARMOR -->
+<setattribute xpath="//perk[@name='perkHeavyArmor']" name="parent">attUniversalPerks</setattribute>
+<!-- Heavy armor has no level requirements in vanilla, keep it that way -->
+
+	<!-- *** PACK_MULE -->
+<setattribute xpath="//perk[@name='perkPackMule']" name="parent">attAstrominer</setattribute>
+<set xpath="//perk[@name='perkPackMule']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attAstrominer</set>
+
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='1']/requirement/@desc_key">reqAstrominerLevel01</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='2']/requirement/@desc_key">reqAstrominerLevel02</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='3']/requirement/@desc_key">reqAstrominerLevel03</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='4']/requirement/@desc_key">reqAstrominerLevel04</set>
+<set xpath="//perk[@name='perkPackMule']/level_requirements[@level='5']/requirement/@desc_key">reqAstrominerLevel05</set>
+
+<set xpath="//perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">7,14,21,28,36</set>
+
+	<!-- *** MASTER_CHEF -->
+<setattribute xpath="//perk[@name='perkMasterChef']" name="parent">attUniversalPerks</setattribute>
+<!-- Master chef has no level requirements in vanilla, keep it that way -->
+
+	<!-- *** MINER69R -->
+<setattribute xpath="//perk[@name='perkMiner69r']" name="parent">attAstrominer</setattribute>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attAstrominer</set>
+
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='1']/requirement/@desc_key">reqAstrominerLevel01</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='2']/requirement/@desc_key">reqAstrominerLevel02</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='3']/requirement/@desc_key">reqAstrominerLevel03</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='4']/requirement/@desc_key">reqAstrominerLevel04</set>
+<set xpath="//perk[@name='perkMiner69r']/level_requirements[@level='5']/requirement/@desc_key">reqAstrominerLevel05</set>
+
+	<!-- *** MOTHER_LODE -->
+<setattribute xpath="//perk[@name='perkMotherLode']" name="parent">attAstrominer</setattribute>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements//requirement[@progression_name='attStrength']/@progression_name">attAstrominer</set>
+
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='1']/requirement/@desc_key">reqAstrominerLevel01</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='2']/requirement/@desc_key">reqAstrominerLevel02</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='3']/requirement/@desc_key">reqAstrominerLevel03</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='4']/requirement/@desc_key">reqAstrominerLevel04</set>
+<set xpath="//perk[@name='perkMotherLode']/level_requirements[@level='5']/requirement/@desc_key">reqAstrominerLevel05</set>
+
+	<!-- *** BRAWLER (Moved to Exomedic) -->
+<setattribute xpath="//perk[@name='perkBrawler']" name="parent">attExomedic</setattribute>
+<set xpath="//perk[@name='perkBrawler']/level_requirements//requirement[@progression_name='attFortitude']/@progression_name">attExomedic</set>
+
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='1']/requirement/@desc_key">reqExomedicLevel01</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='2']/requirement/@desc_key">reqExomedicLevel02</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='3']/requirement/@desc_key">reqExomedicLevel03</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel04</set>
+<set xpath="//perk[@name='perkBrawler']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
+
+	<!-- *** MACHINE_GUNNER -->
+<setattribute xpath="//perk[@name='perkMachineGunner']" name="parent">attCybernetician</setattribute>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements//requirement[@progression_name='attFortitude']/@progression_name">attCybernetician</set>
+
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='1']/requirement/@desc_key">reqCyberneticianLevel01</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='2']/requirement/@desc_key">reqCyberneticianLevel02</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='3']/requirement/@desc_key">reqCyberneticianLevel03</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='4']/requirement/@desc_key">reqCyberneticianLevel04</set>
+<set xpath="//perk[@name='perkMachineGunner']/level_requirements[@level='5']/requirement/@desc_key">reqCyberneticianLevel05</set>
+
+	<!-- *** FLURRY_OF_FORTITUDE -->
+<remove xpath="//perk[@name='perkFlurryOfFortitude']"/>
+
+	<!-- *** THE_HUNTSMAN -->
+<remove xpath="//perk[@name='perkTheHuntsman']"/>
+
+	<!-- *** WELL_INSULATED -->
+<!-- This perk is completely commented out in vanilla A22, skip it -->
+
+	<!-- *** LIVING_OFF_THE_LAND -->
+<setattribute xpath="//perk[@name='perkLivingOffTheLand']" name="parent">attUniversalPerks</setattribute>
+<!-- Living off the land has no level requirements in vanilla, keep it that way -->
+
+	<!-- *** PAIN_TOLERANCE (Moved to Exomedic) -->
+<setattribute xpath="//perk[@name='perkPainTolerance']" name="parent">attExomedic</setattribute>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements//requirement[@progression_name='attFortitude']/@progression_name">attExomedic</set>
+
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='1']/requirement/@desc_key">reqExomedicLevel01</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='2']/requirement/@desc_key">reqExomedicLevel02</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='3']/requirement/@desc_key">reqExomedicLevel03</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel04</set>
+<set xpath="//perk[@name='perkPainTolerance']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
+
+	<!-- *** HEALING_FACTOR -->
+<setattribute xpath="//perk[@name='perkHealingFactor']" name="parent">attExomedic</setattribute>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements//requirement[@progression_name='attFortitude']/@progression_name">attExomedic</set>
+
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='1']/requirement/@desc_key">reqExomedicLevel01</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='2']/requirement/@desc_key">reqExomedicLevel02</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='3']/requirement/@desc_key">reqExomedicLevel03</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel04</set>
+<set xpath="//perk[@name='perkHealingFactor']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
+
+	<!-- *** SLOW_METABOLISM -->
+<setattribute xpath="//perk[@name='perkSlowMetabolism']" name="parent">attUniversalPerks</setattribute>
+<remove xpath="//perk[@name='perkSlowMetabolism']//level_requirements"/>
+
+	<!-- *** RULE_ONE_CARDIO -->
+<setattribute xpath="//perk[@name='perkRuleOneCardio']" name="parent">attExomedic</setattribute>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements//requirement[@progression_name='attFortitude']/@progression_name">attExomedic</set>
+
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='2']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='3']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='4']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='1']/requirement/@desc_key">reqExomedicLevel01</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='2']/requirement/@desc_key">reqExomedicLevel03</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='3']/requirement/@desc_key">reqExomedicLevel05</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel05</set>
+<set xpath="//perk[@name='perkRuleOneCardio']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
+
+	<!-- *** ARCHERY -->
+<setattribute xpath="//perk[@name='perkArchery']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkArchery']/level_requirements//requirement[@progression_name='attAgility']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel04</set>
+<set xpath="//perk[@name='perkArchery']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** GUNSLINGER (Moved to Neonaut) -->
+<setattribute xpath="//perk[@name='perkGunslinger']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements//requirement[@progression_name='attAgility']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel04</set>
+<set xpath="//perk[@name='perkGunslinger']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** DEEP_CUTS (Moved to Neonaut - blades = stealth/agility) -->
+<setattribute xpath="//perk[@name='perkDeepCuts']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements//requirement[@progression_name='attAgility']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel04</set>
+<set xpath="//perk[@name='perkDeepCuts']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** FLURRY_OF_AGILITY -->
+<remove xpath="//perk[@name='perkFlurryOfAgility']"/>
+
+	<!-- *** RUN_AND_GUN (Moved to Neonaut - mobility/movement) -->
+<setattribute xpath="//perk[@name='perkRunAndGun']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements//requirement[@progression_name='attAgility']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel04</set>
+<set xpath="//perk[@name='perkRunAndGun']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** FLURRY_OF_BLOWS -->
+<append xpath="/progression/perks">
+	<perk name="perkFlurryOfBlows" max_level="3" parent="attUniversalPerks" name_key="perkFlurryOfBlowsName" desc_key="perkFlurryOfBlowsDesc" icon="ui_game_symbol_knunchuck"> 
+<!--		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attUniversalPerks" operation="GTE" value="1" desc_key="reqUniversalPerksLevel01"/></level_requirements> 
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attUniversalPerks" operation="GTE" value="3" desc_key="reqUniversalPerksLevel03"/></level_requirements> 
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attUniversalPerks" operation="GTE" value="5" desc_key="reqUniversalPerksLevel05"/></level_requirements> -->
+
+		<effect_group> 
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3" value=".1,.17,.25" tags="perkFlurryOfBlows"/> 
+		</effect_group> 
+
+		<effect_group> 
+			<requirement name="HoldingItemHasTags" tags="perkFlurryOfBlows"/> 
+			<requirement name="ProgressionLevel" progression_name="perkFlurryOfBlows" operation="Equals" value="3"/> 
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="30" delay="1.0"/> 
+
+			<effect_description level="1" desc_key="perkFlurryOfBlowsRank1Desc" long_desc_key="perkFlurryOfBlowsRank1LongDesc"/> 
+			<effect_description level="2" desc_key="perkFlurryOfBlowsRank2Desc" long_desc_key="perkFlurryOfBlowsRank2LongDesc"/> 
+			<effect_description level="3" desc_key="perkFlurryOfBlowsRank3Desc" long_desc_key="perkFlurryOfBlowsRank3LongDesc"/> 
+		</effect_group> 
+	</perk>
+</append>
+
+	<!-- *** MEDIUM_ARMOR -->
+<setattribute xpath="//perk[@name='perkMediumArmor']" name="parent">attUniversalPerks</setattribute>
+<!-- Medium armor has no level requirements in vanilla, keep it that way -->
+
+	<!-- *** PARKOUR -->
+<setattribute xpath="//perk[@name='perkParkour']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkParkour']/level_requirements//requirement[@progression_name='attAgility']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='4']/requirement/@value">5</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel05</set>
+<set xpath="//perk[@name='perkParkour']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** HIDDEN_STRIKE -->
+<setattribute xpath="//perk[@name='perkHiddenStrike']" name="parent">attUniversalPerks</setattribute>
+<remove xpath="//perk[@name='perkHiddenStrike']//level_requirements"/>
+
+	<!-- *** FROM_THE_SHADOWS -->
+<setattribute xpath="//perk[@name='perkFromTheShadows']" name="parent">attUniversalPerks</setattribute>
+<remove xpath="//perk[@name='perkFromTheShadows']//level_requirements"/>
+
+	<!-- *** ELECTROCUTIONER (Moved to Cybernetician - stun batons = technology) -->
+<setattribute xpath="//perk[@name='perkElectrocutioner']" name="parent">attCybernetician</setattribute>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attCybernetician</set>
+
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='1']/requirement/@desc_key">reqCyberneticianLevel01</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='2']/requirement/@desc_key">reqCyberneticianLevel02</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='3']/requirement/@desc_key">reqCyberneticianLevel03</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='4']/requirement/@desc_key">reqCyberneticianLevel04</set>
+<set xpath="//perk[@name='perkElectrocutioner']/level_requirements[@level='5']/requirement/@desc_key">reqCyberneticianLevel05</set>
+
+	<!-- *** TURRETS -->
+<setattribute xpath="//perk[@name='perkTurrets']" name="parent">attCybernetician</setattribute>
+<set xpath="//perk[@name='perkTurrets']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attCybernetician</set>
+
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='1']/requirement/@desc_key">reqCyberneticianLevel01</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='2']/requirement/@desc_key">reqCyberneticianLevel02</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='3']/requirement/@desc_key">reqCyberneticianLevel03</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='4']/requirement/@desc_key">reqCyberneticianLevel04</set>
+<set xpath="//perk[@name='perkTurrets']/level_requirements[@level='5']/requirement/@desc_key">reqCyberneticianLevel05</set>
+
+	<!-- *** FLURRY_OF_INTELLECT -->
+<remove xpath="//perk[@name='perkFlurryOfIntellect']"/>
+
+	<!-- *** BETTER_BARTER -->
+<setattribute xpath="//perk[@name='perkBetterBarter']" name="parent">attEmpath</setattribute>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attEmpath</set>
+
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='1']/requirement/@desc_key">reqEmpathLevel01</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='2']/requirement/@desc_key">reqEmpathLevel02</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='3']/requirement/@desc_key">reqEmpathLevel03</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='4']/requirement/@desc_key">reqEmpathLevel04</set>
+<set xpath="//perk[@name='perkBetterBarter']/level_requirements[@level='5']/requirement/@desc_key">reqEmpathLevel05</set>
+
+	<!-- *** DARING_ADVENTURER -->
+<setattribute xpath="//perk[@name='perkDaringAdventurer']" name="parent">attNeonaut</setattribute>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attNeonaut</set>
+
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='1']/requirement/@desc_key">reqNeonautLevel01</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='2']/requirement/@desc_key">reqNeonautLevel02</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='3']/requirement/@desc_key">reqNeonautLevel03</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='4']/requirement/@desc_key">reqNeonautLevel04</set>
+<set xpath="//perk[@name='perkDaringAdventurer']/level_requirements[@level='5']/requirement/@desc_key">reqNeonautLevel05</set>
+
+	<!-- *** CHARISMATIC_NATURE -->
+<setattribute xpath="//perk[@name='perkCharismaticNature']" name="parent">attEmpath</setattribute>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attEmpath</set>
+
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='1']/requirement/@desc_key">reqEmpathLevel01</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='2']/requirement/@desc_key">reqEmpathLevel02</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='3']/requirement/@desc_key">reqEmpathLevel03</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='4']/requirement/@desc_key">reqEmpathLevel04</set>
+<set xpath="//perk[@name='perkCharismaticNature']/level_requirements[@level='5']/requirement/@desc_key">reqEmpathLevel05</set>
+
+	<!-- *** PHYSICIAN -->
+<setattribute xpath="//perk[@name='perkPhysician']" name="parent">attExomedic</setattribute>
+<set xpath="//perk[@name='perkPhysician']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attExomedic</set>
+
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='1']/requirement/@desc_key">reqExomedicLevel01</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='2']/requirement/@desc_key">reqExomedicLevel02</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='3']/requirement/@desc_key">reqExomedicLevel03</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel04</set>
+<set xpath="//perk[@name='perkPhysician']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
+
+<csv xpath="//perk[@name='perkPhysician']/effect_group[2]/requirement[@name='EntityTagCompare']/@tags" delim="," op="add">robot,mech</csv>
+
+	<!-- *** ADVANCED_ENGINEERING -->
+<setattribute xpath="//perk[@name='perkAdvancedEngineering']" name="parent">attCybernetician</setattribute>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attCybernetician</set>
+
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='1']/requirement/@desc_key">reqCyberneticianLevel01</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='2']/requirement/@desc_key">reqCyberneticianLevel02</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='3']/requirement/@desc_key">reqCyberneticianLevel03</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='4']/requirement/@desc_key">reqCyberneticianLevel04</set>
+<set xpath="//perk[@name='perkAdvancedEngineering']/level_requirements[@level='5']/requirement/@desc_key">reqCyberneticianLevel05</set>
+
+<set xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@tags='workstationCSM']/requirement[@name='ProgressionLevel']/@value">80</set>
+
+	<!-- *** GREASE_MONKEY -->
+<setattribute xpath="//perk[@name='perkGreaseMonkey']" name="parent">attCosmotech</setattribute>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements//requirement[@progression_name='attIntellect']/@progression_name">attCosmotech</set>
+
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='1']/requirement/@value">1</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='2']/requirement/@value">2</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='3']/requirement/@value">3</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement/@value">4</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement/@value">5</set>
+
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='1']/requirement/@desc_key">reqCosmotechLevel01</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='2']/requirement/@desc_key">reqCosmotechLevel02</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='3']/requirement/@desc_key">reqCosmotechLevel03</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement/@desc_key">reqCosmotechLevel04</set>
+<set xpath="//perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement/@desc_key">reqCosmotechLevel05</set>
+
+	<!-- *** LOCK_PICKING (Moved to Neonaut) -->
+<setattribute xpath="//perk[@name='perkLockPicking']" name="parent">attNeonaut</setattribute>
+
+<!-- Add level_requirements back since vanilla commented them out -->
+<append xpath="//perk[@name='perkLockPicking']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="1" desc_key="reqNeonautLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="3" desc_key="reqNeonautLevel03"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+</append>
+
+	<!-- *** FIX MASTERY PERKS - Reassign to District Zero class attributes with proper requirements -->
+
+	<!-- perkPerceptionMastery -> attEmpath (Moved to Empath) -->
+<setattribute xpath="//perk[@name='perkPerceptionMastery']" name="parent">attEmpath</setattribute>
+<remove xpath="//perk[@name='perkPerceptionMastery']/level_requirements"/>
+<append xpath="//perk[@name='perkPerceptionMastery']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="3" desc_key="reqEmpathLevel03"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="4" desc_key="reqEmpathLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+</append>
+
+	<!-- perkStrengthMastery -> attAstrominer (mining, melee theme) -->
+<setattribute xpath="//perk[@name='perkStrengthMastery']" name="parent">attAstrominer</setattribute>
+<remove xpath="//perk[@name='perkStrengthMastery']/level_requirements"/>
+<append xpath="//perk[@name='perkStrengthMastery']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="3" desc_key="reqAstrominerLevel03"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="4" desc_key="reqAstrominerLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="5" desc_key="reqAstrominerLevel05"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="5" desc_key="reqAstrominerLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="5" desc_key="reqAstrominerLevel05"/></level_requirements>
+</append>
+
+	<!-- perkFortitudeMastery -> attExomedic (Moved - physical = fitness) -->
+<setattribute xpath="//perk[@name='perkFortitudeMastery']" name="parent">attExomedic</setattribute>
+<remove xpath="//perk[@name='perkFortitudeMastery']/level_requirements"/>
+<append xpath="//perk[@name='perkFortitudeMastery']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="3" desc_key="reqExomedicLevel03"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="4" desc_key="reqExomedicLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="5" desc_key="reqExomedicLevel05"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="5" desc_key="reqExomedicLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="5" desc_key="reqExomedicLevel05"/></level_requirements>
+</append>
+
+	<!-- perkAgilityMastery -> attNeonaut (stealth, parkour, ranged theme) -->
+<setattribute xpath="//perk[@name='perkAgilityMastery']" name="parent">attNeonaut</setattribute>
+<remove xpath="//perk[@name='perkAgilityMastery']/level_requirements"/>
+<append xpath="//perk[@name='perkAgilityMastery']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="3" desc_key="reqNeonautLevel03"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="4" desc_key="reqNeonautLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+</append>
+
+	<!-- perkIntellectMastery -> attCybernetician (tech, engineering theme) -->
+<setattribute xpath="//perk[@name='perkIntellectMastery']" name="parent">attCybernetician</setattribute>
+<remove xpath="//perk[@name='perkIntellectMastery']/level_requirements"/>
+<append xpath="//perk[@name='perkIntellectMastery']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="3" desc_key="reqCyberneticianLevel03"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="4" desc_key="reqCyberneticianLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+</append>
+
+	<!-- *** FIX OTHER PERKS WITH REMOVED SKILL PARENTS -->
+
+	<!-- perkGrandSlam -> attCosmotech (clubs = Cosmotech with Pummel Pete) -->
+<setattribute xpath="//perk[@name='perkGrandSlam']" name="parent">attCosmotech</setattribute>
+<remove xpath="//perk[@name='perkGrandSlam']/level_requirements"/>
+<append xpath="//perk[@name='perkGrandSlam']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="1" desc_key="reqCosmotechLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="2" desc_key="reqCosmotechLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="4" desc_key="reqCosmotechLevel04"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+</append>
+
+	<!-- perkJunkMiner -> attAstrominer (mining theme) -->
+<setattribute xpath="//perk[@name='perkJunkMiner']" name="parent">attAstrominer</setattribute>
+<remove xpath="//perk[@name='perkJunkMiner']/level_requirements"/>
+<append xpath="//perk[@name='perkJunkMiner']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="1" desc_key="reqAstrominerLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="2" desc_key="reqAstrominerLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="3" desc_key="reqAstrominerLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="4" desc_key="reqAstrominerLevel04"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAstrominer" operation="GTE" value="5" desc_key="reqAstrominerLevel05"/></level_requirements>
+</append>
+
+	<!-- perkSiphoningStrikes -> attExomedic (Moved - combat recovery) -->
+<setattribute xpath="//perk[@name='perkSiphoningStrikes']" name="parent">attExomedic</setattribute>
+<remove xpath="//perk[@name='perkSiphoningStrikes']/level_requirements"/>
+<append xpath="//perk[@name='perkSiphoningStrikes']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="1" desc_key="reqExomedicLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="2" desc_key="reqExomedicLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="3" desc_key="reqExomedicLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="4" desc_key="reqExomedicLevel04"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attExomedic" operation="GTE" value="5" desc_key="reqExomedicLevel05"/></level_requirements>
+</append>
+
+	<!-- perkHardTarget -> attNeonaut (movement/agility theme) -->
+<setattribute xpath="//perk[@name='perkHardTarget']" name="parent">attNeonaut</setattribute>
+<remove xpath="//perk[@name='perkHardTarget']/level_requirements"/>
+<append xpath="//perk[@name='perkHardTarget']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="1" desc_key="reqNeonautLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="2" desc_key="reqNeonautLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="3" desc_key="reqNeonautLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="4" desc_key="reqNeonautLevel04"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attNeonaut" operation="GTE" value="5" desc_key="reqNeonautLevel05"/></level_requirements>
+</append>
+
+	<!-- perkLightArmor -> attUniversalPerks (no attribute requirements in vanilla) -->
+<setattribute xpath="//perk[@name='perkLightArmor']" name="parent">attUniversalPerks</setattribute>
+
+<!-- ==================== NEW PERKS FOR CLASS BALANCE ==================== -->
+
+<!-- *** EMPATH NEW PERKS *** -->
+
+<!-- *** STEADY_AIM (5 tiers) - Reduced weapon spread and recoil -->
+<append xpath="/progression/perks">
+	<perk name="perkSteadyAim" max_level="5" parent="attEmpath" name_key="perkSteadyAimName" desc_key="perkSteadyAimDesc" icon="ui_game_symbol_map_cursor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="1" desc_key="reqEmpathLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="2" desc_key="reqEmpathLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="3" desc_key="reqEmpathLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="4" desc_key="reqEmpathLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Reduced weapon spread when aiming -->
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1,2,3,4,5" value="-.05,-.1,-.15,-.2,-.25"/>
+			<!-- Reduced vertical recoil -->
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="1,2,3,4,5" value="-.05,-.1,-.15,-.2,-.25"/>
+			<!-- Reduced horizontal recoil -->
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="1,2,3,4,5" value="-.05,-.1,-.15,-.2,-.25"/>
+
+			<effect_description level="1" desc_key="perkSteadyAimRank1Desc" long_desc_key="perkSteadyAimRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSteadyAimRank2Desc" long_desc_key="perkSteadyAimRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSteadyAimRank3Desc" long_desc_key="perkSteadyAimRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSteadyAimRank4Desc" long_desc_key="perkSteadyAimRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkSteadyAimRank5Desc" long_desc_key="perkSteadyAimRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** MENTAL_FORTITUDE (3 tiers) - Reduced debuff effects -->
+<append xpath="/progression/perks">
+	<perk name="perkMentalFortitude" max_level="3" parent="attEmpath" name_key="perkMentalFortitudeName" desc_key="perkMentalFortitudeDesc" icon="ui_game_symbol_healing_factor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="1" desc_key="reqEmpathLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="3" desc_key="reqEmpathLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Increased resistance to debuffs -->
+			<passive_effect name="BuffResistance" operation="perc_add" level="1,2,3" value=".1,.2,.3"/>
+
+			<effect_description level="1" desc_key="perkMentalFortitudeRank1Desc" long_desc_key="perkMentalFortitudeRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMentalFortitudeRank2Desc" long_desc_key="perkMentalFortitudeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMentalFortitudeRank3Desc" long_desc_key="perkMentalFortitudeRank3LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** FOCUSED_FIRE (5 tiers) - Bonus headshot damage -->
+<append xpath="/progression/perks">
+	<perk name="perkFocusedFire" max_level="5" parent="attEmpath" name_key="perkFocusedFireName" desc_key="perkFocusedFireDesc" icon="ui_game_symbol_long_shot">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="1" desc_key="reqEmpathLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="2" desc_key="reqEmpathLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="3" desc_key="reqEmpathLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="4" desc_key="reqEmpathLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attEmpath" operation="GTE" value="5" desc_key="reqEmpathLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Bonus headshot damage -->
+			<requirement name="HitLocation" body_parts="Head"/>
+			<passive_effect name="DamageModifier" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5"/>
+
+			<effect_description level="1" desc_key="perkFocusedFireRank1Desc" long_desc_key="perkFocusedFireRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkFocusedFireRank2Desc" long_desc_key="perkFocusedFireRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkFocusedFireRank3Desc" long_desc_key="perkFocusedFireRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkFocusedFireRank4Desc" long_desc_key="perkFocusedFireRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkFocusedFireRank5Desc" long_desc_key="perkFocusedFireRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** CYBERNETICIAN NEW PERKS *** -->
+
+<!-- *** REINFORCED_CONSTRUCTION (5 tiers) - Crafted items have bonus durability -->
+<append xpath="/progression/perks">
+	<perk name="perkReinforcedConstruction" max_level="5" parent="attCybernetician" name_key="perkReinforcedConstructionName" desc_key="perkReinforcedConstructionDesc" icon="ui_game_symbol_workbench">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="1" desc_key="reqCyberneticianLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="2" desc_key="reqCyberneticianLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="3" desc_key="reqCyberneticianLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="4" desc_key="reqCyberneticianLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Increased max durability on crafted items -->
+			<passive_effect name="DegradationMax" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5"/>
+			<!-- Reduced durability loss per use -->
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="1,2,3,4,5" value="-.05,-.1,-.15,-.2,-.25"/>
+
+			<effect_description level="1" desc_key="perkReinforcedConstructionRank1Desc" long_desc_key="perkReinforcedConstructionRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkReinforcedConstructionRank2Desc" long_desc_key="perkReinforcedConstructionRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkReinforcedConstructionRank3Desc" long_desc_key="perkReinforcedConstructionRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkReinforcedConstructionRank4Desc" long_desc_key="perkReinforcedConstructionRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkReinforcedConstructionRank5Desc" long_desc_key="perkReinforcedConstructionRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** EFFICIENT_REPAIRS (3 tiers) - Repair kits restore more durability -->
+<append xpath="/progression/perks">
+	<perk name="perkEfficientRepairs" max_level="3" parent="attCybernetician" name_key="perkEfficientRepairsName" desc_key="perkEfficientRepairsDesc" icon="ui_game_symbol_service">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="1" desc_key="reqCyberneticianLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="3" desc_key="reqCyberneticianLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Repair kits restore more durability -->
+			<passive_effect name="RepairAmount" operation="perc_add" level="1,2,3" value=".2,.4,.6"/>
+			<!-- Faster repair time -->
+			<passive_effect name="RepairTime" operation="perc_add" level="1,2,3" value="-.1,-.2,-.3"/>
+
+			<effect_description level="1" desc_key="perkEfficientRepairsRank1Desc" long_desc_key="perkEfficientRepairsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkEfficientRepairsRank2Desc" long_desc_key="perkEfficientRepairsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkEfficientRepairsRank3Desc" long_desc_key="perkEfficientRepairsRank3LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** AMMO_FABRICATOR (5 tiers) - Bonus ammo when crafting -->
+<append xpath="/progression/perks">
+	<perk name="perkAmmoFabricator" max_level="5" parent="attCybernetician" name_key="perkAmmoFabricatorName" desc_key="perkAmmoFabricatorDesc" icon="ui_game_symbol_rifle">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="1" desc_key="reqCyberneticianLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="2" desc_key="reqCyberneticianLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="3" desc_key="reqCyberneticianLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="4" desc_key="reqCyberneticianLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Bonus output when crafting ammo -->
+			<passive_effect name="CraftingOutputCount" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="ammo"/>
+
+			<effect_description level="1" desc_key="perkAmmoFabricatorRank1Desc" long_desc_key="perkAmmoFabricatorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkAmmoFabricatorRank2Desc" long_desc_key="perkAmmoFabricatorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkAmmoFabricatorRank3Desc" long_desc_key="perkAmmoFabricatorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkAmmoFabricatorRank4Desc" long_desc_key="perkAmmoFabricatorRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkAmmoFabricatorRank5Desc" long_desc_key="perkAmmoFabricatorRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** OVERCHARGE (5 tiers) - Stun baton bonus damage -->
+<append xpath="/progression/perks">
+	<perk name="perkOvercharge" max_level="5" parent="attCybernetician" name_key="perkOverchargeName" desc_key="perkOverchargeDesc" icon="ui_game_symbol_electric_power">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="1" desc_key="reqCyberneticianLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="2" desc_key="reqCyberneticianLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="3" desc_key="reqCyberneticianLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="4" desc_key="reqCyberneticianLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCybernetician" operation="GTE" value="5" desc_key="reqCyberneticianLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Bonus damage with stun batons -->
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="perkElectrocutioner"/>
+			<!-- Bonus block damage with stun batons -->
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="perkElectrocutioner"/>
+
+			<effect_description level="1" desc_key="perkOverchargeRank1Desc" long_desc_key="perkOverchargeRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkOverchargeRank2Desc" long_desc_key="perkOverchargeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkOverchargeRank3Desc" long_desc_key="perkOverchargeRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkOverchargeRank4Desc" long_desc_key="perkOverchargeRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkOverchargeRank5Desc" long_desc_key="perkOverchargeRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** COSMOTECH NEW PERKS *** -->
+
+<!-- *** FUEL_EFFICIENCY (3 tiers) - Vehicles use less fuel -->
+<append xpath="/progression/perks">
+	<perk name="perkFuelEfficiency" max_level="3" parent="attCosmotech" name_key="perkFuelEfficiencyName" desc_key="perkFuelEfficiencyDesc" icon="ui_game_symbol_4x4">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="1" desc_key="reqCosmotechLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Reduced vehicle fuel consumption -->
+			<passive_effect name="VehicleFuelUsePer" operation="perc_add" level="1,2,3" value="-.1,-.2,-.3"/>
+
+			<effect_description level="1" desc_key="perkFuelEfficiencyRank1Desc" long_desc_key="perkFuelEfficiencyRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkFuelEfficiencyRank2Desc" long_desc_key="perkFuelEfficiencyRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkFuelEfficiencyRank3Desc" long_desc_key="perkFuelEfficiencyRank3LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** ARMORED_PLATING (5 tiers) - Vehicles take less damage -->
+<append xpath="/progression/perks">
+	<perk name="perkArmoredPlating" max_level="5" parent="attCosmotech" name_key="perkArmoredPlatingName" desc_key="perkArmoredPlatingDesc" icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="1" desc_key="reqCosmotechLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="2" desc_key="reqCosmotechLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="4" desc_key="reqCosmotechLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Reduced vehicle self-damage -->
+			<passive_effect name="VehicleSelfDamage" operation="perc_add" level="1,2,3,4,5" value="-.1,-.2,-.3,-.4,-.5" tags="vehicle"/>
+
+			<effect_description level="1" desc_key="perkArmoredPlatingRank1Desc" long_desc_key="perkArmoredPlatingRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkArmoredPlatingRank2Desc" long_desc_key="perkArmoredPlatingRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkArmoredPlatingRank3Desc" long_desc_key="perkArmoredPlatingRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkArmoredPlatingRank4Desc" long_desc_key="perkArmoredPlatingRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkArmoredPlatingRank5Desc" long_desc_key="perkArmoredPlatingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** SCRAP_YIELD (5 tiers) - Bonus salvage resources -->
+<append xpath="/progression/perks">
+	<perk name="perkScrapYield" max_level="5" parent="attCosmotech" name_key="perkScrapYieldName" desc_key="perkScrapYieldDesc" icon="ui_game_symbol_scrap">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="1" desc_key="reqCosmotechLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="2" desc_key="reqCosmotechLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="4" desc_key="reqCosmotechLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Bonus salvage resources from wrenching -->
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.5" tags="salvageHarvest"/>
+
+			<effect_description level="1" desc_key="perkScrapYieldRank1Desc" long_desc_key="perkScrapYieldRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkScrapYieldRank2Desc" long_desc_key="perkScrapYieldRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkScrapYieldRank3Desc" long_desc_key="perkScrapYieldRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkScrapYieldRank4Desc" long_desc_key="perkScrapYieldRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkScrapYieldRank5Desc" long_desc_key="perkScrapYieldRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** QUICK_HANDS (3 tiers) - Faster reload speed -->
+<append xpath="/progression/perks">
+	<perk name="perkQuickHands" max_level="3" parent="attCosmotech" name_key="perkQuickHandsName" desc_key="perkQuickHandsDesc" icon="ui_game_symbol_run_and_gun">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="1" desc_key="reqCosmotechLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Faster reload speed for shotguns and clubs -->
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3" value=".1,.2,.3" tags="perkBoomstick"/>
+			<!-- General weapon handling bonus -->
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,2,3" value=".1,.2,.3" tags="perkBoomstick,perkPummelPete"/>
+
+			<effect_description level="1" desc_key="perkQuickHandsRank1Desc" long_desc_key="perkQuickHandsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkQuickHandsRank2Desc" long_desc_key="perkQuickHandsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkQuickHandsRank3Desc" long_desc_key="perkQuickHandsRank3LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+<!-- *** COSMOTECH_MASTERY (5 tiers) - Ultimate salvager bonuses -->
+<append xpath="/progression/perks">
+	<perk name="perkCosmotechMastery" max_level="5" parent="attCosmotech" name_key="perkCosmotechMasteryName" desc_key="perkCosmotechMasteryDesc" icon="ui_game_symbol_strength_mastery">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="3" desc_key="reqCosmotechLevel03"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="4" desc_key="reqCosmotechLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attCosmotech" operation="GTE" value="5" desc_key="reqCosmotechLevel05"/></level_requirements>
+
+		<effect_group>
+			<!-- Level 1: Extra scrap when wrenching vehicles and mechanical objects -->
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".25" tags="salvageHarvest"/>
+
+			<!-- Level 2: Shotgun knockback - chance to stagger enemies -->
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffKnockdown">
+				<requirement name="ProgressionLevel" progression_name="perkCosmotechMastery" operation="GTE" value="2"/>
+				<requirement name="ItemHasTags" tags="perkBoomstick"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+			</triggered_effect>
+
+			<!-- Level 3: Bonus resources when salvaging - chance for extra mechanical parts -->
+			<passive_effect name="HarvestCount" operation="base_set" level="3,5" value="1" tags="perkCosmotechMasteryBonusParts"/>
+
+			<!-- Level 4: Club kills have chance to drop bonus loot -->
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffPerkScavengerBonus">
+				<requirement name="ProgressionLevel" progression_name="perkCosmotechMastery" operation="GTE" value="4"/>
+				<requirement name="ItemHasTags" tags="perkPummelPete"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+			</triggered_effect>
+
+			<!-- Level 5: Bonus damage for all Cosmotech weapons -->
+			<passive_effect name="EntityDamage" operation="perc_add" level="5" value=".5" tags="perkBoomstick,perkPummelPete"/>
+		</effect_group>
+
+		<effect_group>
+			<!-- Vehicle fuel efficiency at all ranks -->
+			<passive_effect name="VehicleFuelUsePer" operation="perc_add" level="1,5" value="-.05,-.25"/>
+			<!-- Vehicle durability - less damage to vehicles -->
+			<passive_effect name="VehicleSelfDamage" operation="perc_add" level="3,5" value="-.15" tags="vehicle"/>
+		</effect_group>
+
+		<effect_group>
+			<effect_description level="1" desc_key="perkCosmotechMasteryRank1Desc" long_desc_key="perkCosmotechMasteryRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkCosmotechMasteryRank2Desc" long_desc_key="perkCosmotechMasteryRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkCosmotechMasteryRank3Desc" long_desc_key="perkCosmotechMasteryRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkCosmotechMasteryRank4Desc" long_desc_key="perkCosmotechMasteryRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkCosmotechMasteryRank5Desc" long_desc_key="perkCosmotechMasteryRank5LongDesc"/>
+		</effect_group>
+	</perk>
+</append>
+
+</Zilox>

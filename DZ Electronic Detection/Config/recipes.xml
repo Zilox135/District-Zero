@@ -1,0 +1,26 @@
+<Zilox>
+
+<append xpath="/recipes">
+
+<recipe name="resourceElectricPartsBundle" count="1" craft_time="5">
+	<ingredient name="resourceElectricParts" count="5"/>
+	<ingredient name="resourcePaper" count="1"/>
+	<ingredient name="resourceYuccaFibers" count="1"/>
+</recipe>
+
+<recipe name="resourceMechanicalPartsBundle" count="1" craft_time="5">
+	<ingredient name="resourceMechanicalParts" count="5"/>
+	<ingredient name="resourcePaper" count="1"/>
+	<ingredient name="resourceYuccaFibers" count="1"/>
+</recipe>
+
+<recipe name="resourceNanoChipBundle" count="1" craft_time="5">
+	<ingredient name="resourceNanoChip" count="5"/>
+	<ingredient name="resourcePaper" count="1"/>
+	<ingredient name="resourceYuccaFibers" count="1"/>
+</recipe>
+
+
+
+</append>
+</Zilox>

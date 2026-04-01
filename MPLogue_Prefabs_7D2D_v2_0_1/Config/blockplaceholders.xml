@@ -1,0 +1,338 @@
+﻿<blockplaceholders>
+ 	
+		
+		
+	<append xpath="/blockplaceholders">
+
+
+	
+		<placeholder name="MPL_pp_terrAsphaltMixHelper">
+			<block name="terrGravel" prob=".04"/>
+			<block name="terrDirt" prob=".2"/>
+			<block name="terrOreCoal" prob=".03"/>
+			<block name="terrSand" prob=".03"/>
+			<block name="terrAsphalt" prob=".73"/>
+		</placeholder>
+
+
+
+
+	<placeholder name="mpl_pp_LibaryIvyHelper_Front_Right">
+		<block name="mpl_pp_LibaryIvyGreen_Front_Right" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Right" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Front_Right" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Right" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Right" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+
+	<placeholder name="mpl_pp_LibaryIvyHelper_Front_Left">
+		<block name="mpl_pp_LibaryIvyGreen_Front_Left" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Left" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Front_Left" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Left" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Front_Left" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+	
+	
+	<placeholder name="mpl_pp_LibaryIvyHelper_Side_01">
+		<block name="mpl_pp_LibaryIvyGreen_Side_01" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_01" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Side_01" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_01" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_01" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+		
+	<placeholder name="mpl_pp_LibaryIvyHelper_Side_02">
+		<block name="mpl_pp_LibaryIvyGreen_Side_02" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_02" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Side_02" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_02" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_02" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+	
+	<placeholder name="mpl_pp_LibaryIvyHelper_Side_03">
+		<block name="mpl_pp_LibaryIvyGreen_Side_03" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_03" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Side_03" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_03" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_03" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+		
+	<placeholder name="mpl_pp_LibaryIvyHelper_Side_04">
+		<block name="mpl_pp_LibaryIvyGreen_Side_04" prob="1" biome="pine_forest"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_04" prob="1" biome="burnt_forest"/>
+		<block name="mpl_pp_LibaryIvyGreen_Side_04" prob="1" biome="desert"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_04" prob="1" biome="snow"/>
+		<block name="mpl_pp_LibaryIvyDead_Side_04" prob="1" biome="wasteland"/>
+	</placeholder>
+	
+		
+	
+	
+	
+	
+	
+	
+
+
+
+	
+
+		<placeholder name="MPL_RandomHeadNormGndAlign">
+			<block name="MPL_ArleneHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_CocktailWaitressHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_CopHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_JoeHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_LabHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_MechanicHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_MoeHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_NurseHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_SpiderHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_SteveHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_ThugHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_TomHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_WightHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_WorkerHeadNormGndAlign" prob=".066"/>
+			<block name="MPL_YoHeadNormGndAlign" prob=".066"/>
+		</placeholder>
+
+
+
+
+
+		<placeholder name="MPL_Ivy_Helper">
+			<block name="MPL_Ivy_A" prob=".061"/>
+			<block name="MPL_Ivy_B" prob=".061"/>
+			<block name="MPL_Ivy_C" prob=".061"/>
+			<block name="MPL_Ivy_D" prob=".061"/>
+			<block name="MPL_Ivy_E" prob=".06"/>
+			<block name="MPL_Ivy_F" prob=".06"/>
+			<block name="MPL_Ivy_G" prob=".06"/>
+			<block name="MPL_Ivy_H" prob=".06"/>
+			<block name="MPL_Ivy_I" prob=".06"/>
+			<block name="MPL_Ivy_J" prob=".06"/>
+			<block name="MPL_Ivy_K" prob=".06"/>
+			<block name="MPL_Ivy_L" prob=".06"/>
+			<block name="MPL_Ivy_M" prob=".06"/>
+			<block name="MPL_Ivy_N" prob=".06"/>
+			<block name="MPL_Ivy_O" prob=".06"/>
+			<block name="MPL_Ivy_P" prob=".06"/>
+			<block name="MPL_Ivy_A" prob="1"/>
+		</placeholder>
+		
+		
+		<placeholder name="mpl_SheetWallHelper">
+			<block name="mpl_SheetWall" prob="1"/>
+		</placeholder>
+
+		<placeholder name="MPL_WightSafeSmallRandomHelper">
+			<block name="MPL_WightSafeSmallLocked" prob=".5"/>
+			<block name="MPL_WightSafeSmallEmpty" prob=".5"/>
+		</placeholder>
+		
+		
+		<placeholder name="MPL_BoulderBuildingBlock">
+			<block name="MPL_resourceRock01_1x1" prob=".05"/>
+			<block name="MPL_resourceRock01_1x1" prob=".05"/>
+			<block name="MPL_resourceRock02_1x1" prob=".05"/>
+			<block name="MPL_resourceRock03_1x1" prob=".05"/>
+		</placeholder>
+		
+		
+
+		<placeholder name="MPL_HardAir_SecretLadder_Helper">
+			<block name="MPL_HardAir_SecretLadder" prob="1"/>
+		</placeholder>
+
+
+
+
+		<placeholder name="MPL_DecorTrashHelper">
+			<block name="garbage_decor1" prob=".2"/>
+			<block name="garbage_decor2" prob=".2"/>
+			<block name="garbage_decor3" prob=".2"/>
+			<block name="newspaperDecor01" prob=".2"/>
+			<block name="newspaperDecor02" prob=".2"/>
+			<block name="newspaperDecor03" prob=".2"/>
+			<block name="newspaperDecor04" prob=".2"/>
+			<block name="rubbishDecor01" prob=".2"/>
+			<block name="rubbishDecor02" prob=".2"/>
+			<block name="rubbishDecor03" prob=".2"/>
+			<block name="rubbishDecor04" prob=".2"/>
+			<block name="rubbishDecor05" prob=".2"/>
+			<block name="rubbishDecor06" prob=".2"/>
+			<block name="rubbishDecor07" prob=".2"/>
+			<block name="rubbishDecor08" prob=".2"/>
+			<block name="rubbishDecor09" prob=".2"/>
+			<block name="rubbishDecor10" prob=".2"/>
+			<block name="rubbishDecor11" prob=".2"/>
+			<block name="rubbishDecor12" prob=".2"/>
+			<block name="rubbishDecor13" prob=".2"/>		
+			<block name="cntTrashPile01" prob=".2"/>
+			<block name="cntTrashPile02" prob=".2"/>
+			<block name="cntTrashPile03" prob=".2"/>
+			<block name="cntTrashPile04" prob=".2"/>
+			<block name="cntTrashPile05" prob=".2"/>
+			<block name="cntTrashPile06" prob=".2"/>
+			<block name="cntTrashPile07" prob=".2"/>
+			<block name="cntTrashPile08" prob=".2"/>
+			<block name="cntTrashPile09" prob=".2"/>
+		</placeholder>
+		
+		
+		
+
+		<placeholder name="MPL_cntBoxPalletsHelper">
+			<block name="cntCardboardBox" prob=".16"/>
+			<block name="palletBrownBoxesBase" prob=".16"/>
+			<block name="palletBrownBoxesTile" prob=".16"/>
+			<block name="palletBrownBoxesTop" prob=".16"/>
+			<block name="palletBrownBoxesTopSmall" prob=".16"/>
+			<block name="palletBrownBoxesLoose" prob=".16"/>
+		</placeholder>
+
+
+
+		<placeholder name="MPL_cntLootBooksEmptHelper">
+			<block name="MPL_cntShippingCrateBookstoreEmpt" prob=".3"/>
+			<block name="MPL_cntLootCrateBookstoreEmpt" prob=".3"/>
+			<block name="cntShippingCrateBookstore" prob=".2"/>
+			<block name="cntLootCrateBookstore" prob=".2"/>
+		</placeholder>
+		
+		
+		
+		<placeholder name="MPL_RandomBookBoxes">
+			<block name="MPL_cntBoxPalletsHelper" prob=".5"/>
+			<block name="MPL_cntLootBooksEmptHelper" prob=".5"/>
+		</placeholder>
+
+
+		<placeholder name="MPL_BookShelfDubTopRandHelp">
+			<block name="cntBookShelfDoubleTopEmpty" prob=".56"/>
+			<block name="cntBookShelfDoubleTopFull01" prob=".07"/>
+			<block name="cntBookShelfDoubleTopFull02" prob=".07"/>
+			<block name="MPL_BookShelfDubTopEmpt01" prob=".15"/>
+			<block name="MPL_BookShelfDubTopEmpt02" prob=".15"/>
+		</placeholder>
+
+		<placeholder name="MPL_BookShelfDubBotRandHelp">
+			<block name="cntBookShelfDoubleBottomEmpty" prob=".56"/>
+			<block name="cntBookShelfDoubleBottomFull01" prob=".07"/>
+			<block name="cntBookShelfDoubleBottomFull02" prob=".07"/>
+			<block name="MPL_BookShelfDubTopEmpt01" prob=".15"/>
+			<block name="MPL_BookShelfDubTopEmpt02" prob=".15"/>
+		</placeholder>
+
+
+
+		<placeholder name="MPL_BookShelfSingTopRandHelp">
+			<block name="cntBookShelfSingleTopEmpty" prob=".5"/>
+			<block name="cntBookShelfSingleTopFull01" prob=".1"/>
+			<block name="cntBookShelfSingleTopFull02" prob=".1"/>
+			<block name="MPL_BookShelfSingTopEmpt01" prob=".15"/>
+			<block name="MPL_BookShelfSingTopEmpt02" prob=".15"/>
+		</placeholder>
+
+		<placeholder name="MPL_BookShelfSingBotRandHelp">
+			<block name="cntBookShelfSingleBottomEmpty" prob=".5"/>
+			<block name="cntBookShelfSingleBottomFull01" prob=".1"/>
+			<block name="cntBookShelfSingleBottomFull02" prob=".1"/>
+			<block name="MPL_BookShelfSingTopEmpt01" prob=".15"/>
+			<block name="MPL_BookShelfSingTopEmpt02" prob=".15"/>
+		</placeholder>
+
+
+
+
+		<placeholder name="HardAirVomitClaymoreHelper">
+			<block name="MPL_HardAirVomitClaymore" prob="1"/>
+		</placeholder>		
+		
+		<placeholder name="MPL_OrbSafeRandomLootHelper">
+			<block name="MPL_OrbSafeEmpty" prob=".5"/>
+			<block name="MPL_OrbSafeClosed" prob=".5"/>
+		</placeholder>
+			
+		<placeholder name="MPL_cntGunRackSmallRandomLootHelper">
+			<block name="MPL_cntGunRackSmallEmpty01" prob=".18"/>
+			<block name="MPL_cntGunRackSmallEmpty02" prob=".18"/>
+			<block name="MPL_cntGunRackSmallEmpty03" prob=".18"/>
+			<block name="MPL_cntGunRackSmallMagazines" prob=".20"/>
+			<block name="MPL_cntGunRackSmallArmor" prob=".26"/>
+		</placeholder>
+
+		<placeholder name="MPL_cntGunRackLargeRandomLootHelper">
+			<block name="MPL_cntGunRackLargeGuns01" prob=".3"/>
+			<block name="MPL_cntGunRackLargeGuns02" prob=".3"/>
+			<block name="MPL_cntGunRackLargeGunsEmpty01" prob=".2"/>
+			<block name="MPL_cntGunRackLargeGunsEmpty02" prob=".2"/>
+		</placeholder>
+
+
+	<placeholder name="IvySheetSingleRandomHelper">
+		<block name="IvySheet02" prob=".14"/>
+		<block name="IvySheet03" prob=".14"/>
+		<block name="IvySheet04" prob=".14"/>
+		<block name="IvySheet05" prob=".14"/>
+		<block name="IvySheet06" prob=".14"/>
+		<block name="IvySheet07" prob=".14"/>
+		<block name="IvySheet08" prob=".14"/>
+	</placeholder>
+	
+	<placeholder name="IvySheetLayeredRandomHelper">
+		<block name="IvySheetNew01" prob=".08"/>
+		<block name="IvySheetNew02" prob=".08"/>
+		<block name="IvySheetNew03" prob=".08"/>
+		<block name="IvySheetNew04" prob=".08"/>
+		<block name="IvySheetNew05" prob=".08"/>
+		<block name="IvySheetNew06" prob=".08"/>
+		<block name="IvySheetNew07" prob=".08"/>
+		<block name="IvySheetNew08" prob=".08"/>
+		<block name="IvySheetNew09" prob=".08"/>
+		<block name="IvySheetNew10" prob=".08"/>
+		<block name="IvySheetNew11" prob=".08"/>
+		<block name="IvySheetNew12" prob=".08"/>
+	</placeholder>
+
+	<placeholder name="IvySheetCombinedRandomHelper">
+		<block name="IvySheet02" prob=".05"/>
+		<block name="IvySheet03" prob=".05"/>
+		<block name="IvySheet04" prob=".05"/>
+		<block name="IvySheet05" prob=".05"/>
+		<block name="IvySheet06" prob=".05"/>
+		<block name="IvySheet07" prob=".05"/>
+		<block name="IvySheet08" prob=".05"/>
+		<block name="IvySheetNew01" prob=".05"/>
+		<block name="IvySheetNew02" prob=".05"/>
+		<block name="IvySheetNew03" prob=".05"/>
+		<block name="IvySheetNew04" prob=".05"/>
+		<block name="IvySheetNew05" prob=".05"/>
+		<block name="IvySheetNew06" prob=".05"/>
+		<block name="IvySheetNew07" prob=".05"/>
+		<block name="IvySheetNew08" prob=".05"/>
+		<block name="IvySheetNew09" prob=".05"/>
+		<block name="IvySheetNew10" prob=".05"/>
+		<block name="IvySheetNew11" prob=".05"/>
+		<block name="IvySheetNew12" prob=".05"/>
+	</placeholder>
+
+
+
+
+
+
+
+
+
+
+		
+			
+    </append>
+	
+</blockplaceholders>

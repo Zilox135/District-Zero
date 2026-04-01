@@ -1,0 +1,41 @@
+<configs>
+<!-- ============================================================================= -->
+<!-- DZ ELECTRONIC DETECTION - Robot Detection Settings                            -->
+<!-- ============================================================================= -->
+<!-- Configure electronic detection for robots                                     -->
+<!-- ElectronicDetectionRange: Max range in blocks (default: 50)                   -->
+<!-- ElectronicDetectionThreshold: Min signature to detect (default: 5)            -->
+<!-- EAIDetectElectronics: AI task for non-EntityRobot entities                    -->
+<!-- ============================================================================= -->
+
+<!-- Add detection settings to robot template (uses EntityRobot class) -->
+<append xpath="//entity_class[@name='robotTemplateHostile']">
+    <property name="ElectronicDetectionRange" value="100"/>
+    <property name="ElectronicDetectionThreshold" value="5"/>
+    <property name="ElectronicScanSound" value="robot_sense"/>
+</append>
+
+<!-- Add DetectElectronics AI task to drone template -->
+<append xpath="//entity_class[@name='droneTemplateHostile']">
+    <property name="AITask-0" value="DetectElectronics" data="range=100,threshold=5"/>
+</append>
+
+<!-- Add DetectElectronics AI task to robot animal template -->
+<append xpath="//entity_class[@name='robotAnimalTemplateHostile']">
+    <property name="AITask-0" value="DetectElectronics" data="range=100,threshold=5"/>
+</append>
+
+<!-- Add DetectElectronics AI task to mech template -->
+<append xpath="//entity_class[@name='mechTemplateHostile']">
+    <property name="AITask-0" value="DetectElectronics" data="range=100,threshold=5"/>
+</append>
+
+<!-- Add buffDetectionCheck to player on game enter and respawn -->
+<!-- Appends to the existing effect_group in playerMale that has the other status buffs -->
+<append xpath="//entity_class[@name='playerMale']/effect_group[triggered_effect[@trigger='onSelfEnteredGame']]">
+    <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffDetectionCheck"/>
+    <triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffDetectionCheck"/>
+</append>
+
+</configs>
+

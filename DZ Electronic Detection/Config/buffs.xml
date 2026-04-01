@@ -1,0 +1,122 @@
+<Zilox>
+<append xpath="/buffs">
+
+	<!-- ============================================================================= -->
+	<!-- ELECTRONIC DETECTION BUFF SYSTEM                                              -->
+	<!-- Tracks player's electronic signature from carried items (ElectronicSignature) -->
+	<!-- Robots can detect players with high electronic signatures                     -->
+	<!-- ============================================================================= -->
+
+	<buff name="buffDetectionCheck" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+
+		<!-- Count electronics in inventory and update the ElectronicSignature cvar -->
+		<effect_group name="Update Electronic Signature">
+			<triggered_effect trigger="onSelfBuffUpdate" action="CountElectronics, DZCore" cvar="ElectronicSignature"/>
+		</effect_group>
+
+		<!-- Low signature (1-5): Start grace period warning -->
+		<effect_group name="Start Grace Period">
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="LT" value="5"/>
+			<requirement name="!HasBuff" buff="buffDetectionGrace,buffDetection"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetectionGrace"/>
+		</effect_group>
+
+		<!-- High signature (5+): Skip grace, go straight to detection -->
+		<effect_group name="Immediate Detection">
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="5"/>
+			<requirement name="!HasBuff" buff="buffDetection"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetection"/>
+		</effect_group>
+
+		<!-- Cleanup on game enter/leave -->
+		<effect_group name="Cleanup">
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDetection"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveCVar" cvar=".DetectionDisplay"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="buffDetection"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveCVar" cvar=".DetectionDisplay"/>
+		</effect_group>
+	</buff>
+
+	<!-- Grace period buff - warning before full detection -->
+	<buff name="buffDetectionGrace" name_key="buffDetectionGraceName" description_key="buffDetectionGraceDesc" icon="ui_game_symbol_Robot_Detection" icon_color="255,128,0">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<display_value value=".DetectionDisplay"/>
+		<display_value_format value="time"/>
+
+		<effect_group name="Countdown Timer">
+			<!-- Set 10 second countdown on start -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DetectionDisplay" operation="set" value="10"/>
+			<!-- Count down each update -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DetectionDisplay" operation="subtract" value="1">
+				<requirement name="CVarCompare" cvar=".DetectionDisplay" operation="GT" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Electronics Removed - Cancel Grace">
+			<!-- If electronics removed, cancel the warning -->
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="LT" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".DetectionDisplay"/>
+		</effect_group>
+
+		<effect_group name="High Signature - Skip to Detection">
+			<!-- If signature jumps high, skip grace and go to detection -->
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".DetectionDisplay"/>
+		</effect_group>
+
+		<effect_group name="Grace Expired - Start Detection">
+			<!-- Timer expired and still have electronics - start detection -->
+			<requirement name="CVarCompare" cvar=".DetectionDisplay" operation="LTE" value="0"/>
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectionGrace"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".DetectionDisplay"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffDetection"/>
+		</effect_group>
+	</buff>
+
+	<!-- Active detection buff - robots can sense you -->
+	<buff name="buffDetection" name_key="buffDetectionName" description_key="buffDetectionDesc" icon="ui_game_symbol_Robot_Detection" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<display_value value="ElectronicSignature"/>
+		<display_value_key value="{0:#}"/>
+
+		<effect_group name="Detection Sound">
+			<!-- Play warning sound when signature is very high (30+) -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="player#smell">
+				<requirement name="CVarCompare" cvar=".DetectionSoundCheck" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="30"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DetectionSoundCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="ElectronicSignature" operation="GTE" value="30"/>
+			</triggered_effect>
+			<!-- Reset sound check when signature drops below 30 -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DetectionSoundCheck" operation="set" value="0">
+				<requirement name="CVarCompare" cvar="ElectronicSignature" operation="LT" value="30"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Cleanup">
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".DetectionSoundCheck"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveCVar" cvar=".DetectionSoundCheck"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="buffDetection"/>
+		</effect_group>
+
+		<effect_group name="Electronics Removed - End Detection">
+			<!-- Remove buff when electronics are gone -->
+			<requirement name="CVarCompare" cvar="ElectronicSignature" operation="LT" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetection"/>
+		</effect_group>
+	</buff>
+
+</append>
+</Zilox>

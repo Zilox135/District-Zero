@@ -1,0 +1,691 @@
+<Zilox>
+
+<!-- Remove profanity/inappropriate Trader Jen voice lines - Updated for A22 format with @: prefix and .wav extension -->
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_declined_03.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_declined_05.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_declined_06.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_declined_11.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_declined_14.wav']"/>
+
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_accepted_03.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_accepted_04.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_sale_accepted_05.wav']"/>
+
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_05.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_07.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_10.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_11.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_12.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_13.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_21.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_28.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_greeting_32.wav']"/>
+
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_02.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_07.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_09.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_10.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_11.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_12.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_20.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_21.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_22.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_23.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_24.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_26.wav']"/>
+<remove xpath="//AudioClip[@ClipName='@:Sounds/VO/Trader/Jen/trader_jen_trade_27.wav']"/>
+
+<!-- Remove bullet casing sound -->
+<remove xpath="//SoundDataNode[contains(@name,'eject')]"/>
+
+<!-- Remove wheel bounce sounds -->
+<set xpath="//SoundDataNode[@name='vwheel_bounce']/AudioClip/@ClipName">@:Sounds/Misc/silencefiller.wav</set>
+<!-- Remove wheel slide sounds -->
+<set xpath="//SoundDataNode[@name='vwheel_slide']/AudioClip/@ClipName">@:Sounds/Misc/silencefiller.wav</set>
+
+<append xpath="/Sounds">
+
+<!-- GUN FIRE SOUNDS -->
+	
+<SoundDataNode name="flare_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?FlareFire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_farming_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
+	<Noise ID="0" noise="20" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?LaserFarming_Fire"/>
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+
+<SoundDataNode name="laser_pistol_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laserpistol_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="laser_magnum_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="62" time="2" muffled_when_crouched="0.8" heat_map_strength="0.75" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_magnum_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/44magnum_fire_silly1" AltSound="true"/>	
+    <AudioClip ClipName="Sounds/Twitch/Silly/44magnum_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/44magnum_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_rifle_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.9" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laserrifle_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="60"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="laser_sniper_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.9" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasersniper_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_smg_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasersmg_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/></SoundDataNode>
+
+<SoundDataNode name="laser_shotgun_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="81" time="2" muffled_when_crouched="0.8" heat_map_strength="1.0" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasershotgun_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly3" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="plasma_gl_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="4" noise="100" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?plasma_gl_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_fire_start"> <AudioSource name="@:Sounds/Prefabs/AudioSource_MotorWeap.prefab"/>
+	<Noise ID="4" noise="60" time="2" heat_map_strength="1.0" heat_map_time="90"/>
+	<Sequence/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_start"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/auger_fire_silly_start" AltSound="true"/>
+    <AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_loop" Loop="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/auger_fire_silly_lp" Loop="true" AltSound="true"/>
+    <AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_end"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/auger_fire_silly_end" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- GUN SILENCED FIRE SOUNDS -->
+	
+<SoundDataNode name="laser_pistol_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="17" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laserpistol_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/pistol_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+	
+<SoundDataNode name="laser_magnum_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_magnum_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+	
+<SoundDataNode name="laser_rifle_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="43" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laserrifle_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="60"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/></SoundDataNode>	
+	
+<SoundDataNode name="laser_sniper_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="34" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasersniper_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/hunting_rifle_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+	
+<SoundDataNode name="laser_smg_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="43" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasersmg_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/smg_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>	
+	
+<SoundDataNode name="laser_shotgun_s_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+	<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lasershotgun_fire"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly1" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly2" AltSound="true"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/shotgun_fire_silly3" AltSound="true"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+	
+<!-- GUN DRYFIRE SOUNDS -->
+
+<SoundDataNode name="flare_dryfire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
+	<Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?FlareDryFire"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_dryfire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
+	<Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_dryfire"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<!-- GUN EMPTY SOUNDS -->
+
+<SoundDataNode name="laser_empty"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_empty"/>
+    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+
+<!-- AIRDROP SOUNDS -->
+
+<SoundDataNode name="supply_crate_jet"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?SupplyCrateJet"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+
+<!-- EXPLOSION SOUNDS -->
+
+<SoundDataNode name="leaves_explosion"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="4" heat_map_strength="5" heat_map_time="300"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?leaves_explosion"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="explosion_small"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="2" heat_map_strength="3" heat_map_time="150"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?small_explosion"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/explosion_silly" AltSound="true"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	
+<SoundDataNode name="explosion_plasma_small"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="2" heat_map_strength="3" heat_map_time="150"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?explosion_small_plasma"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/explosion_silly" AltSound="true"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>		
+
+<SoundDataNode name="plasma_explosion"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="4" heat_map_strength="5" heat_map_time="300"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?plasma_explosion"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/explosion_silly" AltSound="true"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	
+<SoundDataNode name="laser_explosion"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="4" heat_map_strength="5" heat_map_time="300"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?laser_explosion"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/explosion_silly" AltSound="true"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+	
+<SoundDataNode name="combat_explosion_electricity"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Explosion.prefab"/>
+	<Noise ID="5" noise="120" time="4" heat_map_strength="5" heat_map_time="300"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Explosion_02_With_Electricity"/>
+    <AudioClip ClipName="Sounds/Twitch/Silly/explosion_silly" AltSound="true"/>
+    <LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- GUN UPGRADE SOUNDS -->
+<SoundDataNode name="laser_farming_upgrade"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
+	<Noise ID="0" noise="20" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?LaserFarming_DryFire"/>
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+
+<!-- ROBOT SOUNDS -->
+
+<SoundDataNode name="robot_random"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Scan"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_01"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_01"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_03"/>	
+	<Channel name="Mouth"/>
+	<Priority name="5"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+<SoundDataNode name="robot_alert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Scan"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_01"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Technology_03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_01"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robotic_Whoosh_03"/>	
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+	
+<SoundDataNode name="robot_sense"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_06"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_07"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_08"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_09"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_move_bot_small_g5d3_10"/>	
+	<Channel name="Mouth"/>
+	<Priority name="4"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>	
+	
+<SoundDataNode name="robot_hurt"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-05"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-06"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-07"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-08"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-09"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-10"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-11"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-12"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-13"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-14"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-15"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-16"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-17"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-18"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-19"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-20"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-21"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-22"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-23"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-24"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-25"/>	
+	<Channel name="Mouth"/>
+	<Priority name="1"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+
+<SoundDataNode name="robot_death"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Power_Down"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?servo_small_bot_power_down_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?servo_small_bot_power_down_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?servo_small_bot_power_down_03"/>	
+	<Channel name="Mouth"/>
+	<Priority name="0"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+	
+<SoundDataNode name="robot_attack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_06"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_07"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_activate_bot_small_glitchy_08"/>	
+	<Channel name="Mouth"/>
+	<Priority name="2"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> </SoundDataNode>	
+	
+<SoundDataNode name="robot_dismember"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Explosion_02_With_Electricity"/>
+	<Channel name="Mouth"/>
+	<Priority name="0"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+
+<!-- DRONE SOUNDS -->	
+<SoundDataNode name="drone_flying_motion_start_01"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?DroneFlying_MotionStart_Mono_01"/>
+	<LocalCrouchVolumeScale value="0.3"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2.222"/> </SoundDataNode>	
+
+<SoundDataNode name="drone_flying_motion_start_02"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?DroneFlying_MotionStart_Mono_02"/>
+	<LocalCrouchVolumeScale value="0.3"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2.222"/> </SoundDataNode>
+	
+<SoundDataNode name="drone_flying_motion_stop_01"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?DroneFlying_MotionStop_Mono_01"/>
+	<LocalCrouchVolumeScale value="0.3"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2.222"/> </SoundDataNode>	
+
+<SoundDataNode name="drone_flying_motion_stop_02"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?drone_flying_motion_stop_02"/>
+	<LocalCrouchVolumeScale value="0.3"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2.222"/> </SoundDataNode>	
+
+<SoundDataNode name="drone_flying_motion_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?DroneFlying_Motion_Mono_01" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2"/> </SoundDataNode>
+	
+<SoundDataNode name="drone_flying_thruster_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?engine_thruster" Loop="true"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?engine_thruster" AltSound="true" Loop="true" />
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2"/> </SoundDataNode>	
+
+<SoundDataNode name="drone_flying_take_off"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?drone_take_off"/>
+	<LocalCrouchVolumeScale value="0.3"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="5"/> <MaxRepeatRate value="2.222"/> </SoundDataNode>
+
+<SoundDataNode name="drone_flying_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Amb_Small.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?drone_fly" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="18"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+
+<!-- MECH SOUNDS -->
+
+<SoundDataNode name="mech_random"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_bass_layer__01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_bass_layer__02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_bass_layer__03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_bass_layer__04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_chopper_sound_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_chopper_sound_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_chopper_sound_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_chopper_sound_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_06"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_07"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?transform_a_a_metal_grain_08"/>	
+	<Channel name="Mouth"/>
+	<Priority name="5"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+<SoundDataNode name="mech_alert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-05"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-06"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-07"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-08"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-09"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-10"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-11"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-12"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-13"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-14"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-15"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-16"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-17"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-18"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-19"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-20"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-21"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-22"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-23"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-24"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-25"/>	
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+	
+<SoundDataNode name="mech_sense"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-05"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-06"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-07"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-08"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-09"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-10"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-11"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-12"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-13"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-14"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-15"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-16"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-17"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-18"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-19"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-20"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-21"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-22"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-23"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-24"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-25"/>		
+	<Channel name="Mouth"/>
+	<Priority name="4"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>	
+	
+	<SoundDataNode name="mech_hurt"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Metal_Hit_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Metal_Hit_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Metal_Hit_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Metal_Hit_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Metal_Hit_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-05"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-06"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-07"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-08"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-09"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-10"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-11"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-12"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-13"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-14"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-15"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-16"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-17"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-18"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-19"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-20"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-21"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-22"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-23"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-24"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-25"/>		
+	<Channel name="Mouth"/>
+	<Priority name="1"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+
+<SoundDataNode name="mech_death"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?power_shutdown_mech_01"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_04"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_06"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_07"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanism_energy_mech_sweetener_08"/>	
+	<Channel name="Mouth"/>
+	<Priority name="0"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+	
+<SoundDataNode name="mech_attack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-02"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-03"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-05"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-06"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-07"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-08"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-09"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-10"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-11"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-12"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-13"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-14"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-15"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-16"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-17"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-18"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-19"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-20"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-21"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-22"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-23"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-24"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?GSFX-mech-mechanics-25"/>	
+	<Channel name="Mouth"/>
+	<Priority name="2"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> </SoundDataNode>
+	
+<SoundDataNode name="mech_dismember"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Pain.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?Robot_Combat_Explosion_02_With_Electricity"/>
+	<Channel name="Mouth"/>
+	<Priority name="0"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>	
+
+<SoundDataNode name="mech_drill_spin"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?drill_spin"/>
+	<Channel name="Mouth"/>
+	<Priority name="2"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.1"/> </SoundDataNode>	
+
+<!-- ROBOT FOOTSTEPS -->
+
+<SoundDataNode name="steprobot"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Footsteps.prefab"/>
+	<Noise ID="2" noise="10" time="1.5" muffled_when_crouched="0.507"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_01"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_02"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_03"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_04"/>	
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_05"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_mandroid_06"/>	
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.4002"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> <runningvolumescale value="1"/> </SoundDataNode>
+
+<SoundDataNode name="stepdroid"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Footsteps.prefab"/>
+	<Noise ID="2" noise="10" time="1.5" muffled_when_crouched="0.507"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_a_mech_mega_03"/>	
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.4002"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> <runningvolumescale value="1"/> </SoundDataNode>	
+	
+<SoundDataNode name="stepmech"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Footsteps.prefab"/>
+	<Noise ID="2" noise="10" time="1.5" muffled_when_crouched="0.507"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_a_mech_mega_08"/>	
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.4002"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> <runningvolumescale value="1"/> </SoundDataNode>
+
+<SoundDataNode name="steprobotanimal"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Footsteps.prefab"/>
+	<Noise ID="2" noise="10" time="1.5" muffled_when_crouched="0.507"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?footstep_servo_thick_medium_01"/>	
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.4002"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> <runningvolumescale value="1"/> </SoundDataNode>	
+
+<!-- ELECTRICITY -->
+
+<SoundDataNode name="electrical_sparks"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?electrical-sparks" Loop="true"/>	
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	
+<!-- VEHICLE SOUNDS -->
+
+<SoundDataNode name="hover_engine_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine" Loop="true"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine" AltSound="true" Loop="true" />
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="hover_engine_thruster_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?engine_thruster" Loop="true"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?engine_thruster" AltSound="true" Loop="true" />
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+
+<SoundDataNode name="hover_startup"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine_start"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine_start" AltSound="true" />
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="hover_shutoff"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine_shutoff"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?hover_engine_shutoff" AltSound="true" />
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="vehicle_on_fire_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?fire_burning" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+
+</append>
+</Zilox>

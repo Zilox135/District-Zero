@@ -1,0 +1,931 @@
+<configs>
+
+
+	<append xpath="/shapes">
+
+
+	<shape name="MPL_pillar50Plate_offset">
+		<property name="Model" value="@:Shapes/pillar50_plate.fbx" />
+		<property name="CustomIcon" value="shapepillar50Plate" />
+ 		<property name="ShapeCategories" value="Round" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="UseGlobalUV" value="Local" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value="1,-.05,1" />
+	</shape>
+	
+	
+
+	<shape name="MPL_bowlingBall_Corner">
+		<property name="Model" value="@:Shapes/bowling_ball.fbx" />
+		<property name="CustomIcon" value="shapeBowlingBall" />
+		<property name="ShapeCategories" value="Deco" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="UseGlobalUV" value="Local" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value=".6,-.05,.6" />
+	</shape>
+
+
+
+
+
+	<shape name="pillar50SideCent">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/Pole0.5m.fbx" />
+		<property name="CustomIcon" value="shapePole0.5m" />
+		<property name="ShapeCategories" value="Basic,Round" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="UseGlobalUV" value="Local" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value=".8,0,1" />
+	</shape>
+
+	<shape name="pillar50SquareTopSideCent">
+		<property name="Model" value="@:Shapes/deco_pole_round_quarter_centered.fbx" />
+		<property name="CustomIcon" value="shapeDecoPoleRoundQuarterCentered" />
+		<property name="ShapeCategories" value="Round" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value="Local" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value=".8,0,1" />
+	</shape>
+
+
+	<!-- *** Offset Sentered BulletProof Windows (no downgrade) -->
+	
+	<shape name="MPL_windowStoreOneSidedBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_one_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreOneSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreTwoSidedBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_two_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreTwoSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreThreeSidedBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_three_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreThreeSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreFourSidedBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_four_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreFourSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreCornerBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_corner_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreCornerBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+	<shape name="MPL_windowStorePaneBulletproofFull_OffCent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_pane_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStorePaneBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,1.525" />
+	</shape>
+
+
+
+
+
+
+	<!-- *** Centered BulletProof Windows (no downgrade) -->
+	<shape name="MPL_windowStoreOneSidedBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_one_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreOneSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreTwoSidedBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_two_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreTwoSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreThreeSidedBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_three_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreThreeSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreFourSidedBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_four_sided_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreFourSidedBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+	<shape name="MPL_windowStoreCornerBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_corner_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStoreCornerBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+	<shape name="MPL_windowStorePaneBulletproofFull_Cent" tag="Bulletproof">
+		<property name="ShapeMenu" value="false" />
+		<property name="Model" value="@:Shapes/window_store_pane_full.fbx" />
+		<property name="CustomIcon" value="shapeWindowStorePaneBulletproofFull" />
+		<property name="ShapeCategories" value="Windows" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="UseGlobalUV" value=",DDLDDDL" />
+		<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+		<drop event="Destroy" count="0" />
+		<property name="WaterClipPlane" value="0, 0, 1, -0.5" />
+		<property name="ModelOffset" value="1,0,.525" />
+	</shape>
+
+
+	<shape name="MPL_halfPillar1mPlateSideFlush">
+		<property name="Model" value="@:Shapes/half_pillar_1m_plate.fbx" />
+		<property name="CustomIcon" value="shapehalfPillar1mPlate" />
+ 		<property name="ShapeCategories" value="Round" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="UseGlobalUV" value="L,G,G,G,G,G" />
+		<property name="ImposterExchange" value="imposterPlate" />
+		<property name="LightOpacity" value="0" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value="0,0,0" />
+	</shape>
+
+-->
+	<shape name="MPL_plateDoubleTrapOffset">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/plate_double.fbx" />
+		<property name="CustomIcon" value="shapePlateDouble" />
+		<property name="ShapeCategories" value="Square" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="ModelOffset" value="1,1,1"/>
+		<property name="Class" value="TrapDoor"/>
+		<property name="TriggerDelay" value="2"/>
+		<property name="TriggerSound" value="trapCatwalkMetalTrigger"/>
+		<property name="ShapeAltTexture" value="T,B,N,W,S,E" />
+	</shape>
+
+
+
+		<shape name="MPL_BulletProofWaterProofWindowFull" tag="Bulletproof">
+			<property name="ShapeMenu" value="false" />
+			<property name="Model" value="@:Shapes/window_store_four_sided_full.fbx" />
+			<property name="CustomIcon" value="shapeWindowStoreFourSidedBulletproofFull" />
+			<property name="ShapeCategories" value="Windows" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="UseGlobalUV" value=",DDLDDDL" />
+			<property name="ShapeAltTexture" value="T,B,55,W,S,E,333" />
+			<property name="DowngradeFX" value="impact_stone_on_glass,glassdestroy" />
+			<property name="CopyPaintOnDowngrade" value="T,B,N,W,S,E" />
+			<property name="DowngradeBlock" value="corrugatedMetalShapes:windowStoreFourSidedBroken" />
+			<drop event="Destroy" count="0" />
+		</shape>
+
+
+
+	<shape name="MPL_FarmSink">
+		<property name="Path" value="solid" />
+		<property name="Model" value="@:Shapes/counter_half_hollow_top_offset.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeCounterHalfHollowTopOffset" />
+		<property name="ShapeCategories" value="Deco" />
+		<property name="ImposterExchange" value="imposterBlock" />
+		<property name="ShapeAltTexture" value="312,312,312,312,312,312,312" />
+		<property name="WaterClipPlane" value="0, 1, -1.192093E-07, -0.5189999" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="ModelOffset" value="1,.01,.06"/>
+	</shape>
+
+
+	<shape name="MPL_Offset_signNumber_0">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_0.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont0" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_1">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_1.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont1" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_2">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_2.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont2" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_3">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_3.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont3" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_4">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_4.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont4" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_5">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_5.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont5" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_6">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_6.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont6" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_7">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_7.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont7" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_8">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_8.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont8" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signNumber_9">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_9.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFont9" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_a">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_a.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontA" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_b">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_b.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontB" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_c">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_c.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontC" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_d">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_d.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontD" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_e">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_e.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontE" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_f">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_f.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontF" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_g">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_g.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontG" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_h">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_h.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontH" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_i">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_i.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontI" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_j">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_j.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontJ" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_k">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_k.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontK" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_l">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_l.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontL" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_m">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_m.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontM" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_n">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_n.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontN" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_o">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_o.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontO" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_p">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_p.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontP" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_q">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_q.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontQ" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_r">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_r.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontR" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_s">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_s.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontS" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_t">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_t.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontT" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_u">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_u.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontU" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_v">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_v.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontV" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_w">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_w.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontW" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_x">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_x.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontX" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_y">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_y.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontY" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_z">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_z.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontZ" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_cross">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_cross.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontCross" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_period">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_period.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontPeriod" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_comma">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_comma.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontComma" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_apostrophe">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_apostrophe.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontApostrophe" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_exclamation">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_exclamation.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontExclamation" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_question">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_question.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontQuestion" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_ampersand">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_ampersand.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeSignLetter_ampersand" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+	<shape name="MPL_Offset_signLetter_prohibition">
+		<!-- <property name="Path" value="solid" /> -->
+		<property name="Model" value="@:Shapes/font_prohibition.fbx" />
+		<property name="Place" value="TowardsPlacerInverted" />
+		<property name="CustomIcon" value="shapeFontProhibition" />
+		<property name="ShapeCategories" value="Letters" />
+		<property name="ImposterExclude" value="true" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="WaterFlow" value="permitted" />
+		<property name="CustomIconTint" value="d9e6fa"/>		
+		<property name="ModelOffset" value=".5,0,1"/>
+	</shape>
+
+
+
+
+	</append>
+
+</configs>

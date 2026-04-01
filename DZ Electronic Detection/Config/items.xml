@@ -1,0 +1,97 @@
+<configs>
+<!-- ============================================================================= -->
+<!-- DZ ELECTRONIC DETECTION - Item ElectronicSignature Properties                 -->
+<!-- ============================================================================= -->
+<!-- Robots with electronic detection can sense players carrying these items.      -->
+<!-- Signature is multiplied by stack count.                                       -->
+<!-- ============================================================================= -->
+
+<!-- Nano chips - high-tech signature -->
+<append xpath="//item[@name='resourceNanoChip']">
+    <property name="ElectronicSignature" value="1"/>
+</append>
+
+<!-- Electrical parts -->
+<append xpath="//item[@name='resourceElectricParts']">
+    <property name="ElectronicSignature" value="1"/>
+</append>
+
+<!-- Mechanical parts -->
+<append xpath="//item[@name='resourceMechanicalParts']">
+    <property name="ElectronicSignature" value="1"/>
+</append>
+
+<append xpath="/items">
+
+<item name="resourceElectricPartsBundle">
+	<property name="CustomIcon" value="resourceElectricPartsBundle"/>
+	<property name="DescriptionKey" value="resourceElectricPartsBundleDesc"/>	
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="HoldType" value="31"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="Group" value="Resources"/>
+	<property name="SoundPickup" value="parts_grab"/>
+	<property name="SoundPlace" value="parts_place"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="resourceElectricParts"/>
+		<property name="Create_item_count" value="5"/>
+	</property>
+</item>
+
+<item name="resourceMechanicalPartsBundle">
+	<property name="CustomIcon" value="resourceMechanicalPartsBundle"/>
+	<property name="DescriptionKey" value="resourceMechanicalPartsBundleDesc"/>		
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="HoldType" value="31"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="Group" value="Resources"/>
+	<property name="SoundPickup" value="parts_grab"/>
+	<property name="SoundPlace" value="parts_place"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="resourceMechanicalParts"/>
+		<property name="Create_item_count" value="5"/>
+	</property>
+</item>
+
+<item name="resourceNanoChipBundle">
+	<property name="CustomIcon" value="resourceNanoChipBundle"/>
+	<property name="DescriptionKey" value="resourceNanoChipBundleDesc"/>	
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="HoldType" value="31"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="Group" value="Resources"/>
+	<property name="SoundPickup" value="parts_grab"/>
+	<property name="SoundPlace" value="parts_place"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="resourceNanoChip"/>
+		<property name="Create_item_count" value="5"/>
+	</property>
+</item>
+
+</append>
+</configs>
+

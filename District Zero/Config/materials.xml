@@ -1,0 +1,71 @@
+<Zilox>
+
+<!-- Higher explosion resistance for the dew collector -->
+<set xpath="//material[@id='MFuelBarrelPolymer']/property[@name='explosionresistance']/@value">1</set>
+
+<!-- Prevent plants & glass from being destroyed by explosions -->
+<append xpath="//material[@id='Mplants']">
+	<property name="explosionresistance" value="1"/>
+</append>
+
+<append xpath="//material[@id='Mmushrooms']">
+	<property name="explosionresistance" value="1"/>
+</append>
+
+<append xpath="//material[@id='Mcorn']">
+	<property name="explosionresistance" value="1"/>
+</append>
+
+<append xpath="//material[@id='Mglass']">
+	<property name="explosionresistance" value="1"/>
+</append>
+
+<append xpath="/materials">
+
+<material id="MresourceCobalt">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="cobalt"/>
+	<property name="Experience" value="1.6"/>
+</material>
+
+<material id="MresourceForgedCobalt">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="cobalt"/>
+	<property name="Experience" value="20"/>
+</material>
+
+<material id="Mcobalt">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="cobalt"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="MaxDamage" value="300"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="Mcobalt_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="cobalt"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.75"/>
+	<property name="MaxDamage" value="20000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="MresourceFertilizer">
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="Experience" value="200"/>
+</material>
+
+</append>
+</Zilox>

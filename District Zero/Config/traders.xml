@@ -1,0 +1,133 @@
+<Zilox>
+
+<!-- REMOVE HUNTERS JOUNRAL BOOK SERIES -->
+<remove xpath="//item[starts-with(@name,'bookHuntingJournal')]"/>
+
+<!-- REMOVE ATTRIBUTE ARMOR MODS -->
+<remove xpath="//item[@name='modArmorPerception']"/>
+<remove xpath="//item[@name='modArmorStrength']"/>
+<remove xpath="//item[@name='modArmorFortitude']"/>
+<remove xpath="//item[@name='modArmorAgility']"/>
+<remove xpath="//item[@name='modArmorIntellect']"/>
+
+<!-- SET TRADER PROTECTION (Set to true if you want traders to be protected) -->
+<setattribute xpath="/traders" name="trader_protection">false</setattribute>
+
+<!-- SET TRADER LAND CLAIM PLACEMENT RULES (Singleplayer or Multiplayer or both Singleplayer,Multiplayer) -->
+<setattribute xpath="/traders" name="land_claim_placement">Singleplayer</setattribute>
+
+<!-- REMOVE TRADER OPEN AND CLOSE TIMES -->
+<removeattribute xpath="//@open_time" />
+<removeattribute xpath="//@close_time" />
+
+<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']">
+	<traderstage_template name="baseTier4"> <!-- Mech Tools|T4 Weapons -->
+		<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+		<entry min="200" max="999999" quality="1"/>
+		<entry min="200" max="999999" quality="2"/>
+		<entry min="200" max="999999" quality="3"/>
+		<entry min="200" max="999999" quality="4"/>
+		<entry min="200" max="999999" quality="5"/>
+	</traderstage_template>
+</insertAfter>
+
+<!-- midTier3 now exists in vanilla A22, so modify it instead of inserting -->
+<set xpath="/traders/traderstage_templates/traderstage_template[@name='midTier3']/entry/@min">50</set>
+
+<!-- TRADER GROUPS -->
+<append xpath="//trader_item_group[@name='traderGeneral']">
+	<item name="drugAntiRadiation" count="1,3" prob="0.5"/>
+</append>
+
+<append xpath="//trader_item_group[@name='rareMedicine']">
+	<item name="drugAdvancedAntiRadiation" prob="0.1"/>
+</append>
+
+<append xpath="//trader_item_group[@name='groupVehicles']">
+	<item name="vehicleMuscleCarPlaceable"/>
+	<item name="vehicleMuscleCarChassis"/>
+	
+	<item name="vehiclePickupTruckPlaceable"/>
+	<item name="vehiclePickupTruckChassis"/>
+
+	<item name="vehicleLuxurySedanPlaceable"/>
+	<item name="vehicleLuxurySedanChassis"/>
+
+	<item name="vehicleHoverCarPlaceable"/>
+	<item name="vehicleHoverCarChassis"/>
+</append>
+
+<append xpath="//trader_item_group[@name='tools']">	
+	<item name="toolBustlePipe" prob="0.1"/>
+	<item name="toolPreHeater" prob="0.1"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='rareTools']">
+	<item name="meleeToolAxeT3PlasmaFireaxe" quality="1,3"/>
+	<item name="meleeToolPickT3PlasmaPickaxe" quality="1,3"/>
+	<item name="meleeToolShovelT3PlasmaShovel" quality="1,3"/>
+	<item name="meleeToolPickT3PlasmaMiningTool" quality="1,3"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='groupAllAmmo']">
+	<item name="ammoFlareRound" count="6,25" prob="0.4"/>	
+	<item name="ammoNanoEnergyCell" count="40,150"/>
+	<item name="ammoHeavyEnergyCell" count="40,150"/>	
+	<item name="ammoShotgunEnergyCell" count="15,100"/>
+	<item name="ammoGrenadeEnergyCell" count="4,10"/>
+	<item name="ammoRocketEnergyCell" count="4,10"/>	
+	<item name="thrownGrenadeEMP" count="4,10"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='ammoBrass']">
+	<item name="ammoShotgunEnergyCellAP" count="6,25" prob="0.2"/>
+</append>
+
+<append xpath="//trader_item_group[@name='ammoAP']">
+	<item name="ammoNanoEnergyCellAP" count="40,150"/>
+	<item name="ammoHeavyEnergyCellAP" count="40,150"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='groupRangedAll']">
+	<item name="gunHandgunT1Flaregun" quality="2,5"/>
+	<item name="gunHandgunFarmT1LaserFarmingTool" quality="2,5"/>
+
+	<item name="gunMGT2LaserAssaultRifle" quality="2,5"/>
+	<item name="gunRifleT2LaserSniperRifle" quality="2,5"/>
+	<item name="gunHandgunT2LaserPistol" quality="2,5"/>
+	<item name="gunHandgunT2LaserSMG" quality="2,5"/>
+	<item name="gunShotgunT2LaserShotgun" quality="2,5"/>
+	<item name="gunHandgunT2LaserMagnum" quality="2,5"/>
+
+	<item name="gunHandgunT3PlasmaPistol" quality="2,5"/>
+	<item name="gunHandgunT3PlasmaMagnum" quality="2,5"/>
+	<item name="gunShotgunT3PlasmaShotgun" quality="2,5"/>
+	<item name="gunHandgunT3PlasmaSMG" quality="2,5"/>
+	<item name="gunMGT3PlasmaAssaultRifle" quality="2,5"/>
+	<item name="gunRifleT3PlasmaSniperRifle" quality="2,5"/>
+	<item name="gunExplosivesT3PlasmaGrenadeLauncher" quality="2,5"/>
+	<item name="gunExplosivesT3PlasmaRocketLauncher" quality="2,5"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='groupMeleeAll']">
+	<item name="meleeWpnClubT2LaserClub" quality="1,3"/>
+	<item name="meleeWpnBladeT2LaserKnife" quality="1,3"/>
+	<item name="meleeWpnSledgeT2LaserSledgehammer" quality="1,3"/>
+	<item name="meleeWpnBladeT2LaserSword" quality="3,6" prob="0.5"/>
+	<item name="meleeWpnBatonT2LaserStunBaton" quality="1,3"/>
+	<item name="meleeWpnSpearT2LaserSpear" quality="1,3"/>
+
+	<item name="meleeWpnClubT3PlasmaClub" quality="1,4"/>
+	<item name="meleeWpnBladeT3PlasmaKnife" quality="1,4"/>
+	<item name="meleeWpnSledgeT3PlasmaSledgehammer" quality="1,4"/>
+	<item name="meleeWpnBladeT3PlasmaSword" quality="3,6" prob="0.4"/>
+	<item name="meleeWpnBatonT3PlasmaBaton" quality="1,4"/>
+	<item name="meleeWpnSpearT3PlasmaSpear" quality="1,4"/>		
+</append>
+
+<!-- *** Blocks -->
+<append xpath="//trader_item_group[@name='landMines']">
+	<item name="mineEMP" count="1,5"/>
+</append>
+
+</Zilox>

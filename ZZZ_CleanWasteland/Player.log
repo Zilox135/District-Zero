@@ -1,0 +1,1424 @@
+Mono path[0] = 'D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/Managed'
+Mono config path = 'D:/DistrictZeroMain/7 Days To Die/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 28 workers.
+Loading player data from D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/data.unity3d
+Initialize engine version: 2022.3.62f2 (7670c08855a9)
+[Subsystems] Discovering subsystems at path D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28a0)
+    Vendor:   NVIDIA
+    VRAM:     7957 MB
+    Driver:   32.0.15.7652
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.075 seconds
+- Finished resetting the current domain, in  0.001 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+[PhysX] Initialized MultithreadedTaskDispatcher with 28 workers.
+UnloadTime: 0.650400 ms
+2025-12-30T03:37:46 0.027 INF Backtrace Initialized
+2025-12-30T03:37:46 0.057 INF Version: V 2.5 (b23) Compatibility Version: V 2.5, Build: WindowsPlayer 64 Bit
+2025-12-30T03:37:46 0.057 INF System information:
+2025-12-30T03:37:46 0.058 INF    OS: Windows 11  (10.0.26200) 64bit
+2025-12-30T03:37:46 0.058 INF    CPU: Intel(R) Core(TM) i7-14700HX (cores: 28)
+2025-12-30T03:37:46 0.059 INF    RAM: 65239 MB
+2025-12-30T03:37:46 0.059 INF    GPU: NVIDIA GeForce RTX 4060 Laptop GPU (7957 MB)
+2025-12-30T03:37:46 0.063 INF    Graphics API: Direct3D 11.0 [level 11.1] (shader level 5.0)
+2025-12-30T03:37:46 0.065 INF Local UTC offset: 0 hours
+2025-12-30T03:37:46 0.083 INF Command line arguments: "D:\DistrictZeroMain\7 Days To Die\7DaysToDie.exe"
+2025-12-30T03:37:46 0.084 INF UserDataFolder: C:\Users\polil\AppData\Roaming/7DaysToDie
+2025-12-30T03:37:46 0.086 INF [Platform] Init
+2025-12-30T03:37:46 0.124 INF [Platform] Using native platform: Steam
+2025-12-30T03:37:46 0.126 INF [Platform] Using cross platform: EOS
+2025-12-30T03:37:46 0.127 INF [Platform] Using server platform: Steam
+2025-12-30T03:37:46 0.127 INF [Platform] Using server platform: XBL
+2025-12-30T03:37:46 0.127 INF [Platform] Using server platform: PSN
+2025-12-30T03:37:46 0.128 INF [Platform] Using server platform: LAN
+2025-12-30T03:37:46 0.143 INF Starting PlayerInputManager...
+2025-12-30T03:37:46 0.145 INF InControl (version 1.8.9 build 9376, native module = True, XInput = True)
+2025-12-30T03:37:46 0.148 INF InControl (version 1.8.9 build 9376)
+2025-12-30T03:37:46 0.153 INF InControl Native (version 1.0.6)
+2025-12-30T03:37:46 0.236 INF [InControl] NativeInputDeviceManager enabled.
+2025-12-30T03:37:46 0.254 INF [Platform] Initializing Steam
+2025-12-30T03:37:46 0.369 INF [Steamworks.NET] SteamAPI_Init() ok
+2025-12-30T03:37:46 0.370 INF [Steamworks.NET] Registering auth callbacks
+2025-12-30T03:37:46 0.372 INF Not running in Big Picture Mode, no on-screen keyboard available
+2025-12-30T03:37:46 0.373 INF [Platform] Initializing EOS
+2025-12-30T03:37:46 0.394 INF [EOS] Initialize: Success
+2025-12-30T03:37:46 0.416 INF [EOS-Voice] Successfully initialized.
+2025-12-30T03:37:46 0.417 INF [EOS-ACC] Not started with EAC, anticheat disabled
+2025-12-30T03:37:46 0.417 INF [EAC] AntiCheatServerP2P initialized with null interface
+2025-12-30T03:37:46 0.418 INF [Platform] Initializing XBL
+2025-12-30T03:37:46 0.419 INF [Platform] Initializing PSN
+2025-12-30T03:37:46 0.420 INF [Platform] Initializing LAN
+2025-12-30T03:37:46 0.422 INF [SaveDataUtils] InitStatic Begin
+2025-12-30T03:37:46 0.424 INF [SaveDataUtils] SdPlayerPrefs -> Unity
+2025-12-30T03:37:46 0.424 INF [SaveDataUtils] InitStatic Complete
+2025-12-30T03:37:46 0.434 INF Attached native device with handle 1:
+Name: XInput Controller
+Driver Type: XInput
+Location ID: XInput::1
+Serial Number: 
+Vendor ID: 0xffff
+Product ID: 0x0
+Version Number: 0x1
+Buttons: 14
+Analogs: 6
+
+2025-12-30T03:37:46 0.483 INF Last played version: V 2.5
+2025-12-30T03:37:47 0.694 INF Localization language from platform: english
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+[PhysX] Initialized MultithreadedTaskDispatcher with 28 workers.
+UnloadTime: 1.396000 ms
+2025-12-30T03:37:47 0.715 INF Texture quality is set to 0
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 6253.
+Total: 8.957000 ms (FindLiveObjects: 0.249000 ms CreateObjectMapping: 0.117300 ms MarkObjects: 8.532900 ms  DeleteObjects: 0.057300 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+[PhysX] Initialized MultithreadedTaskDispatcher with 28 workers.
+UnloadTime: 1.261100 ms
+2025-12-30T03:37:54 8.253 INF Awake IsFocused: True
+2025-12-30T03:37:54 8.254 INF Awake
+2025-12-30T03:37:54 8.418 INF Occlusion: Awake
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 6577.
+Total: 6.619900 ms (FindLiveObjects: 0.195800 ms CreateObjectMapping: 0.098200 ms MarkObjects: 6.301400 ms  DeleteObjects: 0.024100 ms)
+
+2025-12-30T03:37:54 8.457 INF ApplyAllOptions streaming budget 7161.3 MB
+2025-12-30T03:37:54 8.459 INF ApplyAllOptions current screen 2560 x 1600, 240.014297385621hz, window 2560 x 1600, mode FullScreenWindow
+2025-12-30T03:37:54 8.460 INF Texture quality is set to 0
+2025-12-30T03:37:54 8.460 INF ApplyTextureFilter 3, AF Enable
+2025-12-30T03:37:54 8.461 INF ApplyTerrainOptions 2
+2025-12-30T03:37:55 8.570 INF [MODS] Start loading from: 'C:\Users\polil\AppData\Roaming/7DaysToDie/Mods'
+2025-12-30T03:37:55 8.571 INF [MODS]   Trying to load from folder: '0_TFP_Harmony'
+2025-12-30T03:37:55 8.581 INF [MODS]     Loaded assembly 0Harmony (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\0Harmony.dll)
+2025-12-30T03:37:55 8.582 INF [MODS]     Loaded assembly Mono.Cecil (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\Mono.Cecil.dll)
+2025-12-30T03:37:55 8.583 INF [MODS]     Loaded assembly Mono.Cecil.Mdb (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\Mono.Cecil.Mdb.dll)
+2025-12-30T03:37:55 8.584 INF [MODS]     Loaded assembly Mono.Cecil.Pdb (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\Mono.Cecil.Pdb.dll)
+2025-12-30T03:37:55 8.585 INF [MODS]     Loaded assembly Mono.Cecil.Rocks (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\Mono.Cecil.Rocks.dll)
+2025-12-30T03:37:55 8.585 INF [MODS]     Loaded assembly MonoMod.Backports (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.Backports.dll)
+2025-12-30T03:37:55 8.586 INF [MODS]     Loaded assembly MonoMod.Core (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.Core.dll)
+2025-12-30T03:37:55 8.587 INF [MODS]     Loaded assembly MonoMod.Iced (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.Iced.dll)
+2025-12-30T03:37:55 8.588 INF [MODS]     Loaded assembly MonoMod.ILHelpers (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.ILHelpers.dll)
+2025-12-30T03:37:55 8.589 INF [MODS]     Loaded assembly MonoMod.RuntimeDetour (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.RuntimeDetour.dll)
+2025-12-30T03:37:55 8.589 INF [MODS]     Loaded assembly MonoMod.Utils (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\MonoMod.Utils.dll)
+2025-12-30T03:37:55 8.590 INF [MODS]     Loaded assembly System.ValueTuple (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\System.ValueTuple.dll)
+2025-12-30T03:37:55 8.591 INF [MODS]     Loaded assembly TfpHarmony (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\TfpHarmony.dll)
+2025-12-30T03:37:55 8.591 INF [MODS]     Loaded Mod: TFP_Harmony (1.1.0.4)
+2025-12-30T03:37:55 8.592 INF [MODS] Start loading from: 'D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods'
+2025-12-30T03:37:55 8.593 INF [MODS]   Trying to load from folder: '0_TFP_Harmony'
+2025-12-30T03:37:55 8.593 WRN [MODS]     Mod with same name (TFP_Harmony) already loaded, ignoring
+2025-12-30T03:37:55 8.593 INF [MODS]   Trying to load from folder: '0-CustomParticleLoader'
+2025-12-30T03:37:55 8.594 INF [MODS]     Loaded assembly CustomParticleLoader (in D:\DistrictZeroMain\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll)
+2025-12-30T03:37:55 8.594 INF [MODS]     Loaded Mod: CustomParticleLoader (1.6.0)
+2025-12-30T03:37:55 8.595 INF [MODS]   Trying to load from folder: '7daysC'
+2025-12-30T03:37:55 8.595 WRN [MODS]     Folder 7daysC does not contain a ModInfo.xml, ignoring
+2025-12-30T03:37:55 8.595 INF [MODS]   Trying to load from folder: 'District Zero'
+2025-12-30T03:37:55 8.596 INF [MODS]     Loaded assembly DZCore (in D:\DistrictZeroMain\7 Days To Die\Mods\District Zero\DZCore.dll)
+2025-12-30T03:37:55 8.597 INF [MODS]     Loaded Mod: District_Zero (2.5.1)
+2025-12-30T03:37:55 8.597 INF [MODS]   Trying to load from folder: 'DZCore'
+2025-12-30T03:37:55 8.597 WRN [MODS]     Folder DZCore does not contain a ModInfo.xml, ignoring
+2025-12-30T03:37:55 8.597 INF [MODS]   Trying to load from folder: 'MPLogue_Prefabs_7D2D_v2_0_1'
+2025-12-30T03:37:55 8.598 INF [MODS]     Loaded Mod: MPLogue_Prefabs_7D2D_V2_0_1 (2.0.1)
+2025-12-30T03:37:55 8.598 INF [MODS]   Trying to load from folder: 'TianYiSdtdLiveReloader'
+2025-12-30T03:37:55 8.599 INF [MODS]     Loaded assembly SdtdLiveReloader (in D:\DistrictZeroMain\7 Days To Die\Mods\TianYiSdtdLiveReloader\SdtdLiveReloader.dll)
+2025-12-30T03:37:55 8.599 INF [MODS]     Loaded Mod: SdtdLiveReloader (1.0)
+2025-12-30T03:37:55 8.599 INF [MODS]   Trying to load from folder: 'ZZZ_CleanWasteland'
+2025-12-30T03:37:55 8.600 INF [MODS]     Loaded Mod: ZZZ_CleanWasteland (1.0.2)
+2025-12-30T03:37:55 8.600 INF [MODS] Initializing mod code
+2025-12-30T03:37:55 8.600 INF [MODS]   Initializing mod TFP_Harmony
+2025-12-30T03:37:55 8.609 INF [MODS]     Found ModAPI in assembly TfpHarmony (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\TfpHarmony.dll), creating instance
+2025-12-30T03:37:55 8.610 INF [MODS]       [Harmony] Init done
+Fallback handler could not load library D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/MonoBleedingEdge/data-0000028CAD6EE0F0.dll
+2025-12-30T03:37:55 8.782 INF [MODS]     Initialized code in mod 'TFP_Harmony' in assembly TfpHarmony (in C:\Users\polil\AppData\Roaming\7DaysToDie\Mods\0_TFP_Harmony\TfpHarmony.dll)
+2025-12-30T03:37:55 8.783 INF [MODS]   Initializing mod CustomParticleLoader
+2025-12-30T03:37:55 8.783 INF [MODS]     Found ModAPI in assembly CustomParticleLoader (in D:\DistrictZeroMain\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll), creating instance
+2025-12-30T03:37:55 8.784 INF  Loading Patch: CustomParticleEffectLoaderInit
+2025-12-30T03:37:55 9.020 INF [MODS]     Initialized code in mod 'CustomParticleLoader' in assembly CustomParticleLoader (in D:\DistrictZeroMain\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll)
+2025-12-30T03:37:55 9.020 INF [MODS]   Initializing mod District_Zero
+2025-12-30T03:37:55 9.021 INF [MODS]     Found ModAPI in assembly DZCore (in D:\DistrictZeroMain\7 Days To Die\Mods\District Zero\DZCore.dll), creating instance
+2025-12-30T03:37:55 9.374 INF [MODS]     Initialized code in mod 'District_Zero' in assembly DZCore (in D:\DistrictZeroMain\7 Days To Die\Mods\District Zero\DZCore.dll)
+2025-12-30T03:37:55 9.374 INF [MODS]   Initializing mod SdtdLiveReloader
+2025-12-30T03:37:55 9.374 INF [MODS]     Found ModAPI in assembly SdtdLiveReloader (in D:\DistrictZeroMain\7 Days To Die\Mods\TianYiSdtdLiveReloader\SdtdLiveReloader.dll), creating instance
+2025-12-30T03:37:55 9.375 INF [MODS]     Initialized code in mod 'SdtdLiveReloader' in assembly SdtdLiveReloader (in D:\DistrictZeroMain\7 Days To Die\Mods\TianYiSdtdLiveReloader\SdtdLiveReloader.dll)
+2025-12-30T03:37:55 9.375 INF [MODS] Loading done
+2025-12-30T03:37:56 9.552 INF UIAtlas ItemIconAtlas: Pack took 77954 us
+2025-12-30T03:37:56 9.579 INF UIAtlas UIAtlas: Pack took 12051 us
+2025-12-30T03:37:56 9.580 INF [MODS] Loading localization from mod: District_Zero
+2025-12-30T03:37:56 9.582 INF [MODS] Loading localization from mod: MPLogue_Prefabs_7D2D_V2_0_1
+2025-12-30T03:37:56 9.591 INF Loading permissions file at 'C:\Users\polil\AppData\Roaming/7DaysToDie\Saves/serveradmin.xml'
+2025-12-30T03:37:56 9.600 WRN Ignoring unknown section in permissions file: apitokens
+2025-12-30T03:37:56 9.601 WRN Ignoring unknown section in permissions file: webmodules
+2025-12-30T03:37:56 9.601 WRN Ignoring unknown section in permissions file: webusers
+2025-12-30T03:37:56 9.601 INF Loading permissions file done.
+2025-12-30T03:37:56 9.613 INF Creating TransformDebug GameObject
+2025-12-30T03:37:56 9.633 INF GameSense server not found (no props file), disabling
+2025-12-30T03:37:56 9.671 INF [Discord] Loaded settings with DiscordDisabled=False
+2025-12-30T03:37:56 9.681 INF [Discord] Initializing, version 1.4.9649, # 763870b3777c80fd978f7ba35bb7bc0178c55098
+2025-12-30T03:37:56 9.719 INF [Discord] Registering game for Discord invites: Success
+2025-12-30T03:37:56 9.728 INF [Discord] Initialized
+2025-12-30T03:37:56 9.734 INF [PartyQuests] Initialized
+2025-12-30T03:37:56 9.738 INF Awake done in 1483 ms
+2025-12-30T03:37:56 9.813 INF [XUi] Instantiating XUi from default prefab.
+2025-12-30T03:37:56 9.818 INF [XUi] XUi instantiation completed in 4 ms
+2025-12-30T03:37:56 10.131 WRN [Discord][RTC][Log] Will not log any `WebRTC.Audio.Apm.AppliedInputVolume.*` histogram stats. (input_volume_stats_reporter.cc:98)
+2025-12-30T03:37:56 10.132 WRN [Discord][RTC][Log] Will not log any `WebRTC.Audio.Apm.RecommendedInputVolume.*` histogram stats. (input_volume_stats_reporter.cc:98)
+2025-12-30T03:37:56 10.141 INF [XUi] Loading XUi asynchronously
+2025-12-30T03:37:56 10.153 INF Updated culture for display texts
+2025-12-30T03:37:56 10.218 WRN [Discord][RTC][Log] AudioDeviceWindowsCore::~AudioDeviceWindowsCore() the Avrt DLL module is now unloaded (audio_device_core_win.cc:603)
+2025-12-30T03:37:56 10.317 INF [EOS] Read cached (NewsFeatured.xml) completed: 1624 bytes
+2025-12-30T03:37:56 10.327 INF [EOS] Read cached (News.xml) completed: 9788 bytes
+2025-12-30T03:37:56 10.341 INF Reloading serveradmin.xml
+2025-12-30T03:37:56 10.341 INF Loading permissions file at 'C:\Users\polil\AppData\Roaming/7DaysToDie\Saves/serveradmin.xml'
+2025-12-30T03:37:56 10.342 INF Permissions file unchanged, skipping reloading
+2025-12-30T03:37:57 10.656 WRN [Discord][RTC][Log] AudioDeviceWindowsCore::~AudioDeviceWindowsCore() the Avrt DLL module is now unloaded (audio_device_core_win.cc:603)
+2025-12-30T03:37:57 10.656 WRN [Discord][RTC][Log] Will not log any `WebRTC.Audio.Apm.AppliedInputVolume.*` histogram stats. (input_volume_stats_reporter.cc:98)
+2025-12-30T03:37:57 10.657 WRN [Discord][RTC][Log] Will not log any `WebRTC.Audio.Apm.RecommendedInputVolume.*` histogram stats. (input_volume_stats_reporter.cc:98)
+2025-12-30T03:37:57 10.698 INF [Discord] Current output device: default // default (Headphones (Realtek(R) Audio)) // True
+2025-12-30T03:37:57 10.699 INF [Discord] Current input device: default // default (Microphone Array (Intel® Smart Sound Technology for Digital Microphones)) // True
+2025-12-30T03:37:57 10.699 INF [Discord] Current output device: default // default (Headphones (Realtek(R) Audio)) // True
+2025-12-30T03:37:57 10.699 INF [Discord] Current input device: default // default (Microphone Array (Intel® Smart Sound Technology for Digital Microphones)) // True
+2025-12-30T03:37:57 10.854 INF [XUi] Parsing all window groups completed in 608 ms total.
+Couldn't create a Convex Mesh from source mesh "hull_forklift_tire" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+2025-12-30T03:37:57 11.040 WRN World '11-28b' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:37:57 11.041 WRN World '12-12C' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:37:57 11.041 WRN World '12-13C' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:37:57 11.042 WRN World '12-20B' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:37:57 11.042 WRN World 'ASYLUM-W-CAVES12-24' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:37:57 11.044 WRN World 'OfficialAsylumMap' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:37:57 11.044 WRN World 'OfficialAsylumMapDONEBUTNOCAVES' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:37:57 11.369 INF [EOS] Read cached (news_featured_2025_2.5_stable.jpg) completed: 142407 bytes
+2025-12-30T03:37:57 11.390 INF [EOS] Read cached (news_featured_bm_pricedown.jpg) completed: 788212 bytes
+2025-12-30T03:37:57 11.415 INF [EOS] Read cached (news_featured_ytz2.1.jpg) completed: 123752 bytes
+2025-12-30T03:37:57 11.434 INF [EOS] Read cached (news_featured_tfpmerch.jpg) completed: 78916 bytes
+2025-12-30T03:37:57 11.449 INF [EOS] Read cached (news_featured_soundtrack.jpg) completed: 235045 bytes
+2025-12-30T03:37:57 11.477 INF [EOS] Read cached (news_game_2025_2.5_stable.jpg) completed: 102102 bytes
+2025-12-30T03:37:57 11.488 INF [EOS] Read cached (news_game_2.4_stable.jpg) completed: 87456 bytes
+2025-12-30T03:37:57 11.499 INF [EOS] Read cached (news_game_2.3_stable.jpg) completed: 72704 bytes
+2025-12-30T03:37:57 11.510 INF [EOS] Read cached (news_game_2.2_stable.jpg) completed: 96101 bytes
+2025-12-30T03:37:58 11.522 INF [EOS] Read cached (news_game_2.1_stable.jpg) completed: 95868 bytes
+2025-12-30T03:37:58 11.534 INF [EOS] Read cached (news_game_06_2.0_stable.jpg) completed: 96807 bytes
+2025-12-30T03:37:58 11.544 INF [EOS] Read cached (game_news_06_EXP.jpg) completed: 110240 bytes
+2025-12-30T03:37:59 12.911 INF Loaded default EULA
+2025-12-30T03:37:59 12.961 INF [XUi] Initialized all window groups completed in 1972 ms total.
+Couldn't create a Convex Mesh from source mesh "Head" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+2025-12-30T03:38:00 13.582 INF LoadTextureArraysForQuality quality -1 to 0, reload False
+2025-12-30T03:38:00 14.203 INF LoadTextureArraysForQuality took 0.619
+2025-12-30T03:38:00 14.230 INF Loaded (local): events in 0.01
+2025-12-30T03:38:00 14.266 INF Loaded (local): rwgmixer in 0.02
+2025-12-30T03:38:00 14.308 INF Loaded (local): archetypes in 0.02
+2025-12-30T03:38:00 14.337 INF Loaded (local): loadingscreen in 0.01
+2025-12-30T03:38:00 14.363 INF Added 1336 subtitle data entries and 3 speaker colors
+2025-12-30T03:38:00 14.367 INF Loaded (local): subtitles in 0.01
+2025-12-30T03:38:00 14.390 INF Loaded (local): videos in 0.01
+2025-12-30T03:38:00 14.390 INF WorldStaticData.Init() needed 4.000s
+2025-12-30T03:38:00 14.396 INF [Steamworks.NET] Login ok.
+2025-12-30T03:38:00 14.398 INF [EOS] Login
+2025-12-30T03:38:01 14.707 INF AchievementManager: Received stats and achievements from Steam
+2025-12-30T03:38:02 15.527 INF [EOS] Login succeeded, PUID: 0002b9a01f4f438d9d590dc75fab7d41
+2025-12-30T03:38:02 15.528 INF [EOS] Getting native user for 0002b9a01f4f438d9d590dc75fab7d41
+2025-12-30T03:38:02 15.529 INF [EOS] CopyIdToken result: Success
+2025-12-30T03:38:02 15.703 INF [BACKTRACE] Attempting to get User ID from platform: EOS
+2025-12-30T03:38:02 15.706 INF [EOS] Created RFS Request: NewsFeatured.xml
+2025-12-30T03:38:02 15.707 INF [EOS] Created RFS Request: News.xml
+2025-12-30T03:38:02 15.711 INF [EOS] Created RFS Request: DLCConfiguration
+2025-12-30T03:38:02 15.711 INF [EOS] Created RFS Request: eula_english
+2025-12-30T03:38:02 15.712 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False)
+2025-12-30T03:38:02 15.715 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False) Fetching Title Storage Overrides...
+2025-12-30T03:38:02 15.715 INF [EOS] Created RFS Request: PlatformOverrides
+2025-12-30T03:38:02 15.718 INF [EOS] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False)
+2025-12-30T03:38:02 15.883 INF [EOS] Read (NewsFeatured.xml) completed: Success, received 1624 bytes
+2025-12-30T03:38:02 15.885 INF [EOS] Created RFS Request: news_featured_2025_2.5_stable.jpg
+2025-12-30T03:38:02 15.885 INF [EOS] Created RFS Request: news_featured_bm_pricedown.jpg
+2025-12-30T03:38:02 15.885 INF [EOS] Created RFS Request: news_featured_ytz2.1.jpg
+2025-12-30T03:38:02 16.109 INF [EOS] Read (BlockedPlayerList) completed: Success, received 8 bytes
+2025-12-30T03:38:02 16.119 INF [EOS] Read (news_featured_2025_2.5_stable.jpg) completed: Success, received 142407 bytes
+2025-12-30T03:38:02 16.119 INF [EOS] Created RFS Request: news_featured_tfpmerch.jpg
+2025-12-30T03:38:02 16.147 INF [EOS] Read (News.xml) completed: Success, received 9788 bytes
+2025-12-30T03:38:02 16.148 INF [EOS] Created RFS Request: news_game_2025_2.5_stable.jpg
+2025-12-30T03:38:02 16.149 INF [EOS] Created RFS Request: news_game_2.4_stable.jpg
+2025-12-30T03:38:02 16.149 INF [EOS] Created RFS Request: news_game_2.3_stable.jpg
+2025-12-30T03:38:02 16.169 INF [EOS] Read (DLCConfiguration) completed: Success, received 3232 bytes
+2025-12-30T03:38:02 16.171 INF [DLCTitleStorageManager] Successfully retrieved DLC configuration.
+2025-12-30T03:38:02 16.194 INF [EOS] Read (eula_english) completed: Success, received 34433 bytes
+2025-12-30T03:38:02 16.195 INF [EOS] Created RFS Request: backtraceconfig.xml
+2025-12-30T03:38:02 16.244 INF [EOS] Read (PlatformOverrides) completed: Success, received 532 bytes
+2025-12-30T03:38:02 16.246 INF [TitleStorageOverridesManager] Successfully retrieved overrides.
+2025-12-30T03:38:02 16.246 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False) Fetched Title Storage Overrides!
+2025-12-30T03:38:02 16.318 INF [EOS] Read (news_featured_ytz2.1.jpg) completed: Success, received 123752 bytes
+2025-12-30T03:38:02 16.319 INF [EOS] Created RFS Request: news_featured_soundtrack.jpg
+2025-12-30T03:38:02 16.419 INF [EOS] Read (news_featured_tfpmerch.jpg) completed: Success, received 78916 bytes
+2025-12-30T03:38:02 16.444 INF [EOS] Read (news_game_2025_2.5_stable.jpg) completed: Success, received 102102 bytes
+2025-12-30T03:38:02 16.445 INF [EOS] Created RFS Request: news_game_2.2_stable.jpg
+2025-12-30T03:38:02 16.474 INF [EOS] Read (news_game_2.4_stable.jpg) completed: Success, received 87456 bytes
+2025-12-30T03:38:02 16.475 INF [EOS] Created RFS Request: news_game_2.1_stable.jpg
+2025-12-30T03:38:02 16.497 INF [EOS] Read (news_game_2.3_stable.jpg) completed: Success, received 72704 bytes
+2025-12-30T03:38:02 16.497 INF [EOS] Created RFS Request: news_game_06_2.0_stable.jpg
+2025-12-30T03:38:03 16.517 INF [EOS] Read (backtraceconfig.xml) completed: Success, received 2424 bytes
+2025-12-30T03:38:03 16.519 INF [BACKTRACE] Bug reporting Enabled with save uploading: Disabled
+2025-12-30T03:38:03 16.519 INF [BACKTRACE] Save Attaching Feature: Disabled
+2025-12-30T03:38:03 16.520 INF [BACKTRACE] Entire World Attaching Feature: Disabled
+2025-12-30T03:38:03 16.520 INF [BACKTRACE] Bug reporting Disabled with save uploading: Disabled
+2025-12-30T03:38:03 16.520 INF Backtrace Configuration refreshed from XML: Enabled False
+2025-12-30T03:38:03 16.520 INF [BACKTRACE] Bug reporting: Disabled
+2025-12-30T03:38:03 16.520 INF [BACKTRACE] Bug reporting attach save feature: Disabled
+2025-12-30T03:38:03 16.521 INF [BACKTRACE] Bug reporting attach entire world feature: Disabled
+2025-12-30T03:38:03 16.679 INF [TitleStorageOverridesManager] Using cached last success.
+2025-12-30T03:38:03 16.825 INF [EOS] Read (news_featured_soundtrack.jpg) completed: Success, received 235045 bytes
+2025-12-30T03:38:03 16.870 INF [EOS] Read (news_featured_bm_pricedown.jpg) completed: Success, received 788212 bytes
+2025-12-30T03:38:03 16.969 INF [EOS] Read (news_game_2.2_stable.jpg) completed: Success, received 96101 bytes
+2025-12-30T03:38:03 16.970 INF [EOS] Created RFS Request: game_news_06_EXP.jpg
+2025-12-30T03:38:03 16.990 INF [EOS] Read (news_game_2.1_stable.jpg) completed: Success, received 95868 bytes
+2025-12-30T03:38:03 17.010 INF [EOS] Read (news_game_06_2.0_stable.jpg) completed: Success, received 96807 bytes
+2025-12-30T03:38:03 17.192 INF [EOS] Read (game_news_06_EXP.jpg) completed: Success, received 110240 bytes
+2025-12-30T03:38:09 23.108 WRN World '11-28b' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:38:09 23.112 WRN World '12-12C' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:38:09 23.113 WRN World '12-13C' has an invalid GameVersion value: V 2.4 (b7)
+2025-12-30T03:38:09 23.113 WRN World '12-20B' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:38:09 23.113 WRN World 'ASYLUM-W-CAVES12-24' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:38:09 23.118 WRN World 'OfficialAsylumMap' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:38:09 23.118 WRN World 'OfficialAsylumMapDONEBUTNOCAVES' has an invalid GameVersion value: V 2.5 (b23)
+2025-12-30T03:38:13 26.601 WRN Could not find selectable element btnStart in WindowGroup saveSpaceNeeded
+2025-12-30T03:38:13 26.602 INF [SaveSpaceNeeded] Auto-Confirming.
+2025-12-30T03:38:13 26.607 INF NET: Starting offline server.
+2025-12-30T03:38:13 26.608 INF [PlatformApplication] restart required = False
+2025-12-30T03:38:13 26.608 INF StartGame
+2025-12-30T03:38:13 26.609 INF [Discord] Logging in with existing access token
+2025-12-30T03:38:13 26.609 INF NetPackageManager Init
+2025-12-30T03:38:13 26.642 INF [XUi] Instantiating XUi from default prefab.
+2025-12-30T03:38:13 26.654 INF [XUi] XUi instantiation completed in 11 ms
+2025-12-30T03:38:13 26.661 INF Persistent GamePrefs saved
+GamePref.AdminFileName = serveradmin.xml
+GamePref.AirDropFrequency = 24
+GamePref.AirDropMarker = True
+GamePref.AISmellMode = 3
+GamePref.AllowSpawnNearBackpack = False
+GamePref.AllowSpawnNearFriend = 2
+GamePref.AutopilotMode = 0
+GamePref.BedrollDeadZoneSize = 15
+GamePref.BedrollExpiryTime = 45
+GamePref.BiomeProgression = True
+GamePref.BlockDamageAI = 100
+GamePref.BlockDamageAIBM = 100
+GamePref.BlockDamagePlayer = 300
+GamePref.BloodMoonEnemyCount = 64
+GamePref.BloodMoonFrequency = 7
+GamePref.BloodMoonRange = 0
+GamePref.BloodMoonWarning = 8
+GamePref.BuildCreate = False
+GamePref.CameraRestrictionMode = 0
+GamePref.ConnectToServerIP =  103.170.155.82
+GamePref.ConnectToServerPort = 26900
+GamePref.CreateLevelDim = 4096
+GamePref.CreateLevelName = My Level
+GamePref.CreativeMenuEnabled = False
+GamePref.DayCount = 3
+GamePref.DayLightLength = 18
+GamePref.DayNightLength = 120
+GamePref.DeathPenalty = 0
+GamePref.DebugMenuEnabled = False
+GamePref.DebugMenuShowTasks = False
+GamePref.DebugPanelsEnabled = ,Ply,Ge,Sp,Fo,Pr,
+GamePref.DebugStopEnemiesMoving = False
+GamePref.DropOnDeath = 3
+GamePref.DropOnQuit = 0
+GamePref.DynamicMeshDistance = 1000
+GamePref.DynamicMeshEnabled = True
+GamePref.DynamicMeshLandClaimBuffer = 3
+GamePref.DynamicMeshLandClaimOnly = False
+GamePref.DynamicMeshMaxItemCache = 1
+GamePref.DynamicMeshMaxRegionCache = 2
+GamePref.DynamicMeshUseImposters = True
+GamePref.DynamicSpawner = 
+GamePref.EACEnabled = False
+GamePref.EnableMapRendering = False
+GamePref.EnemyDifficulty = 0
+GamePref.EnemySpawnMode = True
+GamePref.EulaLatestVersion = 2
+GamePref.EulaVersionAccepted = 2
+GamePref.FavoriteServersList = 
+GamePref.FragLimit = 20
+GamePref.GameDifficulty = 2
+GamePref.GameGuidClient = 
+GamePref.GameMode = GameModeSurvival
+GamePref.GameName = bjgjbb
+GamePref.GameNameClient = My Game
+GamePref.GameVersion = V 2.5
+GamePref.GameWorld = Navezgane
+GamePref.HideCommandExecutionLog = 0
+GamePref.IgnoreEOSSanctions = False
+GamePref.JarRefund = 0
+GamePref.JoiningOptions = True
+GamePref.LandClaimCount = 3
+GamePref.LandClaimDeadZone = 0
+GamePref.LandClaimDecayMode = 0
+GamePref.LandClaimExpiryTime = 7
+GamePref.LandClaimOfflineDelay = 0
+GamePref.LandClaimOfflineDurabilityModifier = 4
+GamePref.LandClaimOnlineDurabilityModifier = 4
+GamePref.LandClaimSize = 71
+GamePref.Language = 
+GamePref.LanguageBrowser = 
+GamePref.LastGameResetRevision = 13
+GamePref.LastLoadedPrefab = Darth_Pentagram_Landing
+GamePref.LastLoadingTipRead = 15
+GamePref.LootAbundance = 200
+GamePref.LootRespawnDays = 5
+GamePref.LootTimer = 
+GamePref.MatchLength = 10
+GamePref.MaxChunkAge = 10
+GamePref.MaxQueuedMeshLayers = 40
+GamePref.MaxSpawnedAnimals = 50
+GamePref.MaxSpawnedZombies = 64
+GamePref.MaxUncoveredMapChunksPerPlayer = 524288
+GamePref.NoGraphicsMode = False
+GamePref.OptionsAllowController = True
+GamePref.OptionsAmbientVolumeLevel = 0.004459309
+GamePref.OptionsAudioOcclusion = False
+GamePref.OptionsAutoPartyWithFriends = True
+GamePref.OptionsBackgroundGlobalOpacity = 0.99
+GamePref.OptionsBindingsResetRevision = 1
+GamePref.OptionsChatCommunication = True
+GamePref.OptionsControllerAimAssists = True
+GamePref.OptionsControllerCursorHoverSensitivity = 0.5
+GamePref.OptionsControllerCursorSnap = True
+GamePref.OptionsControllerIconStyle = 0
+GamePref.OptionsControllerJoystickLayout = 0
+GamePref.OptionsControllerLookAcceleration = 4
+GamePref.OptionsControllerLookAxisDeadzone = 0.1
+GamePref.OptionsControllerLookInvert = False
+GamePref.OptionsControllerMoveAxisDeadzone = 0.1
+GamePref.OptionsControllerSensitivityX = 0.35
+GamePref.OptionsControllerSensitivityY = 0.25
+GamePref.OptionsControllerTriggerEffects = False
+GamePref.OptionsControllerVehicleSensitivity = 1
+GamePref.OptionsControllerVibration = True
+GamePref.OptionsControllerVibrationStrength = 2
+GamePref.OptionsControllerWeaponAiming = False
+GamePref.OptionsControllerZoomSensitivity = 0.5
+GamePref.OptionsControlsDefaultQuickAction = 0
+GamePref.OptionsControlsResetRevision = 7
+GamePref.OptionsControlsSprintLock = 1
+GamePref.OptionsCrossplay = True
+GamePref.OptionsDisableChunkLODs = False
+GamePref.OptionsDisableXmlEvents = False
+GamePref.OptionsDynamicMusicDailyTime = 0.45
+GamePref.OptionsDynamicMusicEnabled = True
+GamePref.OptionsFilterProfanity = False
+GamePref.OptionsForegroundGlobalOpacity = 1
+GamePref.OptionsGfx3PCameraMode = 0
+GamePref.OptionsGfxAA = 3
+GamePref.OptionsGfxAASharpness = 0.5
+GamePref.OptionsGfxBloom = True
+GamePref.OptionsGfxBrightness = 0.5520208
+GamePref.OptionsGfxCameraDistance3P = 0.25
+GamePref.OptionsGfxDefaultFirstPersonCamera = True
+GamePref.OptionsGfxDOF = False
+GamePref.OptionsGfxDynamicMinFPS = 20
+GamePref.OptionsGfxDynamicMode = 0
+GamePref.OptionsGfxDynamicScale = 1
+GamePref.OptionsGfxFOV = 85
+GamePref.OptionsGfxFOV3P = 67
+GamePref.OptionsGfxFSRPreset = 2
+GamePref.OptionsGfxGrassDistance = 2
+GamePref.OptionsGfxLODDistance = 0.5
+GamePref.OptionsGfxMotionBlur = 1
+GamePref.OptionsGfxMotionBlurEnabled = True
+GamePref.OptionsGfxObjQuality = 2
+GamePref.OptionsGfxOcclusion = True
+GamePref.OptionsGfxQualityPreset = 5
+GamePref.OptionsGfxReflectQuality = 2
+GamePref.OptionsGfxReflectShadows = True
+GamePref.OptionsGfxResetRevision = 4
+GamePref.OptionsGfxResolution = 0
+GamePref.OptionsGfxShadowDistance = 0
+GamePref.OptionsGfxShadowQuality = 1
+GamePref.OptionsGfxSSAO = True
+GamePref.OptionsGfxSSReflections = 0
+GamePref.OptionsGfxStreamMipmaps = True
+GamePref.OptionsGfxSunShafts = True
+GamePref.OptionsGfxTerrainQuality = 2
+GamePref.OptionsGfxTexFilter = 3
+GamePref.OptionsGfxTexQuality = 0
+GamePref.OptionsGfxTreeDistance = 4
+GamePref.OptionsGfxUpscalerMode = 2
+GamePref.OptionsGfxViewDistance = 7
+GamePref.OptionsGfxVsync = 1
+GamePref.OptionsGfxWaterPtlLimiter = 0.25
+GamePref.OptionsGfxWaterQuality = 1
+GamePref.OptionsHudOpacity = 1
+GamePref.OptionsHudSize = 1
+GamePref.OptionsInterfaceSensitivity = 0.75
+GamePref.OptionsIntroMovieEnabled = False
+GamePref.OptionsInvertMouse = False
+GamePref.OptionsJournalPopup = True
+GamePref.OptionsLookSensitivity = 0.5
+GamePref.OptionsMenuMusicVolumeLevel = 1
+GamePref.OptionsMicVolumeLevel = 0.75
+GamePref.OptionsMumblePositionalAudioSupport = True
+GamePref.OptionsMusicVolumeLevel = 0
+GamePref.OptionsOverallAudioVolumeLevel = 0.008918618
+GamePref.OptionsPlayChanceFrequency = 3
+GamePref.OptionsPlayChanceProbability = 0.983
+GamePref.OptionsPlayerModel = playerMale
+GamePref.OptionsPlayerModelTexture = Player/Male/Player_male
+GamePref.OptionsPOICulling = 1
+GamePref.OptionsPoiVolumesSkipDeleteConfirmation = False
+GamePref.OptionsQuestsAutoAccept = True
+GamePref.OptionsQuestsAutoShare = True
+GamePref.OptionsScreenBoundsValue = 1
+GamePref.OptionsSelectionBoxAlphaMultiplier = 0.4
+GamePref.OptionsShowCompass = True
+GamePref.OptionsShowConsoleButton = False
+GamePref.OptionsShowCrosshair = True
+GamePref.OptionsStabSpawnBlocksOnGround = True
+GamePref.OptionsSubtitlesEnabled = False
+GamePref.OptionsTempCelsius = False
+GamePref.OptionsUiCompassUseEnglishCardinalDirections = False
+GamePref.OptionsUiFpsScaling = 2
+GamePref.OptionsVehicleLookSensitivity = 0.5
+GamePref.OptionsVoiceChatEnabled = True
+GamePref.OptionsVoiceInputDevice = {a550ba70-933e-434f-8e51-aa6171e946bf}
+GamePref.OptionsVoiceOutputDevice = {0.0.0.00000000}.{523afdff-c92e-4c83-912a-0da3009357ed}
+GamePref.OptionsVoiceVolumeLevel = 2
+GamePref.OptionsWeaponAiming = False
+GamePref.OptionsZoomAccel = 0.5
+GamePref.OptionsZoomSensitivity = 0.3
+GamePref.PartySharedKillRange = 10000
+GamePref.PersistentPlayerProfiles = True
+GamePref.PlayerAutologin = False
+GamePref.PlayerKillingMode = 0
+GamePref.PlayerName = Asylum Mods
+GamePref.PlayerSafeZoneHours = 7
+GamePref.PlayerSafeZoneLevel = 5
+GamePref.PlayerToken = 
+GamePref.PlaytestBiome = 3
+GamePref.QuestProgressionDailyLimit = 8
+GamePref.RebuildMap = False
+GamePref.Region = NorthAmericaWest
+GamePref.SaveDataLimit = 205
+GamePref.SaveDataLimitType = Short
+GamePref.SelectionContextMode = 0
+GamePref.SelectionOperationMode = 0
+GamePref.ServerAdminSlots = 0
+GamePref.ServerAdminSlotsPermission = 0
+GamePref.ServerAllowCrossplay = True
+GamePref.ServerDescription = 
+GamePref.ServerDisabledNetworkProtocols = 
+GamePref.ServerEACPeerToPeer = False
+GamePref.ServerEnabled = False
+GamePref.ServerIP = 
+GamePref.ServerIsPublic = True
+GamePref.ServerLoginConfirmationText = 
+GamePref.ServerMatchmakingGroup = 
+GamePref.ServerMaxAllowedViewDistance = 12
+GamePref.ServerMaxPlayerCount = 8
+GamePref.ServerMaxWorldTransferSpeedKiBs = 512
+GamePref.ServerName = Default Server
+GamePref.ServerPort = 26900
+GamePref.ServerReservedSlots = 0
+GamePref.ServerReservedSlotsPermission = 100
+GamePref.ServerVisibility = 2
+GamePref.ServerWebsiteURL = 
+GamePref.ShowFriendPlayerOnMap = True
+GamePref.SkipSpawnButton = True
+GamePref.StormFreq = 100
+GamePref.TelnetEnabled = False
+GamePref.TelnetFailedLoginLimit = 10
+GamePref.TelnetFailedLoginsBlocktime = 10
+GamePref.TelnetPort = 25003
+GamePref.TerminalWindowEnabled = True
+GamePref.TwitchBloodMoonAllowed = True
+GamePref.TwitchServerPermission = 90
+GamePref.UNUSED_ControlPanelEnabled = False
+GamePref.UNUSED_ControlPanelPort = 8080
+GamePref.UNUSED_LastLoadedPrefabSize = 
+GamePref.UNUSED_NewGameSetDefaults = 
+GamePref.UNUSED_OptionsBloom = 
+GamePref.UNUSED_OptionsDOF = 
+GamePref.UNUSED_OptionsFieldOfViewNew = 
+GamePref.UNUSED_OptionsGamma = 
+GamePref.UNUSED_OptionsGfxGameplayResolutionHeight = 
+GamePref.UNUSED_OptionsGfxGameplayResolutionWidth = 
+GamePref.UNUSED_OptionsGfxUMATexQuality = 
+GamePref.UNUSED_OptionsMotionBlur = 
+GamePref.UNUSED_OptionsObjectBlur = 
+GamePref.UNUSED_OptionsReflectionBounces = 
+GamePref.UNUSED_OptionsReflectionCullList = 
+GamePref.UNUSED_OptionsReflectionFarClip = 
+GamePref.UNUSED_OptionsReflectionRefreshMode = 
+GamePref.UNUSED_OptionsReflectionShadowDistance = 
+GamePref.UNUSED_OptionsReflectionTimeSlicingMode = 
+GamePref.UNUSED_OptionsSSAO = 
+GamePref.UNUSED_OptionsStreamingMipmapsBudget = 
+GamePref.UNUSED_OptionsSunShafts = 
+GamePref.UNUSED_PlayerId = 
+GamePref.UNUSED_SaveGameFolder = 
+GamePref.UNUSED_UserDataFolder = 
+GamePref.WebDashboardEnabled = False
+GamePref.WebDashboardPort = 8080
+GamePref.WebDashboardUrl = 
+GamePref.WorldGenSeed = 
+GamePref.WorldGenSize = 8192
+GamePref.XPMultiplier = 300
+GamePref.ZombieBMMove = 3
+GamePref.ZombieFeralMove = 3
+GamePref.ZombieFeralSense = 0
+GamePref.ZombieMove = 0
+GamePref.ZombieMoveNight = 3
+GamePref.ZombiePlayers = True
+GameStat.AirDropFrequency = 0
+GameStat.AirDropMarker = True
+GameStat.AllowedViewDistance = 12
+GameStat.AnimalCount = 0
+GameStat.AutoParty = False
+GameStat.BedrollExpiryTime = 45
+GameStat.BiomeProgression = True
+GameStat.BlockDamagePlayer = 100
+GameStat.BloodMoonDay = 0
+GameStat.BloodMoonEnemyCount = 8
+GameStat.BloodMoonWarning = 8
+GameStat.CameraRestrictionMode = 0
+GameStat.ChunkStabilityEnabled = True
+GameStat.CurrentRoundIx = 0
+GameStat.DayLightLength = 18
+GameStat.DayLimitActive = False
+GameStat.DayLimitThisRound = 0
+GameStat.DeathPenalty = XPOnly
+GameStat.DropOnDeath = 1
+GameStat.DropOnQuit = 0
+GameStat.EnemyCount = 0
+GameStat.EnemyDifficulty = Normal
+GameStat.EnemySpawnMode = True
+GameStat.FragLimitActive = False
+GameStat.FragLimitThisRound = 0
+GameStat.GameDifficulty = 2
+GameStat.GameDifficultyBonus = 1
+GameStat.GameModeId = 0
+GameStat.GameState = 0
+GameStat.GlobalMessageToShow = 
+GameStat.IsCreativeMenuEnabled = False
+GameStat.IsFlyingEnabled = False
+GameStat.IsPlayerCollisionEnabled = True
+GameStat.IsPlayerDamageEnabled = True
+GameStat.IsResetMapOnRestart = False
+GameStat.IsSaveSupplyCrates = True
+GameStat.IsSpawnEnemies = True
+GameStat.IsSpawnNearOtherPlayer = False
+GameStat.IsTeleportEnabled = False
+GameStat.IsVersionCheckDone = False
+GameStat.JarRefund = 0
+GameStat.LandClaimCount = 5
+GameStat.LandClaimDeadZone = 30
+GameStat.LandClaimDecayMode = 0
+GameStat.LandClaimExpiryTime = 3
+GameStat.LandClaimOfflineDelay = 0
+GameStat.LandClaimOfflineDurabilityModifier = 32
+GameStat.LandClaimOnlineDurabilityModifier = 32
+GameStat.LandClaimSize = 41
+GameStat.LoadScene = 
+GameStat.LootTimer = 
+GameStat.OptionsPOICulling = 0
+GameStat.PartySharedKillRange = 100
+GameStat.PlayerKillingMode = KillStrangersOnly
+GameStat.QuestProgressionDailyLimit = 4
+GameStat.ScoreDiedMultiplier = -5
+GameStat.ScorePlayerKillMultiplier = 1
+GameStat.ScoreZombieKillMultiplier = 1
+GameStat.ShowAllPlayersOnMap = False
+GameStat.ShowFriendPlayerOnMap = True
+GameStat.ShowSpawnWindow = False
+GameStat.ShowWindow = 
+GameStat.StormFreq = 0
+GameStat.TimeLimitActive = False
+GameStat.TimeLimitThisRound = 0
+GameStat.TimeOfDayIncPerSec = 20
+GameStat.TwitchBloodMoonAllowed = True
+GameStat.UNUSED_ShowZombieCounter = 
+GameStat.XPMultiplier = 100
+GameStat.ZombieHordeMeter = False
+2025-12-30T03:38:13 26.737 INF StartAsServer
+2025-12-30T03:38:13 26.747 INF Setting for 'DayNightLength' does not match the default (server will go to the modded category): current = 120, default = 60
+2025-12-30T03:38:13 26.748 INF Setting for 'DeathPenalty' does not match the default (server will go to the modded category): current = 0, default = 1
+2025-12-30T03:38:13 26.748 INF Setting for 'DropOnDeath' does not match the default (server will go to the modded category): current = 3, default = 1
+2025-12-30T03:38:13 26.748 INF Setting for 'BloodMoonEnemyCount' does not match the default (server will go to the modded category): current = 64, default = 8
+2025-12-30T03:38:13 26.748 INF Setting for 'BlockDamagePlayer' does not match the default (server will go to the modded category): current = 300, default = 100
+2025-12-30T03:38:13 26.748 INF Setting for 'LootRespawnDays' does not match the default (server will go to the modded category): current = 5, default = 7
+2025-12-30T03:38:13 26.748 INF Setting for 'LootAbundance' does not match the default (server will go to the modded category): current = 200, default = 100
+2025-12-30T03:38:13 26.748 INF Setting for 'AirDropFrequency' does not match the default (server will go to the modded category): current = 24, default = 72
+2025-12-30T03:38:13 26.749 INF Setting for 'XPMultiplier' does not match the default (server will go to the modded category): current = 300, default = 100
+2025-12-30T03:38:13 26.793 WRN save folder does not exist
+2025-12-30T03:38:13 26.831 INF Loaded (local): events in 0.01
+2025-12-30T03:38:13 27.005 INF Set Microsplat diffuse: MicroSplatConfig_diff_tarray (UnityEngine.Texture2DArray)
+2025-12-30T03:38:13 27.005 INF Set Microsplat normals: MicroSplatConfig_normal_tarray (UnityEngine.Texture2DArray)
+2025-12-30T03:38:13 27.005 INF Set Microsplat smooth:  MicroSplatConfig_smoothAO_tarray (UnityEngine.Texture2DArray)
+2025-12-30T03:38:13 27.012 INF Loaded (local): materials in 0.16
+2025-12-30T03:38:13 27.038 INF Loaded (local): physicsbodies in 0.01
+2025-12-30T03:38:13 27.061 INF Loaded (local): painting in 0.01
+2025-12-30T03:38:13 27.134 INF Loaded (local): shapes in 0.01
+2025-12-30T03:38:15 28.953 INF [Discord] Saving settings with DiscordDisabled=False
+2025-12-30T03:38:15 28.970 INF [Discord] Logged in
+2025-12-30T03:38:15 28.972 WRN [Discord][Log] RPC manager reset: RPC manager connecting with new client ID Status:0 (rpc_manager.cpp:130)
+2025-12-30T03:38:30 43.851 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$mineEMP
+2025-12-30T03:38:30 43.853 INF Hashed index:49745
+2025-12-30T03:38:30 43.854 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+Unloading 3 Unused Serialized files (Serialized files now loaded: 122)
+2025-12-30T03:38:31 45.109 INF Block IDs with mapping
+2025-12-30T03:38:31 45.117 INF Block IDs total 28162, terr 43, last 28370
+2025-12-30T03:38:31 45.128 INF Loaded (local): blocks in 15.75
+Unloading 38514 unused Assets to reduce memory usage. Loaded Objects now: 293767.
+Total: 258.093500 ms (FindLiveObjects: 14.798700 ms CreateObjectMapping: 7.410200 ms MarkObjects: 220.473900 ms  DeleteObjects: 15.410100 ms)
+
+2025-12-30T03:38:32 45.659 INF Loaded (local): progression in 0.08
+2025-12-30T03:38:32 45.859 INF Loaded (local): buffs in 0.14
+2025-12-30T03:38:32 45.903 INF Loaded (local): misc in 0.02
+2025-12-30T03:38:33 46.728 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_Leaves
+2025-12-30T03:38:33 46.729 INF Hashed index:52616
+2025-12-30T03:38:33 46.729 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 46.736 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_Fireball
+2025-12-30T03:38:33 46.736 INF Hashed index:1776
+2025-12-30T03:38:33 46.736 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 46.738 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$ammoGrenadePlasmaCell
+2025-12-30T03:38:33 46.739 INF Hashed index:54075
+2025-12-30T03:38:33 46.739 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$ammoRocketPlasmaCell
+2025-12-30T03:38:33 46.740 INF Hashed index:65385
+2025-12-30T03:38:33 46.740 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$thrownGrenadeEMP
+2025-12-30T03:38:33 46.740 INF Hashed index:1153
+2025-12-30T03:38:33 46.741 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?BlasterImpact$ammoProjectileLaser
+2025-12-30T03:38:33 46.741 INF Hashed index:55748
+2025-12-30T03:38:33 46.741 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 46.741 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?PlasmaImpact$ammoProjectilePlasma
+2025-12-30T03:38:33 46.742 INF Hashed index:26905
+2025-12-30T03:38:33 46.742 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 46.743 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_BulletRed$ammoProjectileLaserBullet
+2025-12-30T03:38:33 46.743 INF Hashed index:53872
+2025-12-30T03:38:33 46.743 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 46.760 INF Loaded (local): items in 0.36
+2025-12-30T03:38:33 46.829 INF Item IDs with mapping
+2025-12-30T03:38:33 46.830 INF ItemIDs from Mapping
+2025-12-30T03:38:33 46.833 INF ItemClass assignLeftOverItems 67108 of 81920
+2025-12-30T03:38:33 46.883 INF Loaded (local): item_modifiers in 0.09
+2025-12-30T03:38:33 47.101 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?EnergyExplosion$robotDroneNano
+2025-12-30T03:38:33 47.102 INF Hashed index:28066
+2025-12-30T03:38:33 47.102 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 47.107 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?EnergyExplosion$robotDroneNano
+2025-12-30T03:38:33 47.107 INF Hashed index:28066
+2025-12-30T03:38:33 47.109 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionSmallSparks$robotDroneRacing
+2025-12-30T03:38:33 47.110 INF Hashed index:60804
+2025-12-30T03:38:33 47.110 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 47.115 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionSmallSparks$robotDronePolice
+2025-12-30T03:38:33 47.115 INF Hashed index:65157
+2025-12-30T03:38:33 47.116 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionLargeSparks$robotDroneSecurity
+2025-12-30T03:38:33 47.116 INF Hashed index:55591
+2025-12-30T03:38:33 47.116 INF Bundle path: D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/../Mods\District Zero/Resources/Particles.unity3d
+2025-12-30T03:38:33 47.131 INF Original path:#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionLargeSparks$robotDroneMothership
+2025-12-30T03:38:33 47.131 INF Hashed index:41123
+2025-12-30T03:38:33 47.151 INF Loaded (local): entityclasses in 0.16
+2025-12-30T03:38:33 47.194 INF Loaded (local): qualityinfo in 0.02
+2025-12-30T03:38:34 47.536 INF Loaded (local): sounds in 0.05
+2025-12-30T03:38:34 47.638 INF Loaded (local): recipes in 0.04
+2025-12-30T03:38:34 47.693 INF Loaded (local): blockplaceholders in 0.02
+2025-12-30T03:38:34 47.894 INF Loaded (local): loot in 0.04
+2025-12-30T03:38:34 48.100 INF Loaded (local): entitygroups in 0.03
+2025-12-30T03:38:34 48.148 INF Loaded (local): utilityai in 0.02
+2025-12-30T03:38:34 48.215 INF Loaded (local): vehicles in 0.02
+2025-12-30T03:38:34 48.266 INF Loaded (local): rwgmixer in 0.02
+2025-12-30T03:38:34 48.315 INF Loaded (local): weathersurvival in 0.02
+2025-12-30T03:38:34 48.365 INF Loaded (local): archetypes in 0.02
+2025-12-30T03:38:34 48.420 INF Loaded (local): challenges in 0.02
+2025-12-30T03:38:34 48.506 INF Loaded (local): quests in 0.05
+2025-12-30T03:38:35 48.566 INF Loaded (local): traders in 0.02
+2025-12-30T03:38:35 48.600 INF Loaded (local): npc in 0.02
+2025-12-30T03:38:35 48.628 INF Loaded (local): dialogs in 0.01
+2025-12-30T03:38:35 48.663 INF Loaded (local): ui_display in 0.02
+2025-12-30T03:38:35 48.695 INF Loaded (local): nav_objects in 0.02
+2025-12-30T03:38:35 48.745 INF Loaded (local): gamestages in 0.01
+2025-12-30T03:38:35 48.972 INF Loaded (local): gameevents in 0.19
+2025-12-30T03:38:35 49.031 INF Loaded (local): twitch in 0.03
+2025-12-30T03:38:35 49.059 INF Loaded (local): twitch_events in 0.01
+2025-12-30T03:38:35 49.099 INF Loaded (local): dmscontent in 0.03
+2025-12-30T03:38:35 49.123 INF Loaded (local): XUi_Common/styles in 0.01
+2025-12-30T03:38:35 49.150 INF Loaded (local): XUi_Common/controls in 0.01
+2025-12-30T03:38:35 49.173 INF Loaded (local): XUi/styles in 0.01
+2025-12-30T03:38:35 49.199 INF Loaded (local): XUi/controls in 0.01
+2025-12-30T03:38:35 49.274 INF Loaded (local): XUi/windows in 0.01
+2025-12-30T03:38:35 49.298 INF [XUi] Loading XUi asynchronously
+2025-12-30T03:38:35 49.325 INF Loaded (local): XUi/xui in 0.03
+2025-12-30T03:38:36 49.733 INF Loaded (local): biomes in 0.10
+2025-12-30T03:38:36 50.013 INF Loaded (local): worldglobal in 0.06
+2025-12-30T03:38:36 50.212 INF [XUi] Parsing all window groups completed in 758 ms total.
+2025-12-30T03:38:36 50.250 INF Loaded (local): spawning in 0.07
+2025-12-30T03:38:37 50.661 INF Loaded (local): loadingscreen in 0.06
+2025-12-30T03:38:37 51.015 INF Added 1336 subtitle data entries and 3 speaker colors
+2025-12-30T03:38:37 51.041 INF Loaded (local): subtitles in 0.07
+2025-12-30T03:38:37 51.098 INF ShapeControllers: 96
+2025-12-30T03:38:37 51.356 INF Loaded (local): videos in 0.05
+2025-12-30T03:38:37 51.453 INF Loading players.xml
+2025-12-30T03:38:37 51.455 INF createWorld: Navezgane, bjgjbb, GameModeSurvival
+2025-12-30T03:38:37 51.456 INF Occlusion: Enabled
+2025-12-30T03:38:37 51.501 INF Started thread ChunkRegeneration
+2025-12-30T03:38:37 51.501 INF Started thread ChunkCalc
+2025-12-30T03:38:37 51.502 INF Started thread ChunkMeshBake
+2025-12-30T03:38:38 51.518 INF [XUi] Initialized all window groups completed in 1127 ms total.
+2025-12-30T03:38:38 51.534 INF World.Load: Navezgane
+2025-12-30T03:38:38 51.537 INF Loading base world file header...
+2025-12-30T03:38:38 51.537 INF Loaded world file from different version: 'V 2.0 (b291)'
+2025-12-30T03:38:38 51.543 INF BloodMoon SetDay: day 7, last day 0, freq 7, range 0
+2025-12-30T03:38:38 51.559 INF BloodMoon SetDay: day 7, last day 0, freq 7, range 0
+2025-12-30T03:38:38 51.570 INF Started thread WaterSimulationApplyChanges
+2025-12-30T03:38:40 54.113 INF Started thread GenerateChunks
+2025-12-30T03:38:40 54.445 INF Calculating world hashes took 320 ms (world size 193 MiB)
+2025-12-30T03:38:40 54.447 INF Initial ENABLE_FILE_BACKED_ARRAYS == False
+2025-12-30T03:38:40 54.504 INF GenWorldFromRaw load dtm took 379ms
+2025-12-30T03:38:41 54.556 INF Biomes image size w= 3072, h = 3072
+2025-12-30T03:38:41 55.036 INF GenWorldFromRaw biomes took 532ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 126)
+Unloading 1881 unused Assets to reduce memory usage. Loaded Objects now: 482389.
+Total: 542.146900 ms (FindLiveObjects: 23.368800 ms CreateObjectMapping: 11.442900 ms MarkObjects: 501.897100 ms  DeleteObjects: 5.437600 ms)
+
+2025-12-30T03:38:42 56.499 INF GenWorldFromRaw shader control textures took 449ms
+2025-12-30T03:38:43 56.855 INF Computed 505 chunk groups containing a total of 9726 chunks. Largest group contains 435 chunks.
+2025-12-30T03:38:43 56.858 INF Started thread SaveChunks C:\Users\polil\AppData\Roaming\7DaysToDie\Saves\Navezgane\bjgjbb\Region
+2025-12-30T03:38:43 56.859 INF GenWorldFromRaw misc took 359ms
+2025-12-30T03:38:43 57.245 INF GenWorldFromRaw splats took 385ms
+Unloading 0 Unused Serialized files (Serialized files now loaded: 126)
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 482393.
+Total: 563.121700 ms (FindLiveObjects: 26.844900 ms CreateObjectMapping: 11.955500 ms MarkObjects: 520.963900 ms  DeleteObjects: 3.356900 ms)
+
+2025-12-30T03:38:44 58.454 INF [DECO] read 
+2025-12-30T03:38:44 58.458 INF DecoManager chunks
+2025-12-30T03:38:45 59.053 INF Dynamic Music Initialized on Server
+2025-12-30T03:38:45 59.062 INF Dynamic Music Initialized on Client
+2025-12-30T03:38:45 59.063 INF Begin DMS Conductor Preload Routine
+2025-12-30T03:38:45 59.064 INF Preloading LayeredSection Exploration : Type: DynamicMusic.Adventure
+2025-12-30T03:38:45 59.065 INF Loading new config for Exploration...
+2025-12-30T03:38:45 59.071 INF Loading new ClipSets for Exploration...
+2025-12-30T03:38:45 59.203 INF Exploration loaded new config and clipsets
+2025-12-30T03:38:45 59.245 INF Preloading LayeredSection Suspense : Type: DynamicMusic.Adventure
+2025-12-30T03:38:45 59.245 INF Loading new config for Suspense...
+2025-12-30T03:38:45 59.251 INF Loading new ClipSets for Suspense...
+2025-12-30T03:38:45 59.327 INF Suspense loaded new config and clipsets
+2025-12-30T03:38:45 59.352 INF Preloading LayeredSection Combat : Type: DynamicMusic.Combat
+2025-12-30T03:38:45 59.353 INF Loading new config for Combat...
+2025-12-30T03:38:45 59.355 INF Loading new ClipSets for Combat...
+2025-12-30T03:38:45 59.469 INF Combat loaded new config and clipsets
+2025-12-30T03:38:45 59.508 INF Preloading LayeredSection Bloodmoon : Type: DynamicMusic.Bloodmoon
+2025-12-30T03:38:45 59.509 INF Loading new config for Bloodmoon...
+2025-12-30T03:38:46 59.729 INF [EOS] Created RFS Request: drops.xml
+2025-12-30T03:38:46 59.824 INF AstarManager Init
+2025-12-30T03:38:46 60.033 INF [EOS] Read (drops.xml) completed: Success, received 781 bytes
+2025-12-30T03:38:46 60.037 INF fetching Twitch entitlements for s76561198321032645
+2025-12-30T03:38:46 60.171 INF createWorld() done
+2025-12-30T03:38:47 60.539 WRN Failed to fetch Twitch entitlements: HTTP/1.1 404 Not Found
+2025-12-30T03:38:47 60.689 INF Created player with id=171
+2025-12-30T03:38:47 60.708 INF [PartyQuests] Player registered: [type=EntityPlayerLocal, name=Asylum Mods, id=171]
+2025-12-30T03:38:47 60.719 INF Respawning: NewGame
+2025-12-30T03:38:47 60.722 INF Loaded player
+2025-12-30T03:38:47 60.833 INF [MumbleLF] Loading Windows Mumble Link
+2025-12-30T03:38:47 60.836 INF [Mumble] Setting Mumble ID to 171
+2025-12-30T03:38:47 60.837 INF [Mumble] Setting context to 1F4070B50B82F145B87EF0EEF578D650
+2025-12-30T03:38:47 60.837 INF [Mumble] Shared Memory initialized
+Unloading 3 Unused Serialized files (Serialized files now loaded: 156)
+Unloading 494 unused Assets to reduce memory usage. Loaded Objects now: 491113.
+Total: 602.411600 ms (FindLiveObjects: 28.582400 ms CreateObjectMapping: 12.607200 ms MarkObjects: 556.864600 ms  DeleteObjects: 4.356700 ms)
+
+2025-12-30T03:38:48 61.819 INF 60sec delta: 0,current: 2817939,desired: 2893203
+2025-12-30T03:38:48 61.820 INF [Backtrace] Updated Statistics
+2025-12-30T03:38:48 61.906 INF OpenSpawnWindow
+2025-12-30T03:38:48 61.917 INF Loading dymesh settings
+2025-12-30T03:38:48 61.918 INF Dynamic Mesh Settings
+2025-12-30T03:38:48 61.918 INF Use Imposter Values: True
+2025-12-30T03:38:48 61.918 INF Only Player Areas: False
+2025-12-30T03:38:48 61.919 INF Player Area Buffer: 3
+2025-12-30T03:38:48 61.919 INF Max View Distance: 1000
+2025-12-30T03:38:48 61.919 INF Regen all on new world: False
+2025-12-30T03:38:48 61.928 INF Dymesh: Prepping dynamic mesh. Resend Default: True
+2025-12-30T03:38:48 61.929 INF Dymesh: Mesh location: C:\Users\polil\AppData\Roaming/7DaysToDie\Saves/Navezgane/bjgjbb/DynamicMeshes/
+2025-12-30T03:38:48 61.930 INF StartGame done
+2025-12-30T03:38:49 62.851 INF Dymesh: Warming dynamic mesh
+2025-12-30T03:38:49 62.851 INF Dymesh: Creating dynamic mesh manager
+2025-12-30T03:38:49 62.854 INF Dymesh: Awake
+2025-12-30T03:38:49 62.854 INF Dymesh: Mesh location: C:\Users\polil\AppData\Roaming/7DaysToDie\Saves/Navezgane/bjgjbb/DynamicMeshes/
+2025-12-30T03:38:49 62.856 INF Dymesh: Loading Items: C:\Users\polil\AppData\Roaming/7DaysToDie\Saves/Navezgane/bjgjbb/DynamicMeshes/
+2025-12-30T03:38:49 62.857 INF Dymesh: Loaded Items: 0
+2025-12-30T03:38:49 62.858 INF Dymesh: Loading all items took: 0.0020428 seconds.
+2025-12-30T03:38:49 62.862 INF Meshlist count is now 1
+2025-12-30T03:38:49 62.862 INF Meshlist count is now 2
+2025-12-30T03:38:49 62.862 INF Force load took 0 seconds
+2025-12-30T03:38:49 62.864 INF Clearing queues.
+2025-12-30T03:38:49 62.864 INF Cleared queues.
+2025-12-30T03:38:49 62.865 INF Dynamic thread starting
+2025-12-30T03:38:49 62.867 INF Dymesh door replacement: imposterBlock
+2025-12-30T03:38:50 63.741 INF Respawn almost done
+2025-12-30T03:38:50 63.752 INF PlayerSpawnedInWorld (reason: NewGame, position: 512, 61, 942): localplayer
+2025-12-30T03:38:50 63.754 INF 5833+0 Origin Reposition (0.0, 0.0, 0.0) to (512.0, 48.0, 928.0)
+2025-12-30T03:38:50 63.815 INF Asylum Mods onNewBiomeEntered +buffForest_Hazard
+2025-12-30T03:38:52 65.771 INF MinEventLogMessage: XP gained during the last level:
+2025-12-30T03:38:52 65.771 INF CVarLogValue: $xpFromLootThisLevel == 0
+2025-12-30T03:38:52 65.771 INF CVarLogValue: $xpFromHarvestingThisLevel == 0
+2025-12-30T03:38:52 65.772 INF CVarLogValue: $xpFromKillThisLevel == 0
+2025-12-30T03:38:53 66.734 INF [DECO] written 83062, in 13ms
+2025-12-30T03:38:53 66.737 INF [DECO] write thread 1ms
+2025-12-30T03:38:55 68.771 INF Asylum Mods WeatherStatusTick  to default
+2025-12-30T03:38:55 68.772 INF Asylum Mods WeatherBuffUpdate , indoors False
+2025-12-30T03:39:03 76.635 INF Executing command 'dm'
+2025-12-30T03:39:07 80.971 INF Executing command 'cm'
+2025-12-30T03:39:15 88.976 INF Saving 252 of chunks took 2622ms
+2025-12-30T03:39:18 92.270 INF 9101+0 Origin Reposition (512.0, 48.0, 928.0) to (-1424.0, 48.0, -1488.0)
+2025-12-30T03:39:18 92.275 INF Respawning: Teleport
+2025-12-30T03:39:19 93.196 INF Respawn almost done
+2025-12-30T03:39:19 93.198 INF PlayerSpawnedInWorld (reason: Teleport, position: -1409, 63, -1480): localplayer
+2025-12-30T03:39:19 93.219 INF Asylum Mods onNewBiomeEntered -buffForest_Hazard
+2025-12-30T03:39:19 93.220 INF Asylum Mods onNewBiomeEntered +buffWasteland_Hazard
+2025-12-30T03:39:22 95.763 INF Time: 1.29m FPS: 111.11 Heap: 2239.2MB Max: 2239.2MB Chunks: 307 CGO: 82 Ply: 1 Zom: 1 Ent: 2 (2) Items: 0 CO: 1 RSS: 6910.6MB
+2025-12-30T03:39:24 98.261 INF Asylum Mods WeatherStatusTick default to default
+2025-12-30T03:39:24 98.262 INF Asylum Mods WeatherBuffUpdate , indoors False
+2025-12-30T03:39:52 125.755 INF 60sec delta: 3635837,current: 3635837,desired: 3473774
+2025-12-30T03:39:52 125.756 INF [Backtrace] Updated Statistics
+2025-12-30T03:39:52 125.792 INF Time: 1.79m FPS: 102.77 Heap: 2094.1MB Max: 2239.2MB Chunks: 315 CGO: 199 Ply: 1 Zom: 11 Ent: 12 (13) Items: 0 CO: 1 RSS: 7203.8MB
+2025-12-30T03:39:55 129.082 INF Saving 233 of chunks took 1930ms
+2025-12-30T03:39:55 129.093 INF [DECO] written 83070, in 9ms
+2025-12-30T03:39:55 129.096 INF [DECO] write thread 2ms
+2025-12-30T03:40:01 135.299 INF 13429+0 Origin Reposition (-1424.0, 48.0, -1488.0) to (1360.0, 64.0, 624.0)
+2025-12-30T03:40:01 135.307 INF Respawning: Teleport
+2025-12-30T03:40:02 136.251 INF Respawn almost done
+2025-12-30T03:40:02 136.254 INF PlayerSpawnedInWorld (reason: Teleport, position: 1373, 75, 626): localplayer
+2025-12-30T03:40:02 136.292 INF Asylum Mods onNewBiomeEntered -buffWasteland_Hazard
+2025-12-30T03:40:02 136.292 INF Asylum Mods onNewBiomeEntered +buffForest_Hazard
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 728.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1262, 61, 765.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+2025-12-30T03:40:07 141.340 INF Asylum Mods WeatherStatusTick default to default
+2025-12-30T03:40:07 141.341 INF Asylum Mods WeatherBuffUpdate , indoors False
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeMountainPine31m" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1542, 71, 629.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+[MultiBlockManager] The replacement block "treeFirLrg01" is larger than the original block "treeLargeRandomHelper" in dimensions. 
+Replacement size: "1, 20, 1", Original size: "1, 15, 1". Parent world position: 1477, 81, 426.
+Child blocks of the replacement will not be placed outside the original block's dimensions. 
+Note: We expect to see this warning when single-block helpers are used to place MultiBlocks at 45-degree rotations. Many of these instances will be resolved by converting to the new oversized block format in the near future. 
+In situations where 45-degree rotations aren't needed, helper blocks should be set to the maximum dimensions of any possible replacements. Affected prefabs may need to be re-saved to implement these changes.
+2025-12-30T03:40:26 159.519 INF Time: 2.29m FPS: 123.16 Heap: 2279.1MB Max: 2279.1MB Chunks: 349 CGO: 204 Ply: 1 Zom: 4 Ent: 5 (21) Items: 0 CO: 1 RSS: 7294.3MB
+2025-12-30T03:40:55 189.491 INF VehicleManager saving 0 (0 + 0)
+2025-12-30T03:40:55 189.492 INF DroneManager saving 0 (0 + 0)
+2025-12-30T03:40:55 189.493 INF VehicleManager saved 9 bytes
+2025-12-30T03:40:55 189.493 INF TurretTracker saving 0 (0 + 0)
+2025-12-30T03:40:55 189.494 INF DroneManager saved 9 bytes
+2025-12-30T03:40:55 189.495 INF TurretTracker saved 9 bytes
+2025-12-30T03:40:55 189.496 INF 60sec delta: 330075,current: 3965912,desired: 3531757
+2025-12-30T03:40:55 189.497 INF [Backtrace] Updated Statistics
+2025-12-30T03:40:56 189.520 INF Time: 2.79m FPS: 112.63 Heap: 2313.1MB Max: 2313.1MB Chunks: 349 CGO: 227 Ply: 1 Zom: 5 Ent: 6 (28) Items: 0 CO: 1 RSS: 7256.8MB
+2025-12-30T03:40:58 192.302 INF Saving 207 of chunks took 1791ms
+2025-12-30T03:40:58 192.314 INF [DECO] written 83102, in 10ms
+2025-12-30T03:40:58 192.316 INF [DECO] write thread 1ms
+2025-12-30T03:41:04 197.548 INF 20427+0 Origin Reposition (1360.0, 64.0, 624.0) to (-1424.0, 48.0, -1488.0)
+2025-12-30T03:41:04 197.555 INF Respawning: Teleport
+2025-12-30T03:41:04 198.391 INF Respawn almost done
+2025-12-30T03:41:04 198.394 INF PlayerSpawnedInWorld (reason: Teleport, position: -1409, 63, -1480): localplayer
+2025-12-30T03:41:04 198.465 INF Asylum Mods onNewBiomeEntered -buffForest_Hazard
+2025-12-30T03:41:04 198.465 INF Asylum Mods onNewBiomeEntered +buffWasteland_Hazard
+2025-12-30T03:41:09 203.426 INF Asylum Mods WeatherStatusTick default to default
+2025-12-30T03:41:09 203.426 INF Asylum Mods WeatherBuffUpdate , indoors False
+Crash!!!
+SymInit: Symbol-SearchPath: '.;D:\DistrictZeroMain\7 Days To Die;D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/Plugins\x86_64;D:/DistrictZeroMain/7 Days To Die/7DaysToDie_Data/Plugins;D:\DistrictZeroMain\7 Days To Die;C:\WINDOWS;C:\WINDOWS\system32;', symOptions: 534, UserName: 'polil'
+OS-Version: 10.0.0
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie.exe:7DaysToDie.exe (00007FF659AD0000), size: 688128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2022.3.62.28864
+C:\WINDOWS\SYSTEM32\ntdll.dll:ntdll.dll (00007FF8209A0000), size: 2519040 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF81FFC0000), size: 823296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF81E1D0000), size: 4124672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+D:\DistrictZeroMain\7 Days To Die\UnityPlayer.dll:UnityPlayer.dll (00007FFEED5C0000), size: 31965184 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2022.3.62.28864
+C:\WINDOWS\System32\USER32.dll:USER32.dll (00007FF81EBE0000), size: 1855488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\System32\win32u.dll:win32u.dll (00007FF81DE00000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\GDI32.dll:GDI32.dll (00007FF820200000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\gdi32full.dll:gdi32full.dll (00007FF81DCD0000), size: 1228800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\msvcp_win.dll:msvcp_win.dll (00007FF81DEE0000), size: 667648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\System32\ucrtbase.dll:ucrtbase.dll (00007FF81DAF0000), size: 1355776 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\System32\ole32.dll:ole32.dll (00007FF81EE90000), size: 1667072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\System32\combase.dll:combase.dll (00007FF81E820000), size: 3690496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\System32\RPCRT4.dll:RPCRT4.dll (00007FF820330000), size: 1146880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\VERSION.dll:VERSION.dll (00007FF812DA0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF81F050000), size: 417792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\msvcrt.dll:msvcrt.dll (00007FF8206A0000), size: 692224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.26100.7019
+C:\WINDOWS\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF81F0C0000), size: 4759552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF81FF00000), size: 737280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\sechost.dll:sechost.dll (00007FF820280000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\SHELL32.dll:SHELL32.dll (00007FF81F6A0000), size: 7680000 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\System32\wintypes.dll:wintypes.dll (00007FF81E5D0000), size: 1482752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF81E740000), size: 876544 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\IMM32.dll:IMM32.dll (00007FF820650000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\CRYPT32.dll:CRYPT32.dll (00007FF81E050000), size: 1536000 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF813540000), size: 1114112 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\WS2_32.dll:WS2_32.dll (00007FF820750000), size: 475136 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\WINMM.dll:WINMM.dll (00007FF810B80000), size: 217088 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF813260000), size: 1212416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\SYSTEM32\bcrypt.dll:bcrypt.dll (00007FF81D9E0000), size: 172032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\HID.DLL:HID.DLL (00007FF81BF20000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\SYSTEM32\GLU32.dll:GLU32.dll (00007FF813C80000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF819F40000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\dxcore.dll:dxcore.dll (00007FF81A280000), size: 278528 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF81C870000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF81DE30000), size: 675840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\uxtheme.dll:uxtheme.dll (00007FF819E40000), size: 700416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\x64\AudioDevProps2.dll:AudioDevProps2.dll (00007FFF85920000), size: 1257472 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.6.28.0
+C:\WINDOWS\System32\shcore.dll:shcore.dll (00007FF81FE00000), size: 1003520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF81B6B0000), size: 8773632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\WINDOWS\SYSTEM32\profapi.dll:profapi.dll (00007FF81DA10000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFF66970000), size: 10825728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\iphlpapi.dll:iphlpapi.dll (00007FF81C2A0000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\NVUnityPlugin.DLL:NVUnityPlugin.DLL (00007FFF77400000), size: 1609728 (result: 0), SymType: '-deferred-', PDB: ''
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\BacktraceCrashpadWindows.dll:BacktraceCrashpadWindows.dll (00007FFFC51B0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF801B00000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF801A70000), size: 561152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF802B10000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL:CRYPTBASE.DLL (00007FF81D160000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\System32\MSCTF.dll:MSCTF.dll (00007FF820090000), size: 1433600 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\d3d11.dll:d3d11.dll (00007FF81B110000), size: 2498560 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\dxgi.dll:dxgi.dll (00007FF81B390000), size: 1290240 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\powrprof.dll:powrprof.dll (00007FF81D350000), size: 385024 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.3912
+C:\WINDOWS\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF81D330000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll:directxdatabasehelper.dll (00007FF8151A0000), size: 405504 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\cfgmgr32.dll:cfgmgr32.dll (00007FF81D750000), size: 356352 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvldumdx.dll:nvldumdx.dll (00007FFFED220000), size: 794624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\SYSTEM32\msasn1.dll:msasn1.dll (00007FF81D1B0000), size: 77824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF811780000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\wldp.dll:wldp.dll (00007FF81D220000), size: 413696 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\drvstore.dll:drvstore.dll (00007FF8115C0000), size: 1552384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\devobj.dll:devobj.dll (00007FF81D7B0000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\System32\wintrust.dll:wintrust.dll (00007FF81DC40000), size: 524288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\imagehlp.dll:imagehlp.dll (00007FF81EBB0000), size: 131072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.4202
+C:\WINDOWS\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF81D140000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\rsaenh.dll:rsaenh.dll (00007FF81C7D0000), size: 237568 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvgpucomp64.dll:nvgpucomp64.dll (00007FFFE49C0000), size: 61546496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\Display.NvContainer\NvMessageBus.dll:NvMessageBus.dll (00007FF805130000), size: 3551232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.15.3538.9611
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\NvCamera\NvCamera64.dll:NvCamera64.dll (00007FFF417A0000), size: 8830976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.1.0.0
+C:\WINDOWS\SYSTEM32\DINPUT8.dll:DINPUT8.dll (00007FFFB3380000), size: 307200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1591
+C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll:XINPUT9_1_0.dll (00007FF815880000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1
+C:\WINDOWS\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FF818F00000), size: 2293760 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\inputhost.dll:inputhost.dll (00007FFFC20A0000), size: 1986560 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\CoreMessaging.dll:CoreMessaging.dll (00007FF8197B0000), size: 1208320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FFFEC610000), size: 901120 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvwgf2umx.dll:nvwgf2umx.dll (00007FFFDD740000), size: 88805376 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\system32\nvspcap64.dll:nvspcap64.dll (00007FFF7D840000), size: 3227648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.4.148
+C:\WINDOWS\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF81C9A0000), size: 221184 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvppex.dll:nvppex.dll (00007FFFEAAA0000), size: 1785856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\SYSTEM32\gpapi.dll:gpapi.dll (00007FF81CE80000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\NvCamera\d3dcompiler_47_64.dll:d3dcompiler_47_64.dll (00007FFF6B600000), size: 4210688 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.3.9600.16384
+C:\WINDOWS\SYSTEM32\nvapi64.dll:nvapi64.dll (00007FF80DB00000), size: 5771264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\System32\clbcatq.dll:clbcatq.dll (00007FF81F5E0000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\WINDOWS\System32\MMDevApi.dll:MMDevApi.dll (00007FF813A60000), size: 618496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\AudioSes.dll:AudioSes.dll (00007FF80FC30000), size: 1785856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\x64\ProductInfo.dll:ProductInfo.dll (00007FF819B30000), size: 421888 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.10.7.0
+C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\x64\ASM.Plugin.AudioDevProps2.dll:ASM.Plugin.AudioDevProps2.dll (00007FF813660000), size: 274432 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2.0
+C:\WINDOWS\SYSTEM32\PropSys.dll:PropSys.dll (00007FF8186E0000), size: 1060864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.26100.7309
+C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF81A310000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\lib_burst_generated.dll:lib_burst_generated.dll (00007FFFB8E30000), size: 368640 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 9.18.944.0
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\igd10iumd64.dll:igd10iumd64.dll (00007FFFFE690000), size: 5353472 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.101.7040
+C:\WINDOWS\SYSTEM32\apphelp.dll:apphelp.dll (00007FF819D20000), size: 651264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\igd10um64xe.DLL:igd10um64xe.DLL (00007FFFFD570000), size: 17924096 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.101.7040
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\IntelControlLib.dll:IntelControlLib.dll (00007FFFBDE10000), size: 716800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.2.252.0
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\igdgmm2_64.dll:igdgmm2_64.dll (00007FF8000D0000), size: 339968 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.101.7040
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\igdgmm64.dll:igdgmm64.dll (00007FFFFC350000), size: 5943296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.101.7040
+C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_2515c9a83c1ef12c\igc64.dll:igc64.dll (00007FFFF6EA0000), size: 86638592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.101.7040
+C:\WINDOWS\SYSTEM32\dcomp.dll:dcomp.dll (00007FF819140000), size: 2240512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll:Microsoft.Internal.WarpPal.dll (00007FF818A50000), size: 102400 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FFFBD8C0000), size: 1343488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\InControlNative.dll:InControlNative.dll (00007FFFB6CE0000), size: 237568 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\XInput1_4.dll:XInput1_4.dll (00007FF813CD0000), size: 114688 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\Windows\System32\deviceaccess.dll:deviceaccess.dll (00007FFFEA8B0000), size: 290816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\steam_api64.dll:steam_api64.dll (00007FFF814D0000), size: 315392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 8.2.21.95
+C:\Program Files (x86)\Steam\steamclient64.dll:steamclient64.dll (00007FFF4EF20000), size: 25882624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.33.56.27
+C:\WINDOWS\System32\PSAPI.DLL:PSAPI.DLL (00007FF81F030000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1
+C:\Program Files (x86)\Steam\tier0_s64.dll:tier0_s64.dll (00007FFF540B0000), size: 1687552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.33.56.27
+C:\Program Files (x86)\Steam\vstdlib_s64.dll:vstdlib_s64.dll (00007FFF53D10000), size: 790528 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.33.56.27
+C:\WINDOWS\SYSTEM32\MSWSOCK.dll:MSWSOCK.dll (00007FF81CE10000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\Secur32.dll:Secur32.dll (00007FF819DD0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1
+C:\WINDOWS\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF81CB40000), size: 299008 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF801A20000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF809AC0000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF8012B0000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll:gameoverlayrenderer64.dll (00007FFF6B450000), size: 1753088 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.33.56.27
+C:\WINDOWS\system32\wbem\fastprox.dll:fastprox.dll (00007FF801100000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\amsi.dll:amsi.dll (00007FF800F50000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\USERENV.dll:USERENV.dll (00007FF81CEC0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25110.6-0\MpOav.dll:MpOav.dll (00007FF800AE0000), size: 663552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 4.18.25110.6
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\EOSSDK-Win64-Shipping.dll:EOSSDK-Win64-Shipping.dll (00007FFEEC2E0000), size: 19787776 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.17.1.3
+C:\WINDOWS\System32\NSI.dll:NSI.dll (00007FF820690000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF813FC0000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF813F90000), size: 143360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\napinsp.dll:napinsp.dll (00007FFFBA440000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF81C340000), size: 1228800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\System32\winrnr.dll:winrnr.dll (00007FFFBA170000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+C:\WINDOWS\system32\nlansp_c.dll:nlansp_c.dll (00007FFFB9E90000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\wshbth.dll:wshbth.dll (00007FF813FF0000), size: 90112 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.5074
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\xaudio2_9redist.dll:xaudio2_9redist.dll (00007FFF6DA30000), size: 864256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.0.1
+C:\WINDOWS\SYSTEM32\AVRT.dll:AVRT.dll (00007FF81B380000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\xaudio2_9.dll:xaudio2_9.dll (00007FFF81430000), size: 593920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\DSOUND.dll:DSOUND.dll (00007FFF6CD50000), size: 606208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\winmmbase.dll:winmmbase.dll (00007FFF6CC50000), size: 221184 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\ResampleDmo.DLL:ResampleDmo.DLL (00007FFF6CC90000), size: 724992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\msdmo.dll:msdmo.dll (00007FFFC1B60000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\WINDOWS\SYSTEM32\wdmaud.drv:wdmaud.drv (00007FFF6CC00000), size: 290816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\msacm32.drv:msacm32.drv (00007FFFC17C0000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+C:\WINDOWS\SYSTEM32\MSACM32.dll:MSACM32.dll (00007FFF77D20000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7019
+C:\WINDOWS\SYSTEM32\midimap.dll:midimap.dll (00007FFFD6380000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+C:\Program Files\NVIDIA Corporation\NVIDIA App\MessageBus\MessageBus.dll:MessageBus.dll (00007FFFB3450000), size: 7565312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.22.2758.1620
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FF812EF0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7171
+C:\WINDOWS\System32\fwpuclnt.dll:fwpuclnt.dll (00007FF8140A0000), size: 548864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\discord_partner_sdk.dll:discord_partner_sdk.dll (00007FFEDE6C0000), size: 11005952 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\ktmw32.dll:ktmw32.dll (00007FFFF2CC0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1
+C:\WINDOWS\SYSTEM32\qwave.dll:qwave.dll (00007FFF82150000), size: 364544 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\TRAFFIC.dll:TRAFFIC.dll (00007FFF82130000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1
+C:\WINDOWS\SYSTEM32\WMICLNT.dll:WMICLNT.dll (00007FF814660000), size: 77824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+C:\Windows\System32\mfwmaaec.dll:mfwmaaec.dll (00007FFF75F40000), size: 253952 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\ControllerExt.dll:ControllerExt.dll (00007FFF6D820000), size: 544768 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7309_none_3e05feeae336a044\comctl32.dll:comctl32.dll (00007FF80A140000), size: 2699264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.10.26100.7309
+C:\Windows\System32\Windows.UI.dll:Windows.UI.dll (00007FF80AB40000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\system32\schannel.DLL:schannel.DLL (00007FF81C6A0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\ncrypt.dll:ncrypt.dll (00007FF81D410000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7309
+C:\WINDOWS\SYSTEM32\NTASN1.dll:NTASN1.dll (00007FF81D3C0000), size: 258048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+C:\WINDOWS\system32\ncryptsslp.dll:ncryptsslp.dll (00007FFFF2560000), size: 270336 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.5074
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\_nvngx.dll:_nvngx.dll (00007FFFF26B0000), size: 1527808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\SYSTEM32\DEVRTL.dll:DEVRTL.dll (00007FF800AC0000), size: 90112 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1882
+C:\WINDOWS\SYSTEM32\SPINF.dll:SPINF.dll (00007FF811250000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.1150
+D:\DistrictZeroMain\7 Days To Die\nvngx_dlss.dll:nvngx_dlss.dll (00007FFEDC4E0000), size: 35516416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.1.11.0
+C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryAPI64.dll:NvTelemetryAPI64.dll (00007FFFF2E10000), size: 4419584 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.4.23.0
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvcuda64.dll:nvcuda64.dll (00007FFFF3850000), size: 34361344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.7652
+C:\WINDOWS\System32\DriverStore\FileRepository\nvmii.inf_amd64_8e2b7f872a9cdacc\nvdxgdmal64.dll:nvdxgdmal64.dll (00007FFFF36B0000), size: 610304 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryBridge64.dll:NvTelemetryBridge64.dll (00007FFFF1960000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.4.23.0
+C:\WINDOWS\SYSTEM32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF8004E0000), size: 3022848 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.7462
+C:\Users\polil\AppData\Local\Discord\app-1.0.9219\modules\discord_hook-1\discord_hook\0c5a4c0eae96ff\DiscordHook64.dll:DiscordHook64.dll (00007FFF6C6A0000), size: 3956736 (result: 0), SymType: '-deferred-', PDB: ''
+D:\DistrictZeroMain\7 Days To Die\MonoBleedingEdge\EmbedRuntime\MonoPosixHelper.dll:MonoPosixHelper.dll (00007FFF6AFD0000), size: 626688 (result: 0), SymType: '-deferred-', PDB: ''
+D:\DistrictZeroMain\7 Days To Die\7DaysToDie_Data\Plugins\x86_64\getrss.dll:getrss.dll (000000006D3C0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF81AEA0000), size: 2367488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.26100.5074
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFEEE829BA1 (UnityPlayer) tlsf_memalign
+0x00007FFEED919E69 (UnityPlayer) DynamicHeapAllocator::Allocate
+0x00007FFEED921601 (UnityPlayer) DualThreadAllocator<DynamicHeapAllocator>::Allocate
+0x00007FFEED91D90A (UnityPlayer) MemoryManager::Allocate
+0x00007FFEEDAD866C (UnityPlayer) VertexData::AllocateMemory
+0x00007FFEEDADC33C (UnityPlayer) VertexData::Resize
+0x00007FFEEDAD644E (UnityPlayer) MeshDataBindings::SetVertexBufferParamsFromPtr
+0x00007FFEED69973C (UnityPlayer) Mesh_MeshData_CUSTOM_SetVertexBufferParamsFromPtr
+0x0000028E962A0E93 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Mesh/MeshData:SetVertexBufferParamsFromPtr (intptr,int,intptr,int)
+0x0000028E962A0D9B (Mono JIT Code) UnityEngine.Mesh/MeshData:SetVertexBufferParams (int,Unity.Collections.NativeArray`1<UnityEngine.Rendering.VertexAttributeDescriptor>)
+0x0000028E962A8B1B (Mono JIT Code) MeshDataUtils:ApplyMeshDataCompression (UnityEngine.Mesh/MeshData,Unity.Collections.NativeArray`1<UnityEngine.Rendering.VertexAttributeDescriptor>)
+0x0000028E962A887B (Mono JIT Code) MeshDataManager/JobState/<>c__DisplayClass19_0:<CopyToMeshData>b__18 ()
+0x0000028BCE869984 (Mono JIT Code) System.Threading.Tasks.Task:InnerInvoke ()
+0x0000028BCBD55D24 (Mono JIT Code) System.Threading.Tasks.Task:Execute ()
+0x0000028BCBD55CD3 (Mono JIT Code) System.Threading.Tasks.Task:ExecutionContextCallback (object)
+0x0000028BCBD551BE (Mono JIT Code) System.Threading.ExecutionContext:RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+0x0000028BCBD5429B (Mono JIT Code) System.Threading.ExecutionContext:Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+0x0000028BCBD53D4B (Mono JIT Code) System.Threading.Tasks.Task:ExecuteWithThreadLocal (System.Threading.Tasks.Task&)
+0x0000028BCBD5339B (Mono JIT Code) System.Threading.Tasks.Task:ExecuteEntry (bool)
+0x0000028BCBD530FB (Mono JIT Code) System.Threading.Tasks.Task:System.Threading.IThreadPoolWorkItem.ExecuteWorkItem ()
+0x0000028BCBD50CAA (Mono JIT Code) System.Threading.ThreadPoolWorkQueue:Dispatch ()
+0x0000028BCBD5017B (Mono JIT Code) System.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()
+0x0000028BCBD50445 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_bool (object,intptr,intptr,intptr)
+0x00007FFF66C04B7E (mono-2.0-bdwgc) mono_jit_set_domain
+0x00007FFF66B3D204 (mono-2.0-bdwgc) mono_object_get_virtual_method
+0x00007FFF66B7E9CD (mono-2.0-bdwgc) mono_thread_has_sufficient_execution_stack
+0x00007FFF66B81C33 (mono-2.0-bdwgc) mono_thread_has_sufficient_execution_stack
+0x00007FFF66B6F9AB (mono-2.0-bdwgc) mono_profiler_init_etw
+0x00007FFF66B6FBBE (mono-2.0-bdwgc) mono_profiler_init_etw
+0x00007FF81FFEE8D7 (KERNEL32) BaseThreadInitThunk
+0x00007FF820A2C53C (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/polil/AppData/Local/Temp/The Fun Pimps/7 Days To Die/Crashes

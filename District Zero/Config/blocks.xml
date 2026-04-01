@@ -1,0 +1,2515 @@
+<Zilox>
+
+
+
+<!-- DEFAULT LOCKPICK BREAK CHANCE IS 0.75 -->
+<set xpath="//property[@name='LockPickBreakChance']/@value">0.40</set>
+
+<!-- CHANGE WORKBENCH MODEL -->
+<set xpath="//block[@name='workbench']/property[@name='Model']/@value">#@modfolder:Resources/Workstations.unity3d?Workbench.prefab</set>
+
+<!-- CHANGE WORKBENCH HARVEST AND REPAIR -->
+<set xpath="//block[@name='workbench']/drop[@event='Harvest' and @name='resourceWood']/@count">10</set>
+<set xpath="//block[@name='workbench']/drop[@event='Harvest' and @name='resourceWood']/@name">resourceElectricParts</set>
+<set xpath="//block[@name='workbench']/property[@class='RepairItems']/property[@name='resourceWood']/@value">5</set>
+<set xpath="//block[@name='workbench']/property[@class='RepairItems']/property[@name='resourceWood']/@name">resourceElectricParts</set>
+
+<!-- CHANGE WORKBENCH SOUNDS -->
+<set xpath="//block[@name='workbench']/property[@name='OpenSound']/@value">chest_tier5_open</set>
+<set xpath="//block[@name='workbench']/property[@name='CloseSound']/@value">chest_tier5_close</set>
+
+<!-- CHANGE WORKBENCH DIMENSIONS -->
+<set xpath="//block[@name='workbench']/property[@name='MultiBlockDim']/@value">3,2,1</set>
+
+<!-- CHANGE FORGE MODEL AND HARVEST -->
+<set xpath="//block[@name='forge']/property[@name='Model']/@value">#@modfolder:Resources/Workstations.unity3d?Forge.prefab</set>
+<set xpath="//block[starts-with(@name,'forge')]/property[@name='MultiBlockDim']/@value">1,2,1</set>
+<set xpath="//block[starts-with(@name,'forge')]/property[@name='Material']/@value">Mmetal</set>
+<set xpath="//block[starts-with(@name,'forge')]/property[@name='ParticleOffset']/@value">1,0,0.3</set>
+<set xpath="//block[starts-with(@name,'forge')]/property[@class='RepairItems']/property[@name='resourceCobblestones']/@name">resourceScrapIron</set>
+<set xpath="//block[starts-with(@name,'forge')]/drop[@event='Harvest' and @name='resourceRockSmall']/@name">resourceScrapIron</set>
+<set xpath="//block[starts-with(@name,'forge')]/drop[@event='Harvest' and @name='resourceClayLump']/@name">resourceElectricParts</set>
+<set xpath="//block[starts-with(@name,'forge')]/drop[@event='Harvest' and @name='resourceLeather']/@name">resourceMetalPipe</set>
+
+<set xpath="//block[@name='cntForgeWorkstationBroken']/property[@name='Model']/@value">#@modfolder:Resources/Workstations.unity3d?Forge.prefab</set>
+<set xpath="//block[@name='cntForgeWorkstationBroken']/property[@name='Material']/@value">Mmetal</set>
+<set xpath="//block[@name='cntForgeWorkstationBroken']/property[@name='MultiBlockDim']/@value">1,2,1</set>
+<set xpath="//block[@name='cntForgeWorkstationBroken']/property[@class='RepairItems']/property[@name='resourceCobblestones']/@name">resourceScrapIron</set>
+<set xpath="//block[@name='cntForgeWorkstationBroken']/drop[@event='Harvest' and @name='resourceRockSmall']/@name">resourceScrapIron</set>
+<set xpath="//block[@name='cntForgeWorkstationBroken']/drop[@event='Harvest' and @name='resourceClayLump']/@name">resourceElectricParts</set>
+
+<!-- INCREASE THE HEALTH OF WORKSTATIONS -->
+<set xpath="//block[@name='workbench']/property[@name='MaxDamage']/@value">6000</set>
+<set xpath="//block[@name='cementMixer']/property[@name='MaxDamage']/@value">5000</set>
+<set xpath="//block[@name='forge']/property[@name='MaxDamage']/@value">4000</set>
+<set xpath="//block[@name='chemistryStation']/property[@name='MaxDamage']/@value">3500</set>
+<set xpath="//block[@name='cntDewCollector']/property[@name='MaxDamage']/@value">3000</set>
+
+<!-- SET TABLE SAW HEALTH -->
+<append xpath="//block[@name='tableSaw']">
+	<property name="MaxDamage" value="800"/>
+</append>
+
+<!-- REDUCE ECONOMIC VALUE OF WHEELCHAIRS -->
+<set xpath="//block[starts-with(@name,'wheelchair')]/property[@name='EconomicValue']/@value">250</set>
+
+<!-- ALLOW BROKEN FORGE TO BE WRENCHED AND CHANGE ICON -->
+<append xpath="//block[@name='cntForgeWorkstationBroken']">
+	<property name="CustomIcon" value="forge"/>
+    <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
+</append>
+
+<!-- HARVEST WHEELS FROM TIRES IN THE WORLD -->
+<append xpath="//block[starts-with(@name,'decoCarTire') or (starts-with(@name,'decoCarWheel'))]">
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="5" tag="salvageHarvest"/>
+	<drop event="Destroy" name="vehicleWheels" count="1" prob="0.1" tag="salvageHarvest"/>
+</append>
+
+<!-- ADD RADIATION BUFF TO RADIATED BARRELS -->
+<append xpath="//block[starts-with(@name,'cntBarrelRadiated')]">
+	<property name="Class" value="BuffAOE, DZCore"/>
+	<property name="ActiveRadiusEffects" value="buffRadiationSourceAOE(3)"/>
+	<property name="MaxDamage" value="1000"/>	
+	<drop event="Harvest" name="resourceAcid" prob=".25" count="1" tag="WasteTreasuresAcidHarvest" tool_category="Disassemble"/>
+</append>
+
+<!-- ADD CAMPFIRE BUFF TO BURNING BARREL -->
+<append xpath="//block[starts-with(@name,'burningBarrel')]">
+	<property name="Class" value="BuffAOE, DZCore"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>	
+</append>
+
+<!-- CHANGE PLAYER BURNING BARREL DESCRIPTION KEY -->
+<set xpath="//block[@name='burningBarrelPlayer']/property[@name='DescriptionKey']/@value">burningBarrelPlayerDesc</set>
+
+<!-- CHANGE HARVEST FOR COW FEED -->
+<set xpath="//block[starts-with(@name,'palletBagCowFeed')]/drop[@event='Harvest']/@name">foodCornMeal</set>
+
+<!-- INCREASE HEALTH OF TRADER WALLS -->
+<append xpath="//block[starts-with(@name,'banditWall')]">
+	<property name="MaxDamage" value="4500"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'chainlinkFence') or (starts-with(@name,'chainlinkGate'))]">
+	<property name="MaxDamage" value="3000"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'logWall')]">
+	<property name="MaxDamage" value="2000"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'doorWoodLarge')]">
+	<property name="MaxDamage" value="2000"/>
+</append>
+
+<!-- ADD OFFICE CHAIRS TO LEATHER HARVEST CHALLENGE -->
+<csv xpath="//block[@name='officeChair01']/property[@name='Tags']/@value" delim="," op="add">challenge_leather</csv>
+<set xpath="//block[@name='officeChair01']/property[@name='IndexName']/@value">challenge_leather</set>
+
+<!-- INCREASE SALVAGE HARVEST RATE FOR OFFICE CHAIRS -->
+<set xpath="//block[@name='officeChair01']/drop[@name='resourceLeather']/@count">4,6</set>
+
+<!-- REMOVE PICKUP OPTION FROM OFFICE CHAIRS (REPLACED WITH TAKE RADIAL OPTION) -->
+<remove xpath="//block[@name='officeChair01']/property[@name='CanPickup']"/>
+
+<!-- REMOVE SCRAP OPTION FROM OFFICE CHAIRS -->
+<set xpath="//block[@name='officeChair01']/property[@name='Weight']/@value">0</set>
+
+<!-- ADD RADIAL TAKE OPTION TO OFFICE CHAIRS -->
+<append xpath="//block[@name='officeChair01']">
+	<property name="TakeDelay" value="0.5"/>
+	<property name="TakeItemOverride" value="officeChair01VariantHelper"/>	
+</append>
+
+<!-- REMOVE HEAT FROM DEW COLLECTOR -->
+<remove xpath="//block[@name='cntDewCollector']/property[starts-with(@name,'HeatMap')]"/>
+
+<!-- ADD ADVANCED ROTATION TO STORAGE -->
+<set xpath="//block[@name='cntWoodWritableCrate']/property[@name='AllowedRotations']/@value">All</set>
+<append xpath="/blocks/block[@name='cntWoodWritableCrate']">
+	<property name="OnlySimpleRotations" value="false"/>
+</append>
+
+<!-- MAKE POI SWITCHES MULTIUSE -->
+<set xpath="//block[@name='powerSwitch01']/property[@name='SingleUse']/@value">false</set>
+<set xpath="//block[starts-with(@name,'keyRack')]/property[@name='SingleUse']/@value">false</set>
+<set xpath="//block[starts-with(@name,'keyRack')]/property[@name='Class']/@value">Activate</set>
+<set xpath="//block[starts-with(@name,'pipeSmallWallValve') and (contains(@name,'Switch'))]/property[@name='SingleUse']/@value">false</set>
+<set xpath="//block[starts-with(@name,'pipeSmallWallValve') and (contains(@name,'Switch'))]/property[@name='Class']/@value">Activate</set>
+
+<!-- LOCKPICK DOORS -->
+<append xpath="//block[starts-with(@name,'commercial') and (contains(@name,'Door'))]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'ironDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'interiorHouseDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'interiorDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'pantryDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'woodenFenceDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'exteriorHouseDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'exteriorScreenDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'frenchDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'jailDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="15"/>
+	<property name="LockPickBreakChance" value="0.45"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'rollUpDoor') or (starts-with(@name,'rollUpGate'))]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'ironGarageDoor') or (starts-with(@name,'steelGarageDoor')) or (starts-with(@name,'woodenGarageDoor')) and not (contains(@name,'Powered'))]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="30"/>
+	<property name="LockPickBreakChance" value="0.75"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'vaultDoor') and not (contains(@name,'Powered'))]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="30"/>
+	<property name="LockPickBreakChance" value="0.75"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'chainlinkGate')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="20"/>
+	<property name="LockPickBreakChance" value="0.45"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'chainlinkFence') and (contains(@name,'Door'))]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'oldWoodDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'closetDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'bathroomStallDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'manholeHatch')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'woodHatch')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'ironHatch')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'cellarDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'trailerDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'elevatorDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'tallCabinetDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'houseSlidingDoor')]">
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="10"/>
+	<property name="LockPickBreakChance" value="0.30"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<!-- CHANGE FARMING SO SEEDS STAY AFTER HARVEST -->
+<remove xpath="//block[starts-with(@name,'planted') and (contains(@name,'HarvestPlayer'))]/drop[@event='Destroy']"/>
+
+<append xpath="//block[@name='plantedMushroom3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedMushroom1"/>
+</append>
+
+<append xpath="//block[@name='plantedYucca3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedYucca1"/>
+</append>
+
+<append xpath="//block[@name='plantedCotton3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedCotton1"/>
+</append>
+
+<append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedCoffee1"/>
+</append>
+
+<append xpath="//block[@name='plantedGoldenrod3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedGoldenrod1"/>
+</append>
+
+<append xpath="//block[@name='plantedAloe3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedAloe1"/>
+</append>
+
+<append xpath="//block[@name='plantedBlueberry3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedBlueberry1"/>
+</append>
+
+<append xpath="//block[@name='plantedPotato3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedPotato1"/>
+</append>
+
+<append xpath="//block[@name='plantedChrysanthemum3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+</append>
+
+<append xpath="//block[@name='plantedCorn3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedCorn1"/>
+</append>
+
+<append xpath="//block[@name='plantedGraceCorn3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedGraceCorn1"/>
+</append>
+
+<append xpath="//block[@name='plantedHop3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedHop1"/>
+</append>
+
+<append xpath="//block[@name='plantedPumpkin3HarvestPlayer']">
+    <property name="DowngradeBlock" value="plantedPumpkin1"/>
+</append>
+
+<!-- COBALT UPGRADE FROM STEEL -->
+<append xpath="//block[@name='steelShapes']">
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="cobaltShapes"/>
+		<property name="Item" value="resourceForgedCobalt"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+</append>
+
+<!-- PICKUP DECORATION -->
+<append xpath="//block[starts-with(@name,'commercialBlind')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntCabinet') and (contains(@name,'Open')) or (contains(@name,'Filler'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntCooler') and not (contains(@name,'Closed'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntLuggage') and not (contains(@name,'Closed'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'metalPipe')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntShoppingCartEmpty')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntRetroFridge') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMicrowaveOven') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntCupboard') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntDryer') and not(contains(@name,'Closed'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntWasher') and not(contains(@name,'Closed'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntBinTrashMetalEmpty')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntBinTrashPlasticEmpty')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'cntBarrelPlastic')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'deco') and not (@name='decoCookingPot')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'wall') and not (@name='wallLight01') and not (starts-with(@name,'wallTorch')) and not (starts-with(@name,'wallMirror'))]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntBrute') and not (contains(@name,'Full'))]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cone')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'dining')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'garbage')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'sign') and not (starts-with(@name,'signTrader')) and not (contains(@name,'Light'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'utility')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'counter')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'sink')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'pedestal')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'couch')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntDomedTrashCanEmpty')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntDomedTrashCanCornerEmpty')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'urinal')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMedicineCabinetOpen')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMedicineCabinetFaucetOpen')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntNightstandOpen')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntBookcaseEmpty')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'miniblind')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cinder')]">
+	<property name="TakeDelay" value=".5"/>			
+</append>
+
+<append xpath="//block[starts-with(@name,'cntStove') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'control')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'sandbag')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'fire')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'electrical')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'breaker')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'laundry')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'faucet')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'shower')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'drinkingfountain')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'painting') or (starts-with(@name,'picture'))]">
+	<property name="TakeDelay" value=".5"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'school')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'rusty')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'bar') and not (@name='barracksChair')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'sectional')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'tv') and not (contains(@name,'CRT'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'mattress')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'bird')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'hanging')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'satellite')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'airCondition')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'umbrella')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'tableSaw')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'flag') and not (starts-with(@name,'flagPole'))]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'restaurant')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'capChimney')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'candelabra')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'wheelchair')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'standIV')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'wineBarrel')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[starts-with(@name,'trapSpikes')]">
+	<property name="TakeDelay" value=".5"/>		
+</append>
+
+<append xpath="//block[@name='cntCollapsedSolarbank']">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="solarbank"/>
+	<property name="TakeItemOverrideChance" value="0.2"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntWallSafe')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageWallSafeClosed"/>	
+</append>
+
+<conditional>
+    <if cond="mod_loaded('MPLogue_Prefabs_7D2D_V1_0')">
+		<append xpath="//block[starts-with(@name,'MPL_OrbSafe')]">
+			<property name="TakeDelay" value=".5"/>
+			<property name="TakeItemOverride" value="MPL_SecureOrbSafeClosed"/>	
+		</append>
+    </if>
+</conditional>
+
+<append xpath="//block[starts-with(@name,'cntDeskSafe')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageDeskSafeClosed"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntGunSafe')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageGunSafeClosedWhite"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntFootlocker') and not (contains(@name,'ArmyGreen'))]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageFootlockerClosedWhite"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntFootlocker') and (contains(@name,'ArmyGreen'))]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageFootlockerClosedArmyGreen"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntWoodenChest')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageWoodenChestClosed"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntWoodenChestRotten')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageWoodenChestRottenClosed"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntOldWestChest')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageOldWestChestClosed"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntWoodenChestMilitary')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageWoodenChestMilitaryClosed"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntToolBox')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageToolBoxClosedWhite"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'cntRollingToolBox')]">
+	<property name="TakeDelay" value=".5"/>
+	<property name="TakeItemOverride" value="cntSecureStorageRollingToolBoxClosedWhite"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'wallMirror') and (contains(@name,'Broken'))]">
+	<property name="TakeDelay" value=".5"/>	
+</append>
+
+<append xpath="//block[contains(@name,'Concrete')]">
+	<property name="TakeDelay" value="0"/>
+</append>
+
+<!-- MAKE WALL MIRROR LOOTABLE -->
+<append xpath="//block[starts-with(@name,'wallMirror') and not (contains(@name,'Broken'))]">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="medicineCabinet"/>
+	<property name="DowngradeFX" value="impact_organic_on_metal,silencefiller"/>
+	<property name="DowngradeBlock" value="wallMirrorBroken"/>	
+</append>
+
+<!-- MAKE MILITARY CARTON LOOTABLE -->
+<append xpath="//block[starts-with(@name,'palletCartonMilitaryCap')]">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="ammoPalletCartonSmall"/>	
+</append>
+
+<append xpath="//block[starts-with(@name,'palletCartonMilitaryTile')]">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="ammoPalletCartonMedium"/>	
+</append>
+
+<!-- MAKE TRADER SUPER CHEST LOOTABLE -->
+<append xpath="//block[starts-with(@name,'cntTraderSuperChest')]">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="munitions"/>	
+</append>
+
+<!-- ADD TAG FOR GRASS BLOCKS -->
+<append xpath="//block[contains(@name,'Grass')]">
+	<property name="Tags" value="grass"/>
+</append>
+
+<!-- ADJUST GLOBAL OFFSET FOR TREES -->
+<append xpath="//block[@name='treeMaster' or (@name='treeMasterGrowing')]">
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+</append>
+
+<!-- VANILLA TREES KEEP THEIR NORMAL ICONS -->
+<setattribute xpath="//block[starts-with(@name,'tree')]/property[@name='Extends']" name="param1">UsePrefabNameForIcon</setattribute>
+
+<!-- INTERACTABLE LIGHTS -->
+<append xpath="//block[starts-with(@name,'light') or (starts-with(@name,'tableLamp')) or (starts-with(@name,'tvCRT')) or (starts-with(@name,'signNeon')) or (starts-with(@name,'signShopOpen'))]">
+	<property name="RuntimeSwitch" value="true"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'ceilingLight') or (starts-with(@name,'recessedLight')) or (starts-with(@name,'wallLight')) or (starts-with(@name,'porchLight')) or (starts-with(@name,'signPills'))]">
+	<property name="RuntimeSwitch" value="true"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'lightPorch') or (starts-with(@name,'industrialLight')) or (starts-with(@name,'deskLamp')) or (starts-with(@name,'plantHydroponic'))]">
+	<property name="RuntimeSwitch" value="true"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'workLight') or (starts-with(@name,'ceilingFanLight')) or (starts-with(@name,'lightIndustrial')) or (starts-with(@name,'spotlight'))]">
+	<property name="RuntimeSwitch" value="true"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'lightDisplay') or (starts-with(@name,'signTrader')) or (starts-with(@name,'roadBarricadeLight')) or (starts-with(@name,'signExitLight'))]">
+	<property name="RuntimeSwitch" value="true"/>
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'signTrafficLight') or (starts-with(@name,'fluorescentLight')) or (starts-with(@name,'hood')) or (starts-with(@name,'chandelierLight'))]">
+	<property name="RuntimeSwitch" value="true"/>	
+	<property name="TakeDelay" value=".5"/>
+</append>
+
+<append xpath="//block[@name='tvCRT']">
+    <property name="DisplayNameOn" value="useTVOn"/>
+    <property name="DisplayNameOff" value="useTVOff"/>      
+</append>
+
+<!-- NON INTERACTABLE LIGHTS -->
+<append xpath="//block[starts-with(@name,'lantern') or (starts-with(@name,'candle')) or (starts-with(@name,'emberPileLight')) or (starts-with(@name,'burningBarrel'))]">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>
+</append>
+
+<append xpath="//block[@name='wallTorchLight']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>
+</append>
+
+<append xpath="//block[@name='candleWallLight']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>		
+</append>
+
+<append xpath="//block[@name='candleTableLight']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>		
+</append>
+
+<append xpath="//block[@name='emberPileLightPOI1']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>	
+</append>
+
+<append xpath="//block[@name='emberPileLightPOI2']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>		
+</append>
+
+<append xpath="//block[@name='cntWoodBurningStove']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>		
+</append>
+
+<append xpath="//block[@name='burningBarrel']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>	
+</append>
+
+<append xpath="//block[@name='decoPumpkinJackOLantern']">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>
+</append>
+
+<append xpath="//block[starts-with(@name,'streetLight')]">
+	<property name="RuntimeSwitch" value="false"/>	
+	<property name="TakeDelay" value="0"/>   
+</append>
+
+<append xpath="/blocks">	
+
+<!-- WORKSTATIONS -->
+<block name="autoMiner">
+	<!-- Class -->
+	<property name="Class" value="Workstation"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="autominer"/>
+	</property>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<!-- UI_Info -->
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="autoMinerDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_autominer"/>
+	<property name="Stacknumber" value="1"/>
+	<!-- Visual -->
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Workstations.unity3d?AutoMiningDrill.prefab"/>
+	<property name="ModelOffset" value="0,.2,0"/>
+	<property name="MultiBlockDim" value="5,4,5"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<!-- Placement -->
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<!-- Value -->
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<!-- Interaction -->
+	<property name="MaxDamage" value="5000"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="OpenSound" value="chest_tier5_open"/>
+	<property name="CloseSound" value="chest_tier5_close"/>
+	<property name="TakeDelay" value="2"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="25"/>
+		<property name="resourceMechanicalParts" value="20"/>
+		<property name="resourceElectricParts" value="10"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="20" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<!-- Sorting -->
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+</block>
+
+<block name="blastFurnace">
+	<property name="Class" value="Forge"/>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="5000"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#@modfolder:Resources/Workstations.unity3d?BlastFurnace.prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="MultiBlockDim" value="3,3,2"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="ParticleName" value="forgeWorkstation"/>
+	<property name="ParticleOffset" value="1.5,-.5,.3"/>	
+	<property name="HeatMapStrength" value="6"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+	<property name="TraderStageTemplate" value="midTier3"/>	
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="blastfurnace"/>
+		<property name="Modules" value="tools,output,fuel,material_input"/>
+		<property name="InputMaterials" value="iron,brass,lead,glass,stone,clay,cobalt"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_blastfurnace"/>
+	<property name="OpenSound" value="forge_open"/>
+	<property name="CloseSound" value="forge_close"/>
+	<property name="CraftSound" value="forge_smelt_click"/>
+	<property name="CraftCompleteSound" value="forge_item_complete"/>
+	<property name="WorkstationJournalTip" value="forgeTip"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="10"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="resourceForgedIron" count="15" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="10" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="5" tag="allHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>	
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="5"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="DescriptionKey" value="blastFurnaceDesc"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+
+<block name="fabricator">
+	<!-- Class -->
+	<property name="Class" value="Workstation"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="fabricator"/>
+	</property>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<!-- UI_Info -->
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="fabricatorDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_fabricator"/>
+	<property name="Stacknumber" value="1"/>
+	<!-- Visual -->
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Workstations.unity3d?HydroOrganicFabricator.prefab"/>
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<!-- Placement -->
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<!-- Value -->
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="2000"/>
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<!-- Interaction -->
+	<property name="MaxDamage" value="3000"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="OpenSound" value="chest_tier5_open"/>
+	<property name="CloseSound" value="chest_tier5_close"/>
+	<property name="TakeDelay" value="2"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+	</property>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<!-- Sorting -->
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+</block>
+
+<!-- RESOURCES -->
+<block name="cobaltShapes" shapes="All">
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+	<property name="Material" value="Mcobalt_shapes"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Shape" value="New"/>
+	<property name="Texture" value="267"/>
+	<property name="UiBackgroundTexture" value="267"/>
+	<property name="EconomicValue" value="160"/>
+	<property class="RepairItems">
+		<property name="resourceForgedCobalt" value="8"/>
+	</property>
+	<drop event="Harvest" name="resourceCobalt" count="15" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapCobaltPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="UpgradeSound" value="place_block_metal"/>
+	<property name="SortOrder1" value="S041"/>
+	<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
+	<property name="FilterTags" value="MC_Shapes"/>
+</block>
+
+<block name="scrapCobaltPile">
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="CustomIcon" value="scrapMetalPile"/>
+	<property name="CustomIconTint" value="#0000FF"/>
+	<property name="MaxDamage" value="50"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="New"/>
+	<property name="Model" value="@:Shapes/broken_girder_beam.fbx"/>
+	<property name="Texture" value="267"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<drop event="Harvest" name="resourceCobalt" count="15" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="FilterTags" value="MC_building,SC_construction,SC_destruction"/>
+</block>
+
+<block name="oreCobaltBoulder">
+	<property name="Extends" value="oreBoulderMaster"/>
+	<property name="Material" value="MoreMetal"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?CobaltOreRock.prefab"/>	
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="Map.Color" value="70,110,120"/>
+	<drop event="Harvest" name="resourceCobalt" count="105" tag="oreWoodHarvest"/>
+</block>
+
+<block name="terrOreCobalt">
+	<property name="Material" value="MoreMetal"/>
+	<property name="Tags" value="ore,deepOre"/>
+	<property name="Shape" value="Terrain"/>
+	<property name="Mesh" value="terrain"/>
+	<property name="Map.Color" value="173,216,230"/>
+	<property name="CustomIcon" value="terrOrePotassiumNitrate"/>
+	<property name="CustomIconTint" value="#0000FF"/>	
+<!--	<property name="Texture" value="737"/>--> <!-- Cobalt custom texture -->
+	<property name="Texture" value="316"/>	
+	<property name="Weight" value="100"/>
+	<property name="ImposterExclude" value="true"/>
+	<drop event="Harvest" name="resourceCobalt" count="50" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="resourceCobalt" count="50" prob="0.4" stick_chance="0"/>
+	<property name="CanMobsSpawnOn" value="true"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+	<property name="SortOrder1" value="d0l0"/>
+	<property name="SortOrder2" value="0050"/>
+	<property name="DisplayType" value="blockTerrain"/>
+	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+</block>
+
+<block name="terrOreStoneCobaltRandom">
+	<property name="Extends" value="terrOreStoneIronRandom"/>
+	<property name="CreativeMode" value="Player"/>
+</block>
+
+<!-- HARVESTABLE VEHICLES -->
+<block name="cntVehicleMasterInsecure">
+	<property name="CreativeMode" value="None"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Class" value="CarExplodeLoot"/>
+	<property name="IndexName" value="challenge_cars"/>	
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="ItemTypeIcon" value="explosion"/>
+	<property name="LootList" value="cars"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Model" value="@:Entities/Vehicles/Car/car_black_dmg0Prefab.prefab"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="2,2,6"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="MaxDamage" value="1000"/>	
+	<property name="Map.Color" value="192,192,192"/>	
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="smallEngine" count="0,1" prob=".5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="carBattery" count="0,1" prob=".4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceAcid" count="1" prob=".15" tag="WasteTreasuresAcidHarvest"/>
+	<drop event="Harvest" name="resourceRadiator" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="4,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceHeadlight" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceOil" count="0,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="8,22" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceSpring" count="3,6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="70,180" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceCloth" count="10,20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceNanoChip" count="1,2" tag="salvageHarvest"/>		
+	<drop event="Destroy" count="0"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property class="Explosion">
+		<property name="ParticleIndex" value="31"/> <!-- which prefab/particle is used -->
+		<property name="RadiusBlocks" value="3.5"/> <!-- damage radius for blocks -->
+		<property name="BlockDamage" value="500"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="RadiusEntities" value="5"/> <!-- damage radius for entities -->
+		<property name="EntityDamage" value="250"/> <!-- damage for entities in the center of the explosion -->
+	</property>
+	<property name="PlacementDistance" value="6"/>
+	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts"/>	
+	<property name="FilterTags" value="MC_building,SC_automotive"/>
+</block>
+
+<!-- UNLOCKED VEHICLES -->
+<block name="cntSedanCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?SedanCar.prefab"/>
+</block>
+
+<block name="cntTruckInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?TruckVehicle.prefab"/>
+	<property name="MaxDamage" value="2500"/>	
+</block>
+
+<block name="cntMuscleCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?MuscleCar.prefab"/>
+</block>
+
+<block name="cntPickupTruckInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?PickupTruck.prefab"/>
+</block>
+
+<block name="cntSedanCar2Insecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?HoverVehicle.prefab"/>	
+</block>
+
+<block name="cntHoverCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?HoverCar.prefab"/>	
+</block>
+
+<block name="cntRacingCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Catlow.prefab"/>
+</block>
+
+<block name="cntGarbageTruckInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?GarbageTruck.prefab"/>
+	<property name="MultiBlockDim" value="2,4,7"/>		
+	<property name="MaxDamage" value="2500"/>	
+</block>
+
+<block name="cntMotorcycleInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Motorcycle.prefab"/>
+	<property name="MultiBlockDim" value="2,1,3"/>	
+	<property name="MaxDamage" value="500"/>	
+</block>
+
+<block name="cntArmoredHoverCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?ArmoredHoverCar.prefab"/>	
+</block>
+
+<block name="cntBlackMuscleCarInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackMuscleCar.prefab"/>		
+</block>
+
+<block name="cntPoliceVehicleInsecure">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?PoliceVehicle.prefab"/>		
+</block>
+
+<block name="cntPoliceVehicleUnlockedAlarm">
+	<property name="Extends" value="cntVehicleMasterInsecure"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="PoliceVehicle"/>	
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?PoliceVehicleAlarm.prefab"/>
+	<property name="MaxDamage" value="500"/>	
+</block>
+
+<!-- FARMING -->
+<block name="terrFarmland">
+	<property name="CreativeMode" value="None"/>
+	<property name="Material" value="Mfarmland"/>
+	<property name="Shape" value="Terrain"/>
+	<property name="Mesh" value="terrain"/>
+	<property name="Texture" value="2"/>
+	<property name="ImposterExclude" value="true"/>
+	<property name="CanMobsSpawnOn" value="false"/>
+	<property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="FilterTags" value="fterrain"/>
+	<property name="SortOrder1" value="d0m0"/>
+	<property name="SortOrder2" value="0050"/>
+</block>
+
+<block name="terrFarmlandFertilized">
+	<property name="CreativeMode" value="None"/>
+	<property name="Material" value="MfertilizedFarmland"/>
+	<property name="Shape" value="Terrain"/>
+	<property name="Mesh" value="terrain"/>
+	<property name="Texture" value="2"/>
+	<property name="ImposterExclude" value="true"/>
+	<property name="CanMobsSpawnOn" value="false"/>
+	<property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="FilterTags" value="fterrain"/>
+	<property name="SortOrder1" value="d0m0"/>
+	<property name="SortOrder2" value="0050"/>
+</block>
+
+<block name="signRadiation">
+	<property name="Extends" value="signRoadAZ260eastSpeed65" param1="ModelOffset"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?RadiationSign.prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+</block>
+
+<block name="cntBarrelRadiationSingle">
+	<property name="Extends" value="cntBarrelMetalMaster" param1="ModelOffset,CustomIcon"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?RadiationBarrel.prefab"/>		
+	<property name="Class" value="BuffAOE, DZCore"/>
+	<property name="ActiveRadiusEffects" value="buffRadiationSourceAOE(3)"/>
+	<property name="MaxDamage" value="1000"/>		
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="MultiBlockDim" value="2,1,1"/>
+	<property name="DescriptionKey" value="cntBarrelRadiationSingleDesc"/>		
+	<drop event="Harvest" name="resourceAcid" prob=".25" count="1" tag="WasteTreasuresAcidHarvest" tool_category="Disassemble"/>
+</block>
+
+<!-- LOOTABLE BROKEN VENDING MACHINES -->
+<block name="cntVendingMachine2BrokenLoot">
+	<property name="Extends" value="cntVendingMachine2Broken" param1="DowngradeBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="vendingDrinksLoot"/>	
+</block>
+
+<block name="cntVendingMachineEnergyBrokenLoot">
+	<property name="Extends" value="cntVendingMachineEnergyBroken" param1="DowngradeBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntVendingMachineEnergyBroken"/>	
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="vendingDrinksLoot"/>	
+</block>
+
+<block name="cntVendingMachineWaterBrokenLoot">
+	<property name="Extends" value="cntVendingMachineWaterBroken" param1="DowngradeBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntVendingMachineWaterBroken"/>	
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="vendingDrinksLoot"/>	
+</block>
+
+<!-- STORAGE CONTAINERS -->
+<block name="cntSecureStorageWallSafeClosed">
+	<property name="Extends" value="cntWallSafe" param1="DowngradeBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="smallSafeClosed"/>
+	<property name="CustomIcon" value="cntWallSafe"/>	
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<conditional>
+    <if cond="mod_loaded('MPLogue_Prefabs_7D2D_V1_0')">
+		<block name="MPL_SecureOrbSafeClosed">
+			<property name="Extends" value="MPL_OrbSafeClosed" param1="DowngradeBlock"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="smallSafeClosed"/>		
+		</block>
+    </if>
+</conditional>
+
+<block name="cntSecureStorageDeskSafeClosed">
+	<property name="Extends" value="cntDeskSafe" param1="HandleFace,DowngradeBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="smallSafeClosed"/>
+	<property name="CustomIcon" value="cntWallSafe"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+	<property name="Material" value="Mmetal"/>
+</block>
+
+<block name="cntSecureStorageGunSafeClosedWhite">
+	<property name="Extends" value="cntGunSafeWhite"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="gunSafeClosed"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="A0A0A0"/>
+	<property name="TintColor" value="A0A0A0"/>
+</block>
+
+<block name="cntSecureStorageFootlockerClosedWhite">
+	<property name="Extends" value="cntFootlockerClosedWhite" param1="DowngradeBlock"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="footlockerClosed"/>
+	<property name="CustomIcon" value="cntFootlockerClosedWhite"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageFootlockerClosedArmyGreen">
+	<property name="Extends" value="cntFootlockerClosedArmyGreen"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="militaryFootlockerClosed"/>	
+	<property name="CustomIcon" value="cntFootlockerClosedWhite"/>
+	<property name="CustomIconTint" value="4D5F41"/>
+	<property name="TintColor" value="4D5F41"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageWoodenChestClosed">
+	<property name="Extends" value="cntWoodenChestClosed" param1="DowngradeBlock"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="playerStorage"/>
+	<property name="CustomIcon" value="cntWoodenChestClosed"/>	
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageWoodenChestRottenClosed">
+	<property name="Extends" value="cntWoodenChestRottenClosed" param1="DowngradeBlock"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="playerStorage"/>	
+	<property name="CustomIcon" value="cntWoodenChestRottenClosed"/>	
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageOldWestChestClosed">
+	<property name="Extends" value="cntWoodenChestRottenClosed" param1="DowngradeBlock"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="playerStorage"/>		
+	<property name="CustomIcon" value="cntWoodenChestRottenOpen"/>
+	<property name="CustomIconTint" value="FFFF99"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageWoodenChestMilitaryClosed">
+	<property name="Extends" value="cntWoodenChestMilitaryClosed" param1="DowngradeBlock"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="playerStorage"/>	
+	<property name="CustomIcon" value="cntWoodenChestMilitaryClosed"/>	
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageToolBoxClosedWhite">
+	<property name="Extends" value="cntToolBoxClosedWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="toolBoxClosed"/>
+	<property name="CustomIcon" value="cntToolBoxClosedWhite"/>		
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<block name="cntSecureStorageRollingToolBoxClosedWhite">
+	<property name="Extends" value="cntRollingToolBoxClosedWhite" param1="TintColor"/>
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="rollingToolBoxClosed"/>		
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntRollingToolBoxClosedWhite"/>	
+	<property name="CustomIconTint" value="999999"/>
+	<property name="TintColor" value="999999"/>
+	<property name="DescriptionKey" value="cntSecureStorageChestDesc"/>	
+</block>
+
+<!-- MINES -->
+<block name="mineEMP">
+	<property name="Extends" value="mineCandyTin"/>
+	<property name="DisplayType" value="blockLandmine"/>
+	<property name="Explosion.ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$mineEMP"/>
+	<property name="Explosion.AudioName" value="plasma_explosion"/>
+	<property name="Explosion.AudioDuration" value="3"/>
+	<property name="Explosion.SyncOnConnect" value="false"/>
+	<property name="Explosion.IgnoreHeatMap" value="true"/>	
+	<property name="Explosion.Duration" value="5"/>
+	<property name="Explosion.RadiusBlocks" value="2"/>
+	<property name="Explosion.BlockDamage" value="10"/>
+	<property name="Explosion.RadiusEntities" value="10"/>
+	<property name="Explosion.EntityDamage" value="30"/> <!-- damage for entities in the center of the explosion. -->
+	<property name="Explosion.Buff" value="buffEMP,buffDisableLauncher"/>	
+	<property name="UnlockedBy" value="craftingExplosives"/>
+	<property name="Stacknumber" value="20"/> <!-- STK explosives -->
+	<property name="DescriptionKey" value="mineEMPDesc"/>	
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Guns.unity3d?EMPMine.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>	
+	<property name="EconomicValue" value="146"/>
+	<property name="MaxDamage" value="5"/>
+	<property name="SortOrder1" value="B757"/>
+	<property name="SortOrder2" value="0003"/>
+</block>
+
+<!-- TREES -->
+<block name="treeForestBeech00A">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_00_A.prefab"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1" prob="0.1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech00B">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_00_B.prefab"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1" prob="0.1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech00C">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_00_C.prefab"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1" prob="0.1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech00D">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_00_D.prefab"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1" prob="0.1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech01">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_01.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech02">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_02.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech03">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_03.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech04">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_04.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech05">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_05.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech06">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_06.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech07">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_07.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech08">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_08.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestBeech09">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_09.prefab"/>
+	<property name="MultiBlockDim" value="1,13,1"/>
+	<property name="BigDecorationRadius" value="6"/>		
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir01">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_01.prefab"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir02">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_02.prefab"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir03">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_03.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir04">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_04.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir05">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_05.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir06">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_06.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir07">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_07.prefab"/>
+	<property name="MultiBlockDim" value="1,13,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeForestFir08">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_08.prefab"/>
+	<property name="MultiBlockDim" value="1,13,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir01">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_01.prefab"/>		
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir02">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_02.prefab"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir03">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_03.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir04">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_04.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir05">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_05.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir06">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_06.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir07">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_07.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treeWinterFir08">
+	<property name="Extends" value="treeMaster"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_08.prefab"/>
+	<property name="MultiBlockDim" value="1,13,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<!-- GROWING TREES -->
+<block name="treePlantedSaplingMaster">
+	<property name="Extends" value="treeMasterGrowing" param1="CustomIcon"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="FallOver" value="false"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak08m"/>
+	<property name="DescriptionKey" value="treePlantedSeed1mDesc"/>
+	<property name="Material" value="Mplants"/>
+	<property name="Model" value="@:Entities/Trees/OakSeed01Prefab.prefab"/>
+	<property name="ModelOffset" value="0,0.5,0"/>
+	<property name="ParticleOnDeath" value="treeGib_sapling"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="MaxDamage" value="10"/>
+	<property name="ActivationDistance" value="4"/>
+	<property name="Map.Color" value="133,94,66"/>
+	<property name="UsePrefabNameForIcon" value="true"/>		
+	<dropextendsoff/>
+	<drop event="Destroy" name="treePlantedOak1m" count="1"/>
+	<property name="SortOrder1" value="B902"/>
+	<property name="SortOrder2" value="0004"/>
+	<property name="Group" value="Resources"/>
+</block>
+
+<block name="treePlantedSaplingBeech00">
+	<property name="Extends" value="treePlantedSaplingMaster"/>
+	<property name="CreativeMode" value="Player"/>	
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_Sapling_00.prefab"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestBeech00"/>	
+	<dropextendsoff/>	
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>	
+</block>
+
+<block name="treePlantedSaplingFir00">
+	<property name="Extends" value="treePlantedSaplingMaster"/>
+	<property name="CreativeMode" value="Player"/>		
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Sapling_00.prefab"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestFir00"/>	
+	<dropextendsoff/>	
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>	
+</block>
+
+<block name="treePlantedSaplingWinterFir00">
+	<property name="Extends" value="treePlantedSaplingMaster"/>
+	<property name="CreativeMode" value="Player"/>		
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_Sapling_00.prefab"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterFir00"/>
+	<dropextendsoff/>	
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>	
+</block>
+
+<block name="treePlantedForestBeech00">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_00_A.prefab"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="FallOver" value="false"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestBeech01"/>	
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestBeech01">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_01.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestBeech02"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestBeech02">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_03.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestBeech03"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>	
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestBeech03">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Tree_05.prefab"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>	
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingBeech00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestFir00">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_01.prefab"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="4"/>	
+	<property name="FallOver" value="false"/>	
+	<property name="PlantGrowing.Next" value="treePlantedForestFir01"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestFir01">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_02.prefab"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestFir02"/>		
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestFir02">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_03.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="PlantGrowing.Next" value="treePlantedForestFir03"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>	
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedForestFir03">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_05.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>		
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedWinterFir00">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_01.prefab"/>		
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterFir01"/>	
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedWinterFir01">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_02.prefab"/>
+	<property name="MultiBlockDim" value="1,6,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="FallOver" value="false"/>	
+	<property name="PlantGrowing.Next" value="treePlantedWinterFir02"/>		
+	<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedWinterFir02">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodLarge"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_03.prefab"/>
+	<property name="MultiBlockDim" value="1,10,1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="PlantGrowing.Next" value="treePlantedWinterFir03"/>
+	<property name="PlantGrowing.FertileLevel" value="3"/>	
+	<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<block name="treePlantedWinterFir03">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fir_Tree_Snow_05.prefab"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="6"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>		
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="treePlantedSaplingWinterFir00" count="1"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_75m"/>
+	<property name="SortOrder2" value="0300"/>
+</block>
+
+<!-- PLANTS -->
+<block name="plantMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Material" value="MleavesStable"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plantHedgePrefab"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="GndAlign" value="0"/>	
+	<property name="Collide" value="melee"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="Map.Color" value="48,105,75"/>		
+	<drop event="Harvest" name="resourceWood" count="1,3" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceYuccaFibers" count="1,3" tag="allHarvest"/>	
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="resourceWood" count="0" prob="1" stick_chance="0"/>
+	<property name="EconomicValue" value="20"/>
+	<property name="FilterTags" value="MC_outdoor,SC_shrubbery,A21_NEW"/>
+	<property name="SortOrder1" value="a061"/>
+	<property name="WaterFlow" value="permitted"/>	
+</block>
+
+<block name="plantBeech00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Plant_00.prefab"/>
+</block>
+
+<block name="plantBeech01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Plant_01.prefab"/>
+</block>
+
+<block name="plantBeech02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Plant_02.prefab"/>
+</block>
+
+<block name="plantBeech03">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Beech_Plant_03.prefab"/>
+</block>
+
+<block name="plantBlackBerry00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_00.prefab"/>
+</block>
+
+<block name="plantBlackBerry01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_01.prefab"/>
+</block>
+
+<block name="plantBlackBerry02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_02.prefab"/>
+</block>
+
+<block name="plantBlackBerry03">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_03.prefab"/>
+</block>
+
+<block name="plantBlackBerry04">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_04.prefab"/>
+</block>
+
+<block name="plantBlackBerry05">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?BlackBerry_Plant_05.prefab"/>
+</block>
+
+<block name="plantFern00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fern_Plant_00.prefab"/>
+</block>
+
+<block name="plantFern01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fern_Plant_01.prefab"/>
+</block>
+
+<block name="plantFern02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fern_Plant_02.prefab"/>
+</block>
+
+<block name="plantFern03">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Fern_Plant_03.prefab"/>
+</block>
+
+<block name="plantIvy00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Ivy_Plant_00.prefab"/>
+</block>
+
+<block name="plantIvy01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Ivy_Plant_01.prefab"/>
+</block>
+
+<block name="plantIvy02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Ivy_Plant_02.prefab"/>
+</block>
+
+<block name="plantLilly00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Lilly_Plant_00.prefab"/>
+</block>
+
+<block name="plantLilly01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Lilly_Plant_01.prefab"/>
+</block>
+
+<block name="plantGalinsoga00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Galinsoga_Plant_00.prefab"/>
+</block>
+
+<block name="plantGalinsoga01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Galinsoga_Plant_01.prefab"/>
+</block>
+
+<block name="plantGalinsoga02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Galinsoga_Plant_02.prefab"/>
+</block>
+
+<block name="plantLeaves00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_00.prefab"/>
+</block>
+
+<block name="plantLeaves01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_01.prefab"/>
+</block>
+
+<block name="plantLeaves02">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_02.prefab"/>
+</block>
+
+<block name="plantLeaves03">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_03.prefab"/>
+</block>
+
+<block name="plantLeaves04">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_04.prefab"/>
+</block>
+
+<block name="plantLeaves05">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Leaves_Plant_05.prefab"/>
+</block>
+
+<block name="plantMoss00">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Moss_Plant_00.prefab"/>
+</block>
+
+<block name="plantMoss01">
+	<property name="Extends" value="plantMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Moss_Plant_01.prefab"/>
+</block>
+
+<!-- ROCKS -->
+<block name="boulderMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="Material" value="Mboulder"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="Model" value="Entities/Resources/resourceRock01Prefab"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="GndAlign" value="1"/>	
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="PassThroughDamage" value="true"/>
+	<drop event="Harvest" name="resourceRockSmall" count="22" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Map.Color" value="120,120,120"/>
+	<property name="FilterTags" value="MC_outdoor,SC_decor"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="IndexName" value="quest_stone_boulder"/>
+</block>
+
+<block name="boulderResource00">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_00.prefab"/>
+</block>
+
+<block name="boulderResource01">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_01.prefab"/>
+</block>
+
+<block name="boulderResource02">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_02.prefab"/>
+</block>
+
+<block name="boulderResource03">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_03.prefab"/>
+</block>
+
+<block name="boulderResource04">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_04.prefab"/>
+</block>
+
+<block name="boulderResource05">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_05.prefab"/>
+</block>
+
+<block name="boulderResource06">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_06.prefab"/>
+</block>
+
+<block name="boulderResource07">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_07.prefab"/>
+</block>
+
+<block name="boulderResource08">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_08.prefab"/>
+</block>
+
+<block name="boulderResource09">
+	<property name="Extends" value="boulderMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_09.prefab"/>
+</block>
+
+<block name="rockMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="Material" value="Mstone"/>
+	<property name="Weight" value="80"/>	
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Resources/resourceRock01Prefab"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="PassThroughDamage" value="true"/>	
+	<property name="GndAlign" value="1"/>	
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="CanPickup" value="true" param1="resourceRockSmall"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Map.Color" value="120,120,120"/>	
+	<drop event="Destroy" name="resourceRockSmall" count="1"/>
+	<property name="FilterTags" value="MC_outdoor,SC_decor"/>
+	<property name="IndexName" value="quest_stone"/>
+	<property name="WaterFlow" value="permitted"/>
+</block>
+
+<block name="rockSmallResource00">
+	<property name="Extends" value="rockMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_10.prefab"/>	
+</block>
+
+<block name="rockSmallResource01">
+	<property name="Extends" value="rockMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_11.prefab"/>	
+</block>
+
+<block name="rockSmallResource02">
+	<property name="Extends" value="rockMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_12.prefab"/>	
+</block>
+
+<block name="rockSmallResource03">
+	<property name="Extends" value="rockMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Rock_13.prefab"/>	
+</block>
+
+<block name="branchMaster">
+	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+	<property name="CreativeMode" value="None"/>	
+	<property name="Material" value="Mwood_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/OutdoorDecor/driftwood_01Prefab"/>
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="PassThroughDamage" value="true"/>	
+	<property name="GndAlign" value="0"/>	
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Map.Color" value="92,64,51"/>	
+	<drop event="Harvest" name="resourceWood" count="8,14" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>	
+	<property name="FilterTags" value="MC_outdoor,SC_decor,A21_NEW"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="IndexName" value="quest_wood"/>
+</block>
+
+<block name="branch00">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_00.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch01">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_01.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch02">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_02.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch03">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_03.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch04">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_04.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch05">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_05.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch06">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_06.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch07">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_07.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="branch08">
+	<property name="Extends" value="branchMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Branch_08.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeStumpMaster">
+	<property name="Material" value="MtreeWoodSmall"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="wood,challenge_stump"/>
+	<property name="IndexName" value="challenge_stump"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="@:Entities/Trees/Prefabs/Stump.prefab"/>
+	<property name="UsePrefabNameForIcon" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="GndAlign" value="0"/>
+	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
+	<property name="Map.Color" value="92,64,51"/>
+
+	<!-- Vanilla-style drops -->
+	<drop event="Harvest" name="resourceWood" count="10,15" tag="oreWoodHarvest,lumberjackHarvest"/>
+	<drop event="Destroy" name="resourceWood" count="10,15"/>
+
+	<!-- Critical: vanilla bee/honey behavior -->
+	<property name="DestroyedEvent" value="block_tree_stump_bees"/>
+
+	<property name="FilterTags" value="MC_outdoor,SC_trees"/>
+	<property name="SortOrder1" value="a0d0"/>
+</block>
+
+<block name="treeStump00">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Stump_00.prefab"/>
+	<property name="MultiBlockDim" value="2,2,2"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeStump01">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Stump_01.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeStump02">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Stump_02.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeStump03">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Stump_03.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeStump04">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Stump_04.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeLogMaster">
+	<property name="Material" value="MtreeWoodSmall"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="Tags" value="wood"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="@:Entities/Trees/Prefabs/Stump.prefab"/>
+	<property name="MultiBlockDim" value="3,2,3"/>	
+	<property name="UsePrefabNameForIcon" value="true"/>	
+	<property name="StabilitySupport" value="false"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="GndAlign" value="0"/>	
+	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
+	<property name="Map.Color" value="92,64,51"/>		
+	<drop event="Harvest" name="resourceWood" count="20,30" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>	
+	<property name="FilterTags" value="MC_outdoor,SC_trees"/>
+	<property name="SortOrder1" value="a0d0"/>
+</block>
+
+<block name="treeLog00">
+	<property name="Extends" value="treeLogMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Log_00.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="treeLog01">
+	<property name="Extends" value="treeLogMaster"/>
+	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?Forest_Log_01.prefab"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<!-- PLACEHOLDERS -->
+<block name="decoRoadRandomHelper">
+	<property name="Extends" value="treeStumpMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CanDecorateOnSlopes" value="false"/>	
+</block>
+
+<block name="decoRoadGrassRandomHelper">
+	<property name="Extends" value="treeGrassMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CanDecorateOnSlopes" value="true"/>	
+</block>
+
+</append>
+</Zilox>

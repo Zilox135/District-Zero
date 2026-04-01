@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="1" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="True" />
+  <property name="TraderAreaProtect" value="0,0,0" />
+  <property name="ThemeTags" value="traderHugh" />
+  <property name="ThemeRepeatDistance" value="1000" />
+  <property name="TraderAreaTeleportSize" value="30, 44, 30" />
+  <property name="Tags" value="countrytown, rural, gateway, nocheckpoint" />
+  <property name="AllowedTownships" value="city,town,rural,wilderness" />
+  <property name="PrefabSize" value="60, 64, 60" />
+  <property name="RotationToFaceNorth" value="3" />
+  <property name="Zoning" value="any" />
+  <property name="YOffset" value="-20" />
+  <property name="TraderAreaTeleportCenter" value="0, 1, 0" />
+  <property name="SleeperVolumeSize" value="20, 9, 14" />
+  <property name="SleeperVolumeStart" value="22, 1, 20" />
+  <property name="SleeperVolumeGroupId" value="0" />
+  <property name="SleeperVolumeGroup" value="animalBear,1,1" />
+  <property name="SleeperIsLootVolume" value="False" />
+  <property name="SleeperIsQuestExclude" value="False" />
+  <property name="SleeperVolumeFlags" value="2" />
+  <property name="TeleportVolumeSize" value="53, 47, 52" />
+  <property name="TeleportVolumeStart" value="2, 0, 3" />
+  <property name="SleeperVolumeTriggeredBy" value=" " />
+  <property name="QuestTags" value="trader, traderHugh" />
+  <property class="Stats">
+    <property name="TotalVertices" value="262962" />
+    <property name="TotalTriangles" value="201234" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="232406" />
+      <property name="Triangles" value="157730" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="4128" />
+      <property name="Triangles" value="2828" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="1920" />
+      <property name="Triangles" value="960" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="24508" />
+      <property name="Triangles" value="39716" />
+    </property>
+  </property>
+  <property class="IndexedBlockOffsets">
+    <property class="quest_stone_boulder">
+      <property name="0" value="54, 20, 46" />
+      <property name="1" value="54, 21, 46" />
+      <property name="2" value="54, 20, 47" />
+      <property name="3" value="54, 21, 47" />
+      <property name="4" value="54, 20, 48" />
+      <property name="5" value="54, 21, 48" />
+      <property name="6" value="54, 20, 49" />
+      <property name="7" value="54, 21, 49" />
+      <property name="8" value="54, 20, 50" />
+      <property name="9" value="54, 21, 50" />
+      <property name="10" value="49, 20, 51" />
+      <property name="11" value="54, 20, 51" />
+      <property name="12" value="54, 21, 51" />
+      <property name="13" value="54, 20, 52" />
+      <property name="14" value="54, 21, 52" />
+      <property name="15" value="54, 20, 53" />
+      <property name="16" value="54, 21, 53" />
+      <property name="17" value="48, 20, 54" />
+      <property name="18" value="48, 21, 54" />
+      <property name="19" value="49, 20, 54" />
+      <property name="20" value="49, 21, 54" />
+      <property name="21" value="50, 20, 54" />
+      <property name="22" value="50, 21, 54" />
+      <property name="23" value="51, 20, 54" />
+      <property name="24" value="51, 21, 54" />
+      <property name="25" value="52, 20, 54" />
+      <property name="26" value="52, 21, 54" />
+      <property name="27" value="53, 20, 54" />
+      <property name="28" value="53, 21, 54" />
+      <property name="29" value="54, 20, 54" />
+      <property name="30" value="54, 21, 54" />
+      <property name="31" value="54, 22, 54" />
+      <property name="32" value="47, 20, 54" />
+      <property name="33" value="46, 20, 54" />
+      <property name="34" value="46, 21, 54" />
+      <property name="35" value="47, 21, 54" />
+    </property>
+    <property class="quest_wood_trees">
+      <property name="0" value="52, 20, 53" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="54, 20, 27" />
+    </property>
+    <property class="quest_wood">
+      <property name="0" value="51, 21, 22" />
+      <property name="1" value="47, 20, 26" />
+    </property>
+    <property class="POILight">
+      <property name="0" value="43, 0, 38" />
+    </property>
+    <property class="Trader">
+      <property name="0" value="42, 39, 39" />
+    </property>
+    <property class="challenge_steel">
+      <property name="0" value="46, 39, 37" />
+      <property name="1" value="46, 39, 38" />
+    </property>
+  </property>
+</prefab>

@@ -1,0 +1,41 @@
+<rwgmixer>
+<!--
+
+    <append xpath="/rwgmixer">
+        <streettile name="rwg_tile_rural_corner_mpl_01">
+            <property name="maxtiles" value="10"/>
+            <property name="mintiles" value="8"/>
+            <property name="maxdensity" value="120"/>
+        </streettile>
+    </append>
+
+
+-->
+
+	<append xpath="/rwgmixer">
+		<prefab_spawn_adjust partial_name="trader_rekt_by_MPLogue" biomeTags="forest" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="trader_Temple_byMPLogue" biomeTags="snow" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="Svalbard_Seed_Vault_by_MPLogue" biomeTags="snow" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="trader_Wight_Multi_Trader_by_MPLogue" biomeTags="wasteland" bias="10" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="Petra_Indiana_Jones_by_MPLogue" biomeTags="desert" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="Rubble_wall_01_by_MPLogue" biomeTags="wasteland,burntforest" min_count="1" max_count="2"/>
+		<prefab_spawn_adjust partial_name="Skywalker_Homestead_by_MPLogue" biomeTags="desert" min_count="1" max_count="2"/>
+		<prefab_spawn_adjust partial_name="SnekCave_by_MPLogue" biomeTags="wasteland,burntforest" min_count="1" max_count="2"/>
+		<prefab_spawn_adjust partial_name="Swamp_Market_by_MPLogue" biomeTags="wasteland" min_count="1" max_count="2"/>
+		<prefab_spawn_adjust partial_name="trader_jen_by_MPLogue" biomeTags="burntforest" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="trader_joel_by_MPLogue" biomeTags="wasteland" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="trader_hugh_by_MPLogue" biomeTags="snow" min_count="1" max_count="1"/>
+		<prefab_spawn_adjust partial_name="trader_bob_by_MPLogue" biomeTags="desert" min_count="1" max_count="1"/>	
+		<prefab_spawn_adjust partial_name="Rose_Abby_byMPLogue" biomeTags="forest,snow" min_count="1" max_count="2"/>		
+		<prefab_spawn_adjust partial_name="BridgeHouse_by_MPLogue" biomeTags="forest,snow,desert" bias="20" min_count="3" max_count="5"/>			
+		<prefab_spawn_adjust partial_name="Quarry_House_01_by_MPLogue" biomeTags="forest,snow,desert" bias="20" min_count="3" max_count="5"/>	
+		<prefab_spawn_adjust partial_name="Cat_Statue_by_MPLogue" biomeTags="wasteland,burntforest" min_count="2" max_count="3"/>	
+	</append>
+
+
+
+	<append xpath="/rwgmixer/township[@name='city']/property[@name='biomes']/@value">,forest,desert</append>
+	<append xpath="/rwgmixer/township[@name='citybig']/property[@name='biomes']/@value">,forest,snow</append>
+
+
+</rwgmixer>

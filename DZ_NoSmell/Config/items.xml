@@ -1,0 +1,14 @@
+<DZ_NoSmell>
+
+<!-- REMOVE ALL ITEM SMELL PROPERTIES (passive smell from carrying items) -->
+<remove xpath="//item/property[@name='Smell']"/>
+
+<!-- REMOVE ALL SMELLUSE PROPERTIES FROM FOOD ACTIONS (smell when eating) -->
+<remove xpath="//item/property[@class='Action0']/property[@name='SmellUse']"/>
+
+<!-- REMOVE SMELL DISPLAY VALUES (these show smell distance in UI) -->
+<remove xpath="/items/item/effect_group/display_value[@name='dSmell']"/>
+<remove xpath="/items/item/effect_group/display_value[@name='dSmellUse']"/>
+
+</DZ_NoSmell>
+

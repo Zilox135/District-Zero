@@ -1,0 +1,119 @@
+<!--
+================================================================================
+CLEAN WASTELAND MOD - Biomes Configuration
+================================================================================
+
+This mod removes debris, trees, and vegetation from the wasteland biome while
+preserving all valuable elements:
+
+KEPT ELEMENTS:
+- Ore veins (deco_coal_vein, deco_iron_vein, deco_lead_vein, deco_nitrate_vein)
+- Loot containers (barrels, wasteland loot helpers, bird nests)
+- Mineable items (hubcaps, candy tins)
+- Resource rocks (resourceRock01, resourceRock02)
+- Car wrecks (carWrecksRandomHelper, carsRandomHelper)
+- Radiated mushrooms (mushroomRadiated02, mushroomRadiated04)
+- All terrain layers and ore resources
+- All subbiomes and their configurations
+- Weather patterns and biome properties
+
+REMOVED ELEMENTS:
+- Debris (rubble, cinder blocks, scrap metal, driftwood, rocks, tire)
+- Trees (treeBurntMaple variants, treeDeadPineLeaf)
+- Vegetation (plantShrubDead, treeBrownGrassDiagonal, treeShortGrass)
+
+================================================================================
+-->
+
+<configs>
+
+	<!-- ========================================================================
+	     REMOVE ALL TREES AND VEGETATION FROM WASTELAND (All subbiomes)
+	     Uses simplified XPath that works across main biome and all subbiomes
+	     ======================================================================== -->
+
+	<!-- Remove ALL trees (burnt maples, dead pines) from wasteland -->
+	<remove xpath="//biome[@name='wasteland']//decoration[starts-with(@blockname,'treeBurnt')]" />
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='treeDeadPineLeaf']" />
+
+	<!-- Remove ALL grass decorations from wasteland -->
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='treeBrownGrassDiagonal']" />
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='treeShortGrass']" />
+
+	<!-- Remove ALL plants/shrubs from wasteland -->
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='plantShrubDead']" />
+
+	<!-- ========================================================================
+	     REMOVE DEBRIS FROM WASTELAND (All subbiomes)
+	     ======================================================================== -->
+
+	<!-- Remove decorative rocks (NOT resource rocks) -->
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='rock01']" />
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='rock02']" />
+
+	<!-- Remove cinder blocks -->
+	<remove xpath="//biome[@name='wasteland']//decoration[starts-with(@blockname,'cinderBlocks')]" />
+
+	<!-- Remove rubble and scrap -->
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='rubblePileBricksSmall']" />
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='scrapMetalPile']" />
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='hubcapNoMine']" />
+
+	<!-- Remove driftwood -->
+	<remove xpath="//biome[@name='wasteland']//decoration[starts-with(@blockname,'driftwood')]" />
+
+	<!-- Remove tire decorations -->
+	<remove xpath="//biome[@name='wasteland']//decoration[@blockname='decoCarTireSmallFlat']" />
+
+	<!-- Remove rubble prefabs -->
+	<remove xpath="//biome[@name='wasteland']//decoration[starts-with(@name,'deco_rubble_stone')]" />
+	<remove xpath="//biome[@name='wasteland']//decoration[starts-with(@name,'deco_rubble_brick')]" />
+
+	<!-- ========================================================================
+	     ADD CUSTOM ALIEN VEGETATION TO WASTELAND (All Subbiomes)
+	     ======================================================================== -->
+
+	<!-- Alien Grass - Very Dense ground cover (added to ALL wasteland subbiomes) -->
+	<!-- Target each subbiome's decorations section individually -->
+	<append xpath="//biome[@name='wasteland']/subbiome/decorations">
+		<decoration type="block" blockname="aliengrass" prob="0.005"/>
+		<decoration type="block" blockname="alienplant01" prob="0.005"/>
+		<decoration type="block" blockname="alienplant02" prob="0.005"/>
+		<!-- Alien Mushrooms - Very rare -->
+		<decoration type="block" blockname="alienmushroom01" prob="0.001"/>
+		<decoration type="block" blockname="alienmushroom02" prob="0.001"/>
+		<decoration type="block" blockname="alienmushroom03" prob="0.001"/>
+		<decoration type="block" blockname="alienmushroom04" prob="0.001"/>
+		<!-- Mushroom Tree - Rare like burnt trees -->
+		<decoration type="block" blockname="treemushroom01" prob="0.004" rotatemax="3"/>
+		<!-- Alien Trees - Rare -->
+		<decoration type="block" blockname="alientree01" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree02" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree03" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree04" prob="0.001" rotatemax="3"/>
+		<decoration type="block" blockname="alientree05" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree06" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree09" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree10" prob="0.004" rotatemax="3"/>
+		<decoration type="block" blockname="alientree11" prob="0.004" rotatemax="3"/>
+		<!-- Alien Rocks - Large boulders like resourceRock -->
+		<decoration type="block" blockname="alienrock01" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock02" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock03" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock04" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock05" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock06" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock07" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock08" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock09" prob="0.00033" rotatemax="3"/>
+		<decoration type="block" blockname="alienrock10" prob="0.00033" rotatemax="3"/>
+		<!-- Alien Pebbles - Small pickable rocks -->
+		<decoration type="block" blockname="alienpebble01" prob="0.004"/>
+		<decoration type="block" blockname="alienpebble02" prob="0.004"/>
+		<decoration type="block" blockname="alienpebble03" prob="0.004"/>
+		<decoration type="block" blockname="alienpebble04" prob="0.004"/>
+		<decoration type="block" blockname="alienpebble05" prob="0.004"/>
+	</append>
+
+</configs>
+

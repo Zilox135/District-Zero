@@ -1,0 +1,9 @@
+<DZ_NoSmell>
+
+<!-- REMOVE ALL SMELL DETECTION THRESHOLDS FROM ENTITIES -->
+<remove xpath="//entity_class/property[@name='SleeperSmellSenseThreshold']"/>
+<remove xpath="//entity_class/property[@name='SleeperSmellWakeThreshold']"/>
+<remove xpath="//entity_class/property[@name='SmellAlertThreshold']"/>
+
+</DZ_NoSmell>
+

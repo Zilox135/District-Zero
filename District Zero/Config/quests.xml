@@ -1,0 +1,235 @@
+<Zilox>
+
+<!-- REMOVE STAY WITHIN REQUIREMENT FOR QUESTING -->
+<remove xpath="//objective[@type='POIStayWithin']"/>
+<remove xpath="//objective[@type='StayWithin']"/>
+
+<!-- MAKE RESTORE POWER QUESTS WORK AT ALL TIMES OF THE DAY -->
+<remove xpath="//quest[contains(@id,'restore_power')]/objective[@type='RallyPoint']/property[@name='allowed_start_hour']"/>
+<remove xpath="//quest[contains(@id,'restore_power')]/objective[@type='RallyPoint']/property[@name='allowed_end_hour']"/>
+
+<!-- MAKE ALL REWARDS RANDOM -->
+<setattribute xpath="//quest[@id='quest_reward_any_zombie_slayer']//reward" name="isfixed">false</setattribute>
+<setattribute xpath="//quest[@id='quest_reward_lumberjack_zombie_slayer']//reward" name="isfixed">false</setattribute>
+
+<!-- REMOVE LEGENDARY PART REWARDS -->
+<remove xpath="//reward[@id='resourceLegendaryParts']"/>
+
+<!-- ADD ENERGY AMMO TO REWARDS -->
+<append xpath="//quest[@id='quest_reward_any_zombie_slayer']">
+	<reward type="Item" id="ammoNanoEnergyCell" ischosen="true" isfixed="false" value="300"/>
+	<reward type="Item" id="ammoShotgunEnergyCell" ischosen="true" isfixed="false" value="150"/>
+	<reward type="Item" id="ammoHeavyEnergyCell" ischosen="true" isfixed="false" value="150"/>
+</append>
+
+<append xpath="//quest[@id='quest_reward_lumberjack_zombie_slayer']">
+	<reward type="Item" id="thrownGrenadeEMP" ischosen="true" isfixed="false" value="25"/>
+	<reward type="Item" id="mineEMP" ischosen="true" isfixed="false" value="10"/>
+</append>
+
+<!-- REMOVE OLD REWARDS -->
+<remove xpath="//quest[@id='quest_reward_mutated_zombie_slayer']//reward"/>
+
+<!-- ADD NEW REWARDS -->
+<append xpath="//quest[@id='quest_reward_mutated_zombie_slayer']">
+	<reward type="Item" id="modArmorCustomizedFittings" ischosen="true" isfixed="true" value="1"/>
+	<reward type="Item" id="modArmorPlatingReinforced" ischosen="true" isfixed="true" value="1"/>
+	<reward type="Item" id="modArmorQuadStoragePocket" ischosen="true" isfixed="true" value="1"/>
+	<reward type="Item" id="modArmorAdvancedMuffledConnectors" ischosen="true" isfixed="true" value="1"/>
+	<reward type="Item" id="modArmorTreasureHunter" ischosen="true" isfixed="true" value="1"/>
+</append>
+
+<!-- SET AUTO TRACKING OF THE OPEN STARTER CAPSULE CHALLENGE AFTER TALKING TO THE TRADER -->
+<set xpath="//quest[@id='quest_whiteRiverCitizen1']/action[@type='TrackChallenge']/property[@name='challenge']/@value">openStarterCapsule</set>
+
+<!-- REMOVE unique_key property TO USE SIMPLE CLOSEST-POI LOGIC INSTEAD OF TraderArea VALIDATION -->
+<!-- unique_key="traderquest" causes chooseBestTrader() to be used which requires registered TraderAreas -->
+<remove xpath="//quest[@id='quest_whiteRiverCitizen1']/property[@name='unique_key']"/>
+
+<append xpath="/quests">
+
+<!-- Kill_Soldier_Challenge_Reward -->
+	<quest id="quest_reward_soldier_zombie_slayer" template="challengegroup_reward_homesteading">
+		<variable name="name" value="zombie_slayer_name_soldier"/>
+		<variable name="subtitle" value="zombie_slayer_subtitle_soldier"/>
+		<variable name="description" value="zombie_slayer_desc"/>
+		<variable name="completion" value="zombie_slayer_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardExplosives if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="thrownAmmoMolotovCocktail" ischosen="true" isfixed="true" value="20"/>
+		<reward type="Item" id="thrownGrenade" ischosen="true" isfixed="true" value="25"/>
+		<reward type="Item" id="thrownGrenadeContact" ischosen="true" isfixed="true" value="25"/>
+		<reward type="Item" id="thrownGrenadeEMP" ischosen="true" isfixed="true" value="25"/>
+		<reward type="Item" id="mineEMP" ischosen="true" isfixed="true" value="10"/>
+	</quest>
+
+<!-- *** ROBOT_EXTERMINATOR_REWARDS -->
+	<quest id="challengegroup_reward_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name"/>
+		<variable name="subtitle" value="exterminator_subtitle"/>
+		<variable name="description" value="exterminator_desc"/>
+		<property name="completion_key" value="exterminator_completion"/>
+		
+		<reward type="Exp" value="30000"/>
+		<reward type="Item" id="ammoBundle9mmBulletBall" ischosen="true" isfixed="false" value="20"/>
+		<reward type="Item" id="ammoBundleShotgunShell" ischosen="true" isfixed="false" value="20"/>
+		<reward type="Item" id="ammoBundle762mmBulletBall" ischosen="true" isfixed="false" value="20"/>
+		
+		<reward type="Item" id="ammoBundleNanoEnergyCell" ischosen="true" isfixed="false" value="20"/>
+		<reward type="Item" id="ammoBundleHeavyEnergyCell" ischosen="true" isfixed="false" value="20"/>
+		<reward type="Item" id="ammoBundleShotgunEnergyCell" ischosen="true" isfixed="false" value="20"/>		
+	</quest>
+	
+<!-- Kill_Any_Robot_Challenge_Reward -->
+	<quest id="quest_reward_any_robot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_any_robot"/>
+		<variable name="subtitle" value="exterminator_subtitle_any_robot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Overcharged_Robots_Challenge_Reward -->
+	<quest id="quest_reward_overcharged_robot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_overcharged_robot"/>
+		<variable name="subtitle" value="exterminator_subtitle_overcharged_robot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Radiated_Robots_Challenge_Reward -->
+	<quest id="quest_reward_radiated_robot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_radiated_robot"/>
+		<variable name="subtitle" value="exterminator_subtitle_radiated_robot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Inferno_Robots_Challenge_Reward -->
+	<quest id="quest_reward_inferno_robot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_inferno_robot"/>
+		<variable name="subtitle" value="exterminator_subtitle_inferno_robot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Shocker_Robots_Challenge_Reward -->
+	<quest id="quest_reward_shocker_robot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_shocker_robot"/>
+		<variable name="subtitle" value="exterminator_subtitle_shocker_robot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Spider_Bots_Challenge_Reward -->
+	<quest id="quest_reward_spider_bot_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_spider_bot"/>
+		<variable name="subtitle" value="exterminator_subtitle_spider_bot"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Robot_Dogs_Challenge_Reward -->
+	<quest id="quest_reward_robot_dog_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_robot_dog"/>
+		<variable name="subtitle" value="exterminator_subtitle_robot_dog"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Drones_Challenge_Reward -->
+	<quest id="quest_reward_drone_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_drone"/>
+		<variable name="subtitle" value="exterminator_subtitle_drone"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="20000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Droids_Challenge_Reward -->
+	<quest id="quest_reward_droid_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_droid"/>
+		<variable name="subtitle" value="exterminator_subtitle_droid"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReadingHardcore if this list is changed. -->
+		<reward type="Exp" value="50000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+
+<!-- Kill_Mechs_Challenge_Reward -->
+	<quest id="quest_reward_mech_exterminator" template="challengegroup_reward_homesteading">
+		<variable name="name" value="exterminator_name_mech"/>
+		<variable name="subtitle" value="exterminator_subtitle_mech"/>
+		<variable name="description" value="exterminator_desc"/>
+		<variable name="completion" value="exterminator_completion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReadingHardcore if this list is changed. -->
+		<reward type="Exp" value="50000"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupChallengeRewardSkillMagazinesAll" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="schematicsModsAndGeneralCommon" isfixed="true" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" isfixed="true" value="1"/>
+	</quest>	
+
+</append>
+
+</Zilox>

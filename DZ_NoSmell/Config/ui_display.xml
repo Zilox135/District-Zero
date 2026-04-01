@@ -1,0 +1,8 @@
+<DZ_NoSmell>
+
+<!-- REMOVE SMELL DISPLAY ENTRIES FROM ALL FOOD UI DISPLAYS -->
+<remove xpath="//item_display_info/display_entry[@name='dSmellUse']"/>
+<remove xpath="//item_display_info/display_entry[@name='dSmell']"/>
+
+</DZ_NoSmell>
+

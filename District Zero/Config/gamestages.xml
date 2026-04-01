@@ -1,0 +1,8 @@
+<Zilox>
+
+<!-- BIGGER HORDE NIGHTS AND ALL NIGHT -->
+<set xpath="//spawner[@name='BloodMoonHorde']/gamestage/spawn/@num">250</set>
+<set xpath="//spawner[@name='BloodMoonHorde']/gamestage/spawn/@maxAlive">128</set>
+<set xpath="//spawner[@name='BloodMoonHorde']/gamestage/spawn/@duration">7</set>
+
+</Zilox>

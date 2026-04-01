@@ -1,0 +1,847 @@
+<Zilox>
+
+<!-- ADJUST ENCUMBRANCE FOR BIGGER BACKPACK -->
+<set xpath="//buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
+<set xpath="//buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
+
+<!-- REMOVE NEWBIE BUFF -->
+<remove xpath="//buff[@name='buffNewbieCoat']"/>
+
+<!-- FIX: Add check to buffDukeNote to remove itself when note is read (since buffNewbieCoat was removed) -->
+<append xpath="//buff[@name='buffDukeNote']/effect_group">
+	<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDukeNote">
+		<requirement name="CVarCompare" cvar=".dukeNoteRead" operation="Equals" value="1"/>
+	</triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDukeNote">
+		<requirement name="PlayerLevel" operation="GT" value="1"/>
+	</triggered_effect>
+</append>
+
+<!-- ADJUST TWITCH BUFFS FOR LARGER BACKPACK -->
+<set xpath="//buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
+<set xpath="//buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">48</set>
+
+<!-- ADJUST GOD MODE BUFF FOR LARGER BACKPACK -->
+<set xpath="//buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
+
+<!-- STOP ROBOTS FROM GIVING INFECTIONS -->
+<append xpath="//buff[@name='buffInfectionCatch']/effect_group">
+	<requirement name="!EntityTagCompare" target="other" tags="robot,mech"/>
+</append>
+
+<!-- CORPSE BONUS FOR HARVESTING ROBOTS -->
+<append xpath="//buff[@name='buffStatusCheck02']">
+	<effect_group name="corpseHarvestBonusWrench">
+		<requirement name="IsDead, DZCore" target="other"/>
+		<requirement name="HoldingItemHasTags" tags="corpseBonusWrench"/>
+		<requirement name="EntityTagCompare" target="other" tags="robot,mech"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="38" tags="perkSalvageOperations"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSalvageOperations"/> <!-- random EntityDmg -->
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/> <!-- tier bonus -->
+	</effect_group>
+	
+	<effect_group name="corpseHarvestBonusRatchet">
+		<requirement name="IsDead, DZCore" target="other"/>
+		<requirement name="HoldingItemHasTags" tags="corpseBonusRatchet"/>
+		<requirement name="EntityTagCompare" target="other" tags="robot,mech"/>	
+			<passive_effect name="EntityDamage" operation="base_set" value="62" tags="perkSalvageOperations"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSalvageOperations"/> <!-- random EntityDmg -->
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/> <!-- tier bonus -->
+	</effect_group>
+
+	<effect_group name="corpseHarvestBonusImpactDriver">
+		<requirement name="IsDead, DZCore" target="other"/>
+		<requirement name="HoldingItemHasTags" tags="corpseBonusImpactDriver"/>
+		<requirement name="EntityTagCompare" target="other" tags="robot,mech"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="100" tags="perkSalvageOperations"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSalvageOperations"/> <!-- random EntityDmg -->
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/> <!-- tier bonus -->
+	</effect_group>	
+</append>
+
+<!-- ADD RADATION BUFF  -->     
+    <append xpath="//buff[@name='buffStatusCheck01']">
+        <effect_group>   
+			<requirement name="!HasBuff" buff="buffRadiationMain"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiationMain"/>        
+        </effect_group>
+		
+		<effect_group>
+			<requirement name="!HasBuff" buff="buffEnterWastelandWarning"/>			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEnterWastelandWarning"/> 
+		</effect_group>		
+		
+		<effect_group>
+			<requirement name="InBiome" biome="8"/>
+			<requirement name="IsRaining, DZCore"/>
+			<requirement name="!IsIndoors"/>
+			<requirement name="!HasBuff" buff="buffAcidRainTrigger"/>			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffAcidRainTrigger"/> 
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAcidRain">
+				<requirement name="!IsRaining, DZCore"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAcidRain">
+				<requirement name="!InBiome" biome="8"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAcidRain">
+				<requirement name="IsIndoors"/>
+			</triggered_effect>						
+		</effect_group>
+     </append>
+
+<!-- ADD MAX HEALTH BONUS TO VITAMINS -->	 
+<append xpath="//buff[@name='buffDrugVitamins']/effect_group">
+	<passive_effect name="HealthMax" operation="base_add" value="10"/>
+</append>
+
+<!-- ADD RADATION BUFF TO TWITCH RAD ENEMIES -->
+<append xpath="//buff[@name='twitch_enemyrad']/effect_group">
+	<triggered_effect trigger="onSelfBuffUpdate" target="selfAOE" range="5" target_tags="player" action="AddBuff" buff="buffRadiationSourceAOE"/>
+</append>
+
+<!-- ADJUST BLEED PARTICLE FOR ZOMBIES AND ROBOTS -->
+<set xpath="//buff[@name='buffInjuryBleedingParticle']">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_impact_metal_on_organic" local_offset="0,.25,0" parent_transform="LOD0">
+				<requirement name="!EntityTagCompare" tags="robot,mech"/>			
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_impact_metal_on_metal" local_offset="0,.25,0" parent_transform="LOD0">
+				<requirement name="EntityTagCompare" tags="robot,mech"/>			
+			</triggered_effect>			
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffInjuryBleedingParticleTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffInjuryBleedingParticleTimer" operation="add" value="1"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_impact_metal_on_organic" local_offset="0,.25,0" parent_transform="LOD0">
+				<requirement name="CVarCompare" cvar=".buffInjuryBleedingParticleTimer" operation="GTE" value="4"/>
+				<requirement name="!EntityTagCompare" tags="robot,mech"/>				
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_impact_metal_on_metal" local_offset="0,.25,0" parent_transform="LOD0">
+				<requirement name="EntityTagCompare" tags="robot,mech"/>				
+			</triggered_effect>			
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffInjuryBleedingParticleTimer" operation="set" value="0">
+				<requirement name="CVarCompare" cvar=".buffInjuryBleedingParticleTimer" operation="GTE" value="4"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjuryBleedingParticle">
+				<requirement name="!HasBuff" buff="buffInjuryBleeding"/>
+				<requirement name="!HasBuff" buff="buffInjuryBleedingOne"/>
+				<requirement name="!HasBuff" buff="buffInjuryBleedingTwo"/>
+				<requirement name="!HasBuff" buff="buffInjuryBleedingBarbedWire"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffInjuryBleedingParticleTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_organic"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_organic"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_metal"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_metal"/>			
+		</effect_group>
+</set>
+
+<!-- ADD BUCKET HEAD PREFABS FOR ROBOTS -->
+<set xpath="//buff[@name='twitch_buckethead']">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="IronBucketEmptyPrefab" parent_transform="Head">
+				<requirement name="!EntityTagCompare" tags="chicken"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="IronBucketEmptyPrefab" parent_transform="Droid_OII_Head">
+				<requirement name="!EntityTagCompare" tags="chicken"/>
+			</triggered_effect>			
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="IronBucketEmptyPrefab" parent_transform="teddyBear">
+				<requirement name="EntityTagCompare" tags="drone"/>
+			</triggered_effect>
+
+			<passive_effect name="InternalDamageModifier" operation="perc_subtract" value="0.75" tags="head" /> 
+		</effect_group>
+
+		<effect_group>
+			<requirement name="HitLocation" body_parts="Head" />
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true" />
+		</effect_group>
+
+		<effect_group>
+<!-- GENERAL -->				
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="!EntityTagCompare" tags="zombieCop,zombieSoldier,human,trader,drone,cyborgTitan,androidPrime"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>			
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="-0.1,0,0" local_rotation="0,0,-90" local_scale="2.4,2.4,2.4" parent_transform="Droid_OII_Head">
+				<requirement name="!EntityTagCompare" tags="zombieCop,zombieSoldier,human,trader,drone,cyborgTitan,androidPrime"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Droid_OII_Head" />
+			</triggered_effect>
+
+<!-- TRADERS -->
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,.05" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="trader"/>
+				<requirement name="!EntityTagCompare" tags="traderJen"/>				
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,0,0" local_rotation="90,0,0" local_scale="2.3,2.3,2.3" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="traderJen"/>				
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="-0.1,-0.05,0" local_rotation="90,90,0" local_scale="2,2,2" parent_transform="head">
+				<requirement name="EntityTagCompare" tags="traderJoel"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="head" />
+			</triggered_effect>			
+
+			<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Humanoid_RobotTrader01" transform_path="ScifiRifleWLT78Receiver">
+				<requirement name="EntityTagCompare" tags="traderJen"/>				
+			</triggered_effect>			
+
+<!-- ROBOTS -->		
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,.1" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="cyborgTitan"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,.1" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="androidPrime"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>			
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.3,0.1" local_rotation="180,90,0" local_scale="4,4,4" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="juggernaut02"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>				
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="-0.15,0,0.035" local_rotation="90,90,0" local_scale="1.75,1.75,1.75" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="human"/>
+				<requirement name="!EntityTagCompare" tags="trader"/>				
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+		
+<!-- DRONES -->		
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.3,0" local_rotation="180,90,0" local_scale="2.25,2.25,2.25" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="drone"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="1.5,1.5,1.5" parent_transform="Head">
+				<requirement name="!EntityTagCompare" tags="bear,chicken,stag,boar,zombieCop,zombieSoldier,human,trader,drone"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="-0.15,0,0.035" local_rotation="90,90,0" local_scale="1.75,1.75,1.75" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="human"/>
+				<requirement name="!EntityTagCompare" tags="trader"/>				
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.3,0" local_rotation="180,90,0" local_scale="2.25,2.25,2.25" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="drone"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+		</effect_group>
+		
+<!-- ZOMBIES -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="zombieCop"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="2,2,2" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="zombieSoldier"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head" />
+			</triggered_effect>			
+</set>	 
+
+<append xpath="/buffs">
+
+<!-- RADATION BUFF -->
+	<buff name="buffRadiationMain" hidden="true">	
+		<damage_type value="radiation"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<update_rate value="1"/>
+
+		<!-- Radiation is fully %-based. radiationCounter is a float % value. Radiation kills when it reaches 100% -->
+		<effect_group>
+			<!-- $radiationMaxDuration defined in buffStatusCheck01 (7 hours) -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationMaxDuration" operation="set" value="25200">
+				<requirement name="CVarCompare" cvar="$radiationMaxDuration" operation="Equals" value="0"/>
+			</triggered_effect>
+
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationStage2Duration" operation="set" value="30"/> <!-- % of the full buff duration -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationStage3Duration" operation="set" value="60"/> <!-- % of the full buff duration -->
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationDisplayDivisor" operation="set" value="@$radiationMaxDuration"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationDisplayDivisor" operation="divide" value="100"/>
+				<!-- .radiationDisplayPerc = radiationCounter / $radiationDisplayDivisor -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationStage2Duration" operation="multiply" value="@$radiationDisplayDivisor"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$radiationStage3Duration" operation="multiply" value="@$radiationDisplayDivisor"/>
+
+			<!-- cleanup -->
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="radiationCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".radiationDisplayPerc" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$radiationDisplayDivisor" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$radiationStage2Duration" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$radiationStage3Duration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="main loop">
+			<!-- Make sure it does not go above 100% -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="set" value="@$radiationMaxDuration">
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GT" value="@$radiationMaxDuration"/>
+			</triggered_effect>
+		
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="add" value="2.75">
+				<requirement name="!HasBuff" buff="buffRadiationProtection"/>				
+				<requirement name="InBiome" biome="8"/>				
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="set" value="0">
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="LT" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="shut down">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiationMain">
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="display % values">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".radiationDisplayPerc" operation="set" value="@radiationCounter"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".radiationDisplayPerc" operation="divide" value="@$radiationDisplayDivisor"/>
+		</effect_group>
+
+		<effect_group name="signaling buffs">
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation01Untreated">
+				<requirement name="!HasBuff" buff="buffRadiation01Untreated"/>									
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GTE" value="0"/>
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="LT" value="@$radiationStage2Duration"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation02Untreated">
+				<requirement name="!HasBuff" buff="buffRadiation02Untreated"/>														
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GTE" value="@$radiationStage2Duration"/>
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="LT" value="@$radiationStage3Duration"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation03Untreated">
+				<requirement name="!HasBuff" buff="buffRadiation03Untreated"/>														
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GTE" value="@$radiationStage3Duration"/>
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="LT" value="@$radiationMaxDuration"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation04">
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GTE" value="@$radiationMaxDuration"/>				
+			</triggered_effect>			
+		</effect_group>	
+	</buff>
+
+	<buff name="buffRadiationAddCure" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffRadiationAddCurePerc" operation="multiply" value="@$radiationMaxDuration"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffRadiationAddCurePerc" operation="divide" value="100"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="radiationCounter" operation="subtract" value="@$buffRadiationAddCurePerc"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffRadiationAddCurePerc" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="radiationCounter" operation="set" value="@$radiationMaxDuration">
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GT" value="@$radiationMaxDuration"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffRadiationMain"/>			
+		</effect_group>
+	</buff>
+
+	<buff name="buffRadiation01Untreated" hidden="true">
+		<damage_type value="Disease"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<display_value value=".radiationDisplayPerc"/>
+		<display_value_key value="{0:0.0}%"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffRadiation01Untreated"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation02Untreated"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation03Untreated"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffRadiation02Untreated" name_key="buffRadiation02UntreatedName" description_key="buffRadiation02UntreatedDesc" icon="ui_game_symbol_radiation" icon_color="255,128,0">
+		<damage_type value="Disease"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffRadiation02Untreated"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation01Untreated"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation03Untreated"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.25"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffRadiation03Untreated" name_key="buffRadiation03UntreatedName" description_key="buffRadiation03UntreatedDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<damage_type value="Disease"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffRadiation03Untreated"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation01Untreated"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation02Untreated"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.35"/>						
+		</effect_group>
+	</buff>
+
+	<buff name="buffRadiation04" hidden="true">
+		<damage_type value="radiation"/>
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRadiationProtection" name_key="buffRadiationProtectionName" description_key="buffRadiationProtectionDesc" icon_color="50,205,50" icon="ui_game_symbol_radiation">
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<display_value value=".buffRadiationProtectionDisplay"/>
+		<display_value_format value="time"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationSource"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAcidRain"/>			
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRadiationProtectionDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRadiationProtectionDisplay" operation="set" value="@$buffRadiationProtectionDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRadiationProtectionDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiationProtection">
+				<requirement name="CVarCompare" cvar=".buffRadiationProtectionDisplay" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiationProtection">
+				<requirement name="CVarCompare" cvar="$buffRadiationProtectionDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffRadiationProtectionDisplay,$buffRadiationProtectionDuration"/>
+		</effect_group>	
+	</buff>	
+	
+	<buff name="buffRadiationSourceAOE" hidden="true">
+		<stack_type value="replace"/>
+		<duration value=".1"/>
+		<!-- without the 2nd buff the buff display will flicker -->
+		<effect_group>
+			<requirement name="!HasBuff" buff="buffRadiationSource"/>
+			<requirement name="!HasBuff" buff="buffRadiationProtection"/>			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffRadiationSource"/>
+		</effect_group>
+	</buff>	
+	
+	<buff name="buffRadiationSource" name_key="buffRadiationSourceName" description_key="buffRadiationSourceDesc" tooltip_key="buffRadiationSourceTooltip" icon_blink="true" icon_color="255,0,0" icon="ui_game_symbol_radiation">
+		<damage_type value="radiation"/>
+		<stack_type value="ignore"/>
+		<display_value value=".buffRadiationSourceTimer"/>
+		<display_value_format value="time"/>		
+		<duration value="5"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffRadiationSourceTimer" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffRadiationSourceTimer" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRadiationSourceTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffRadiationSourceTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffRadiationSource"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="a_radiated_weak_lp"/>			
+			
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="2"/>
+			<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>			
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="add" value="50">
+				<requirement name="!HasBuff" buff="buffRadiationProtection"/>				
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffAcidRainTrigger" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<!-- without the 2nd buff the buff display will flicker -->
+		<effect_group>
+			<requirement name="!HasBuff" buff="buffRadiationProtection"/>			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffAcidRain"/>
+		</effect_group>
+	</buff>		
+
+	<buff name="buffAcidRain" name_key="buffAcidRainName" description_key="buffAcidRainDesc" tooltip_key="buffAcidRainTooltip" icon="ui_game_symbol_acidrain" icon_blink="true">
+		<damage_type value="radiation"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="add" value="10">
+				<requirement name="!HasBuff" buff="buffRadiationProtection"/>				
+			</triggered_effect>			
+		</effect_group>
+	</buff>
+<!-- END OF RADIATION BUFF -->	
+
+	<buff name="buffNausea" name_key="buffNauseaName" description_key="buffNauseaDesc" icon="ui_game_symbol_death" icon_color="255,128,0">
+		<damage_type value="Disease"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<display_value value=".buffNauseaDisplay"/>
+		<display_value_format value="time"/>	
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffNauseaDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffNauseaDisplay" operation="set" value="@$buffNauseaDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffNauseaDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNausea">
+				<requirement name="CVarCompare" cvar="$buffNauseaDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffNauseaDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffNauseaDuration" operation="set" value="0"/>
+		</effect_group>	
+		
+		<effect_group>
+			<passive_effect name="StaminaMaxBlockage" operation="base_add" value="25"/>
+			<passive_effect name="HealthMaxBlockage" operation="base_add" value="25"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="2"/>			
+		</effect_group>
+	</buff>
+	
+	<buff name="buffFlareRoundAirdropTrigger" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>		
+		
+        <effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffFlareRoundAirdrop"/>			
+	    </effect_group>
+	</buff>
+	
+	<buff name="buffFlareRoundAirdrop" name_key="buffFlaregunAirdropName" description_key="buffFlaregunAirdropDesc" tooltip_key="buffFlaregunAirdropTooltip" icon="ui_game_symbol_airdrop" icon_color="255,255,0,255" icon_blink="true">
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+		<display_value value=".FlareRoundAirdropTimer"/>
+		<display_value_format value="time"/>		
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffFlareRoundAirdrop"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FlareRoundAirdropTimer" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FlareRoundAirdropTimer" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FlareRoundAirdropTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FlareRoundAirdropTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffFlareRoundAirdrop"/>
+		</effect_group>		
+		
+        <effect_group>
+            <triggered_effect trigger="onSelfBuffStart" action="SpawnAirDrop, DZCore"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="SpawnWanderingHorde, DZCore" spawn_type="Horde">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>		
+			</triggered_effect>				
+	    </effect_group>
+	</buff>
+
+    <buff name="buffEMP" hidden="true">
+		<damage_type value="electrical"/>	
+    	<stack_type value="ignore"/>
+    	<duration value="15"/>
+		<update_rate value="0.1"/>		
+		
+    	<effect_group>
+			<requirement name="EntityTagCompare" tags="robot,drone"/>
+		
+			<passive_effect name="RunSpeed" operation="base_set" value="0"/>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0"/>
+			<passive_effect name="CrouchSpeed" operation="base_set" value="0"/>
+			<passive_effect name="JumpStrength" operation="base_set" value="0"/>
+			<passive_effect name="Mobility" operation="base_set" value="0"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="10"/>			
+			
+			<triggered_effect trigger="onSelfBuffStart" action="FreezeEntity, DZCore" enabled="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FreezeEntity, DZCore" enabled="false"/>		
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted"/>		
+    	</effect_group>
+		
+		<effect_group>
+			<requirement name="EntityTagCompare" tags="robot,drone"/>		
+		
+    		<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Particles.unity3d?ElectricalSparks.prefab" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+    		<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="ElectricalSparks"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electrical_sparks" play_in_head="false" play_at_self="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="electrical_sparks"/>			
+		</effect_group>
+    </buff>
+	
+    <buff name="buffDisableLauncher" hidden="true">
+		<damage_type value="electrical"/>	
+    	<stack_type value="ignore"/>
+    	<duration value="10"/>
+		<update_rate value="0.1"/>		
+		
+    	<effect_group>
+			<requirement name="EntityTagCompare" tags="mech,rangedrobotdog"/>		
+		
+			<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="no_weapon" add="true" />
+			<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="no_weapon" add="false" />
+		
+			<passive_effect name="DisableItem" operation="base_set" value="1" tags="launcher" />			
+    	</effect_group>
+		
+		<effect_group>			
+			<requirement name="EntityTagCompare" tags="rangedrobotdog"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="SetComponentEnabled, DZCore" transform="Bone_Turret_Head_Main" component="LineRenderer" enabled="false"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="SetComponentEnabled, DZCore" transform="Bone_Turret_Head_Main" component="LineRenderer" enabled="true"/>			
+    	</effect_group>
+    </buff>
+	
+	<buff name="buffEnemyOvercharged">
+		<stack_type value="ignore"/>
+		<duration value="0"/>	
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand"  />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand"  />
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_shock_left"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_shock_right"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_shock_left" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_shock_right" />
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ParticleSystemSetColor, DZCore" color="#ff6700"/>
+		</effect_group>		
+	</buff>	
+
+	<buff name="buffEnemyShock">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffShocked">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand"  />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand"  />
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_shock_left"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_shock_right"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_left" local_offset="0.1,0.1,0" parent_transform="LeftHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_shock_left" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_shock_right" local_offset="-0.1,0.1,0" parent_transform="RightHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_shock_right" />
+			</triggered_effect>
+		</effect_group>
+	</buff>
+
+	<buff name="buffEnemyInferno">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffBurningMolotov">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>		
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_right" local_offset="-0.1,0.1,0" parent_transform="RightHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_right" local_offset="-0.1,0.1,0" parent_transform="RightHand" />
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_fire_left"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_fire_right"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_left" local_offset="0.1,0.1,0" parent_transform="LeftHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_fire_left" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_right" local_offset="-0.1,0.1,0" parent_transform="RightHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_fire_right" />
+			</triggered_effect>
+		</effect_group>
+	</buff>
+
+	<buff name="buffEnemyRad">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffRadiationSource">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="!HasBuff" target="other" buff="buffRadiationProtection"/>				
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" local_offset="0.1,0.1,0" parent_transform="LeftHand" />
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" local_offset="-0.1,0.1,0" parent_transform="RightHand" />
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" local_offset="-0.1,0.1,0" parent_transform="RightHand" />
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_left"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_right"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" local_offset="0.1,0.1,0" parent_transform="LeftHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_radiation_left" />
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" local_offset="-0.1,0.1,0" parent_transform="RightHand">
+				<requirement name="!HasParticle" particle="p_twitch_zombie_radiation_right" />
+			</triggered_effect>				
+		</effect_group>
+	</buff>
+
+	<buff name="buffRobotElementalResistance">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+
+		<effect_group>
+			<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffBurningMolotov,buffBurningZombie,buffBurningFlamingArrow,buffBurningElement,buffHazardBurningElement"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRobotWaterPenalty">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<update_rate value="0.1"/>		
+
+    	<effect_group>
+			<requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.3"/>		
+			<requirement name="EntityTagCompare" tags="robot,drone"/>
+		
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".50"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".50"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value=".50"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value=".50"/>
+			<passive_effect name="Mobility" operation="perc_subtract" value=".50"/>						
+    	</effect_group>
+		
+		<effect_group>		
+			<requirement name="EntityTagCompare" tags="robot,drone"/>		
+		
+    		<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Particles.unity3d?ElectricalSparks.prefab" parent_transform="LOD0">
+				<requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.3"/>
+			</triggered_effect>
+			
+    		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="ElectricalSparks">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="0.3"/>
+			</triggered_effect>
+			
+    		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRobotWaterPenaltySound">
+				<requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.3"/>
+				<requirement name="!HasBuff" buff="buffRobotWaterPenaltySound"/>
+				<requirement name="!IsSleeping"/>				
+			</triggered_effect>
+
+    		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRobotWaterPenaltySound">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="0.3"/>				
+			</triggered_effect>			
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRobotWaterPenaltySound">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+
+    	<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electrical_sparks" play_in_head="false" play_at_self="true"/>	
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="electrical_sparks"/>						
+    	</effect_group>
+	</buff>
+
+	<buff name="buffWeaponOverheatCooldown" name_key="buffWeaponOverheatCooldownName" description_key="buffWeaponOverheatCooldownDesc" tooltip_key="buffWeaponOverheatCooldownTooltip" icon="ui_game_symbol_fire" icon_color="0,128,255" icon_blink="true">
+		<stack_type value="ignore"/>
+		<duration value="30"/>
+		<display_value value=".WeaponOverheatCooldownTimer"/>
+		<display_value_format value="time"/>		
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffWeaponOverheatCooldown"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".WeaponOverheatCooldownTimer" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".WeaponOverheatCooldownTimer" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".WeaponOverheatCooldownTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".WeaponOverheatCooldownTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffWeaponOverheatCooldown"/>
+		</effect_group>			
+		
+        <effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$weaponOverheatCounter" operation="set" value="0"/>			
+	    </effect_group>
+	</buff>
+
+	<buff name="buffEnterWastelandWarning" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfEnteredBiome" action="ShowToolbeltMessage" message_key="ttEnterWasteland">
+				<requirement name="!HasBuff" buff="buffRadiationProtection"/>		
+				<requirement name="InBiome" biome="8"/>			
+			</triggered_effect>
+		</effect_group>
+	</buff>	
+
+</append>			
+</Zilox>

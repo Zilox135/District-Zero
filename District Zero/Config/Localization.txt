@@ -1,0 +1,1015 @@
+Key,english
+
+autoMiner,Auto Miner
+autoMinerDesc,"An auto miner can extract resources over time.\n\nPress [FF0000][action:local:Activate][action:permanent:Activate][-] when looking at the auto miner to open the menu and select which resource you want to mine."
+blastFurnace,Blast Furnace
+blastFurnaceDesc,"Used to smelt metals to craft tools and weapons or stone to craft cement. Unlock more recipes through perks. Install tools to increase performance or unlock recipes.\nInstallable Tools: Bustle Pipe, Pre heater, Crucible"
+cobaltShapes:VariantHelper,Cobalt Block
+materialMcobalt_shapes,Cobalt
+scrapCobaltPile,Scrap Cobalt Pile
+terrOreCobalt,Cobalt Ore
+terrOreStoneCobaltRandom,= Cobalt Vein = Helper
+oreCobaltBoulder,Cobalt Ore Boulder
+cntSedanCarInsecure,Rusty Sedan
+cntTruckInsecure,Rover Truck
+cntMuscleCarInsecure,Muscle Car
+cntPickupTruckInsecure,Pickup Truck
+cntSedanCar2Insecure,Luxury Sedan
+cntHoverCarInsecure,Hover Car
+cntRacingCarInsecure,Racing Car
+cntArmoredHoverCarInsecure,Armored Hover Car
+cntBlackMuscleCarInsecure,Muscle Car
+cntGarbageTruckInsecure,Garbage Truck
+cntMotorcycleInsecure,Motorcycle
+cntHoverMotorcycleInsecure,Hover Motorcycle
+cntPoliceVehicleInsecure,Police Drone
+cntPoliceVehicleUnlockedAlarm,Police Drone
+signRadiation,Radiation Sign
+cntBarrelRadiationSingle,Radiated Barrel
+cntBarrelRadiationSingleDesc,"A radiation source, that slowly increases your radiation level when nearby."
+cntVendingMachine2BrokenLoot,"Vending Machine, Soda Broken"
+cntVendingMachineEnergyBrokenLoot,"Vending Machine, Energy Broken"
+cntVendingMachineWaterBrokenLoot,"Vending Machine, Water Broken"
+cntSecureStorageWallSafeClosed,Secure Wall Safe
+MPL_SecureOrbSafeClosed,Orb Secure Storage
+cntSecureStorageDeskSafeClosed,Secure Desk Safe
+cntSecureStorageGunSafeClosedWhite,Secure Gun Safe
+cntSecureStorageFootlockerClosedWhite,Secure Footlocker
+cntSecureStorageFootlockerClosedArmyGreen,Secure Military Footlocker
+cntSecureStorageWoodenChestClosed,Secure Wooden Chest
+cntSecureStorageWoodenChestRottenClosed,Secure Rotten Chest
+cntSecureStorageOldWestChestClosed,Secure Old West Chest
+cntSecureStorageWoodenChestMilitaryClosed,Secure Military Chest
+cntSecureStorageToolBoxClosedWhite,Secure Toolbox
+cntSecureStorageRollingToolBoxClosedWhite,Secure Rolling Toolbox
+treeForestBeech00A,Beech Tree 00 A
+treeForestBeech00B,Beech Tree 00 B
+treeForestBeech00C,Beech Tree 00 C
+treeForestBeech00D,Beech Tree 00 D
+treeForestBeech01,Beech Tree 01
+treeForestBeech02,Beech Tree 02
+treeForestBeech03,Beech Tree 03
+treeForestBeech04,Beech Tree 04
+treeForestBeech05,Beech Tree 05
+treeForestBeech06,Beech Tree 06
+treeForestBeech07,Beech Tree 07
+treeForestBeech08,Beech Tree 08
+treeForestBeech09,Beech Tree 09
+treeForestFir01,Fir Tree 01
+treeForestFir02,Fir Tree 02
+treeForestFir03,Fir Tree 03
+treeForestFir04,Fir Tree 04
+treeForestFir05,Fir Tree 05
+treeForestFir06,Fir Tree 06
+treeForestFir07,Fir Tree 07
+treeForestFir08,Fir Tree 08
+treeWinterFir01,Fir Tree Winter 01
+treeWinterFir02,Fir Tree Winter 02
+treeWinterFir03,Fir Tree Winter 03
+treeWinterFir04,Fir Tree Winter 04
+treeWinterFir05,Fir Tree Winter 05
+treeWinterFir06,Fir Tree Winter 06
+treeWinterFir07,Fir Tree Winter 07
+treeWinterFir08,Fir Tree Winter 08
+treePlantedSaplingBeech00,Beech Seed
+treePlantedSaplingFir00,Fir Seed
+treePlantedSaplingWinterFir00,Winter Fir Seed
+treePlantedForestBeech00,Planted Beech Tree 00
+treePlantedForestBeech01,Planted Beech Tree 01
+treePlantedForestBeech02,Planted Beech Tree 02
+treePlantedForestBeech03,Planted Beech Tree 03
+treePlantedForestFir00,Planted Fir Tree 00
+treePlantedForestFir01,Planted Fir Tree 01
+treePlantedForestFir02,Planted Fir Tree 02
+treePlantedForestFir03,Planted Fir Tree 03
+treePlantedWinterFir00,Planted Fir Tree Winter 00
+treePlantedWinterFir01,Planted Fir Tree Winter 01
+treePlantedWinterFir02,Planted Fir Tree Winter 02
+treePlantedWinterFir03,Planted Fir Tree Winter 03
+plantBeech00,Beech Plant 00
+plantBeech01,Beech Plant 01
+plantBeech02,Beech Plant 02
+plantBeech03,Beech Plant 03
+plantBlackBerry00,Blackberry Plant 00
+plantBlackBerry01,Blackberry Plant 01
+plantBlackBerry02,Blackberry Plant 02
+plantBlackBerry03,Blackberry Plant 03
+plantBlackBerry04,Blackberry Plant 04
+plantBlackBerry05,Blackberry Plant 05
+plantFern00,Fern Plant 00
+plantFern01,Fern Plant 01
+plantFern02,Fern Plant 02
+plantFern03,Fern Plant 03
+plantIvy00,Ivy Plant 00
+plantIvy01,Ivy Plant 01
+plantIvy02,Ivy Plant 02
+plantLilly00,Lilly Plant 00
+plantLilly01,Lilly Plant 01
+plantGalinsoga00,Galinsoga Plant 00
+plantGalinsoga01,Galinsoga Plant 01
+plantGalinsoga02,Galinsoga Plant 02
+plantLeaves00,Leaves 00
+plantLeaves01,Leaves 01
+plantLeaves02,Leaves 02
+plantLeaves03,Leaves 03
+plantLeaves04,Leaves 04
+plantLeaves05,Leaves 05
+plantMoss00,Moss 00
+plantMoss01,Moss 01
+boulderResource00,Resource Boulder 00
+boulderResource01,Resource Boulder 01
+boulderResource02,Resource Boulder 02
+boulderResource03,Resource Boulder 03
+boulderResource04,Resource Boulder 04
+boulderResource05,Resource Boulder 05
+boulderResource06,Resource Boulder 06
+boulderResource07,Resource Boulder 07
+boulderResource08,Resource Boulder 08
+boulderResource09,Resource Boulder 09
+rockSmallResource00,Small Rock 00
+rockSmallResource01,Small Rock 01
+rockSmallResource02,Small Rock 02
+rockSmallResource03,Small Rock 03
+branch00,Branch 00
+branch01,Branch 01
+branch02,Branch 02
+branch03,Branch 03
+branch04,Branch 04
+branch05,Branch 05
+branch06,Branch 06
+branch07,Branch 07
+branch08,Branch 08
+treeStump00,Tree Stump 00
+treeStump01,Tree Stump 01
+treeStump02,Tree Stump 02
+treeStump03,Tree Stump 03
+treeStump04,Tree Stump 04
+decoRoadRandomHelper,Deco Road Random Helper
+treeLog00,Tree Log 00
+treeLog01,Tree Log 01
+cntBarrelGroupDesc,Barrels can be looted and will explode if hit by enemies or destroyed by tools without harvest tags such as guns.\nThe player may catch an AOE debuff based on the barrel type.
+decoPumpkinJackOLanternDesc,A must-have for scaring those enemies right back.
+fakeCabinetDoorTrapGroupDesc,Enemies can see through this block. The intended use is that a hidden enemy can see the player and bust out of a closet.
+fencesGroupDesc,Fences and railings can keep the neighbors out. Still useful for not falling from high places.
+fabricator,Fabricator
+fabricatorDesc,Synthesises organic material into useable items over time.\n\nRepair with Forged Iron.
+bladeTrapDesc,Used to dismantle enemies into many pieces.\n\nRepair with Forged Steel.
+mineAirFilterDesc,Place mine and step back carefully. Turns robots into scrap metal!
+mineEMP,EMP Mine
+mineEMPDesc,Generates an electro-magnetic pulse disabling nearby enemies for a short period of time. Also disables weapons on mechs for a short period of time.
+forgeDesc,"Used to smelt metals to craft tools and weapons or stone to craft cement. Install tools to increase performance or unlock recipes.\n\nRepair with Scrap Iron."
+plantedCropsGroupDesc,Plant these seeds on a Farm Plot or fertile land to grow plants for you to harvest.
+burningBarrelPlayerDesc,Open flames provide some heat when nearby. Has no effect on the heat map.
+xuiTargetZombies,Target Enemies
+xuiZombieKills,Enemy Kills
+xuiRoboticAnimals,Robotic Animals
+xuiEnemies,Enemies
+xuiRobots,Robots
+xuiOverchargedRobots,Overcharged Robots
+xuiRadiatedRobots,Radiated Robots
+xuiInfernoRobots,Inferno Robots
+xuiShockerRobots,Shocker Robots
+xuiSpiderBots,Spider Bots
+xuiRobotDogs,Robot Dogs
+xuiDrones,Drones
+xuiDroids,Droids
+xuiMechs,Mechs
+xuiForgeAheadMagazine,Forge Ahead Magazine
+statCraftingSmeltTimeBlastFurnace,Blast Furnace Smelting Speed
+statCraftingTimeBlastFurnace,Blast Furnace Crafting Speed
+statNausea,Nausea Chance
+statHealthLoss,Damage Resist
+statBurnAOERadius,Burn AOE Radius (m)
+statFoodPoisoningRisk,Food Poisoning
+statCureRadiationSickness,Cure Radiation Sickness
+statCureNausea,Cure Nausea
+statEmpath,Empath
+statCybernetician,Cybernetician
+statCosmotech,Cosmotech
+statExomedic,Exomedic
+statMiner69r,Miner 69'er
+statNeonaut,Neonaut
+statEntityDamageShock,Shock Damage
+statNerdDamage,Robotic/Baton Weapon Damage
+buffNauseaName,Nausea
+buffNauseaDesc,You feel nauseous after consuming too many drugs.\nUse vitamins to cure this.\n\nYour max health and stamina are lowered by 25%. All attributes are lowered by 2.
+buffFlaregunAirdropName,Incoming Airdrop
+buffFlaregunAirdropDesc,"An airdrop is enroute to your location, keep an eye on the sky."
+buffFlaregunAirdropTooltip,You have an incoming airdrop.
+buffRadiation02UntreatedName,Acute Radiation Sickness
+buffRadiation02UntreatedDesc,You have acute radiation sickness. If left untreated it could lead to severe acute radiation sickness which can cause death.\n\nStamina Regeneration -25%
+buffRadiation03UntreatedName,Severe Acute Radiation Sickness
+buffRadiation03UntreatedDesc,You have life threatening severe acute radiation sickness. Take medication immediately.\n\nStamina Regeneration -35%\nAll Attributes -1
+buffRadiationProtectionName,Radiation Protection
+buffRadiationProtectionDesc,You are protected from further radiation exposure.
+buffRadiationSourceName,Harmful Radiation Source
+buffRadiationSourceDesc,"You are exposed to a harmful radiation source, your radiation level will increase rapidly over time."
+buffRadiationSourceTooltip,You are exposed to a harmful radiation source!
+buffAcidRainName,Radioactive Acid Rain
+buffAcidRainDesc,"You are exposed to radioactive acid rain, find shelter as soon as possible to avoid harmful radiation exposure."
+buffAcidRainTooltip,"You are exposed to radioactive acid rain, find shelter as soon as possible!"
+buffHeadShotsOnlyDesc,Don't you watch any alien movies? Aim for the head! It's the only way to be sure.
+buffWeaponOverheatCooldownName,Weapon Overheated
+buffWeaponOverheatCooldownDesc,Your weapon has overhated and will need to cooldown before it can be used again.
+buffWeaponOverheatCooldownTooltip,Your weapon has overheated!
+buffInfection01GetBetterDesc,You have a treated mild infection. Continue medication until infection is cleared up.\nGetting hit by zombies will make an infection worse.
+buffInfection01UntreatedDesc,You have a mild infection.\nIt will get worse until treated by antibiotics.\nGetting hit by zombies will make an infection worse.
+buffInfection02GetBetterDesc,You have a treated serious infection. Continue medication and keep an eye on the wound.\nGetting hit by zombies will make an infection worse.\n\nStamina Regeneration -12.5%
+buffInfection02UntreatedDesc,You have a serious infection. If left untreated it could lead to severe infection which can cause death. Take antibiotics as soon as possible.\nGetting hit by zombies will make an infection worse.\n\nStamina Regeneration -25%
+drugAntiRadiation,Anti-Radiation Pills
+drugAntiRadiationDesc,Anti-Radiation Pills can lower your radiation exposure and cure acute radiation sickness. It also protects you from further radiation exposure for some time\n\nCan be crafted in a beaker at a campfire.
+drugAdvancedAntiRadiation,Advanced Anti-Radiation Pills
+drugAdvancedAntiRadiationDesc,Advanced Anti-Radiation Pills completely remove any radiation exposure and cure acute radiation sickness. It also protects you from further radiation exposure for several days\n\nCan be crafted at a chemistry station.
+drugDevRadiation,Radiation Tester
+drugDevRadiationDesc,A radiation dev drug that increases your radiation amount.
+drugVitaminsDesc,"These vitamins cure Nausea and Fatigue, and prevent you from catching ailments like Infection, Dysentery, Nausea or Fatigue."
+foodEggRotten,Rotten Egg
+foodEggRottenDesc,Rotten Eggs smell awful. You probably shouldn't eat this thing.
+drinkJarEmpty,Empty Water Jar
+drinkJarEmptyDesc,An empty glass jar can be filled at water sources using the secondary action or used in other recipes.
+torchPlayerGroupDesc,Open flames and flickering lights like with torches (less so with candles) will attract unwanted attention.
+lanternLight_playerDesc,This oil powered lantern will provide light without the flickering that tends to attract unwanted attention.
+candleDesc,A candle can be carried as a light source or placed on walls. This might attract unwanted attention.
+toolBustlePipe,Bustle Pipe
+toolBustlePipeDesc,A tool that can be installed in a Blast Furnace. It increases air flow and so the smelting speed of the furnace.
+toolPreHeater,Pre Heater
+toolPreHeaterDesc,A tool that can be installed in a Blast Furnace. It increases the crafting speed of that furnace.
+resourceCobalt,Raw Cobalt
+resourceCobaltDesc,"A core resource for crafting, forging, repairing & upgrading walls. Much stronger than steel."
+resourceForgedCobalt,Forged Cobalt
+resourceForgedCobaltDesc,Can be crafted at the blast furnace after installing a crucible upgrade. Cobalt is used to make the strongest items.
+resourceCharcoal,Charcoal
+resourceCharcoalDesc,Charcoal can be made by burning wood in a campfire. A key ingredient in making flare rounds.
+resourceNanoChip,Nano Chip
+resourceNanoChipDesc,A small computer chip. Used in the creation of high tech equipment.
+resourceFertilizerCell,Fertilizer Cell
+resourceFertilizerCellDesc,Fertilizer cells are used with the farming multitool to create fertile land for farming using the secondary action [action:local:Secondary].
+resourceBoneDesc,An ordinary bone from an extinct species. Probabaly.
+resourceRockSmallDesc,"Used in many recipes including stone axes and campfires. Can be thrown to distract enemies & are a core forging resource."
+resourceSnowBallDesc,You know what to do! Turn it into first rate Yucca Juice Smoothie of course.\nCan  be thrown to distract enemies.
+resourceFeatherDesc,Feathers are primarily found in bird nests or crafted in the fabricator. They can be used to craft arrows and crossbow bolts.
+resourceCobaltBundle,Stack of Raw Cobalt (6000)
+resourceCobaltBundleDesc,This is a compact stack of raw cobalt. Use this item to open and unpack it.
+resourceClayLumpBundle,Stack of Clay Soil (6000)
+resourceClayLumpBundleDesc,This is a compact stack of clay soil. Use this item to open and unpack it.
+resourceCrushedSandBundle,Stack of Crushed Sand (6000)
+resourceCrushedSandBundleDesc,This is a compact stack of crushed sand. Use this item to open and unpack it.
+gunBowT0PrimitiveBowDesc,Good for sneaking and killing enemies from a distance. Uses arrows for ammunition.\nHold reload to use alternate ammo.\n\nRepair with Wood.\nScrap to Wood.
+gunBowT1WoodenBowDesc,Good for sneaking and killing enemies from a distance. Uses arrows for ammunition.\nHold reload to use alternate ammo.\n\nRepair with a Repair Kit.\nScrap to Bow / Crossbow Parts.
+gunHandgunT1Flaregun,Emergency Flare Gun
+gunHandgunT1FlaregunDesc,An emergency flare gun that has a 30% chance to spawn an airdrop when fired outdoors. Airdrops will not be sent during Horde Night. Beware it may also attract unwanted attention.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunHandgunFarmT1LaserFarmingTool,Farming Multitool
+gunHandgunFarmT1LaserFarmingToolDesc,Clear grass with the primary action [action:local:Primary]. \n\nFertilize land with the secondary action [action:local:Secondary] Fertilizer Cells are required.\n\nRepair with a Repair Kit.\nScrap to Motor Tool parts.
+gunMGT2LaserAssaultRifle,Laser Assault Rifle
+gunMGT2LaserAssaultRifleDesc,This Laser Assault Rifle uses heavy energy cells.\n\nRepair with a Repair Kit.\nScrap to Machine Gun Parts.
+gunRifleT2LaserSniperRifle,Laser Sniper Rifle
+gunRifleT2LaserSniperRifleDesc,"This high precision, long ranged rifle is perfect for sniping enemies at great distances.\n\nRepair with a Repair Kit.\nScrap to Rifle parts."
+gunHandgunT2LaserPistol,Laser Pistol
+gunHandgunT2LaserPistolDesc,A heavy duty pistol that uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunHandgunT2LaserSMG,Laser SMG
+gunHandgunT2LaserSMGDesc,This submachine gun uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunShotgunT2LaserShotgun,Laser Shotgun
+gunShotgunT2LaserShotgunDesc,This semi automatic shotgun is a rare and devasting short range weapon capable of frying anything in its path.\n\nRepair with a Repair Kit.\nScrap to Shotgun Parts.,
+gunHandgunT2LaserMagnum,Laser Revolver
+gunHandgunT2LaserMagnumDesc,This heavy pistol uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunHandgunT3PlasmaPistol,Plasma Pistol
+gunHandgunT3PlasmaPistolDesc,This pistol uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunHandgunT3PlasmaMagnum,Plasma Revolver
+gunHandgunT3PlasmaMagnumDesc,The Plasma Revolver is the king of handguns. It's the most powerful but makes the most noise. It uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunShotgunT3PlasmaShotgun,Plasma Shotgun
+gunShotgunT3PlasmaShotgunDesc,A long-barreled shotgun with pump action loading. It uses shotgun energy cells.\n\nRepair with a Repair Kit.\nScrap to Shotgun Parts.
+gunHandgunT3PlasmaSMG,Plasma SMG
+gunHandgunT3PlasmaSMGDesc,This submachine gun uses nano energy cells.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.
+gunMGT3PlasmaAssaultRifle,Plasma Assault Rifle
+gunMGT3PlasmaAssaultRifleDesc,This Plasma Assault Rifle uses heavy energy cells.\n\nRepair with a Repair Kit.\nScrap to Machine Gun Parts.
+gunRifleT3PlasmaSniperRifle,Plasma Sniper Rifle
+gunRifleT3PlasmaSniperRifleDesc,"This high precision, long ranged rifle is perfect for sniping enemies at great distances.\n\nRepair with a Repair Kit.\nScrap to Rifle parts."
+gunExplosivesT3PlasmaGrenadeLauncher,Plasma Grenade Launcher
+gunExplosivesT3PlasmaGrenadeLauncherDesc,A Plasma Grenade Launcher shoots grenade energy cells.\n\nRepair with a Repair Kit.\nScrap to Launcher Parts.
+gunExplosivesT3PlasmaRocketLauncher,Plasma Rocket Launcher
+gunExplosivesT3PlasmaRocketLauncherDesc,A Plasma Rocket Launcher shoots rocket energy cells.\n\nRepair with a Repair Kit.\nScrap to Launcher Parts.
+gunHandgunPistolDev,Dev: Instant Death Nearby Pistol
+gunHandgunPistolDevDesc,A dev pistol that kills all nearby enemies when fired.
+ammoFlareRound,Flare Round (Ammo)
+ammoFlareRoundDesc,A flare round that has a 30% chance to spawn an airdrop when fired outdoors. Airdrops will not be sent during Horde Night. Beware it may also attract unwanted attention. Can be crafted at a workbench.
+ammoNanoEnergyCell,Nano Energy Cell (Ammo)
+ammoNanoEnergyCellDesc,Nano energy cells are used as firearm ammunition in handguns. Can be crafted at a workbench.\nCrafts in stacks of 5.
+ammoHeavyEnergyCell,Heavy Energy Cell (Ammo)
+ammoHeavyEnergyCellDesc,Heavy energy cells are used as firearm ammunition in rifles and machine guns. Can be crafted at a workbench.\nCrafts in stacks of 5.
+ammoShotgunEnergyCell,Shotgun Energy Cell (Ammo)
+ammoShotgunEnergyCellDesc,Shotgun energy cells are used as firearm ammunition in shotguns. Can be crafted at a workbench.\nCrafts in stacks of 5.
+ammoNanoEnergyCellAP,AP Nano Energy Cell (Ammo)
+ammoNanoEnergyCellAPDesc,Armor piercing ammunition works especially well against armored targets but puts a bit more stress on the gun. It can penetrate one enemy or one block of up to 250 hit points to also damage the enemy standing behind it.\nCrafts in stacks of 5.
+ammoHeavyEnergyCellAP,AP Heavy Energy Cell (Ammo)
+ammoHeavyEnergyCellAPDesc,Armor piercing ammunition works especially well against armored targets but puts a bit more stress on the gun. It can penetrate one enemy or one block of up to 250 hit points to also damage the enemy standing behind it.\nCrafts in stacks of 5.
+ammoShotgunEnergyCellAP,AP Shotgun Energy Cell (Ammo)
+ammoShotgunEnergyCellAPDesc,Armor piercing shotgun ammo that fires a single projectile.\nDamage falls off rapidly beyond the effective range.\nHold reload to use alternate ammo.\nCrafts in stacks of 5.
+ammoGrenadeEnergyCell,Grenade Energy Cell (Ammo)
+ammoGrenadeEnergyCellDesc,Grenade energy cells are used as firearm ammunition in grenade launchers. Can be crafted at a workbench.\nCrafts in stacks of 5.
+ammoRocketEnergyCell,Rocket Energy Cell (Ammo)
+ammoRocketEnergyCellDesc,Rocket energy cells are used as firearm ammunition in rocket launchers. Can be crafted at a workbench.\nCrafts in stacks of 5.
+thrownGrenadeEMP,EMP Grenade
+thrownGrenadeEMPDesc,Pull pin. Throw. Generates an electro-magnetic pulse disabling nearby enemies for a short period of time. Also disables weapons on mechs for a short period of time. \nArm with [action:local:Secondary]\nThrow with [action:local:Primary]
+thrownTimedChargeDesc,"A shaped charge designed for delicate work like blowing off a safe or door lock. Automatically detonates after 5 seconds. Want to bring the house down? Try some dynamite instead.\nArm with [action:local:Secondary]\nThrow with [action:local:Primary]"
+ammoBundleNanoEnergyCell,Box of Nano Energy Cell Ammo (100)
+ammoBundleNanoEnergyCellAP,Box of AP Nano Energy Cell Ammo (100)
+ammoBundleHeavyEnergyCell,Box of Heavy Energy Cell Ammo (100)
+ammoBundleHeavyEnergyCellAP,Box of AP Heavy Energy Cell Ammo (100)
+ammoBundleShotgunEnergyCell,Box of Shotgun Energy Cell Ammo (100)
+ammoBundleShotgunEnergyCellAP,Box of AP Shotgun Energy Cell Ammo (100)
+meleeWpnClubT2LaserClub,Laser Club
+meleeWpnClubT2LaserClubDesc,Laser clubs are very durable and hard-hitting.\n\nRepair with a Repair Kit.\nScrap to Club Parts.
+meleeWpnBladeT2LaserKnife,Laser Knife
+meleeWpnBladeT2LaserKnifeDesc,Great for harvesting plants and small trees.\nRepair with a Repair Kit.\nScrap to Blade Parts.
+meleeWpnSledgeT2LaserSledgehammer,Laser Sledgehammer
+meleeWpnSledgeT2LaserSledgehammerDesc,The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Repair Kit.\nScrap to Sledgehammer Parts.
+meleeWpnBladeT2LaserSword,Laser Sword
+meleeWpnBladeT2LaserSwordDesc,Great for harvesting plants and slashing enemies.\nRepair with a Repair Kit.\nScrap to Blade Parts.
+meleeWpnBatonT2LaserStunBaton,Laser Stun Baton
+meleeWpnBatonT2LaserStunBatonDesc,Goes zap.\n\nRepair with a Repair Kit.\nScrap to Stun Baton parts.
+meleeWpnSpearT2LaserSpear,Laser Spear
+meleeWpnSpearT2LaserSpearDesc,Spears have more range than other melee weapons.\nRepair with a Repair Kit.\nScrap to Spear Parts.
+meleeWpnClubT3PlasmaClub,Plasma Club
+meleeWpnClubT3PlasmaClubDesc,Plasma clubs are durable and hard-hitting.\n\nRepair with a Repair Kit.\nScrap to Club Parts.
+meleeWpnBladeT3PlasmaKnife,Plasma Knife
+meleeWpnBladeT3PlasmaKnifeDesc,Great for harvesting plants and small trees.\nRepair with a Repair Kit.\nScrap to Iron.
+meleeWpnSledgeT3PlasmaSledgehammer,Plasma Sledgehammer
+meleeWpnSledgeT3PlasmaSledgehammerDesc,The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Repair Kit.\nScrap to Iron.
+meleeWpnBladeT3PlasmaSword,Plasma Sword
+meleeWpnBladeT3PlasmaSwordDesc,Great for harvesting plants and slashing enemies.\nRepair with a Repair Kit.\nScrap to Blade Parts.
+meleeWpnBatonT3PlasmaBaton,Plasma Stun Baton
+meleeWpnBatonT3PlasmaBatonDesc,Goes zap.\n\nRepair with a Repair Kit.\nScrap to Stun Baton parts.,
+meleeWpnSpearT3PlasmaSpear,Plasma Spear
+meleeWpnSpearT3PlasmaSpearDesc,Spears have more range than other melee weapons.\n\nRepair with a Repair Kit.\nScrap to Iron.
+meleeToolAxeT3PlasmaFireaxe,Plasma Fireaxe
+meleeToolAxeT3PlasmaFireaxeDesc,The plasma fireaxe is great for harvesting wood.\n\nRepair with a Repair Kit.\nScrap to Tool Parts.
+meleeToolPickT3PlasmaPickaxe,Plasma Pickaxe
+meleeToolPickT3PlasmaPickaxeDesc,The plasma pickaxe is great for breaking stone and harvesting minerals.\n\nRepair with a Repair Kit.\nScrap to Tool Parts.
+meleeToolShovelT3PlasmaShovel,Plasma Shovel
+meleeToolShovelT3PlasmaShovelDesc,"The plasma shovel is fairly durable and great for digging through earth, sand, snow and ore.\n\nRepair with a Repair Kit.\nScrap to Tool Parts."
+meleeToolPickT3PlasmaMiningTool,Plasma Mining Gun
+meleeToolPickT3PlasmaMiningToolDesc,"The plasma mining gun is the ultimate all in one tool for mining ore and harvesting wood.\n\nRepair with a Repair Kit.\nScrap to Motor Tool Parts."
+meleeWpnBladeT0BoneKnifeDesc,This primitive makeshift weapon is useful for harvesting plants.\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\nRepair with Bone.\nScrap to Bone.
+meleeWpnBladeT1HuntingKnife,Iron Knife
+meleeWpnBladeT1HuntingKnifeDesc,Great for harvesting plants and slashing enemies.\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\nRepair with a Repair Kit.\nScrap to Iron.
+meleeWpnBladeT1CandyKnifeDesc,Time to get into a festive and stabby mood!\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\n\nRepair with a Repair Kit.
+meleeWpnBladeT3MacheteDesc,Great for slashing enemies and harvesting plants.\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\nRepair with a Repair Kit.\nScrap to Blade Parts.
+meleeToolTorchDesc,This torch can be used as a light source or weapon with a chance to catch enemies on fire. Place with secondary action. May attract unwanted attention.
+gunExplosivesT3RocketLauncherParts,Launcher Parts
+meleeWpnBladeT3MacheteParts,Blade Parts
+meleeWpnSpearT3SteelSpearParts,Spear Parts
+meleeWpnClubT3SteelClubParts,Club Parts
+meleeWpnKnucklesT3SteelKnucklesParts,Knuckle Parts
+meleeWpnSledgeT3SteelSledgehammerParts,Sledgehammer Parts
+meleeToolAllSteelParts,Tool Parts
+vehicleMuscleCarPlaceable,Muscle Car
+vehicleMuscleCarChassis,Muscle Car Chassis
+vehiclePickupTruckPlaceable,Pickup Truck
+vehiclePickupTruckChassis,Pickup Truck Chassis
+vehicleLuxurySedanPlaceable,Luxury Sedan
+vehicleLuxurySedanChassis,Luxury Sedan Chassis
+vehicleHoverCarPlaceable,Hover Car
+vehicleHoverCarChassis,Hover Car Chassis
+armorNerdGlovesDesc,Heavy Armor\nProtect those cold clammy soft hands from the elements and become an intellectual badass. Deal more damage with robotic weapons and stun batons.\n\nFull Set Bonus: Tools and Weapons degrade slower.
+foodShamChowderDesc,Sham Chowder tastes great and grows chest hair!
+resourceTestosteroneExtract,Synthesized Testosterone
+resourceTestosteroneExtractDesc,An artificial compound used to create steroids.
+attuniversalperks,Universal Perks
+attUniversalPerksName,Universal Perks
+attUniversalPerksDesc,Universal perks contain a wide variety of skills that one can learn.
+attUniversalPerksRank1Desc,Rank 1
+attUniversalPerksRank2Desc,Rank 2
+attUniversalPerksRank3Desc,Rank 3
+attUniversalPerksRank4Desc,Rank 4
+attUniversalPerksRank5Desc,Rank 5
+attempath,Empath
+attEmpathName,Empath
+attEmpathDesc,The Empath is widely known as an intellectual for their mental ability and charismatic nature. Increasing Empath improves headshot damage with empath governed weapons such as rifles and stun batons.
+attEmpathRank1Desc,Rank 1
+attEmpathRank2Desc,Rank 2
+attEmpathRank3Desc,Rank 3
+attEmpathRank4Desc,Rank 4
+attEmpathRank5Desc,Rank 5
+attcybernetician,Cybernetician
+attCyberneticianName,Cybernetician
+attCyberneticianDesc,The cybernetician specializes in the manufacture and repair of heavy duty weapons and robots. Increasing Cybernetician improves headshot damage with cybernetician governed weapons such as machine guns and knuckles.
+attCyberneticianRank1Desc,Rank 1
+attCyberneticianRank2Desc,Rank 2
+attCyberneticianRank3Desc,Rank 3
+attCyberneticianRank4Desc,Rank 4
+attCyberneticianRank5Desc,Rank 5
+attcosmotech,Cosmotech
+attCosmotechName,Cosmotech
+attCosmotechDesc,The cosmotech specializes in the repair and creation of vehicles and salvage of materials. Increasing Cosmotech improves headshot damage with cosmotech governed weapons such as clubs and shotguns.
+attCosmotechRank01Desc,Rank 1
+attCosmotechRank02Desc,Rank 2
+attCosmotechRank03Desc,Rank 3
+attCosmotechRank04Desc,Rank 4
+attCosmotechRank05Desc,Rank 5
+attexomedic,Exomedic
+attExomedicName,Exomedic
+attExomedicDesc,The exomedic specializes in fitness and treating injuries. Increasing Exomedic improves headshot damage with exomedic governed weapons such as blades and handguns. 
+attExomedicRank01Desc,Rank 1
+attExomedicRank02Desc,Rank 2
+attExomedicRank03Desc,Rank 3
+attExomedicRank04Desc,Rank 4
+attExomedicRank05Desc,Rank 5
+attastrominer,Astrominer
+attAstrominerName,Astrominer
+attAstrominerDesc,The astrominer specializes in mining and resource extraction. Increasing Astrominer improves headshot damage with astrominer governed weapons such as sledgehammers and explosives.
+attAstrominerRank01Desc,Rank 1
+attAstrominerRank02Desc,Rank 2
+attAstrominerRank03Desc,Rank 3
+attAstrominerRank04Desc,Rank 4
+attAstrominerRank05Desc,Rank 5
+attneonaut,Neonaut
+attNeonautName,Neonaut
+attNeonautDesc,The neonaut specializes in multiplanetary exploration and the discovery of new species. Increasing Neonaut improves headshot damage with neonaut governed weapons such as bows and spears.
+attNeonautRank01Desc,Rank 1
+attNeonautRank02Desc,Rank 2
+attNeonautRank03Desc,Rank 3
+attNeonautRank04Desc,Rank 4
+attNeonautRank05Desc,Rank 5
+reqUniversalPerksLevel01,Universal Perks Level 1
+reqUniversalPerksLevel02,Universal Perks Level 2
+reqUniversalPerksLevel03,Universal Perks Level 3
+reqUniversalPerksLevel04,Universal Perks Level 4
+reqUniversalPerksLevel05,Universal Perks Level 5
+reqEmpathLevel01,Empth Level 1
+reqEmpathLevel02,Empth Level 2
+reqEmpathLevel03,Empth Level 3
+reqEmpathLevel04,Empth Level 4
+reqEmpathLevel05,Empth Level 5
+reqCyberneticianLevel01,Cybernetician Level 1
+reqCyberneticianLevel02,Cybernetician Level 2
+reqCyberneticianLevel03,Cybernetician Level 3
+reqCyberneticianLevel04,Cybernetician Level 4
+reqCyberneticianLevel05,Cybernetician Level 5
+reqCosmotechLevel01,Cosmotech Level 1
+reqCosmotechLevel02,Cosmotech Level 2
+reqCosmotechLevel03,Cosmotech Level 3
+reqCosmotechLevel04,Cosmotech Level 4
+reqCosmotechLevel05,Cosmotech Level 5
+reqExomedicLevel01,Exomedic Level 1
+reqExomedicLevel02,Exomedic Level 2
+reqExomedicLevel03,Exomedic Level 3
+reqExomedicLevel04,Exomedic Level 4
+reqExomedicLevel05,Exomedic Level 5
+reqAstrominerLevel01,Astrominer Level 1
+reqAstrominerLevel02,Astrominer Level 2
+reqAstrominerLevel03,Astrominer Level 3
+reqAstrominerLevel04,Astrominer Level 4
+reqAstrominerLevel05,Astrominer Level 5
+reqNeonautLevel01,Neonaut Level 1
+reqNeonautLevel02,Neonaut Level 2
+reqNeonautLevel03,Neonaut Level 3
+reqNeonautLevel04,Neonaut Level 4
+reqNeonautLevel05,Neonaut Level 5
+perkGreatHeistCompleteDesc,Lockpicking is always successful. Break into locks 20% faster.
+perkGreatHeistCompleteLongDesc,"Lock Picking: If there were still laws you would be breaking them! Master the skill of lockpicking, break into locks 20% faster. Lock picks never break."
+attEmpathRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with rifles and stun batons"
+attEmpathRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with rifles and stun batons"
+attEmpathRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with rifles and stun batons"
+attEmpathRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with rifles and stun batons"
+attEmpathRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with rifles and stun batons"
+attCyberneticianRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with machine guns and robotic turrets"
+attCyberneticianRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with machine guns and robotic turrets"
+attCyberneticianRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with machine guns and robotic turrets"
+attCyberneticianRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with machine guns and robotic turrets"
+attCyberneticianRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with machine guns and robotic turrets"
+attCosmotechRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with clubs and shotguns"
+attCosmotechRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with clubs and shotguns"
+attCosmotechRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with clubs and shotguns"
+attCosmotechRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with clubs and shotguns"
+attCosmotechRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with clubs and shotguns"
+attExomedicRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with blades and handguns"
+attExomedicRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with blades and handguns"
+attExomedicRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with blades and handguns"
+attExomedicRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with blades and handguns"
+attExomedicRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with blades and handguns"
+attAstrominerRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with sledgehammers and explosives"
+attAstrominerRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with sledgehammers and explosives"
+attAstrominerRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with sledgehammers and explosives"
+attAstrominerRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with sledgehammers and explosives"
+attAstrominerRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with sledgehammers and explosives"
+attNeonautRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with bows and spears"
+attNeonautRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with bows and spears"
+attNeonautRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with bows and spears"
+attNeonautRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with bows and spears"
+attNeonautRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with bows and spears"
+perkFlurryOfBlowsDesc,Specialize in swinging melee weapons and beating the tar out of your opponents in a furious flurry of quick strikes.
+perkFlurryOfBlowsRank1LongDesc,"You have developed quick hands. All melee attack speeds are increased by 10%."
+perkFlurryOfBlowsRank2LongDesc,You have developed the sudden strike. All melee attack speeds are increased by 17%.
+perkFlurryOfBlowsRank3LongDesc,You have mastered the flurry of blows. All attack speeds are increased by 25%. Each kill recharges stamina by 30 points.
+perkWasteTreasuresHoneyLongDesc,Honey: It gives you energy and boosts your stamina. I learned a little trick on how to sometimes get some when harvesting trees.
+perkWasteTreasuresCompleteDesc,Find more Armor Crafting Kits.
+perkWasteTreasuresCompleteLongDesc,Armor Crafting Kits: All the best armor pieces are made with Armor Crafting Kits. Increase your chance of finding Armor Crafting Kits in loot.
+perkSpearHunter0Desc,"Embrace your cybernetic essence and unlock the enigmatic realm of laser hunting, where the ancient tradition of spear hunting converges with futuristic technology."
+perkSpearHunter3BleedDesc,Spears have a 25% chance to cause mechanical damage.
+perkSpearHunter3BleedLongDesc,Mechanical Damage: Spears have a 25% chance to cause mechanical damage.
+perkDeepCutsName,Lethal Blade
+perkDeepCutsDesc,Specialize in using bladed weapons like knives or machetes (not axes) to inflict mechanical wounds to your foes.
+perkDeepCutsRank1LongDesc,"You might have a dull blade, but you know how to use it. Bladed weapons deal 10% more damage. Inflict up to 3 Mechanical Wounds on an enemy and a power attack inflicts 2. Every attack refreshes the duration on the mechanical damage. Enemies run 10% slower while damaged. Stamina costs are reduced by 8% and 15% for power attacks. Find more bladed weapons and parts in loot."
+perkDeepCutsRank2LongDesc,Your friends say you're really a knife guy. Bladed weapons deal 20% more damage. Inflict up to 4 Mechanical Wounds on an enemy and a power attack inflicts 3. Stamina costs are reduced by 15% and 30% for power attacks. Find more bladed weapons and parts in loot.
+perkDeepCutsRank3LongDesc,"You're a quantum-powered marvel, surpassing the ordinary with each calculated move, soaring beyond the limitations of lesser programs. Bladed weapons deal 30% more damage. Inflict up to 5 Mechanical Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Mechanical Wound. Enemies run 15% slower while damaged. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more bladed weapons and parts in loot."
+perkDeepCutsRank4LongDesc,You're quite lethal with bladed weapons. Bladed weapons deal 40% more damage. Inflict up to 6 Mechanical Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Mechanical Wound. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more bladed weapons and parts in loot.
+perkDeepCutsRank5LongDesc,"You're a cybernetic warrior, slicing through enemies with precision, turning them into byte-sized sushi. Bladed weapons deal 50% more damage. Inflict up to 7 Mechanical Wounds on an enemy and a power attack inflicts 5. All glancing blows cause 1 Mechanical Wound. Enemies run 20% slower while damaged. Killing blows grant 30 stamina. Find more bladed weapons and parts in loot."
+perkTechJunkie5RepulsorLongDesc,Stun Repulsor Mod: Craft a stun repulsor mod for stun batons and send enemies flying on the charged hit.
+perkWasteTreasuresSinksLongDesc,Sinks: So many enemies and so few bullets. Here is a trick I learned about harvesting more lead and brass from sinks and plumbing.
+perkHealingFactorRank3Desc,Cyborg
+perkHealingFactorRank3LongDesc,What are you part cyborg? Gain 1 health every 15 seconds with natural healing. Critical injuries heal 60% faster.
+perkRuleOneCardioDesc,Train your body in the number one tactic against the robot menace: Running away from them.
+perkElectrocutionerRank3LongDesc,You're getting dangerous with batons. All batons deal 30% more damage. Stun batons electrify victims 60% longer. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more batons and parts in loot.
+perkPummelPeteRank5LongDesc,"Pummel Pete once took on 50 enemies with just a club and he would be proud of you. Clubs deal 50% more damage, attacks do 200% more damage to stunned enemies, and power attacks have a 100% chance to knock foes back down. Killing blows grant 30 stamina. 3 successive hits in a short time causes the last blow to do 100% extra damage. Find more clubs and parts in loot."
+perkSkullCrusherRank1LongDesc,"You're a bruiser! With a little luck, you can sometimes knock down enemies. Sledgehammers deal 10% more damage. 15% chance to knock down enemies with power attacks. Stamina costs are reduced by 8% and 15% for power attacks. Find more sledges and parts in loot."
+craftingBladesDesc,Reading [DECEA3]Knife Guy[-] will increase the quality of crafted blades.\nBoost loot odds with [DECEA3]Lethal Blade[-]
+perkPistolPeteAPAmmoDesc,Craft AP ammunition.
+perkPistolPeteAPAmmoLongDesc,Armor Piercing Ammunition: Armor piercing rounds do considerable more damage against armored targets. Craft AP 9mm ammunition and AP Nano Energy Cells.
+perkPistolPeteCompleteDesc,Shots fired at point blank ignore armor. Bulk craft 9mm ammunition and Nano Energy Cells.
+perkSniperAPAmmoDesc,Craft AP ammunition.
+perkSniperAPAmmoLongDesc,Armor Piercing Ammunition: Learn to craft armor piercing 7.62mm and AP Heavy Energy Cells to do more damage against armored opponents.
+perkSniperCompleteDesc,You can craft a ghillie suit. Bulk craft all 7.62mm ammo and Heavy Energy Cells.
+perkShotgunMessiahSlugsDesc,You can craft shotgun slugs and AP Shotgun Energy Cells.
+perkShotgunMessiahSlugsLongDesc,Slugs and AP rounds can penetrate multiple targets. You can craft shotgun slugs and AP Shotgun Energy Cells.
+perkShotgunMessiahCompleteDesc,You can one shot most wood blocks. Bulk craft all shotgun ammo and Shotgun Energy Cells.
+harvestToolsPlasma,Plasma Tools
+handgunsPrimitive,Primitive Handguns
+handgunsBasic,Basic Handguns
+handgunsLaser,Laser Handguns
+handgunsPlasma,Plasma Handguns
+explosivesT2-2,Tier 2: Contact Grenade & EMP Grenade
+explosivesT2-3,Tier 2: Hubcap Landmine & EMP Landmine
+workstationsT1-1,Tier 1: Dew Collector and Fabricator
+workstationsT1-2,Tier 1: Forge
+workstationsT2-1,Tier 2: Workbench
+workstationsT2-2,Tier 2: Lock Pick
+workstationsT2-3,Tier 2: Bellows
+workstationsT2-4,Tier 2: Anvil
+workstationsT3-1,Tier 3: Cement Mixer
+workstationsApiary-1,Tier 3: Apiary
+workstationsApiary-2,Tier 4: Apiary Extractor
+workstationsApiary-3,Tier 4: Apiary Brood Box
+workstationsApiary-4,Tier 5: Apiary Smoker
+workstationsT4,Tier 4: Chemistry Station
+workstationsT5,Tier 5: Forge Crucible
+workstationsT6,Tier 6: Blast Furnace
+workstationsT7,Tier 7: Auto Miner
+medicalT1-3,Tier 1: Anti-Radiation Pills
+medicalT2-2,Tier 2: Recog & Herbal Antibiotics
+medicalT2-3,Tier 2: Advanced Anti-Radiation Pills
+vehiclesT4,"Tier 4: 4x4, Pickup Truck, Muscle Car & Luxury Sedan"
+vehiclesT5,Tier 5: Gyrocopter & Hover Car
+useTVOn,{0} Switch TV On
+useTVOff,{0} Switch TV Off
+blockcommand_nothing,Nothing
+ttSearchContainerBeforePickup,You must search the container before picking it up.
+ttEmptyContainerBeforePickup,You must empty the container before picking it up.
+ttEnterWasteland,You have entered the [FF0000]Wasteland[-] your passive [4EE44E]Radiation[-] will increase over time.
+npcTraderRekt,Trader Luna
+npcTraderLuna,Trader Luna
+vehicleMuscleCar,Muscle Car
+vehiclePickupTruck,Pickup Truck
+vehicleLuxurySedan,Luxury Sedan
+vehicleHoverCar,Hover Car
+robotAndroidPrime,Android Prime
+robotAndroidBolt,Android Bolt
+robotAndroidAndromeda,Android Andromeda
+robotAndroidRex,Android Rex
+robotAndroidChronos,Android Chronos
+robotAndroidAxl,Android A.X.L
+robotAndroidClank,Android Clank
+robotAndroidRalph,Android R.A.L.P.H
+robotAndroidEva,Android Eva
+robotAndroidOrion,Android Orion
+robotAndroidPrimeOvercharged,Android Prime [FFEA00]Overcharged[-]
+robotAndroidBoltOvercharged,Android Bolt [FFEA00]Overcharged[-]
+robotAndroidAndromedaOvercharged,Android Andromeda [FFEA00]Overcharged[-]
+robotAndroidRexOvercharged,Android Rex [FFEA00]Overcharged[-]
+robotAndroidChronosOvercharged,Android Chronos [FFEA00]Overcharged[-]
+robotAndroidAxlOvercharged,Android A.X.L [FFEA00]Overcharged[-]
+robotAndroidClankOvercharged,Android Clank [FFEA00]Overcharged[-]
+robotAndroidRalphOvercharged,Android R.A.L.P.H [FFEA00]Overcharged[-]
+robotAndroidEvaOvercharged,Android Eva [FFEA00]Overcharged[-]
+robotAndroidOrionOvercharged,Android Orion [FFEA00]Overcharged[-]
+robotAndroidPrimeShocker,Android Prime [33CCFF]Shocker[-]
+robotAndroidBoltShocker,Android Bolt [33CCFF]Shocker[-]
+robotAndroidAndromedaShocker,Android Andromeda [33CCFF]Shocker[-]
+robotAndroidRexShocker,Android Rex [33CCFF]Shocker[-]
+robotAndroidChronosShocker,Android Chronos [33CCFF]Shocker[-]
+robotAndroidAxlShocker,Android A.X.L [33CCFF]Shocker[-]
+robotAndroidClankShocker,Android Clank [33CCFF]Shocker[-]
+robotAndroidRalphShocker,Android R.A.L.P.H [33CCFF]Shocker[-]
+robotAndroidEvaShocker,Android Eva [33CCFF]Shocker[-]
+robotAndroidOrionShocker,Android Orion [33CCFF]Shocker[-]
+robotAndroidPrimeInferno,Android Prime [FFA500]Inferno[-]
+robotAndroidBoltInferno,Android Bolt [FFA500]Inferno[-]
+robotAndroidAndromedaInferno,Android Andromeda [FFA500]Inferno[-]
+robotAndroidRexInferno,Android Rex [FFA500]Inferno[-]
+robotAndroidChronosInferno,Android Chronos [FFA500]Inferno[-]
+robotAndroidAxlInferno,Android A.X.L [FFA500]Inferno[-]
+robotAndroidClankInferno,Android Clank [FFA500]Inferno[-]
+robotAndroidRalphInferno,Android R.A.L.P.H [FFA500]Inferno[-]
+robotAndroidEvaInferno,Android Eva [FFA500]Inferno[-]
+robotAndroidOrionInferno,Android Orion [FFA500]Inferno[-]
+robotAndroidPrimeRadiated,Android Prime [4EE44E]Radiated[-]
+robotAndroidBoltRadiated,Android Bolt [4EE44E]Radiated[-]
+robotAndroidAndromedaRadiated,Android Andromeda [4EE44E]Radiated[-]
+robotAndroidRexRadiated,Android Rex [4EE44E]Radiated[-]
+robotAndroidChronosRadiated,Android Chronos [4EE44E]Radiated[-]
+robotAndroidAxlRadiated,Android A.X.L [4EE44E]Radiated[-]
+robotAndroidClankRadiated,Android Clank [4EE44E]Radiated[-]
+robotAndroidRalphRadiated,Android R.A.L.P.H [4EE44E]Radiated[-]
+robotAndroidEvaRadiated,Android Eva [4EE44E]Radiated[-]
+robotAndroidOrionRadiated,Android Orion [4EE44E]Radiated[-]
+robotCyborgNova,Cyborg Nova
+robotCyborgSpark,Cyborg Spark
+robotCyborgTitan,Cyborg Titan T-800
+robotCyborgNovaOvercharged,Cyborg Nova [FFEA00]Overcharged[-]
+robotCyborgSparkOvercharged,Cyborg Spark [FFEA00]Overcharged[-]
+robotCyborgTitanOvercharged,Cyborg Titan T-800 [FFEA00]Overcharged[-]
+robotCyborgNovaShocker,Cyborg Nova [33CCFF]Shocker[-]
+robotCyborgSparkShocker,Cyborg Spark [33CCFF]Shocker[-]
+robotCyborgTitanShocker,Cyborg Titan T-800 [33CCFF]Shocker[-]
+robotCyborgNovaInferno,Cyborg Nova [FFA500]Inferno[-]
+robotCyborgSparkInferno,Cyborg Spark [FFA500]Inferno[-]
+robotCyborgTitanInferno,Cyborg Titan T-800 [FFA500]Inferno[-]
+robotCyborgNovaRadiated,Cyborg Nova [4EE44E]Radiated[-]
+robotCyborgSparkRadiated,Cyborg Spark [4EE44E]Radiated[-]
+robotCyborgTitanRadiated,Cyborg Titan T-800 [4EE44E]Radiated[-]
+robotDroneNano,Nano Drone
+robotDronePoliceNano,Nano Police Drone
+robotDroneRacing,Racing Drone
+robotDronePolice,Police Drone
+robotDroneSecurity,Security Drone
+robotDroneMothership,Mothership Drone
+robotDog,Robot Dog
+robotCombatDog,Combat Dog
+robotAdvancedCombatDog,Advanced Combat Dog
+robotSpiderBot,Spider Bot
+robotSpiderBotNano,Nano Spider Bot
+robotDroidSoldier,Soldier Droid
+robotDroidCombat,Combat Droid
+robotDroidBomber,Bomber Droid
+robotMechLightBiped,Light Biped Mech
+robotMechHeavyBiped,Heavy Biped Mech
+robotMechMining,Mining Mech
+robotMechQuadruped,Quadruped Mech
+trader_rekt,Trader Luna
+trader_rekt2,Trader Luna
+trader_rekt_by_MPLogue,Trader Luna (MPLogue)
+quest_BasicSurvival1,Basic Survival 1/1
+modGunMeleeTheHunterSchematic,The Exterminator Mod Schematic
+modGunMeleeTheHunter,The Exterminator Mod
+modGunMeleeTheHunterDesc,+25% more damage to Mechs and Droids (not Androids or Cyborgs).
+modMeleeClubBarbedWireDesc,"20% chance to cause mechanical damage, 40% with power attacks.\nCan be installed in clubs."
+modMeleeSerratedBladeDesc,10% chance to cause a Mechanical Wound on a regular attack.
+modMeleeStunBatonRepulsorDesc,Install this mod into a stun baton and send enemies flying on the charged hit.
+modMeleeErgonomicGripDesc,Decreases melee stamina usage by 10%.
+modArmorCigarDesc,Look intimidating and get a better deal from traders. Also boosts your miner 69'er skill!	
+goZombieBMMove,Enemy Blood Moon Speed
+goZombieBMMoveDesc,Sets enemy movement mode. Default is sprint during blood moon.
+goZombieFeralMove,Enemy Feral Speed
+goZombieFeralMoveDesc,Sets enemy movement mode. Default is sprint if feral.
+goZombieFeralSense,Enemy Feral Sense
+goZombieFeralSenseDesc,Increases the ability for enemies to hear or see you
+goZombieMove,Enemy Day Speed
+goZombieMoveDesc,Sets enemy movement mode. Default is walk at day.
+goZombieMoveNight,Enemy Night Speed
+goZombieMoveNightDesc,Sets enemy movement mode. Default is sprint at night
+goEnemySpawnDesc,Enemy Spawning On:\nAdds enemies to the world.\n\nEnemy Spawning off:\nTurns off all enenmy spawning in the world.
+goBloodMoonEnemyCountDesc,"This is the number of enemies that can be alive (spawned at the same time) at any time PER PLAYER during a blood moon horde, however, MaxSpawnedZombies overrides this number in multiplayer games.\nAlso note that your game stage sets the max number of enemies PER PARTY. Low game stage values can result in lower number of enemies than the BloodMoonEnemyCount setting.\nChanging this setting has a huge impact on performance. Change at your own risk."
+goBedrollDeadZoneSizeDesc,Bedrolls create an area where enemies do not respawn. Any cleared sleeper volumes that touch this area will not respawn after they've been cleared.
+goEnemyDifficultyDesc,Controls how aggressive enemies are. Feral means enemies are very aggressive and can sense you even through walls at night.
+goGameModeDesc,::Survival MP::\nFight against other players or band together to survive the apocalypse. Use the provided Land Claim Block to protect your base against other players.\n\n::Survival SP::\nPlay Solo against hordes of enemies exploring Navezgane County Arizona to uncover the truth behind what really happened.
+goLootAbundanceDesc,The percentage of loot to spawn in containers.
+goMaxSpawnedAnimals,Max Robotic Animals
+goMaxSpawnedAnimalsDesc,How many robotic animals can be spawned in the world at once.
+goMaxSpawnedZombies,Max Enemies
+goMaxSpawnedZombiesDesc,This setting covers the entire map. There can only be this many enemies on the entire map at one time.\nChanging this setting has a huge impact on performance. Change at your own risk.
+gmZombieHorde,Robot Horde
+gmSurvivalMPDesc,::Survival MP::\nFight against other players or band together to survive the apocalypse earning land claims to protect your fort against other players. New players start with a Land Claim Block and additional ones can be crafted.
+gmSurvivalSPDesc,::Survival SP::\nPlay Solo against hordes of enemies exploring Navezgane County Arizona to uncover the truth behind what really happened.
+quest_clear_completion,Well I'll be danged. You really managed to pull through in a pinch. Thanks for killing all those enemies. Here's what I owe ya.
+quest_clear_description,Head to [DECEA3]{poi.name}[-] and clear out the enemies. This location could be useful to our cause.
+quest_clear_response,Clear Enemies ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_clear_statement,Clear out the enemies in the area.
+quest_fetch_clear_completion,Well I'll be danged. You really managed to pull through in a pinch. Thanks for killing those enemies and retrieving the supplies. Here's what I owe ya.
+quest_fetch_clear_description,Head to [DECEA3]{poi.name}[-]. Kill all the enemies and retrieve the shipment.
+quest_fetch_clear_statement,Bring back the shipment and destroy those enemies.
+quest_infestation_statement,Clear out the infested enemies in the area.
+quest_restore_power_description,"Head to [DECEA3]{poi.name}[-] and turn back on the generators. While you are there, clear out all the enemies you find inside."
+quest_tier1_clear_offer,Go prove that you have what it takes to be a part of White River Runners. We need you to clear out the enemies at [DECEA3]{poi.name}[-].
+quest_tier2_clear_offer,"You are ready for more, huh? Well this one will be a little harder but I'm sure you will manage. Go kill all the enemies at [DECEA3]{poi.name}[-]."
+quest_tier2_fetch_clear_offer,One of our Runners had to stash their shipment at [DECEA3]{poi.name}[-]. Go exterminate the enemies and retrieve the shipment.
+quest_tier1_restore_power_offer,We found a building that is well suited for a new outpost. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier2_restore_power_offer,We found a building that is well suited for a new outpost. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier3_restore_power_offer,Our community reported a good size structure that contains significant resources we badly need. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier4_restore_power_offer,We found a location that we believe is large enough to defend and accomodate our growing communities needs. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier2_infested_clear_offer,"We located a highly infested robot hideout nearby. The location is critical to the survival of our colony. Go clear out the enemies at [DECEA3]{poi.name}[-]. Remember, there’s more of them, they’re moving faster and they’re harder to kill. Good Luck!"
+quest_tier3_clear_offer,You did a great job on the last clearing but this one may be a bit tougher. I'm sure you can handle it. Go wipe out the enemies at [DECEA3]{poi.name}[-].
+quest_tier3_fetch_clear_offer,One of the boys were being overrun by enemies during a supply run. They told me exactly where to find the shipment at [DECEA3]{poi.name}[-]. Go destroy the enemies and retrieve the goods.
+quest_tier3_infested_clear_offer,We’ve caught word from one of our runners that our safehouse at [DECEA3]{poi.name}[-] has become infested with enemies. Clear the threat survivor!
+quest_tier4_clear_offer,You know the drill. Go exterminate all the enemies at [DECEA3]{poi.name}[-].
+quest_tier4_fetch_clear_offer,We need to retrieve our supplies at [DECEA3]{poi.name}[-]. We know where they stashed them. Go clear out the enemies and retrieve the supplies.
+quest_tier4_infested_clear_offer,We’ve just learned that a swarm of infested enemies has wiped out our team at [DECEA3]{poi.name}[-]. Gather up all your weapons and prepare for the worst.
+quest_tier5_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [DECEA3]{poi.name}[-].
+quest_tier6_clear_offer,"This may be the toughest clear job yet, but I know I can count on you. Go finish off the enemies at [DECEA3]{poi.name}[-]. Good luck."
+quest_tier6_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [DECEA3]{poi.name}[-].
+quest_tier1_restore_power,Tier 1 Restore Power
+quest_restore_power_response,Restore Power ([DECEA3]{poi.distance} {poi.direction}[-])
+questRewardFarmBundleDesc,"A bundle of farm plots, the farming multitool and random seeds."
+questStarterCapsule,Starter Capsule
+questStarterCapsuleDesc,"A capsule containing essential items for survival."
+questRewardLegendaryBatonCraftingBundle,Legendary Stun Baton Crafting Bundle
+questRewardLegendaryHandgunCraftingBundle,Legendary Handgun Crafting Bundle
+questRewardLegendaryMacheteCraftingBundle,Legendary Blade Crafting Bundle
+questRewardLegendaryRocketLauncherCraftingBundle,Legendary Launcher Crafting Bundle
+questRewardLegendarySteelClubCraftingBundle,Legendary Club Crafting Bundle
+questRewardLegendarySteelKnuckleCraftingBundle,Legendary Knuckle Crafting Bundle
+questRewardLegendarySteelSledgehammerCraftingBundle,Legendary Sledgehammer Crafting Bundle
+questRewardLegendarySteelSpearCraftingBundle,Legendary Spear Crafting Bundle
+questRewardLegendarySteelToolsCraftingBundle,Legendary Tools Crafting Bundle
+noteDuke01,A Note from The Resistance
+noteDuke01Desc,"To whoever finds this, \n\nThings went south fast. We got ambushed by a swarm of bots, and we couldn't hold 'em off. They tore through us like paper; they seem to be programmed to kill any signs of life, undead or not. The zombies have a strange glow to them; I don't know what is causing it, but whatever it is, it's been keeping them alive all this time. I'm scribbling this down quick 'cause I can't keep up anymore. My suit is busted up bad, and I'd only slow down the rest. So, I'm staying put. \n\nBut listen, there's hope. I've concealed a capsule with this note. Inside, you'll find gear that might just keep you going—maps, supplies, tools. Use them well, for all our sakes. Stay strong, stay alive. We're counting on you to keep the fight alive."
+buffDukeNoteToolTip,[00FF00]The Resistance left you a note to read[-]
+buffDukeNoteName,Read the Note from The Resistance
+buffDukeNoteDesc,Reading the Note from The Resistance or reaching Level 2 will dismiss this reminder.
+quest_WhiteRiverCitizen1_description,"Pshh! Come in Ranger,\n\nWe've intercepted your distress signal and have marked your map with the nearest White River Outpost location. There you will find a Trader where you can buy and sell goods and get yourself patched up; they may also have some work for you.\n\nGood Luck, Sgt. Fury"
+quest_white_river_completion,"Sgt. Fury sent you, eh? Well, you're going to have to show us your capabilities.\n\nTake this shovel and accept your first quest."
+harvestTip,Use any bladed tool or weapon like a Laser Knife to harvest plants and crops.\nUse a wrench to break down cars or mechanical items for advanced resources.\nPerks can increase the harvest yield in several areas.
+infectionTip_title,Radiation
+infectionTip,"Radiation is a constant danger in the apocalypse.\nAcid Rain in the wasteland is the most dangerous source of radiation, stocking up on medication is highly recommended.\n\nRadiation will drain your stamina and in later stages also your attributes. If untreated it is lethal within 7 game days.\n\nUsing Anti-Radiation Pills will immediately make you feel better and reduce the negative effects. A cure reduces the radiation percentage by the amount listed on the item.\n\nThe Radiation symbol on the HUD will change color to indicate your level of radiation exposure"
+onFireTip,"Some weapons, enemies, or parts of the environment can set you on fire. To extinguish that fire you can jump into water, submerging yourself, or 'drink' an item like a water jar. Drinking water will also prevent being set on fire for 10 seconds."
+airDropTip,Air Supply Drops can happen around mid-day. Listen for the airplane and follow the blue smoke to find the crate the plane drops. You can also find supply crates marked on your map if the mark air drops option is enabled.
+loadingTipMainHUD,"On your HUD your health, stamina and radiation levels are shown as red, blue and either green, orange or red for radiation depending on your exposure level. Food and Water levels are shown as green and blue on the right side of your toolbelt. Open your character screen with [action:local:Inventory][action:permanent:Character] to see detailed player stats in the tabs below your character name."
+loadingTipPickaxes,"Pickaxes are great for harvesting the various ores such as iron, lead, coal, oil shale, potassium nitrate and cobalt."
+loadingTipBaseUpgrading,"Building blocks can be upgraded to stronger versions using material and a stone axe.\nThe most common upgrade materials are: wood, cobblestone rocks, concrete mix, forged steel and forged cobalt."
+loadingTipHarvestingRobots,"Harvest robots with a salvage tool to gain useful materials such as electrical parts, mechanical parts and more."
+loadingTipHarvestingRobots_title,Harvesting Robots
+loadingTipHarvestingNanoChips,Nano chips are small computing devices that can be harvested from robots and high tech vehicles with a salvage tool.
+loadingTipHarvestingNanoChips_title,Nano Chips
+zombie_slayer_name_soldier,Soldier Slayer
+zombie_slayer_subtitle_soldier,Soldier Slayer
+exterminator_name,Exterminator
+exterminator_subtitle,Exterminator
+exterminator_name_any_robot,Robot Exterminator
+exterminator_subtitle_any_robot,Robot Exterminator
+exterminator_desc,Good job ranger! You've completed one of the Exterminator Challenges.\n\nGo to any trader to collect your reward.
+exterminator_completion,Good work ranger! You've completed the Exterminator Challenge Group.\n\nGo to any trader to collect your reward.
+exterminator_name_overcharged_robot,Overcharged Robot Exterminator
+exterminator_subtitle_overcharged_robot,Overcharged Robot Exterminator
+exterminator_name_radiated_robot,Radiated Robot Exterminator
+exterminator_subtitle_radiated_robot,Radiated Robot Exterminator
+exterminator_name_inferno_robot,Inferno Robot Exterminator
+exterminator_subtitle_inferno_robot,Inferno Robot Exterminator
+exterminator_name_shocker_robot,Shocker Robot Exterminator
+exterminator_subtitle_shocker_robot,Shocker Robot Exterminator
+exterminator_name_spider_bot,Spider Bot Exterminator
+exterminator_subtitle_spider_bot,Spider Bot Exterminator
+exterminator_name_robot_dog,Robot Dog Exterminator
+exterminator_subtitle_robot_dog,Robot Dog Exterminator
+exterminator_name_drone,Drone Exterminator
+exterminator_subtitle_drone,Drone Exterminator
+exterminator_name_droid,Droid Exterminator
+exterminator_subtitle_droid,Droid Exterminator
+exterminator_name_mech,Mech Exterminator
+exterminator_subtitle_mech,Mech Exterminator
+challengeObjectiveOpen,Open
+challengeKillRewardReading,20000 XP and various reading materials
+challengeKillRewardReadingHardcore,50000 XP and various reading materials
+challengeGroupExterminator,Exterminator
+challengeRewardBonusExterminatorReward,Exterminator Reward
+challengeGroupBasics,Basics
+challengeRewardBonusTraderQuest,Basics Reward
+challengeKillRobotAnimals,Kill Robotic Animals
+challengeKillRobotAnimalsShort,Kill robotic animals to harvest nano chips and other resources.
+challengeKillRobotAnimalsDesc,Killing [DECEA3]Robotic Animals[-] may require using [DECEA3]Stealth[-].\n\nAttacks while crouched on sleeping or un-alerted enemies apply a [DECEA3]Stealth Damage Bonus[-].\n\nThe [DECEA3]Stealth Damage Bonus[-] has a default cooldown of [DECEA3]10[-] seconds in PvE and [DECEA3]60[-] seconds in PvP.
+challengeSalvageRobots,Salvage Robots
+challengeSalvageRobotsShort,Harvest resources from a destroyed Robot with a Salvage Tool.
+challengeSalvageRobotsDesc,Use a [DECEA3]Wrench[-] or other salvage tool to harvest resources.\n\n[DECEA3]Perks[-] can increase your harvest yield.\n\nTough [DECEA3]Enemies[-] will yield higher amounts and [DECEA3]Rare[-] resources.
+challengeMeetRekt,Meet Luna
+challengeMeetRektShort,Meet Trader Luna.
+challengeMeetRektDesc,"Talk to [DECEA3]Trader Luna[-] at her place of business in the [DECEA3]Pine Forest[-] biome. She normally has a stockpile of [DECEA3]Food[-] and [DECEA3]Farming[-] supplies for sale."
+challengeMeetJenDesc,You can find [DECEA3]Trader Jen[-] in the makeshift hospital at [DECEA3]Jen's Clinic[-] in the [DECEA3]Burnt Forest[-]. She may come across as friendly at first but I would watch your back around here. She deals mostly in [DECEA3]Medical[-] supplies.
+challengeKillEnemies,Kill Enemies
+challengeKillEnemiesShort,Kill some enemies.
+challengeKillEnemiesDesc,"[DECEA3]Zombies[-] and [DECEA3]Robots[-] are the primary threat to your survival.\n\n[DECEA3]Normal[-] zombies and robots walk during the day but move faster at night.\n\n[FF6666]Feral[-] zombies and [FFEA00]Overcharged[-] robots run during the day, hit harder, and take more damage.\n\n[00FF00]Radiated[-] zombies and robots regenerate their health and deal severe damage, making them a stubborn threat until eliminated.\n\n[FFA500]Inferno[-] and [33CCFF]Shocker[-] robots are tough, run during the day and have a chance to electrocute the target or set them on fire depending on the type."
+challengePurchaseItemsJoelDesc,"[DECEA3]Traders[-] have a wide stock of [DECEA3]Items[-] available for sale in many [DECEA3]Categories[-]. As you progress, your [DECEA3]Trader Stage[-] will increase and [DECEA3]Traders[-] will stock more [DECEA3]Items[-] as well as offering new, higher [DECEA3]Quality[-] items for sale.\n\nEach [DECEA3]Trader[-] also [DECEA3]Specializes[-] in specific [DECEA3]Categories[-]. For instance, [DECEA3]Trader Luna[-] has a [DECEA3]Specialization[-] in [DECEA3]Food[-] and [DECEA3]Seeds[-] which means she has more [DECEA3]Meals[-] for sale, while [DECEA3]Trader Jen[-] is [DECEA3]Specialized[-] in [DECEA3]Medical[-] supplies and stocks more [DECEA3]Bandages[-].\n\nPrices at [DECEA3]Traders[-] are based on your [DECEA3]Barter[-] statistic, which can be modified by items like [DECEA3]Consumables[-] and some [DECEA3]Armor[-]."
+challengeQuestTraderToTraderCompleteDesc,"After completing [DECEA3]10[-] quests with a [DECEA3]Trader[-], a new category of [DECEA3]Special Jobs[-] will unlock.\n\nThis will enable an [DECEA3]Opening Trade Routes[-] quest, which allows you to find the next [DECEA3]Trader[-] to advance your [DECEA3]Progression[-]. The order is as follows:\n\n[DECEA3]Trader Luna[-] to [DECEA3]Trader Jen[-].\n\n[DECEA3]Trader Jen[-] to [DECEA3]Trader Bob[-].\n\n[DECEA3]Trader Bob[-] to [DECEA3]Trader Hugh[-].\n\n[DECEA3]Trader Hugh[-] to [DECEA3]Trader Joel[-]."
+challengeHarvestLeatherDesc,"[DECEA3]Leather[-] is an ingredient used primarily in [DECEA3]Armor[-] and [DECEA3]Armor Modification[-] recipes.\n\nIt can be harvested from furniture such as [DECEA3]Office Chairs[-], [DECEA3]Leather Couches[-], and [DECEA3]Leather Restaurant Booths[-]."
+challengeHarvestRottingFleshDesc,"[DECEA3]Rotting Flesh[-] is a component used to make [DECEA3]Farm Plots[-] and some [DECEA3]Food[-] items.\n\nIt can be harvested from things like [DECEA3]Corpses[-] and [DECEA3]Body Bags[-].\n\nHarvest some [DECEA3]Rotting Flesh[-] with any [DECEA3]Knife[-]."
+challengeHealerInfectionDesc,"Attacks from [DECEA3]Zombies[-] have a chance to cause an [DECEA3]Infection[-]. Wearing [DECEA3]Armor[-] reduces the chance of [DECEA3]Infection[-] and other [DECEA3]Critical Injuries.[-]\n\n[DECEA3]Honey[-], [DECEA3]Herbal Antibiotics[-], and [DECEA3]Antibiotics[-] are used to treat an [DECEA3]Infection[-]. Use one from your toolbelt by selecting it and pressing [action:local:Primary].\n\nTo use one from your inventory, select it and press the [DECEA3]Use[-] Quick Action [action:local:Left]."
+challengeEnterDesertDesc,"The [DECEA3]Desert[-] has always been a dry, lifeless place in Navezgane County.\n\nAfter the apocalypse, its abundant resources draw human scavengers searching for [DECEA3]Oil Shale[-] and [DECEA3]Yucca Fruit[-]. Watch out for [DECEA3]Nano Drones[-] that patrol high above, waiting to strike at any moment."
+challengeEnterSnowDesc,The [DECEA3]Snow[-] biome is a frigid part of the world that is home to merciless [DECEA3]Robot Dogs[-] and [DECEA3]Spider Bots[-] that hunt their prey with infrared systems.\n\n[DECEA3]Combat Dogs[-] with high-tech laser weapons also patrol the [DECEA3]Snow[-] during the night searching for signs of life to exterminate.
+challengeEnterWastelandDesc,"Once densely populated, the [DECEA3]Wasteland[-] has long since been reduced to rubble and twisted metal beams, with its many residents now deadly [DECEA3]Feral[-] and [DECEA3]Radiated Zombies[-].\n\nMany survivors who enter never return, falling victim to the heavy duty [DECEA3]Mechs[-] and [DECEA3]Droids[-] that prowl the ruined wastes with one goal in mind. Kill on sight. \n\nExplosions can be heard at varying distances as both friend and foe trip haphazardly hidden [DECEA3]Landmines[-] in the destroyed debris."
+challengeKillAnyZombiesDesc,"[DECEA3]Zombies[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [DECEA3]Blocks[-] and cause you to become [DECEA3]Infected[-].\n\nAs your [DECEA3]Gamestage[-] increases, stronger, faster, and more challenging [DECEA3]Zombies[-] will appear.\n\nNo place is safe, as [DECEA3]Zombies[-] inhabit all biomes, with [DECEA3]Downtown[-] and [DECEA3]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [DECEA3]Zombies[-]."
+challengeKillSoldiers,Kill Soldier Zombies
+challengeKillSoldiersShort,Kill some Soldier Zombies.
+challengeKillSoldiersDesc,"[DECEA3]Soldier Zombies[-] are battle hardened undead with increased pain tolerance and heavy duty kevlar helmets, aiming for the head may not be the best choice to take them down.\n\nKill some [DECEA3]Soldier Zombies[-]."
+challengeKillRobots,Kill Any Robot
+challengeKillRobotsShort,Kill lots of Robots.
+challengeKillRobotsDesc,"[DECEA3]Robots[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [DECEA3]Blocks[-] and cause you to become [4EE44E]Irradiated[-].\n\nAs your [DECEA3]Gamestage[-] increases, stronger, faster, and more challenging [DECEA3]Robots[-] will appear.\n\nNo place is safe, as [DECEA3]Robots[-] patrol all biomes, with [DECEA3]Downtown[-] and [DECEA3]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [DECEA3]Robots[-]."
+challengeKillOverchargedRobots,Kill Overcharged Robots
+challengeKillOverchargedRobotsShort,Kill some Overcharged Robots
+challengeKillOverchargedRobotsDesc,"[DECEA3]Overcharged Robots[-] run during the day, hit harder and take more damage than regular robots. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Overcharged Robots[-]."
+challengeKillRadiatedRobots,Kill Radiated Robots
+challengeKillRadiatedRobotsShort,Kill some Radiated Robots
+challengeKillRadiatedRobotsDesc,"[DECEA3]Radiated Robots[-] regenerate their health and deal AOE radiation causing nearby targets to become [4EE44E]Irradiated[-]. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Radiated Robots[-]."
+challengeKillInfernoRobots,Kill Inferno Robots
+challengeKillInfernoRobotsShort,Kill some Inferno Robots
+challengeKillInfernoRobotsDesc,"[DECEA3]Inferno Robots[-] are tough, run during the day, and have a chance to set the target on [FFA500]Fire[-] with each hit. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Inferno Robots[-]."
+challengeKillShockerRobots,Kill Shocker Robots
+challengeKillShockerRobotsShort,Kill some Shocker Robots
+challengeKillShockerRobotsDesc,"[DECEA3]Shocker Robots[-] are very tough, run during the day, and have a chance to [33CCFF]Electrocute[-] the target with each hit. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Shocker Robots[-]."
+challengeKillRobotDogs,Kill Robot Dogs
+challengeKillRobotDogsShort,Kill some Robot Dogs
+challengeKillRobotDogsDesc,"[DECEA3]Robot Dogs[-] are tough and fast, making them difficult to kill. Beware some versions may shoot back. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Robot Dogs[-]."
+challengeKillSpiderBots,Kill Spider Bots
+challengeKillSpiderBotsShort,Kill some Spider Bots
+challengeKillSpiderBotsDesc,"[DECEA3]Spider Bots[-] are weak but very fast and jump at the target from a distance. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Spider Bots[-]."
+challengeKillDrones,Kill Drones
+challengeKillDronesShort,Kill some Drones
+challengeKillDronesDesc,"[DECEA3]Drones[-] scan the skies and stay hidden in plain sight, making them difficult to spot. Beware some versions may shoot back. \n\nThey self destruct in a critical state to protect the sensitive data they collect from falling into the wrong hands.\n\nKill some [DECEA3]Drones[-]."
+challengeKillDroids,Kill Droids
+challengeKillDroidsShort,Kill some Droids
+challengeKillDroidsDesc,"[DECEA3]Droids[-] are heavy duty battle bots that patrol the streets of the wastes. Beware some versions may self destruct if you get too close. \n\nThey salvage for a moderate amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], [DECEA3]Nano Chips[-], [DECEA3]Forged Steel[-], and [DECEA3]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Droids[-]."
+challengeKillMechs,Kill Mechs
+challengeKillMechsShort,Kill some Mechs
+challengeKillMechsDesc,"[DECEA3]Mechs[-] are the toughest and most brutal machines in the wastelands and were designed for mass eradication. Beware most versions are equipped with deadly plasma cannons and will shoot on sight. \n\nThey salvage for a large amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], [DECEA3]Nano Chips[-], [DECEA3]Forged Steel[-], and [DECEA3]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Mechs[-]."
+challengeOpenStarterCapsule,Open Starter Capsule
+challengeOpenStarterCapsuleShort,Open the Starter Capsule.
+challengeOpenStarterCapsuleDesc,"The [DECEA3]Starter Capsule[-] will give you essential items for survival. You will need the [DECEA3]Wrench[-] it provides to harvest resources so you can build workstations to aid your survival.\n\nBasic [DECEA3]Food[-], [DECEA3]Water[-], and [DECEA3]Medical Supplies[-] are provided to help you survive the first few days.\n\nA basic [DECEA3]Flashlight[-] is also provided to help navigate dark areas."
+challengeReadForgeAheadMagazine,Read Forge Ahead Magazine
+challengeReadForgeAheadMagazineShort,Read a Forge Ahead magazine.
+challengeReadForgeAheadMagazineDesc,"[DECEA3]Crafting Skill Magazines[-] come in a wide range of topics. Reading them will increase your [DECEA3]Crafting Skill[-] which increases the [DECEA3]Quality[-] and/or [DECEA3]Technology Tier[-] of the item being crafted.\n\nReading the first [DECEA3]Forge Ahead[-] magazine will unlock essential workstations you will need to produce [DECEA3]Food[-] and [DECEA3]Clean Water[-].\n\n[DECEA3]Crafting Skill Magazines[-] can be found in various loot containers such as [DECEA3]Mailboxes[-], for sale at [DECEA3]Traders[-], or given as a [DECEA3]Quest Reward[-]."
+challengeGatherResourcesFabricator,Gather Fabricator Resources 
+challengeGatherResourcesFabricatorShort,Gather resources to craft a Fabricator
+challengeGatherResourcesFabricatorDesc,"The resources you will need are [DECEA3]Iron[-], [DECEA3]Scrap Polymers[-], [DECEA3]Duct Tape[-], [DECEA3]Nano Chips[-], and [DECEA3]Electrical Parts[-].\n\nMany of these can be salvaged from [DECEA3]Deactivated Robots[-] or [DECEA3]High-tech Vehicles[-].\n\n[DECEA3]Scrap Polymers[-] can be harvested from cardboard boxes and window blinds. [DECEA3]Duct Tape[-] can be crafted or found in loot."
+challengePlaceFabricator,Place Fabricator
+challengePlaceFabricatorShort,Craft and Place the Fabricator on the ground.
+challengePlaceFabricatorDesc,"[DECEA3]Fabricators[-] are used to craft [DECEA3]Raw Meat[-], [DECEA3]Eggs[-], [DECEA3]Animal Fat[-] and other advanced recipes.\n\nTo craft a recipe at the [DECEA3]Fabricator[-], crafting materials must be in your [DECEA3]Inventory[-].\n\nHold [action:local:Activate][action:permanent:Activate] to pick up Workstations within your [DECEA3]Land Claim[-] area."
+challengeCraftRawMeat,Synthesize Raw Meat
+challengeCraftRawMeatShort,Synthesize some Raw Meat.
+challengeCraftRawMeatDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Raw Meat[-].\n\n[DECEA3]Plant Fibers[-] and [DECEA3]Scrap Polymers[-] are the required ingredients.\n\n[DECEA3]Raw Meat[-] can be used in various cooking recipes."
+challengeCraftEggs,Synthesize Eggs
+challengeCraftEggsShort,Synthesize some Eggs.
+challengeCraftEggsDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Eggs[-].\n\n[DECEA3]Plant Fibers[-], [DECEA3]Scrap Polymers[-] and [DECEA3]Boiled Water[-] are the required ingredients.\n\n[DECEA3]Eggs[-] can be used in various cooking recipes."
+challengeCraftLeather,Synthesize Leather
+challengeCraftLeatherShort,Synthesize some Leather.
+challengeCraftLeatherDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Leather[-].\n\n[DECEA3]Scrap Polymers[-] and [DECEA3]Glue[-] are the required ingredients.\n\n[DECEA3]Leather[-] can be used to make [DECEA3]Armor[-] and various other recipes."
+challengeCraftBones,Synthesize Bone
+challengeCraftBonesShort,Synthesize some Bones.
+challengeCraftBonesDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Bones[-].\n\n[DECEA3]Scrap Polymers[-], [DECEA3]Iron[-], and [DECEA3]Broken Glass[-] are the required ingredients.\n\n[DECEA3]Bones[-] can be used to make [DECEA3]Glue[-] and some other recipes."
+challengeGroupCompleteShort,Redeem all the rewards earned by completing challenges in the Basics group.
+challengeGroupCompleteDesc,"After successfully completing every [DECEA3]Challenge[-] within the [DECEA3]Basics[-] category, it's time to claim your well-earned [DECEA3]Rewards[-].\n\nSelect each completed [DECEA3]Challenge[-] marked [00FF00]GREEN[-] and press the [DECEA3]Redeem[-] button below or use [action:local:Forward].\n\n[DECEA3]Redeeming[-] all of the [DECEA3]Challenges[-] in each group will award you with a [DECEA3]Group Completion Reward[-].\n\nThe [DECEA3]Advanced Challenges[-] will unlock after [DECEA3]Redeeming[-] this challenge."
+challengeGroupCompleteDesc_alt,"After successfully completing every challenge within the Basics category, it's time to claim your well-earned rewards.\n\nSelect each completed challenge marked [00FF00]GREEN[-] and click the Redeem button below or use the shortcut [action:gui:GUI Inspect].\n\nRedeeming all of the challenges in each group will award you with a group completion reward.\n\nThe Advanced Challenges will unlock after Redeeming this reward."
+challengeGroupCompleteHint2,[FFB400]Redeem all challenges in the\nBasics group.[-]
+challengeRedeemChallenge,Introduction Challenge
+challengeRedeemChallengeShort,Redeem this introduction challenge.
+challengeRedeemChallengeDesc,"[DECEA3]Challenges[-] aim to introduce you to the core gameplay systems.\n\nReview each [DECEA3]Challenge[-] description to understand your objectives and know where to find crucial information to help you survive.\n\nA [DECEA3]Challenge[-] can be tracked by selecting it and pressing [action:gui:GUI Action Left].\n\nOnce a [DECEA3]Challenge[-] has been completed, return to this window to [DECEA3]Redeem[-] your reward by selecting it and pressing [action:gui:GUI Action Up]. [DECEA3]Redeeming[-] all of the [DECEA3]Challenges[-] in each row will grant you a [DECEA3]Special Reward[-].\n\nThe [DECEA3]Trader Quest[-] will start after [DECEA3]Redeeming[-] this challenge."
+
+perkPerceptionMasteryName,Empath Mastery
+perkStrengthMasteryName,Astrominer Mastery
+perkFortitudeMasteryName,Exomedic Mastery
+perkAgilityMasteryName,Neonaut Mastery
+perkIntellectMasteryName,Cybernetician Mastery
+
+perkSteadyAimName,Steady Aim
+perkSteadyAimDesc,"Mental discipline grants enhanced weapon control, reducing sway and recoil."
+perkSteadyAimRank1Desc,Slightly reduced weapon spread and recoil when aiming.
+perkSteadyAimRank1LongDesc,"Your focused mind begins to steady your hands. Weapon spread when aiming is reduced by 5%, and recoil is reduced by 5%."
+perkSteadyAimRank2Desc,Reduced weapon spread and recoil when aiming.
+perkSteadyAimRank2LongDesc,"Your concentration deepens. Weapon spread when aiming is reduced by 10%, and recoil is reduced by 10%."
+perkSteadyAimRank3Desc,Moderately reduced weapon spread and recoil when aiming.
+perkSteadyAimRank3LongDesc,"Your breathing becomes controlled. Weapon spread when aiming is reduced by 15%, and recoil is reduced by 15%."
+perkSteadyAimRank4Desc,Significantly reduced weapon spread and recoil when aiming.
+perkSteadyAimRank4LongDesc,"Your aim becomes remarkably stable. Weapon spread when aiming is reduced by 20%, and recoil is reduced by 20%."
+perkSteadyAimRank5Desc,Greatly reduced weapon spread and recoil when aiming.
+perkSteadyAimRank5LongDesc,"Your mental discipline is complete. Weapon spread when aiming is reduced by 25%, and recoil is reduced by 25%."
+
+perkMentalFortitudeName,Mental Fortitude
+perkMentalFortitudeDesc,"A strong mind resists negative effects, reducing the impact of debuffs."
+perkMentalFortitudeRank1Desc,Slightly increased resistance to debuffs.
+perkMentalFortitudeRank1LongDesc,"Your mental resilience begins to develop. Debuff effects are reduced by 10%."
+perkMentalFortitudeRank2Desc,Moderately increased resistance to debuffs.
+perkMentalFortitudeRank2LongDesc,"Your willpower strengthens. Debuff effects are reduced by 20%."
+perkMentalFortitudeRank3Desc,Greatly increased resistance to debuffs.
+perkMentalFortitudeRank3LongDesc,"Your mind is an unbreakable fortress. Debuff effects are reduced by 30%."
+
+perkFocusedFireName,Focused Fire
+perkFocusedFireDesc,"Precision targeting increases damage when striking vital areas, rewarding careful aim."
+perkFocusedFireRank1Desc,Slightly increased headshot damage.
+perkFocusedFireRank1LongDesc,"Your aim improves for critical strikes. Headshot damage is increased by 10%."
+perkFocusedFireRank2Desc,Increased headshot damage.
+perkFocusedFireRank2LongDesc,"Your precision grows sharper. Headshot damage is increased by 20%."
+perkFocusedFireRank3Desc,Moderately increased headshot damage.
+perkFocusedFireRank3LongDesc,"Every shot finds its mark. Headshot damage is increased by 30%."
+perkFocusedFireRank4Desc,Significantly increased headshot damage.
+perkFocusedFireRank4LongDesc,"Your deadly accuracy is renowned. Headshot damage is increased by 40%."
+perkFocusedFireRank5Desc,Greatly increased headshot damage.
+perkFocusedFireRank5LongDesc,"One shot, one kill. Headshot damage is increased by 50%."
+
+perkReinforcedConstructionName,Reinforced Construction
+perkReinforcedConstructionDesc,"Engineering expertise creates more durable equipment, extending the life of your gear."
+perkReinforcedConstructionRank1Desc,Items have slightly increased durability and degrade slower.
+perkReinforcedConstructionRank1LongDesc,"Your construction techniques improve. Max durability is increased by 10%, and degradation per use is reduced by 5%."
+perkReinforcedConstructionRank2Desc,Items have increased durability and degrade slower.
+perkReinforcedConstructionRank2LongDesc,"Your engineering skills develop. Max durability is increased by 20%, and degradation per use is reduced by 10%."
+perkReinforcedConstructionRank3Desc,Items have moderately increased durability and degrade slower.
+perkReinforcedConstructionRank3LongDesc,"Quality construction becomes second nature. Max durability is increased by 30%, and degradation per use is reduced by 15%."
+perkReinforcedConstructionRank4Desc,Items have significantly increased durability and degrade slower.
+perkReinforcedConstructionRank4LongDesc,"Your work is built to last. Max durability is increased by 40%, and degradation per use is reduced by 20%."
+perkReinforcedConstructionRank5Desc,Items have greatly increased durability and degrade slower.
+perkReinforcedConstructionRank5LongDesc,"Your creations are legendary for their resilience. Max durability is increased by 50%, and degradation per use is reduced by 25%."
+
+perkEfficientRepairsName,Efficient Repairs
+perkEfficientRepairsDesc,"Technical knowledge allows repair kits to restore more durability, keeping equipment in peak condition."
+perkEfficientRepairsRank1Desc,Repair kits restore more durability and repairs are faster.
+perkEfficientRepairsRank1LongDesc,"Your repair techniques improve. Repair amount is increased by 20%, and repair time is reduced by 10%."
+perkEfficientRepairsRank2Desc,Repair kits restore significantly more durability and repairs are faster.
+perkEfficientRepairsRank2LongDesc,"Your mechanical skills grow. Repair amount is increased by 40%, and repair time is reduced by 20%."
+perkEfficientRepairsRank3Desc,Repair kits restore much more durability and repairs are significantly faster.
+perkEfficientRepairsRank3LongDesc,"You can fix anything. Repair amount is increased by 60%, and repair time is reduced by 30%."
+
+perkAmmoFabricatorName,Ammo Fabricator
+perkAmmoFabricatorDesc,"Advanced manufacturing techniques yield bonus ammunition when crafting, stretching your resources further."
+perkAmmoFabricatorRank1Desc,Craft slightly more ammo per batch.
+perkAmmoFabricatorRank1LongDesc,"Your ammunition production improves. Ammo crafting output is increased by 10%."
+perkAmmoFabricatorRank2Desc,Craft more ammo per batch.
+perkAmmoFabricatorRank2LongDesc,"Your fabrication techniques develop. Ammo crafting output is increased by 20%."
+perkAmmoFabricatorRank3Desc,Craft moderately more ammo per batch.
+perkAmmoFabricatorRank3LongDesc,"Your production line is efficient. Ammo crafting output is increased by 30%."
+perkAmmoFabricatorRank4Desc,Craft significantly more ammo per batch.
+perkAmmoFabricatorRank4LongDesc,"Your ammo production is highly efficient. Ammo crafting output is increased by 40%."
+perkAmmoFabricatorRank5Desc,Craft much more ammo per batch.
+perkAmmoFabricatorRank5LongDesc,"Maximum production efficiency achieved. Ammo crafting output is increased by 50%."
+
+perkOverchargeName,Overcharge
+perkOverchargeDesc,"Push electrical weapons beyond their limits, dealing increased damage with stun batons and electrical devices."
+perkOverchargeRank1Desc,Stun batons deal slightly increased damage.
+perkOverchargeRank1LongDesc,"You learn to boost electrical output. Stun baton damage is increased by 10%."
+perkOverchargeRank2Desc,Stun batons deal increased damage.
+perkOverchargeRank2LongDesc,"Your electrical expertise grows. Stun baton damage is increased by 20%."
+perkOverchargeRank3Desc,Stun batons deal moderately increased damage.
+perkOverchargeRank3LongDesc,"You push the voltage higher. Stun baton damage is increased by 30%."
+perkOverchargeRank4Desc,Stun batons deal significantly increased damage.
+perkOverchargeRank4LongDesc,"Your overcharge techniques are dangerous. Stun baton damage is increased by 40%."
+perkOverchargeRank5Desc,Stun batons deal greatly increased damage.
+perkOverchargeRank5LongDesc,"Maximum power output achieved. Stun baton damage is increased by 50%."
+
+perkFuelEfficiencyName,Fuel Efficiency
+perkFuelEfficiencyDesc,"Mechanical expertise reduces vehicle fuel consumption, letting you travel further on less fuel."
+perkFuelEfficiencyRank1Desc,Vehicles consume slightly less fuel.
+perkFuelEfficiencyRank1LongDesc,"Your driving becomes more economical. Vehicle fuel consumption is reduced by 10%."
+perkFuelEfficiencyRank2Desc,Vehicles consume less fuel.
+perkFuelEfficiencyRank2LongDesc,"Your mechanical tuning improves efficiency. Vehicle fuel consumption is reduced by 20%."
+perkFuelEfficiencyRank3Desc,Vehicles consume much less fuel.
+perkFuelEfficiencyRank3LongDesc,"Your vehicles are remarkably efficient. Vehicle fuel consumption is reduced by 30%."
+
+perkArmoredPlatingName,Armored Plating
+perkArmoredPlatingDesc,"Reinforce your vehicles against damage, reducing wear and tear from collisions and combat."
+perkArmoredPlatingRank1Desc,Vehicles take slightly less damage.
+perkArmoredPlatingRank1LongDesc,"Basic reinforcement reduces damage. Vehicle self-damage is reduced by 10%."
+perkArmoredPlatingRank2Desc,Vehicles take less damage.
+perkArmoredPlatingRank2LongDesc,"Improved plating protects your ride. Vehicle self-damage is reduced by 20%."
+perkArmoredPlatingRank3Desc,Vehicles take moderately less damage.
+perkArmoredPlatingRank3LongDesc,"Solid armor keeps you rolling. Vehicle self-damage is reduced by 30%."
+perkArmoredPlatingRank4Desc,Vehicles take significantly less damage.
+perkArmoredPlatingRank4LongDesc,"Heavy reinforcement makes your vehicle tough. Vehicle self-damage is reduced by 40%."
+perkArmoredPlatingRank5Desc,Vehicles take much less damage.
+perkArmoredPlatingRank5LongDesc,"Your vehicle is a fortress on wheels. Vehicle self-damage is reduced by 50%."
+
+perkScrapYieldName,Scrap Yield
+perkScrapYieldDesc,"Expert salvaging techniques extract more resources when dismantling objects with tools."
+perkScrapYieldRank1Desc,Slightly increased salvage resources.
+perkScrapYieldRank1LongDesc,"Your salvaging improves. Harvest count when salvaging is increased by 10%."
+perkScrapYieldRank2Desc,Increased salvage resources.
+perkScrapYieldRank2LongDesc,"Nothing goes to waste. Harvest count when salvaging is increased by 20%."
+perkScrapYieldRank3Desc,Moderately increased salvage resources.
+perkScrapYieldRank3LongDesc,"You find value in everything. Harvest count when salvaging is increased by 30%."
+perkScrapYieldRank4Desc,Significantly increased salvage resources.
+perkScrapYieldRank4LongDesc,"Master scrapper at work. Harvest count when salvaging is increased by 40%."
+perkScrapYieldRank5Desc,Greatly increased salvage resources.
+perkScrapYieldRank5LongDesc,"Every scrap is precious. Harvest count when salvaging is increased by 50%."
+
+perkQuickHandsName,Quick Hands
+perkQuickHandsDesc,"Dexterity and practice result in faster weapon handling, improving reload speed and readiness."
+perkQuickHandsRank1Desc,Slightly faster reload and weapon handling with shotguns and clubs.
+perkQuickHandsRank1LongDesc,"Your hands move quicker. Reload speed and weapon handling for shotguns and clubs is increased by 10%."
+perkQuickHandsRank2Desc,Faster reload and weapon handling with shotguns and clubs.
+perkQuickHandsRank2LongDesc,"Your reflexes sharpen. Reload speed and weapon handling for shotguns and clubs is increased by 20%."
+perkQuickHandsRank3Desc,Much faster reload and weapon handling with shotguns and clubs.
+perkQuickHandsRank3LongDesc,"Lightning-fast reflexes. Reload speed and weapon handling for shotguns and clubs is increased by 30%."
+
+perkCosmotechMasteryName,Cosmotech Mastery
+perkCosmotechMasteryDesc,"Master the art of salvage and resourcefulness. Enhanced scavenging yields, devastating close-range combat, and superior vehicle handling."
+perkCosmotechMasteryRank1Desc,Increased salvage yields and improved vehicle fuel efficiency.
+perkCosmotechMasteryRank1LongDesc,"Your scavenging expertise grows. Salvage yields are increased by 25% and vehicle fuel consumption is reduced by 5%."
+perkCosmotechMasteryRank2Desc,Shotgun blasts have a chance to stagger enemies.
+perkCosmotechMasteryRank2LongDesc,"Your shotgun blasts carry devastating force. 15% chance to knock down enemies with shotgun hits. Vehicle fuel consumption reduced by 10%."
+perkCosmotechMasteryRank3Desc,Bonus mechanical parts when salvaging.
+perkCosmotechMasteryRank3LongDesc,"Your expertise reveals hidden components. Chance to harvest bonus mechanical parts when salvaging. Vehicles take 15% less damage. Vehicle fuel consumption reduced by 15%."
+perkCosmotechMasteryRank4Desc,Club kills have a chance to drop bonus loot.
+perkCosmotechMasteryRank4LongDesc,"Your brutal efficiency rewards you. 25% chance for bonus loot drops from club kills. Vehicle fuel consumption reduced by 20%."
+perkCosmotechMasteryRank5Desc,Greatly increased damage with shotguns and clubs.
+perkCosmotechMasteryRank5LongDesc,"Ultimate Cosmotech mastery. 50% increased damage with shotguns and clubs. Vehicle fuel consumption reduced by 25%."

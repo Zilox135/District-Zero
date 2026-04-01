@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+    <Name value="DZElectronicDetection" />
+    <DisplayName value="DZ Electronic Detection" />
+    <Version value="1.0.0" />
+    <Description value="Adds ElectronicSignature properties to items, allowing robots to detect players carrying electronic components." />
+    <Author value="District Zero Team" />
+    <Website value="" />
+</xml>
+

@@ -1,0 +1,45 @@
+
+<entity_classes>
+
+<append xpath="/entity_classes">
+
+
+
+
+		<entity_class name="animalSnakeBig" extends="animalSnake">
+			<property name="Mass" value="60"/>
+			<property name="Weight" value="140"/>
+			<property name="MoveSpeed" value="0.8"/>
+			<property name="MoveSpeedAggro" value=".2, .2"/>
+			<property name="MoveSpeedPanic" value="0.2"/>	
+			<property name="ExperienceGain" value="500"/>
+			<property name="DeadBodyHitPoints" value="300"/>
+			<property name="SizeScale" value="4"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalSnake -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>	
+		</entity_class>
+
+
+
+
+
+
+</append>
+
+
+<!-- 	<append xpath="/entity_classes/entity_class [@name='zombieArleneRadiated']/effect_group"> 
+		<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="RadiatedParticlesOnMesh" shape_mesh="true"/>
+	</append>
+ -->
+
+
+
+
+
+</entity_classes>

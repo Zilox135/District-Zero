@@ -1,0 +1,191 @@
+<Zilox>
+
+<!-- REMOVE TRADER QUEST FROM BASICS CHALLENGE GROUP -->
+<removeattribute xpath="//challenge_group[@name='Basics']/@reward_event"/>
+
+<!-- ADD TRADER QUEST TO REDEEM CHALLENGE -->
+<setattribute xpath="//challenge[@name='redeemChallenge']" name="reward_event">challenge_group_reward_basics</setattribute>
+
+<!-- MAKE BASIC CHALLENGES VISIBLE BY DEFAULT -->
+<removeattribute xpath="//challenge_group[@name='Homesteading']/@hidden_by"/>
+<removeattribute xpath="//challenge_group[@name='AdvancedSurvival']/@hidden_by"/>
+<removeattribute xpath="//challenge_group[@name='Workstations']/@hidden_by"/>
+<removeattribute xpath="//challenge_group[@name='Traders']/@hidden_by"/>
+<removeattribute xpath="//challenge_group[@name='Harvesting']/@hidden_by"/>
+
+<!-- REMOVE THE HUNTER CHALLENGE GROUP -->
+<remove xpath="//challenge_group[@name='Hunter']"/>
+
+<!-- REMOVE BASIC CHALLENGES -->
+<remove xpath="//challenge[@name='gatherResources']"/>
+<remove xpath="//challenge[@name='craftClothes']"/>
+<remove xpath="//challenge[@name='wearClothes']"/>	
+<remove xpath="//challenge[@name='craftStoneAxe']"/>
+<remove xpath="//challenge[@name='gatherResourcesStoneAxe']"/>
+<remove xpath="//challenge[@name='craftWoodClub']"/>
+<remove xpath="//challenge[@name='craftBow']"/>
+<remove xpath="//challenge[@name='craftArrows']"/>
+
+<!-- REMOVE ANIMAL AND ZOMBIE CHALLENGES -->
+<remove xpath="//challenge[@name='huntAnimals']"/>
+<remove xpath="//challenge[@name='harvestAnimals']"/>
+<remove xpath="//challenge[@name='killZombies']"/>
+
+<remove xpath="//challenge[@name='killRabbits']"/>
+<remove xpath="//challenge[@name='killChickens']"/>
+<remove xpath="//challenge[@name='killCoyotes']"/>
+<remove xpath="//challenge[@name='killDeer']"/>
+<remove xpath="//challenge[@name='killSnakes']"/>
+<remove xpath="//challenge[@name='killBoars']"/>
+<remove xpath="//challenge[@name='killWolves']"/>
+<remove xpath="//challenge[@name='killMountainLion']"/>
+<remove xpath="//challenge[@name='killBears']"/>
+<remove xpath="//challenge[@name='killAnyAnimal']"/>
+
+<remove xpath="//challenge[@name='killVultures']"/>
+
+<insertAfter xpath="//challenge[@name='redeemChallenge']">
+
+	<!-- *** Basics -->	
+	<challenge name="openStarterCapsule" title_key="challengeOpenStarterCapsule" icon="ui_game_symbol_capsule" group="Basics"
+		short_description_key="challengeOpenStarterCapsuleShort" description_key="challengeOpenStarterCapsuleDesc">
+		<objective type="OpenBundle, DZCore" item="questStarterCapsule" count="1"/>
+	</challenge>
+
+	<challenge name="readForgeAheadMagazine" title_key="challengeReadForgeAheadMagazine" icon="ui_game_symbol_magazine" group="Basics"
+		short_description_key="challengeReadForgeAheadMagazineShort" description_key="challengeReadForgeAheadMagazineDesc">
+		<objective type="UseItem" item_tags="workstationCSM" override_text_key="xuiForgeAheadMagazine" count="1"/>
+	</challenge>
+	
+	<challenge name="gatherResourcesFabricator" title_key="challengeGatherResourcesFabricator" icon="ui_game_symbol_hand_wrench" group="Basics"
+		short_description_key="challengeGatherResourcesFabricatorShort" description_key="challengeGatherResourcesFabricatorDesc">
+		<objective type="Gather" item="resourceScrapIron" count="150"/>
+		<objective type="Gather" item="resourceScrapPolymers" count="100"/>
+		<objective type="Gather" item="resourceDuctTape" count="5"/>
+		<objective type="Gather" item="resourceNanoChip" count="1"/>
+		<objective type="Gather" item="resourceElectricParts" count="5"/>		
+	</challenge>
+
+	<challenge name="placeFabricator" title_key="challengePlaceFabricator" icon="ui_game_symbol_fabricator" group="Basics"
+		short_description_key="challengePlaceFabricatorShort" description_key="challengePlaceFabricatorDesc">
+		<objective type="BlockPlace" block="fabricator" count="1"/>
+	</challenge>
+
+	<challenge name="craftRawMeat" title_key="challengeCraftRawMeat" icon="ui_game_symbol_raw_meat" group="Basics"
+		short_description_key="challengeCraftRawMeatShort" description_key="challengeCraftRawMeatDesc">
+		<objective type="Craft" item="foodRawMeat" count="5"/>
+	</challenge>
+
+	<challenge name="craftEggs" title_key="challengeCraftEggs" icon="ui_game_symbol_egg" group="Basics"
+		short_description_key="challengeCraftEggsShort" description_key="challengeCraftEggsDesc">
+		<objective type="Craft" item="foodEgg" count="5"/>
+	</challenge>
+	
+	<challenge name="craftBones" title_key="challengeCraftBones" icon="ui_game_symbol_bone" group="Basics"
+		short_description_key="challengeCraftBonesShort" description_key="challengeCraftBonesDesc">
+		<objective type="Craft" item="resourceBone" count="5"/>
+	</challenge>	
+
+	<challenge name="craftLeather" title_key="challengeCraftLeather" icon="ui_game_symbol_challenge_harvesting_leather" group="Basics"
+		short_description_key="challengeCraftLeatherShort" description_key="challengeCraftLeatherDesc">
+		<objective type="Craft" item="resourceLeather" count="5"/>
+	</challenge>	
+	
+</insertAfter>
+
+<append xpath="/challenges">
+
+	<!-- *** CHALLENGE_REWARDS_PAGE_01 -->
+	<challenge_group category="Advanced" name="Exterminator" title_key="challengeGroupExterminator"
+	reward_text_key="challengeRewardBonusExterminatorReward" reward_event="challenge_group_reward_exterminator" hidden_by="Basics"/>	
+	
+	<!-- *** Advanced -->	
+	<challenge name="killRobotAnimals" title_key="challengeKillRobotAnimals"  icon="ui_game_symbol_robot_animal" group="AdvancedSurvival"
+	short_description_key="challengeKillRobotAnimalsShort" description_key="challengeKillRobotAnimalsDesc"
+	reward_text_key="challenge_reward_500xp" reward_event="challenge_reward_500">
+		<objective type="KillByTag" entity_tags="robotanimal" target_name_key="xuiRoboticAnimals" count="5"/>
+	</challenge>
+	
+	<challenge name="salvageRobots" title_key="challengeSalvageRobots"  icon="ui_game_symbol_wrench" group="AdvancedSurvival"
+	short_description_key="challengeSalvageRobotsShort" description_key="challengeSalvageRobotsDesc"
+	reward_text_key="challenge_reward_500xp" reward_event="challenge_reward_500">
+		<objective type="Harvest" item="resourceNanoChip" is_block="false" count="10"/>
+	</challenge>
+
+	<challenge name="killEnemies" title_key="challengeKillEnemies" icon="ui_game_symbol_challenge_adv_survival_kill_zombies" group="AdvancedSurvival"
+	short_description_key="challengeKillEnemiesShort" description_key="challengeKillEnemiesDesc"
+	reward_text_key="challenge_reward_500xp" reward_event="challenge_reward_500">
+		<objective type="KillByTag" entity_tags="zombie,robot" target_name_key="xuiEnemies" count="5"/>
+	</challenge>
+	
+	<!-- *** Zombies -->	
+	<challenge name="killSoldier" title_key="challengeKillSoldiers" icon="ui_game_symbol_zombie" group="Zombies"
+	short_description_key="challengeKillSoldiersShort" description_key="challengeKillSoldiersDesc"
+	reward_text_key="challengeKillRewardExplosives" reward_event="quest_reward_soldier_zombie_slayer">
+		<objective type="Kill" entity_names="zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated" count="50"/>
+	</challenge>	
+
+	<!-- *** Exterminator -->
+	<challenge name="killAnyRobot" title_key="challengeKillRobots" icon="ui_game_symbol_robot" group="Exterminator"
+	short_description_key="challengeKillRobotsShort" description_key="challengeKillRobotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_any_robot_exterminator">
+		<objective type="KillByTag" entity_tags="robot,mech" target_name_key="xuiRobots" count="500"/>
+	</challenge>	
+	
+	<challenge name="killOverchargedRobots" title_key="challengeKillOverchargedRobots" icon="ui_game_symbol_android" group="Exterminator"
+	short_description_key="challengeKillOverchargedRobotsShort" description_key="challengeKillOverchargedRobotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_overcharged_robot_exterminator">
+		<objective type="KillByTag" entity_tags="overcharged" target_name_key="xuiOverchargedRobots" count="50"/>		
+	</challenge>
+	
+	<challenge name="killRadiatedRobots" title_key="challengeKillRadiatedRobots" icon="ui_game_symbol_android" group="Exterminator"
+	short_description_key="challengeKillRadiatedRobotsShort" description_key="challengeKillRadiatedRobotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_radiated_robot_exterminator">
+		<objective type="KillByTag" entity_tags="radiatedrobot" target_name_key="xuiRadiatedRobots" count="50"/>		
+	</challenge>	
+
+	<challenge name="killInfernoRobots" title_key="challengeKillInfernoRobots" icon="ui_game_symbol_android" group="Exterminator"
+	short_description_key="challengeKillInfernoRobotsShort" description_key="challengeKillInfernoRobotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_inferno_robot_exterminator">
+		<objective type="KillByTag" entity_tags="inferno" target_name_key="xuiInfernoRobots" count="50"/>		
+	</challenge>
+
+	<challenge name="killShockerRobots" title_key="challengeKillShockerRobots" icon="ui_game_symbol_android" group="Exterminator"
+	short_description_key="challengeKillShockerRobotsShort" description_key="challengeKillShockerRobotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_shocker_robot_exterminator">
+		<objective type="KillByTag" entity_tags="shocker" target_name_key="xuiShockerRobots" count="50"/>		
+	</challenge>		
+	
+	<challenge name="killSpiderBots" title_key="challengeKillSpiderBots" icon="ui_game_symbol_spiderbot" group="Exterminator"
+	short_description_key="challengeKillSpiderBotsShort" description_key="challengeKillSpiderBotsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_spider_bot_exterminator">
+		<objective type="KillByTag" entity_tags="spiderbot" target_name_key="xuiSpiderBots" count="50"/>		
+	</challenge>
+	
+	<challenge name="killRobotDogs" title_key="challengeKillRobotDogs" icon="ui_game_symbol_robot_animal" group="Exterminator"
+	short_description_key="challengeKillRobotDogsShort" description_key="challengeKillRobotDogsDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_robot_dog_exterminator">
+		<objective type="KillByTag" entity_tags="robotdog,rangedrobotdog" target_name_key="xuiRobotDogs" count="50"/>		
+	</challenge>	
+
+	<challenge name="killDrones" title_key="challengeKillDrones" icon="ui_game_symbol_drone" group="Exterminator"
+	short_description_key="challengeKillDronesShort" description_key="challengeKillDronesDesc"
+	reward_text_key="challengeKillRewardReading" reward_event="reward_drone_exterminator">
+		<objective type="KillByTag" entity_tags="drone" target_name_key="xuiDrones" count="50"/>		
+	</challenge>
+
+	<challenge name="killDroids" title_key="challengeKillDroids" icon="ui_game_symbol_droid" group="Exterminator"
+	short_description_key="challengeKillDroidsShort" description_key="challengeKillDroidsDesc"
+	reward_text_key="challengeKillRewardReadingHardcore" reward_event="reward_droid_exterminator">
+		<objective type="KillByTag" entity_tags="droid" target_name_key="xuiDroids" count="50"/>		
+	</challenge>
+
+	<challenge name="killMechs" title_key="challengeKillMechs" icon="ui_game_symbol_mech" group="Exterminator"
+	short_description_key="challengeKillMechsShort" description_key="challengeKillMechsDesc"
+	reward_text_key="challengeKillRewardReadingHardcore" reward_event="reward_mech_exterminator">
+		<objective type="KillByTag" entity_tags="mech" target_name_key="xuiMechs" count="50"/>		
+	</challenge>	
+
+</append>
+
+</Zilox>

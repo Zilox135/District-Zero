@@ -1,0 +1,12 @@
+﻿workstationsT1-2,Tier 1: Forge
+workstationsT2-1,Tier 2: Workbench
+workstationsT2-2,Tier 2: Lock Pick
+workstationsT2-3,Tier 2: Bellows
+workstationsT2-4,Tier 2: Anvil
+workstationsT3-1,Tier 3: Cement Mixer
+workstationsApiary-1,Tier 3: Apiary
+workstationsApiary-2,Tier 4: Apiary Extractor
+workstationsApiary-3,Tier 4: Apiary Brood Box
+workstationsApiary-4,Tier 5: Apiary Smoker
+workstationsT4,Tier 4: Chemistry Station
+workstationsT5,Tier 5: Forge Crucible

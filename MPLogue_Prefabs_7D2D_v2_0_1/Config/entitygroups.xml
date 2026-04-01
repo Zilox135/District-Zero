@@ -1,0 +1,16 @@
+
+
+<entitygroups>
+
+<append xpath="/entitygroups">
+
+
+	<entitygroup name="animalSnakeBig">animalSnakeBig</entitygroup>
+
+	<entitygroup name="SnakeBigGroup">animalSnakeBig</entitygroup>
+
+</append>	
+
+</entitygroups>
+
+

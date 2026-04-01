@@ -1,0 +1,9 @@
+<xml>
+	<Name value="DZNoSmell" />
+	<DisplayName value="DZ No Smell System" />
+	<Description value="Removes the vanilla smell system from the game" />
+	<Author value="Zilox" />
+	<Version value="1.0.0" />
+	<Website value="" />
+</xml>
+

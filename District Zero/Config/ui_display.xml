@@ -1,0 +1,78 @@
+<Zilox>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="blastFurnace">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+		</crafting_category_list>	
+</append>
+
+<!-- ADD NAUSEA CHANCE DISPLAY -->
+<append xpath="//item_display_info[@display_type='drugSteroids']">
+    <display_entry name="dNausea" title_key="statNausea" display_type="Percent"/>
+</append>
+
+<append xpath="//item_display_info[@display_type='medicalPainkillers']">
+    <display_entry name="dNausea" title_key="statNausea" display_type="Percent"/>
+</append>
+
+<append xpath="//item_display_info[@display_type='drugFortBites']">
+    <display_entry name="dNausea" title_key="statNausea" display_type="Percent"/>
+</append>
+
+<append xpath="//item_display_info[@display_type='drugRecog']">
+    <display_entry name="dNausea" title_key="statNausea" display_type="Percent"/>
+</append>
+
+<!-- ADD NAUSEA CURE DISPLAY -->
+<insertAfter xpath="//item_display_info[@display_type='medicalVitamins']/display_entry[@name='dDiseaseResist']">
+	<display_entry name="dCureNausea" title_key="statCureNausea" display_type="Percent"/>
+</insertAfter>
+
+<set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='AttributeLevel']/@name">PerkLevel</set>
+<set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='PerkLevel']/@tags">perkMiner69r</set>
+<set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='PerkLevel']/@title_key">statMiner69r</set>
+
+<append xpath="/ui_display_info/item_display">
+	
+		<item_display_info display_type="toolBustlePipe" display_group="workstationTools">
+			<display_entry name="dCraftingSmeltTimeBlastFurnace" title_key="statCraftingSmeltTimeBlastFurnace" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>		
+	
+		<item_display_info display_type="toolPreHeater" display_group="workstationTools">
+			<display_entry name="dCraftingTimeBlastFurnace" title_key="statCraftingTimeBlastFurnace" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+
+		<item_display_info display_type="Flaregun" display_group="groupRanged">
+			<display_entry name="dExDamageFire" title_key="statEntityDamageFire"/>
+			<display_entry name="dBurnAOERadius" title_key="statBurnAOERadius" display_type="Decimal2"/>			
+			<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="perkGunslinger,admin"/>
+			<display_entry name="MagazineSize" title_key="statMagazineSize" tags="perkGunslinger,admin"/>
+			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange" tags="perkGunslinger,admin"/>
+			<display_entry name="ProjectileVelocity" title_key="statProjectileVelocity" tags="perkGunslinger,admin"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkGunslinger,admin"/>		
+		</item_display_info>
+
+		<item_display_info display_type="FlareRound" display_group="groupRanged">
+			<display_entry name="dExDamageFire" title_key="statEntityDamageFire"/>
+			<display_entry name="dBurnAOERadius" title_key="statBurnAOERadius" display_type="Decimal2"/>			
+			<display_entry name="BlockDamage" title_key="statBlockDamage" tags="perkGunslinger,admin"/>
+			<display_entry name="ProjectileVelocity" title_key="statProjectileVelocity" tags="perkGunslinger,admin"/>			
+		</item_display_info>
+
+		<item_display_info display_type="cureRadiationSickness" display_group="groupConsumables">
+			<display_entry name="dCureRadiationSickness" title_key="statCureRadiationSickness" display_type="Percent"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>			
+			<display_entry name="dNausea" title_key="statNausea" display_type="Percent"/>		
+		</item_display_info>
+
+		<item_display_info display_type="ammoGrenadeShock" display_group="groupAmmo">
+			<display_entry name="dExDamageShock" title_key="statEntityDamageShock"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
+		</item_display_info>		
+
+</append>
+</Zilox>		

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ZZZ_CleanWasteland" />
+	<DisplayName value="Clean Wasteland (Loads Last)" />
+	<Description value="Removes debris, trees, and vegetation from the wasteland biome while preserving loot containers, ore veins (including cobalt), resource rocks, radiated mushrooms, and car wrecks. Loads after District Zero to clean up its cobalt subbiome." />
+	<Author value="District Zero" />
+	<Version value="1.0.2" />
+	<Website value="" />
+</xml>
+

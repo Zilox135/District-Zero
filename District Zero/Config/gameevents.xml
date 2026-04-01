@@ -1,0 +1,124 @@
+<Zilox>
+
+<csv xpath="//action_sequence[@name='block_car_alarm_start']/action[@class='SpawnEntity']/property[@name='entity_names']/@value" delim="," op="add">robotAndroidPrimeOvercharged,robotAndroidBoltOvercharged,robotAndroidAndromedaOvercharged,robotAndroidRexOvercharged,robotAndroidChronosOvercharged,robotAndroidAxlOvercharged,robotAndroidClankOvercharged,robotAndroidRalphOvercharged,robotAndroidEvaOvercharged,robotAndroidOrionOvercharged,robotCyborgNovaOvercharged,robotCyborgSparkOvercharged,robotCyborgTitanOvercharged</csv>
+
+<append xpath="/gameevents">
+
+<!-- *** ROBOT_EXTERMINATOR -->
+	<action_sequence name="challenge_group_reward_exterminator" template="challenge_group_reward_homesteading">
+		<variable name="quest" value="challengegroup_reward_exterminator" />
+	</action_sequence>	
+	
+	<!-- KILL_SOLDIER_REWARD -->
+	<action_sequence name="reward_soldier_zombie_slayer">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_lumberjack_zombie_slayer" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+	
+		<!-- KILL_ANY_ROBOTS_REWARD -->
+	<action_sequence name="reward_any_robot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_any_robot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_OVERCHARGED_ROBOTS_REWARD -->
+	<action_sequence name="reward_overcharged_robot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_overcharged_robot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_RADIATED_ROBOTS_REWARD -->
+	<action_sequence name="reward_radiated_robot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_radiated_robot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_INFERNO_ROBOTS_REWARD -->
+	<action_sequence name="reward_inferno_robot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_inferno_robot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_SHOCKER_ROBOTS_REWARD -->
+	<action_sequence name="reward_shocker_robot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_shocker_robot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_SPIDER_BOTS_REWARD -->
+	<action_sequence name="reward_spider_bot_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_spider_bot_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_ROBOT_DOGS_REWARD -->
+	<action_sequence name="reward_robot_dog_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_robot_dog_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_DRONES_REWARD -->
+	<action_sequence name="reward_drone_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_drone_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_DROIDS_REWARD -->
+	<action_sequence name="reward_droid_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_droid_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+
+	<!-- KILL_MECHS_REWARD -->
+	<action_sequence name="reward_mech_exterminator">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_mech_exterminator" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>	
+
+</append>
+
+</Zilox>
