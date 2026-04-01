@@ -32,7 +32,6 @@
 
 - Scrubo - POI Builder
 - AsylumMods - Developer
-- Killerbunny264 - Maintainer
 
 # Credits
 
