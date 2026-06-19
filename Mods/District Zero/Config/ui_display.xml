@@ -31,7 +31,7 @@
 	<display_entry name="dCureNausea" title_key="statCureNausea" display_type="Percent"/>
 </insertAfter>
 
-<set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='AttributeLevel']/@name">PerkLevel</set>
+<set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='dAttributeLevel']/@name">PerkLevel</set>
 <set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='PerkLevel']/@tags">perkMiner69r</set>
 <set xpath="//item_display_info[@display_type='clothingCigar']/display_entry[@name='PerkLevel']/@title_key">statMiner69r</set>
 

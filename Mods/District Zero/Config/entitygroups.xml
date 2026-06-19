@@ -8,2153 +8,2081 @@
 <remove xpath="//entitygroup[starts-with(@name,'wanderingHordeStage')]"/>
 
 <!-- REMOVE ANIMAL SPAWNS -->
-<csv xpath="//text()" delim="\n" op="remove" >animal*</csv>
+<remove xpath="//entitygroup/e[starts-with(@n,'animal')]" />
 
 <!-- ADD ROBOT ANIMAL SPAWNS -->
-<csv xpath="//entitygroup[@name='animalBear']/text()" delim="\n" op="add">robotAdvancedCombatDog</csv>
-<csv xpath="//entitygroup[@name='animalBearSmall']/text()" delim="\n" op="add">robotCombatDog</csv>
-<csv xpath="//entitygroup[@name='animalBoar']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalBossGrace']/text()" delim="\n" op="add">robotAdvancedCombatDog</csv>
-<csv xpath="//entitygroup[@name='animalChicken']/text()" delim="\n" op="add">robotSpiderBotNano</csv>
-<csv xpath="//entitygroup[@name='animalCoyote']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalDireWolf']/text()" delim="\n" op="add">robotCombatDog</csv>
-<csv xpath="//entitygroup[@name='animalDoe']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalMountainLion']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalRabbit']/text()" delim="\n" op="add">robotSpiderBotNano</csv>
-<csv xpath="//entitygroup[@name='animalSnake']/text()" delim="\n" op="add">robotSpiderBotNano</csv>
-<csv xpath="//entitygroup[@name='animalStag']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalWolf']/text()" delim="\n" op="add">robotDog</csv>
-<csv xpath="//entitygroup[@name='animalZombieBear']/text()" delim="\n" op="add">robotAdvancedCombatDog</csv>
-<csv xpath="//entitygroup[@name='animalZombieDog']/text()" delim="\n" op="add">robotDog</csv>
-<csv xpath="//entitygroup[@name='animalZombieBoar']/text()" delim="\n" op="add">robotSpiderBot</csv>
-<csv xpath="//entitygroup[@name='animalZombieVulture']/text()" delim="\n" op="add">robotDroneNano</csv>
-<csv xpath="//entitygroup[@name='animalZombieVultureRadiated']/text()" delim="\n" op="add">robotDroneMothership</csv>
+<append xpath="//entitygroup[@name='animalBear']">
+	<e n="robotAdvancedCombatDog" />
+</append>
+<append xpath="//entitygroup[@name='animalBearSmall']">
+	<e n="robotCombatDog" />
+</append>
+<append xpath="//entitygroup[@name='animalBoar']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalBossGrace']">
+	<e n="robotAdvancedCombatDog" />
+</append>
+<append xpath="//entitygroup[@name='animalChicken']">
+	<e n="robotSpiderBotNano" />
+</append>
+<append xpath="//entitygroup[@name='animalCoyote']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalDireWolf']">
+	<e n="robotCombatDog" />
+</append>
+<append xpath="//entitygroup[@name='animalDoe']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalMountainLion']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalRabbit']">
+	<e n="robotSpiderBotNano" />
+</append>
+<append xpath="//entitygroup[@name='animalSnake']">
+	<e n="robotSpiderBotNano" />
+</append>
+<append xpath="//entitygroup[@name='animalStag']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalWolf']">
+	<e n="robotDog" />
+</append>
+<append xpath="//entitygroup[@name='animalZombieBear']">
+	<e n="robotAdvancedCombatDog" />
+</append>
+<append xpath="//entitygroup[@name='animalZombieDog']">
+	<e n="robotDog" />
+</append>
+<append xpath="//entitygroup[@name='animalZombieBoar']">
+	<e n="robotSpiderBot" />
+</append>
+<append xpath="//entitygroup[@name='animalZombieVulture']">
+	<e n="robotDroneNano" />
+</append>
+<append xpath="//entitygroup[@name='animalZombieVultureRadiated']">
+	<e n="robotDroneMothership" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .01
-		robotDronePoliceNano, .01		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesAll']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".01" />
+	<e n="robotDronePoliceNano" p=".01" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneRacing, .1
-		robotDroneSecurity, .1
-		robotDroneMothership, .1
-		robotDronePolice, .1
-		robotDog, .1
-		robotSpiderBot, .1
-		robotSpiderBotNano, .01		
-		robotDroidCombat, .01
-		robotDroidBomber, .01
-		robotDroidSoldier, .01
-		robotMechLightBiped, .01
-		robotMechMining, .01
-		robotMechQuadruped, .01		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesNight']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneRacing" p=".1" />
+	<e n="robotDroneSecurity" p=".1" />
+	<e n="robotDroneMothership" p=".1" />
+	<e n="robotDronePolice" p=".1" />
+	<e n="robotDog" p=".1" />
+	<e n="robotSpiderBot" p=".1" />
+	<e n="robotSpiderBotNano" p=".01" />
+	<e n="robotDroidCombat" p=".01" />
+	<e n="robotDroidBomber" p=".01" />
+	<e n="robotDroidSoldier" p=".01" />
+	<e n="robotMechLightBiped" p=".01" />
+	<e n="robotMechMining" p=".01" />
+	<e n="robotMechQuadruped" p=".01" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesForestDowntown']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .2
-		robotDronePoliceNano, .2		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesForestDowntown']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".2" />
+	<e n="robotDronePoliceNano" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .3
-		robotDronePoliceNano, .3		
-		robotDroneRacing, .2
-		robotDroneSecurity, .2
-		robotDroneMothership, .2
-		robotDog, .2
-		robotSpiderBot, .2
-		robotSpiderBotNano, .02
-		robotDronePolice, .2
-		robotDroidCombat, .5
-		robotDroidBomber, .5
-		robotDroidSoldier, .5
-		robotMechLightBiped, .5
-		robotMechMining, .5
-		robotMechQuadruped, .5		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesForestDowntownNight']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".3" />
+	<e n="robotDronePoliceNano" p=".3" />
+	<e n="robotDroneRacing" p=".2" />
+	<e n="robotDroneSecurity" p=".2" />
+	<e n="robotDroneMothership" p=".2" />
+	<e n="robotDog" p=".2" />
+	<e n="robotSpiderBot" p=".2" />
+	<e n="robotSpiderBotNano" p=".02" />
+	<e n="robotDronePolice" p=".2" />
+	<e n="robotDroidCombat" p=".5" />
+	<e n="robotDroidBomber" p=".5" />
+	<e n="robotDroidSoldier" p=".5" />
+	<e n="robotMechLightBiped" p=".5" />
+	<e n="robotMechMining" p=".5" />
+	<e n="robotMechQuadruped" p=".5" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .2
-		robotSpiderBotNano, .02		
-		robotDronePoliceNano, .2
-		robotDroidCombat, .1
-		robotDroidSoldier, .1		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesDowntown']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".2" />
+	<e n="robotSpiderBotNano" p=".02" />
+	<e n="robotDronePoliceNano" p=".2" />
+	<e n="robotDroidCombat" p=".1" />
+	<e n="robotDroidSoldier" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .3
-		robotDronePoliceNano, .3		
-		robotDroneRacing, .2
-		robotDroneSecurity, .2
-		robotDroneMothership, .2
-		robotDronePolice, .2
-		robotDog, 1
-		robotCombatDog, .5		
-		robotSpiderBot, 1
-		robotSpiderBotNano, .01		
-		robotDroidCombat, 1
-		robotDroidBomber, 1
-		robotDroidSoldier, 1
-		robotMechLightBiped, 1
-		robotMechMining, .1
-		robotMechQuadruped, 1
-		robotMechHeavyBiped, 0.1		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesWasteland']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".3" />
+	<e n="robotDronePoliceNano" p=".3" />
+	<e n="robotDroneRacing" p=".2" />
+	<e n="robotDroneSecurity" p=".2" />
+	<e n="robotDroneMothership" p=".2" />
+	<e n="robotDronePolice" p=".2" />
+	<e n="robotDog" p="1" />
+	<e n="robotCombatDog" p=".5" />
+	<e n="robotSpiderBot" p="1" />
+	<e n="robotSpiderBotNano" p=".01" />
+	<e n="robotDroidCombat" p="1" />
+	<e n="robotDroidBomber" p="1" />
+	<e n="robotDroidSoldier" p="1" />
+	<e n="robotMechLightBiped" p="1" />
+	<e n="robotMechMining" p=".1" />
+	<e n="robotMechQuadruped" p="1" />
+	<e n="robotMechHeavyBiped" p="0.1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .4
-		robotDronePoliceNano, .4
-		robotDroneRacing, .4
-		robotDroneSecurity, .4
-		robotDroneMothership, .4
-		robotDronePolice, .4
-		robotDog, .4
-		robotCombatDog, .5		
-		robotSpiderBot, 1
-		robotSpiderBotNano, .01		
-		robotDroidCombat, 1
-		robotDroidBomber, 1
-		robotDroidSoldier, 1
-		robotMechLightBiped, 1
-		robotMechMining, .1
-		robotMechQuadruped, 1
-		robotMechHeavyBiped, 0.2		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesWastelandNight']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".4" />
+	<e n="robotDronePoliceNano" p=".4" />
+	<e n="robotDroneRacing" p=".4" />
+	<e n="robotDroneSecurity" p=".4" />
+	<e n="robotDroneMothership" p=".4" />
+	<e n="robotDronePolice" p=".4" />
+	<e n="robotDog" p=".4" />
+	<e n="robotCombatDog" p=".5" />
+	<e n="robotSpiderBot" p="1" />
+	<e n="robotSpiderBotNano" p=".01" />
+	<e n="robotDroidCombat" p="1" />
+	<e n="robotDroidBomber" p="1" />
+	<e n="robotDroidSoldier" p="1" />
+	<e n="robotMechLightBiped" p="1" />
+	<e n="robotMechMining" p=".1" />
+	<e n="robotMechQuadruped" p="1" />
+	<e n="robotMechHeavyBiped" p="0.2" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .4
-		robotDronePoliceNano, .4		
-		robotDroneRacing, .4
-		robotDroneSecurity, .4
-		robotDroneMothership, .4
-		robotDronePolice, .4
-		robotDog, 2
-		robotCombatDog, 1		
-		robotSpiderBot, 2
-		robotSpiderBotNano, .02		
-		robotDroidCombat, 2
-		robotDroidBomber, 2
-		robotDroidSoldier, 2
-		robotMechLightBiped, 2
-		robotMechMining, .2
-		robotMechQuadruped, 2
-		robotMechHeavyBiped, 0.1		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesWastelandDowntown']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" p=".4" />
+	<e n="robotDronePoliceNano" p=".4" />
+	<e n="robotDroneRacing" p=".4" />
+	<e n="robotDroneSecurity" p=".4" />
+	<e n="robotDroneMothership" p=".4" />
+	<e n="robotDronePolice" p=".4" />
+	<e n="robotDog" p="2" />
+	<e n="robotCombatDog" p="1" />
+	<e n="robotSpiderBot" p="2" />
+	<e n="robotSpiderBotNano" p=".02" />
+	<e n="robotDroidCombat" p="2" />
+	<e n="robotDroidBomber" p="2" />
+	<e n="robotDroidSoldier" p="2" />
+	<e n="robotMechLightBiped" p="2" />
+	<e n="robotMechMining" p=".2" />
+	<e n="robotMechQuadruped" p="2" />
+	<e n="robotMechHeavyBiped" p="0.1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesWastelandNightNoBears']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .4
-		robotDronePoliceNano, .4
-		robotDroneRacing, .4
-		robotDroneSecurity, .4
-		robotDroneMothership, .4
-		robotDronePolice, .4
-		robotDog, .4
-		robotCombatDog, .1		
-		robotSpiderBot, .4
-		robotSpiderBotNano, .4		
-</csv>
+<!--<append xpath="//entitygroup[@name='ZombieScouts']">
+	<e n="robotDroneRacing" />
+</append>-->
 
-<csv xpath="//entitygroup[@name='ZombiesWastelandNight2']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .4
-		robotDronePoliceNano, .4		
-		robotDroneRacing, .4
-		robotDroneSecurity, .4
-		robotDroneMothership, .4
-		robotDronePolice, .4
-		robotDroidCombat, 1
-		robotDroidBomber, 1
-		robotDroidSoldier, 1
-		robotMechLightBiped, 1
-		robotMechMining, .1
-		robotMechQuadruped, 1
-		robotMechHeavyBiped, 0.1		
-		robotDog, 1
-		robotCombatDog, 1		
-		robotSpiderBot, 1
-		robotSpiderBotNano, .01		
-</csv>
+<append xpath="//entitygroup[@name='ZombiesCrawlers']">
+	<e n="robotCyborgSpark" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesWastelandNight2NoBears']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .4
-		robotDronePoliceNano, .4
-		robotDroneRacing, .4
-		robotDroneSecurity, .4
-		robotDroneMothership, .4
-		robotDronePolice, .4
-		robotDog, .4
-		robotCombatDog, .1		
-		robotSpiderBot, .4
-		robotSpiderBotNano, .04		
-</csv>
-
-<csv xpath="//entitygroup[@name='ZombiesHoard']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano, .2
-		robotDronePoliceNano, .2
-		robotDroneRacing, .2
-		robotDroneSecurity, .2
-		robotDroneMothership, .2
-		robotDronePolice, .2
-		robotSpiderBotNano, .02		
-</csv>
-
-<!--<csv xpath="//entitygroup[@name='ZombieScouts']/text()" delim="\n" op="add">
-		robotDroneRacing		
-</csv>-->
-
-<csv xpath="//entitygroup[@name='ZombiesCrawlers']/text()" delim="\n" op="add">
-		robotCyborgSpark		
-</csv>
-
-<csv xpath="//entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotDroneNano
-		robotDronePoliceNano
-		robotSpiderBotNano,	.01
-</csv>
+<append xpath="//entitygroup[@name='ZombiesBurntForest']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotDroneNano" />
+	<e n="robotDronePoliceNano" />
+	<e n="robotSpiderBotNano" p=".01" />
+</append>
 
 <!-- SnowZombies entity group removed in A22 -->
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0			
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .7
-		robotAndroidBolt, .7
-		robotAndroidAndromeda, .7
-		robotAndroidRex, .7
-		robotAndroidChronos, .7
-		robotAndroidAxl, .7
-		robotAndroidClank, .7
-		robotAndroidRalph, .7
-		robotAndroidEva, .7
-		robotAndroidOrion, .7
-		robotCyborgNova, .7
-		robotCyborgSpark, .7
-		robotCyborgTitan, .7
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeRadiated, .07
-		robotAndroidBoltRadiated, .07
-		robotAndroidAndromedaRadiated, .07
-		robotAndroidRexRadiated, .07
-		robotAndroidChronosRadiated, .07
-		robotAndroidAxlRadiated, .07
-		robotAndroidClankRadiated, .07
-		robotAndroidRalphRadiated, .07
-		robotAndroidEvaRadiated, .07
-		robotAndroidOrionRadiated, .07
-		robotCyborgNovaRadiated, .07
-		robotCyborgSparkRadiated, .07
-		robotCyborgTitanRadiated, .07
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS100']">
+	<e n="robotAndroidPrime" p=".7" />
+	<e n="robotAndroidBolt" p=".7" />
+	<e n="robotAndroidAndromeda" p=".7" />
+	<e n="robotAndroidRex" p=".7" />
+	<e n="robotAndroidChronos" p=".7" />
+	<e n="robotAndroidAxl" p=".7" />
+	<e n="robotAndroidClank" p=".7" />
+	<e n="robotAndroidRalph" p=".7" />
+	<e n="robotAndroidEva" p=".7" />
+	<e n="robotAndroidOrion" p=".7" />
+	<e n="robotCyborgNova" p=".7" />
+	<e n="robotCyborgSpark" p=".7" />
+	<e n="robotCyborgTitan" p=".7" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeRadiated" p=".07" />
+	<e n="robotAndroidBoltRadiated" p=".07" />
+	<e n="robotAndroidAndromedaRadiated" p=".07" />
+	<e n="robotAndroidRexRadiated" p=".07" />
+	<e n="robotAndroidChronosRadiated" p=".07" />
+	<e n="robotAndroidAxlRadiated" p=".07" />
+	<e n="robotAndroidClankRadiated" p=".07" />
+	<e n="robotAndroidRalphRadiated" p=".07" />
+	<e n="robotAndroidEvaRadiated" p=".07" />
+	<e n="robotAndroidOrionRadiated" p=".07" />
+	<e n="robotCyborgNovaRadiated" p=".07" />
+	<e n="robotCyborgSparkRadiated" p=".07" />
+	<e n="robotCyborgTitanRadiated" p=".07" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .55
-		robotAndroidBolt, .55
-		robotAndroidAndromeda, .55
-		robotAndroidRex, .55
-		robotAndroidChronos, .55
-		robotAndroidAxl, .55
-		robotAndroidClank, .55
-		robotAndroidRalph, .55
-		robotAndroidEva, .55
-		robotAndroidOrion, .55
-		robotCyborgNova, .55
-		robotCyborgSpark, .55
-		robotCyborgTitan, .55
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3
-		robotAndroidPrimeInferno, .1
-		robotAndroidBoltInferno, .1
-		robotAndroidAndromedaInferno, .1
-		robotAndroidRexInferno, .1
-		robotAndroidChronosInferno, .1
-		robotAndroidAxlInferno, .1
-		robotAndroidClankInferno, .1
-		robotAndroidRalphInferno, .1
-		robotAndroidEvaInferno, .1
-		robotAndroidOrionInferno, .1
-		robotCyborgNovaInferno, .1
-		robotCyborgSparkInferno, .1
-		robotCyborgTitanInferno, .1
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS200']">
+	<e n="robotAndroidPrime" p=".55" />
+	<e n="robotAndroidBolt" p=".55" />
+	<e n="robotAndroidAndromeda" p=".55" />
+	<e n="robotAndroidRex" p=".55" />
+	<e n="robotAndroidChronos" p=".55" />
+	<e n="robotAndroidAxl" p=".55" />
+	<e n="robotAndroidClank" p=".55" />
+	<e n="robotAndroidRalph" p=".55" />
+	<e n="robotAndroidEva" p=".55" />
+	<e n="robotAndroidOrion" p=".55" />
+	<e n="robotCyborgNova" p=".55" />
+	<e n="robotCyborgSpark" p=".55" />
+	<e n="robotCyborgTitan" p=".55" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".1" />
+	<e n="robotAndroidBoltInferno" p=".1" />
+	<e n="robotAndroidAndromedaInferno" p=".1" />
+	<e n="robotAndroidRexInferno" p=".1" />
+	<e n="robotAndroidChronosInferno" p=".1" />
+	<e n="robotAndroidAxlInferno" p=".1" />
+	<e n="robotAndroidClankInferno" p=".1" />
+	<e n="robotAndroidRalphInferno" p=".1" />
+	<e n="robotAndroidEvaInferno" p=".1" />
+	<e n="robotAndroidOrionInferno" p=".1" />
+	<e n="robotCyborgNovaInferno" p=".1" />
+	<e n="robotCyborgSparkInferno" p=".1" />
+	<e n="robotCyborgTitanInferno" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4
-		robotAndroidPrimeShocker, .2
-		robotAndroidBoltShocker, .2
-		robotAndroidAndromedaShocker, .2
-		robotAndroidRexShocker, .2
-		robotAndroidChronosShocker, .2
-		robotAndroidAxlShocker, .2
-		robotAndroidClankShocker, .2
-		robotAndroidRalphShocker, .2
-		robotAndroidEvaShocker, .2
-		robotAndroidOrionShocker, .2
-		robotCyborgNovaShocker, .2
-		robotCyborgSparkShocker, .2
-		robotCyborgTitanShocker, .2
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS400']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+	<e n="robotAndroidPrimeShocker" p=".2" />
+	<e n="robotAndroidBoltShocker" p=".2" />
+	<e n="robotAndroidAndromedaShocker" p=".2" />
+	<e n="robotAndroidRexShocker" p=".2" />
+	<e n="robotAndroidChronosShocker" p=".2" />
+	<e n="robotAndroidAxlShocker" p=".2" />
+	<e n="robotAndroidClankShocker" p=".2" />
+	<e n="robotAndroidRalphShocker" p=".2" />
+	<e n="robotAndroidEvaShocker" p=".2" />
+	<e n="robotAndroidOrionShocker" p=".2" />
+	<e n="robotCyborgNovaShocker" p=".2" />
+	<e n="robotCyborgSparkShocker" p=".2" />
+	<e n="robotCyborgTitanShocker" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieLumberjackGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .25
-		robotAndroidBolt, .25
-		robotAndroidAndromeda, .25
-		robotAndroidRex, .25
-		robotAndroidChronos, .25
-		robotAndroidAxl, .25
-		robotAndroidClank, .25
-		robotAndroidRalph, .25
-		robotAndroidEva, .25
-		robotAndroidOrion, .25
-		robotCyborgNova, .25
-		robotCyborgSpark, .25
-		robotCyborgTitan, .25
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5
-		robotAndroidPrimeRadiated, .3
-		robotAndroidBoltRadiated, .3
-		robotAndroidAndromedaRadiated, .3
-		robotAndroidRexRadiated, .3
-		robotAndroidChronosRadiated, .3
-		robotAndroidAxlRadiated, .3
-		robotAndroidClankRadiated, .3
-		robotAndroidRalphRadiated, .3
-		robotAndroidEvaRadiated, .3
-		robotAndroidOrionRadiated, .3
-		robotCyborgNovaRadiated, .3
-		robotCyborgSparkRadiated, .3
-		robotCyborgTitanRadiated, .3		
-		robotAndroidPrimeInferno, .3
-		robotAndroidBoltInferno, .3
-		robotAndroidAndromedaInferno, .3
-		robotAndroidRexInferno, .3
-		robotAndroidChronosInferno, .3
-		robotAndroidAxlInferno, .3
-		robotAndroidClankInferno, .3
-		robotAndroidRalphInferno, .3
-		robotAndroidEvaInferno, .3
-		robotAndroidOrionInferno, .3
-		robotCyborgNovaInferno, .3
-		robotCyborgSparkInferno, .3
-		robotCyborgTitanInferno, .3		
-		robotAndroidPrimeShocker, .3
-		robotAndroidBoltShocker, .3
-		robotAndroidAndromedaShocker, .3
-		robotAndroidRexShocker, .3
-		robotAndroidChronosShocker, .3
-		robotAndroidAxlShocker, .3
-		robotAndroidClankShocker, .3
-		robotAndroidRalphShocker, .3
-		robotAndroidEvaShocker, .3
-		robotAndroidOrionShocker, .3
-		robotCyborgNovaShocker, .3
-		robotCyborgSparkShocker, .3
-		robotCyborgTitanShocker, .3		
-</csv>
+<append xpath="//entitygroup[@name='zombieLumberjackGroupGS800']">
+	<e n="robotAndroidPrime" p=".25" />
+	<e n="robotAndroidBolt" p=".25" />
+	<e n="robotAndroidAndromeda" p=".25" />
+	<e n="robotAndroidRex" p=".25" />
+	<e n="robotAndroidChronos" p=".25" />
+	<e n="robotAndroidAxl" p=".25" />
+	<e n="robotAndroidClank" p=".25" />
+	<e n="robotAndroidRalph" p=".25" />
+	<e n="robotAndroidEva" p=".25" />
+	<e n="robotAndroidOrion" p=".25" />
+	<e n="robotCyborgNova" p=".25" />
+	<e n="robotCyborgSpark" p=".25" />
+	<e n="robotCyborgTitan" p=".25" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+	<e n="robotAndroidPrimeRadiated" p=".3" />
+	<e n="robotAndroidBoltRadiated" p=".3" />
+	<e n="robotAndroidAndromedaRadiated" p=".3" />
+	<e n="robotAndroidRexRadiated" p=".3" />
+	<e n="robotAndroidChronosRadiated" p=".3" />
+	<e n="robotAndroidAxlRadiated" p=".3" />
+	<e n="robotAndroidClankRadiated" p=".3" />
+	<e n="robotAndroidRalphRadiated" p=".3" />
+	<e n="robotAndroidEvaRadiated" p=".3" />
+	<e n="robotAndroidOrionRadiated" p=".3" />
+	<e n="robotCyborgNovaRadiated" p=".3" />
+	<e n="robotCyborgSparkRadiated" p=".3" />
+	<e n="robotCyborgTitanRadiated" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".3" />
+	<e n="robotAndroidBoltInferno" p=".3" />
+	<e n="robotAndroidAndromedaInferno" p=".3" />
+	<e n="robotAndroidRexInferno" p=".3" />
+	<e n="robotAndroidChronosInferno" p=".3" />
+	<e n="robotAndroidAxlInferno" p=".3" />
+	<e n="robotAndroidClankInferno" p=".3" />
+	<e n="robotAndroidRalphInferno" p=".3" />
+	<e n="robotAndroidEvaInferno" p=".3" />
+	<e n="robotAndroidOrionInferno" p=".3" />
+	<e n="robotCyborgNovaInferno" p=".3" />
+	<e n="robotCyborgSparkInferno" p=".3" />
+	<e n="robotCyborgTitanInferno" p=".3" />
+	<e n="robotAndroidPrimeShocker" p=".3" />
+	<e n="robotAndroidBoltShocker" p=".3" />
+	<e n="robotAndroidAndromedaShocker" p=".3" />
+	<e n="robotAndroidRexShocker" p=".3" />
+	<e n="robotAndroidChronosShocker" p=".3" />
+	<e n="robotAndroidAxlShocker" p=".3" />
+	<e n="robotAndroidClankShocker" p=".3" />
+	<e n="robotAndroidRalphShocker" p=".3" />
+	<e n="robotAndroidEvaShocker" p=".3" />
+	<e n="robotAndroidOrionShocker" p=".3" />
+	<e n="robotCyborgNovaShocker" p=".3" />
+	<e n="robotCyborgSparkShocker" p=".3" />
+	<e n="robotCyborgTitanShocker" p=".3" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieBusinessManGroup']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan	
-</csv>
+<append xpath="//entitygroup[@name='ZombieBusinessManGroup']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0	
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .7
-		robotAndroidBolt, .7
-		robotAndroidAndromeda, .7
-		robotAndroidRex, .7
-		robotAndroidChronos, .7
-		robotAndroidAxl, .7
-		robotAndroidClank, .7
-		robotAndroidRalph, .7
-		robotAndroidEva, .7
-		robotAndroidOrion, .7
-		robotCyborgNova, .7
-		robotCyborgSpark, .7
-		robotCyborgTitan, .7
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS100']">
+	<e n="robotAndroidPrime" p=".7" />
+	<e n="robotAndroidBolt" p=".7" />
+	<e n="robotAndroidAndromeda" p=".7" />
+	<e n="robotAndroidRex" p=".7" />
+	<e n="robotAndroidChronos" p=".7" />
+	<e n="robotAndroidAxl" p=".7" />
+	<e n="robotAndroidClank" p=".7" />
+	<e n="robotAndroidRalph" p=".7" />
+	<e n="robotAndroidEva" p=".7" />
+	<e n="robotAndroidOrion" p=".7" />
+	<e n="robotCyborgNova" p=".7" />
+	<e n="robotCyborgSpark" p=".7" />
+	<e n="robotCyborgTitan" p=".7" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .55
-		robotAndroidBolt, .55
-		robotAndroidAndromeda, .55
-		robotAndroidRex, .55
-		robotAndroidChronos, .55
-		robotAndroidAxl, .55
-		robotAndroidClank, .55
-		robotAndroidRalph, .55
-		robotAndroidEva, .55
-		robotAndroidOrion, .55
-		robotCyborgNova, .55
-		robotCyborgSpark, .55
-		robotCyborgTitan, .55
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3		
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS200']">
+	<e n="robotAndroidPrime" p=".55" />
+	<e n="robotAndroidBolt" p=".55" />
+	<e n="robotAndroidAndromeda" p=".55" />
+	<e n="robotAndroidRex" p=".55" />
+	<e n="robotAndroidChronos" p=".55" />
+	<e n="robotAndroidAxl" p=".55" />
+	<e n="robotAndroidClank" p=".55" />
+	<e n="robotAndroidRalph" p=".55" />
+	<e n="robotAndroidEva" p=".55" />
+	<e n="robotAndroidOrion" p=".55" />
+	<e n="robotCyborgNova" p=".55" />
+	<e n="robotCyborgSpark" p=".55" />
+	<e n="robotCyborgTitan" p=".55" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4		
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS400']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieBusinessManGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .25
-		robotAndroidBolt, .25
-		robotAndroidAndromeda, .25
-		robotAndroidRex, .25
-		robotAndroidChronos, .25
-		robotAndroidAxl, .25
-		robotAndroidClank, .25
-		robotAndroidRalph, .25
-		robotAndroidEva, .25
-		robotAndroidOrion, .25
-		robotCyborgNova, .25
-		robotCyborgSpark, .25
-		robotCyborgTitan, .25
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5		
-</csv>
+<append xpath="//entitygroup[@name='zombieBusinessManGroupGS800']">
+	<e n="robotAndroidPrime" p=".25" />
+	<e n="robotAndroidBolt" p=".25" />
+	<e n="robotAndroidAndromeda" p=".25" />
+	<e n="robotAndroidRex" p=".25" />
+	<e n="robotAndroidChronos" p=".25" />
+	<e n="robotAndroidAxl" p=".25" />
+	<e n="robotAndroidClank" p=".25" />
+	<e n="robotAndroidRalph" p=".25" />
+	<e n="robotAndroidEva" p=".25" />
+	<e n="robotAndroidOrion" p=".25" />
+	<e n="robotCyborgNova" p=".25" />
+	<e n="robotCyborgSpark" p=".25" />
+	<e n="robotCyborgTitan" p=".25" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombiesFeral']/text()" delim="\n" op="add">
-		robotAndroidPrimeOvercharged
-		robotAndroidBoltOvercharged
-		robotAndroidAndromedaOvercharged
-		robotAndroidRexOvercharged
-		robotAndroidChronosOvercharged
-		robotAndroidAxlOvercharged
-		robotAndroidClankOvercharged
-		robotAndroidRalphOvercharged
-		robotAndroidEvaOvercharged
-		robotAndroidOrionOvercharged
-		robotCyborgNovaOvercharged
-		robotCyborgSparkOvercharged
-		robotCyborgTitanOvercharged	
-</csv>
+<append xpath="//entitygroup[@name='ZombiesFeral']">
+	<e n="robotAndroidPrimeOvercharged" />
+	<e n="robotAndroidBoltOvercharged" />
+	<e n="robotAndroidAndromedaOvercharged" />
+	<e n="robotAndroidRexOvercharged" />
+	<e n="robotAndroidChronosOvercharged" />
+	<e n="robotAndroidAxlOvercharged" />
+	<e n="robotAndroidClankOvercharged" />
+	<e n="robotAndroidRalphOvercharged" />
+	<e n="robotAndroidEvaOvercharged" />
+	<e n="robotAndroidOrionOvercharged" />
+	<e n="robotCyborgNovaOvercharged" />
+	<e n="robotCyborgSparkOvercharged" />
+	<e n="robotCyborgTitanOvercharged" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieFeralRadiatedGroup']/text()" delim="\n" op="add">
-		robotAndroidPrimeRadiated
-		robotAndroidBoltRadiated
-		robotAndroidAndromedaRadiated
-		robotAndroidRexRadiated
-		robotAndroidChronosRadiated
-		robotAndroidAxlRadiated
-		robotAndroidClankRadiated
-		robotAndroidRalphRadiated
-		robotAndroidEvaRadiated
-		robotAndroidOrionRadiated
-		robotCyborgNovaRadiated
-		robotCyborgSparkRadiated
-		robotCyborgTitanRadiated	
-</csv>
+<append xpath="//entitygroup[@name='ZombieFeralRadiatedGroup']">
+	<e n="robotAndroidPrimeRadiated" />
+	<e n="robotAndroidBoltRadiated" />
+	<e n="robotAndroidAndromedaRadiated" />
+	<e n="robotAndroidRexRadiated" />
+	<e n="robotAndroidChronosRadiated" />
+	<e n="robotAndroidAxlRadiated" />
+	<e n="robotAndroidClankRadiated" />
+	<e n="robotAndroidRalphRadiated" />
+	<e n="robotAndroidEvaRadiated" />
+	<e n="robotAndroidOrionRadiated" />
+	<e n="robotCyborgNovaRadiated" />
+	<e n="robotCyborgSparkRadiated" />
+	<e n="robotCyborgTitanRadiated" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieBadassGroup']/text()" delim="\n" op="add">
-		robotAndroidPrimeOvercharged
-		robotAndroidBoltOvercharged
-		robotAndroidAndromedaOvercharged
-		robotAndroidRexOvercharged
-		robotAndroidChronosOvercharged
-		robotAndroidAxlOvercharged
-		robotAndroidClankOvercharged
-		robotAndroidRalphOvercharged
-		robotAndroidEvaOvercharged
-		robotAndroidOrionOvercharged
-		robotCyborgNovaOvercharged
-		robotCyborgSparkOvercharged
-		robotCyborgTitanOvercharged
-		robotAndroidPrimeRadiated
-		robotAndroidBoltRadiated
-		robotAndroidAndromedaRadiated
-		robotAndroidRexRadiated
-		robotAndroidChronosRadiated
-		robotAndroidAxlRadiated
-		robotAndroidClankRadiated
-		robotAndroidRalphRadiated
-		robotAndroidEvaRadiated
-		robotAndroidOrionRadiated
-		robotCyborgNovaRadiated
-		robotCyborgSparkRadiated
-		robotCyborgTitanRadiated		
-</csv>
+<append xpath="//entitygroup[@name='ZombieBadassGroup']">
+	<e n="robotAndroidPrimeOvercharged" />
+	<e n="robotAndroidBoltOvercharged" />
+	<e n="robotAndroidAndromedaOvercharged" />
+	<e n="robotAndroidRexOvercharged" />
+	<e n="robotAndroidChronosOvercharged" />
+	<e n="robotAndroidAxlOvercharged" />
+	<e n="robotAndroidClankOvercharged" />
+	<e n="robotAndroidRalphOvercharged" />
+	<e n="robotAndroidEvaOvercharged" />
+	<e n="robotAndroidOrionOvercharged" />
+	<e n="robotCyborgNovaOvercharged" />
+	<e n="robotCyborgSparkOvercharged" />
+	<e n="robotCyborgTitanOvercharged" />
+	<e n="robotAndroidPrimeRadiated" />
+	<e n="robotAndroidBoltRadiated" />
+	<e n="robotAndroidAndromedaRadiated" />
+	<e n="robotAndroidRexRadiated" />
+	<e n="robotAndroidChronosRadiated" />
+	<e n="robotAndroidAxlRadiated" />
+	<e n="robotAndroidClankRadiated" />
+	<e n="robotAndroidRalphRadiated" />
+	<e n="robotAndroidEvaRadiated" />
+	<e n="robotAndroidOrionRadiated" />
+	<e n="robotCyborgNovaRadiated" />
+	<e n="robotCyborgSparkRadiated" />
+	<e n="robotCyborgTitanRadiated" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieFarmGroup']/text()" delim="\n" op="add">
-		robotDog
-		robotSpiderBot
-		robotSpiderBotNano, .01	
-</csv>
+<append xpath="//entitygroup[@name='ZombieFarmGroup']">
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />
+	<e n="robotSpiderBotNano" p=".01" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .7
-		robotAndroidBolt, .7
-		robotAndroidAndromeda, .7
-		robotAndroidRex, .7
-		robotAndroidChronos, .7
-		robotAndroidAxl, .7
-		robotAndroidClank, .7
-		robotAndroidRalph, .7
-		robotAndroidEva, .7
-		robotAndroidOrion, .7
-		robotCyborgNova, .7
-		robotCyborgSpark, .7
-		robotCyborgTitan, .7
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeRadiated, .07
-		robotAndroidBoltRadiated, .07
-		robotAndroidAndromedaRadiated, .07
-		robotAndroidRexRadiated, .07
-		robotAndroidChronosRadiated, .07
-		robotAndroidAxlRadiated, .07
-		robotAndroidClankRadiated, .07
-		robotAndroidRalphRadiated, .07
-		robotAndroidEvaRadiated, .07
-		robotAndroidOrionRadiated, .07
-		robotCyborgNovaRadiated, .07
-		robotCyborgSparkRadiated, .07
-		robotCyborgTitanRadiated, .07		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS100']">
+	<e n="robotAndroidPrime" p=".7" />
+	<e n="robotAndroidBolt" p=".7" />
+	<e n="robotAndroidAndromeda" p=".7" />
+	<e n="robotAndroidRex" p=".7" />
+	<e n="robotAndroidChronos" p=".7" />
+	<e n="robotAndroidAxl" p=".7" />
+	<e n="robotAndroidClank" p=".7" />
+	<e n="robotAndroidRalph" p=".7" />
+	<e n="robotAndroidEva" p=".7" />
+	<e n="robotAndroidOrion" p=".7" />
+	<e n="robotCyborgNova" p=".7" />
+	<e n="robotCyborgSpark" p=".7" />
+	<e n="robotCyborgTitan" p=".7" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeRadiated" p=".07" />
+	<e n="robotAndroidBoltRadiated" p=".07" />
+	<e n="robotAndroidAndromedaRadiated" p=".07" />
+	<e n="robotAndroidRexRadiated" p=".07" />
+	<e n="robotAndroidChronosRadiated" p=".07" />
+	<e n="robotAndroidAxlRadiated" p=".07" />
+	<e n="robotAndroidClankRadiated" p=".07" />
+	<e n="robotAndroidRalphRadiated" p=".07" />
+	<e n="robotAndroidEvaRadiated" p=".07" />
+	<e n="robotAndroidOrionRadiated" p=".07" />
+	<e n="robotCyborgNovaRadiated" p=".07" />
+	<e n="robotCyborgSparkRadiated" p=".07" />
+	<e n="robotCyborgTitanRadiated" p=".07" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .55
-		robotAndroidBolt, .55
-		robotAndroidAndromeda, .55
-		robotAndroidRex, .55
-		robotAndroidChronos, .55
-		robotAndroidAxl, .55
-		robotAndroidClank, .55
-		robotAndroidRalph, .55
-		robotAndroidEva, .55
-		robotAndroidOrion, .55
-		robotCyborgNova, .55
-		robotCyborgSpark, .55
-		robotCyborgTitan, .55
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3
-		robotAndroidPrimeInferno, .1
-		robotAndroidBoltInferno, .1
-		robotAndroidAndromedaInferno, .1
-		robotAndroidRexInferno, .1
-		robotAndroidChronosInferno, .1
-		robotAndroidAxlInferno, .1
-		robotAndroidClankInferno, .1
-		robotAndroidRalphInferno, .1
-		robotAndroidEvaInferno, .1
-		robotAndroidOrionInferno, .1
-		robotCyborgNovaInferno, .1
-		robotCyborgSparkInferno, .1
-		robotCyborgTitanInferno, .1		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS200']">
+	<e n="robotAndroidPrime" p=".55" />
+	<e n="robotAndroidBolt" p=".55" />
+	<e n="robotAndroidAndromeda" p=".55" />
+	<e n="robotAndroidRex" p=".55" />
+	<e n="robotAndroidChronos" p=".55" />
+	<e n="robotAndroidAxl" p=".55" />
+	<e n="robotAndroidClank" p=".55" />
+	<e n="robotAndroidRalph" p=".55" />
+	<e n="robotAndroidEva" p=".55" />
+	<e n="robotAndroidOrion" p=".55" />
+	<e n="robotCyborgNova" p=".55" />
+	<e n="robotCyborgSpark" p=".55" />
+	<e n="robotCyborgTitan" p=".55" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".1" />
+	<e n="robotAndroidBoltInferno" p=".1" />
+	<e n="robotAndroidAndromedaInferno" p=".1" />
+	<e n="robotAndroidRexInferno" p=".1" />
+	<e n="robotAndroidChronosInferno" p=".1" />
+	<e n="robotAndroidAxlInferno" p=".1" />
+	<e n="robotAndroidClankInferno" p=".1" />
+	<e n="robotAndroidRalphInferno" p=".1" />
+	<e n="robotAndroidEvaInferno" p=".1" />
+	<e n="robotAndroidOrionInferno" p=".1" />
+	<e n="robotCyborgNovaInferno" p=".1" />
+	<e n="robotCyborgSparkInferno" p=".1" />
+	<e n="robotCyborgTitanInferno" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4
-		robotAndroidPrimeShocker, .2
-		robotAndroidBoltShocker, .2
-		robotAndroidAndromedaShocker, .2
-		robotAndroidRexShocker, .2
-		robotAndroidChronosShocker, .2
-		robotAndroidAxlShocker, .2
-		robotAndroidClankShocker, .2
-		robotAndroidRalphShocker, .2
-		robotAndroidEvaShocker, .2
-		robotAndroidOrionShocker, .2
-		robotCyborgNovaShocker, .2
-		robotCyborgSparkShocker, .2
-		robotCyborgTitanShocker, .2		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS400']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+	<e n="robotAndroidPrimeShocker" p=".2" />
+	<e n="robotAndroidBoltShocker" p=".2" />
+	<e n="robotAndroidAndromedaShocker" p=".2" />
+	<e n="robotAndroidRexShocker" p=".2" />
+	<e n="robotAndroidChronosShocker" p=".2" />
+	<e n="robotAndroidAxlShocker" p=".2" />
+	<e n="robotAndroidClankShocker" p=".2" />
+	<e n="robotAndroidRalphShocker" p=".2" />
+	<e n="robotAndroidEvaShocker" p=".2" />
+	<e n="robotAndroidOrionShocker" p=".2" />
+	<e n="robotCyborgNovaShocker" p=".2" />
+	<e n="robotCyborgSparkShocker" p=".2" />
+	<e n="robotCyborgTitanShocker" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .25
-		robotAndroidBolt, .25
-		robotAndroidAndromeda, .25
-		robotAndroidRex, .25
-		robotAndroidChronos, .25
-		robotAndroidAxl, .25
-		robotAndroidClank, .25
-		robotAndroidRalph, .25
-		robotAndroidEva, .25
-		robotAndroidOrion, .25
-		robotCyborgNova, .25
-		robotCyborgSpark, .25
-		robotCyborgTitan, .25
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5
-		robotAndroidPrimeRadiated, .3
-		robotAndroidBoltRadiated, .3
-		robotAndroidAndromedaRadiated, .3
-		robotAndroidRexRadiated, .3
-		robotAndroidChronosRadiated, .3
-		robotAndroidAxlRadiated, .3
-		robotAndroidClankRadiated, .3
-		robotAndroidRalphRadiated, .3
-		robotAndroidEvaRadiated, .3
-		robotAndroidOrionRadiated, .3
-		robotCyborgNovaRadiated, .3
-		robotCyborgSparkRadiated, .3
-		robotCyborgTitanRadiated, .3		
-		robotAndroidPrimeInferno, .3
-		robotAndroidBoltInferno, .3
-		robotAndroidAndromedaInferno, .3
-		robotAndroidRexInferno, .3
-		robotAndroidChronosInferno, .3
-		robotAndroidAxlInferno, .3
-		robotAndroidClankInferno, .3
-		robotAndroidRalphInferno, .3
-		robotAndroidEvaInferno, .3
-		robotAndroidOrionInferno, .3
-		robotCyborgNovaInferno, .3
-		robotCyborgSparkInferno, .3
-		robotCyborgTitanInferno, .3		
-		robotAndroidPrimeShocker, .3
-		robotAndroidBoltShocker, .3
-		robotAndroidAndromedaShocker, .3
-		robotAndroidRexShocker, .3
-		robotAndroidChronosShocker, .3
-		robotAndroidAxlShocker, .3
-		robotAndroidClankShocker, .3
-		robotAndroidRalphShocker, .3
-		robotAndroidEvaShocker, .3
-		robotAndroidOrionShocker, .3
-		robotCyborgNovaShocker, .3
-		robotCyborgSparkShocker, .3
-		robotCyborgTitanShocker, .3		
-</csv>
+<append xpath="//entitygroup[@name='ZombieMaleHazmatGroupGS800']">
+	<e n="robotAndroidPrime" p=".25" />
+	<e n="robotAndroidBolt" p=".25" />
+	<e n="robotAndroidAndromeda" p=".25" />
+	<e n="robotAndroidRex" p=".25" />
+	<e n="robotAndroidChronos" p=".25" />
+	<e n="robotAndroidAxl" p=".25" />
+	<e n="robotAndroidClank" p=".25" />
+	<e n="robotAndroidRalph" p=".25" />
+	<e n="robotAndroidEva" p=".25" />
+	<e n="robotAndroidOrion" p=".25" />
+	<e n="robotCyborgNova" p=".25" />
+	<e n="robotCyborgSpark" p=".25" />
+	<e n="robotCyborgTitan" p=".25" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+	<e n="robotAndroidPrimeRadiated" p=".3" />
+	<e n="robotAndroidBoltRadiated" p=".3" />
+	<e n="robotAndroidAndromedaRadiated" p=".3" />
+	<e n="robotAndroidRexRadiated" p=".3" />
+	<e n="robotAndroidChronosRadiated" p=".3" />
+	<e n="robotAndroidAxlRadiated" p=".3" />
+	<e n="robotAndroidClankRadiated" p=".3" />
+	<e n="robotAndroidRalphRadiated" p=".3" />
+	<e n="robotAndroidEvaRadiated" p=".3" />
+	<e n="robotAndroidOrionRadiated" p=".3" />
+	<e n="robotCyborgNovaRadiated" p=".3" />
+	<e n="robotCyborgSparkRadiated" p=".3" />
+	<e n="robotCyborgTitanRadiated" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".3" />
+	<e n="robotAndroidBoltInferno" p=".3" />
+	<e n="robotAndroidAndromedaInferno" p=".3" />
+	<e n="robotAndroidRexInferno" p=".3" />
+	<e n="robotAndroidChronosInferno" p=".3" />
+	<e n="robotAndroidAxlInferno" p=".3" />
+	<e n="robotAndroidClankInferno" p=".3" />
+	<e n="robotAndroidRalphInferno" p=".3" />
+	<e n="robotAndroidEvaInferno" p=".3" />
+	<e n="robotAndroidOrionInferno" p=".3" />
+	<e n="robotCyborgNovaInferno" p=".3" />
+	<e n="robotCyborgSparkInferno" p=".3" />
+	<e n="robotCyborgTitanInferno" p=".3" />
+	<e n="robotAndroidPrimeShocker" p=".3" />
+	<e n="robotAndroidBoltShocker" p=".3" />
+	<e n="robotAndroidAndromedaShocker" p=".3" />
+	<e n="robotAndroidRexShocker" p=".3" />
+	<e n="robotAndroidChronosShocker" p=".3" />
+	<e n="robotAndroidAxlShocker" p=".3" />
+	<e n="robotAndroidClankShocker" p=".3" />
+	<e n="robotAndroidRalphShocker" p=".3" />
+	<e n="robotAndroidEvaShocker" p=".3" />
+	<e n="robotAndroidOrionShocker" p=".3" />
+	<e n="robotCyborgNovaShocker" p=".3" />
+	<e n="robotCyborgSparkShocker" p=".3" />
+	<e n="robotCyborgTitanShocker" p=".3" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieUtilityWorkerGroup']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan		
-</csv>
+<append xpath="//entitygroup[@name='ZombieUtilityWorkerGroup']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0	
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .40
-		robotAndroidBolt, .40
-		robotAndroidAndromeda, .40
-		robotAndroidRex, .40
-		robotAndroidChronos, .40
-		robotAndroidAxl, .40
-		robotAndroidClank, .40
-		robotAndroidRalph, .40
-		robotAndroidEva, .40
-		robotAndroidOrion, .40
-		robotCyborgNova, .40
-		robotCyborgSpark, .40
-		robotCyborgTitan, .40
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS50']">
+	<e n="robotAndroidPrime" p=".40" />
+	<e n="robotAndroidBolt" p=".40" />
+	<e n="robotAndroidAndromeda" p=".40" />
+	<e n="robotAndroidRex" p=".40" />
+	<e n="robotAndroidChronos" p=".40" />
+	<e n="robotAndroidAxl" p=".40" />
+	<e n="robotAndroidClank" p=".40" />
+	<e n="robotAndroidRalph" p=".40" />
+	<e n="robotAndroidEva" p=".40" />
+	<e n="robotAndroidOrion" p=".40" />
+	<e n="robotCyborgNova" p=".40" />
+	<e n="robotCyborgSpark" p=".40" />
+	<e n="robotCyborgTitan" p=".40" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .35
-		robotAndroidBolt, .35
-		robotAndroidAndromeda, .35
-		robotAndroidRex, .35
-		robotAndroidChronos, .35
-		robotAndroidAxl, .35
-		robotAndroidClank, .35
-		robotAndroidRalph, .35
-		robotAndroidEva, .35
-		robotAndroidOrion, .35
-		robotCyborgNova, .35
-		robotCyborgSpark, .35
-		robotCyborgTitan, .35
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1
-		robotAndroidPrimeRadiated, .05
-		robotAndroidBoltRadiated, .05
-		robotAndroidAndromedaRadiated, .05
-		robotAndroidRexRadiated, .05
-		robotAndroidChronosRadiated, .05
-		robotAndroidAxlRadiated, .05
-		robotAndroidClankRadiated, .05
-		robotAndroidRalphRadiated, .05
-		robotAndroidEvaRadiated, .05
-		robotAndroidOrionRadiated, .05
-		robotCyborgNovaRadiated, .05
-		robotCyborgSparkRadiated, .05
-		robotCyborgTitanRadiated, .05		
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS100']">
+	<e n="robotAndroidPrime" p=".35" />
+	<e n="robotAndroidBolt" p=".35" />
+	<e n="robotAndroidAndromeda" p=".35" />
+	<e n="robotAndroidRex" p=".35" />
+	<e n="robotAndroidChronos" p=".35" />
+	<e n="robotAndroidAxl" p=".35" />
+	<e n="robotAndroidClank" p=".35" />
+	<e n="robotAndroidRalph" p=".35" />
+	<e n="robotAndroidEva" p=".35" />
+	<e n="robotAndroidOrion" p=".35" />
+	<e n="robotCyborgNova" p=".35" />
+	<e n="robotCyborgSpark" p=".35" />
+	<e n="robotCyborgTitan" p=".35" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+	<e n="robotAndroidPrimeRadiated" p=".05" />
+	<e n="robotAndroidBoltRadiated" p=".05" />
+	<e n="robotAndroidAndromedaRadiated" p=".05" />
+	<e n="robotAndroidRexRadiated" p=".05" />
+	<e n="robotAndroidChronosRadiated" p=".05" />
+	<e n="robotAndroidAxlRadiated" p=".05" />
+	<e n="robotAndroidClankRadiated" p=".05" />
+	<e n="robotAndroidRalphRadiated" p=".05" />
+	<e n="robotAndroidEvaRadiated" p=".05" />
+	<e n="robotAndroidOrionRadiated" p=".05" />
+	<e n="robotCyborgNovaRadiated" p=".05" />
+	<e n="robotCyborgSparkRadiated" p=".05" />
+	<e n="robotCyborgTitanRadiated" p=".05" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .2
-		robotAndroidBolt, .2
-		robotAndroidAndromeda, .2
-		robotAndroidRex, .2
-		robotAndroidChronos, .2
-		robotAndroidAxl, .2
-		robotAndroidClank, .2
-		robotAndroidRalph, .2
-		robotAndroidEva, .2
-		robotAndroidOrion, .2
-		robotCyborgNova, .2
-		robotCyborgSpark, .2
-		robotCyborgTitan, .2
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeInferno, .1
-		robotAndroidBoltInferno, .1
-		robotAndroidAndromedaInferno, .1
-		robotAndroidRexInferno, .1
-		robotAndroidChronosInferno, .1
-		robotAndroidAxlInferno, .1
-		robotAndroidClankInferno, .1
-		robotAndroidRalphInferno, .1
-		robotAndroidEvaInferno, .1
-		robotAndroidOrionInferno, .1
-		robotCyborgNovaInferno, .1
-		robotCyborgSparkInferno, .1
-		robotCyborgTitanInferno, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS200']">
+	<e n="robotAndroidPrime" p=".2" />
+	<e n="robotAndroidBolt" p=".2" />
+	<e n="robotAndroidAndromeda" p=".2" />
+	<e n="robotAndroidRex" p=".2" />
+	<e n="robotAndroidChronos" p=".2" />
+	<e n="robotAndroidAxl" p=".2" />
+	<e n="robotAndroidClank" p=".2" />
+	<e n="robotAndroidRalph" p=".2" />
+	<e n="robotAndroidEva" p=".2" />
+	<e n="robotAndroidOrion" p=".2" />
+	<e n="robotCyborgNova" p=".2" />
+	<e n="robotCyborgSpark" p=".2" />
+	<e n="robotCyborgTitan" p=".2" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeInferno" p=".1" />
+	<e n="robotAndroidBoltInferno" p=".1" />
+	<e n="robotAndroidAndromedaInferno" p=".1" />
+	<e n="robotAndroidRexInferno" p=".1" />
+	<e n="robotAndroidChronosInferno" p=".1" />
+	<e n="robotAndroidAxlInferno" p=".1" />
+	<e n="robotAndroidClankInferno" p=".1" />
+	<e n="robotAndroidRalphInferno" p=".1" />
+	<e n="robotAndroidEvaInferno" p=".1" />
+	<e n="robotAndroidOrionInferno" p=".1" />
+	<e n="robotCyborgNovaInferno" p=".1" />
+	<e n="robotCyborgSparkInferno" p=".1" />
+	<e n="robotCyborgTitanInferno" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .1
-		robotAndroidBolt, .1
-		robotAndroidAndromeda, .1
-		robotAndroidRex, .1
-		robotAndroidChronos, .1
-		robotAndroidAxl, .1
-		robotAndroidClank, .1
-		robotAndroidRalph, .1
-		robotAndroidEva, .1
-		robotAndroidOrion, .1
-		robotCyborgNova, .1
-		robotCyborgSpark, .1
-		robotCyborgTitan, .1
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeShocker, .2
-		robotAndroidBoltShocker, .2
-		robotAndroidAndromedaShocker, .2
-		robotAndroidRexShocker, .2
-		robotAndroidChronosShocker, .2
-		robotAndroidAxlShocker, .2
-		robotAndroidClankShocker, .2
-		robotAndroidRalphShocker, .2
-		robotAndroidEvaShocker, .2
-		robotAndroidOrionShocker, .2
-		robotCyborgNovaShocker, .2
-		robotCyborgSparkShocker, .2
-		robotCyborgTitanShocker, .2		
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS400']">
+	<e n="robotAndroidPrime" p=".1" />
+	<e n="robotAndroidBolt" p=".1" />
+	<e n="robotAndroidAndromeda" p=".1" />
+	<e n="robotAndroidRex" p=".1" />
+	<e n="robotAndroidChronos" p=".1" />
+	<e n="robotAndroidAxl" p=".1" />
+	<e n="robotAndroidClank" p=".1" />
+	<e n="robotAndroidRalph" p=".1" />
+	<e n="robotAndroidEva" p=".1" />
+	<e n="robotAndroidOrion" p=".1" />
+	<e n="robotCyborgNova" p=".1" />
+	<e n="robotCyborgSpark" p=".1" />
+	<e n="robotCyborgTitan" p=".1" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeShocker" p=".2" />
+	<e n="robotAndroidBoltShocker" p=".2" />
+	<e n="robotAndroidAndromedaShocker" p=".2" />
+	<e n="robotAndroidRexShocker" p=".2" />
+	<e n="robotAndroidChronosShocker" p=".2" />
+	<e n="robotAndroidAxlShocker" p=".2" />
+	<e n="robotAndroidClankShocker" p=".2" />
+	<e n="robotAndroidRalphShocker" p=".2" />
+	<e n="robotAndroidEvaShocker" p=".2" />
+	<e n="robotAndroidOrionShocker" p=".2" />
+	<e n="robotCyborgNovaShocker" p=".2" />
+	<e n="robotCyborgSparkShocker" p=".2" />
+	<e n="robotCyborgTitanShocker" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .05
-		robotAndroidBolt, .05
-		robotAndroidAndromeda, .05
-		robotAndroidRex, .05
-		robotAndroidChronos, .05
-		robotAndroidAxl, .05
-		robotAndroidClank, .05
-		robotAndroidRalph, .05
-		robotAndroidEva, .05
-		robotAndroidOrion, .05
-		robotCyborgNova, .05
-		robotCyborgSpark, .05
-		robotCyborgTitan, .05
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeRadiated, .25
-		robotAndroidBoltRadiated, .25
-		robotAndroidAndromedaRadiated, .25
-		robotAndroidRexRadiated, .25
-		robotAndroidChronosRadiated, .25
-		robotAndroidAxlRadiated, .25
-		robotAndroidClankRadiated, .25
-		robotAndroidRalphRadiated, .25
-		robotAndroidEvaRadiated, .25
-		robotAndroidOrionRadiated, .25
-		robotCyborgNovaRadiated, .25
-		robotCyborgSparkRadiated, .25
-		robotCyborgTitanRadiated, .25		
-		robotAndroidPrimeInferno, .25
-		robotAndroidBoltInferno, .25
-		robotAndroidAndromedaInferno, .25
-		robotAndroidRexInferno, .25
-		robotAndroidChronosInferno, .25
-		robotAndroidAxlInferno, .25
-		robotAndroidClankInferno, .25
-		robotAndroidRalphInferno, .25
-		robotAndroidEvaInferno, .25
-		robotAndroidOrionInferno, .25
-		robotCyborgNovaInferno, .25
-		robotCyborgSparkInferno, .25
-		robotCyborgTitanInferno, .25		
-		robotAndroidPrimeShocker, .25
-		robotAndroidBoltShocker, .25
-		robotAndroidAndromedaShocker, .25
-		robotAndroidRexShocker, .25
-		robotAndroidChronosShocker, .25
-		robotAndroidAxlShocker, .25
-		robotAndroidClankShocker, .25
-		robotAndroidRalphShocker, .25
-		robotAndroidEvaShocker, .25
-		robotAndroidOrionShocker, .25
-		robotCyborgNovaShocker, .25
-		robotCyborgSparkShocker, .25
-		robotCyborgTitanShocker, .25		
-</csv>
+<append xpath="//entitygroup[@name='zombieUtilityWorkerGroupGS800']">
+	<e n="robotAndroidPrime" p=".05" />
+	<e n="robotAndroidBolt" p=".05" />
+	<e n="robotAndroidAndromeda" p=".05" />
+	<e n="robotAndroidRex" p=".05" />
+	<e n="robotAndroidChronos" p=".05" />
+	<e n="robotAndroidAxl" p=".05" />
+	<e n="robotAndroidClank" p=".05" />
+	<e n="robotAndroidRalph" p=".05" />
+	<e n="robotAndroidEva" p=".05" />
+	<e n="robotAndroidOrion" p=".05" />
+	<e n="robotCyborgNova" p=".05" />
+	<e n="robotCyborgSpark" p=".05" />
+	<e n="robotCyborgTitan" p=".05" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeRadiated" p=".25" />
+	<e n="robotAndroidBoltRadiated" p=".25" />
+	<e n="robotAndroidAndromedaRadiated" p=".25" />
+	<e n="robotAndroidRexRadiated" p=".25" />
+	<e n="robotAndroidChronosRadiated" p=".25" />
+	<e n="robotAndroidAxlRadiated" p=".25" />
+	<e n="robotAndroidClankRadiated" p=".25" />
+	<e n="robotAndroidRalphRadiated" p=".25" />
+	<e n="robotAndroidEvaRadiated" p=".25" />
+	<e n="robotAndroidOrionRadiated" p=".25" />
+	<e n="robotCyborgNovaRadiated" p=".25" />
+	<e n="robotCyborgSparkRadiated" p=".25" />
+	<e n="robotCyborgTitanRadiated" p=".25" />
+	<e n="robotAndroidPrimeInferno" p=".25" />
+	<e n="robotAndroidBoltInferno" p=".25" />
+	<e n="robotAndroidAndromedaInferno" p=".25" />
+	<e n="robotAndroidRexInferno" p=".25" />
+	<e n="robotAndroidChronosInferno" p=".25" />
+	<e n="robotAndroidAxlInferno" p=".25" />
+	<e n="robotAndroidClankInferno" p=".25" />
+	<e n="robotAndroidRalphInferno" p=".25" />
+	<e n="robotAndroidEvaInferno" p=".25" />
+	<e n="robotAndroidOrionInferno" p=".25" />
+	<e n="robotCyborgNovaInferno" p=".25" />
+	<e n="robotCyborgSparkInferno" p=".25" />
+	<e n="robotCyborgTitanInferno" p=".25" />
+	<e n="robotAndroidPrimeShocker" p=".25" />
+	<e n="robotAndroidBoltShocker" p=".25" />
+	<e n="robotAndroidAndromedaShocker" p=".25" />
+	<e n="robotAndroidRexShocker" p=".25" />
+	<e n="robotAndroidChronosShocker" p=".25" />
+	<e n="robotAndroidAxlShocker" p=".25" />
+	<e n="robotAndroidClankShocker" p=".25" />
+	<e n="robotAndroidRalphShocker" p=".25" />
+	<e n="robotAndroidEvaShocker" p=".25" />
+	<e n="robotAndroidOrionShocker" p=".25" />
+	<e n="robotCyborgNovaShocker" p=".25" />
+	<e n="robotCyborgSparkShocker" p=".25" />
+	<e n="robotCyborgTitanShocker" p=".25" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieJanitorGroup']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan		
-</csv>
+<append xpath="//entitygroup[@name='ZombieJanitorGroup']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .7
-		robotAndroidBolt, .7
-		robotAndroidAndromeda, .7
-		robotAndroidRex, .7
-		robotAndroidChronos, .7
-		robotAndroidAxl, .7
-		robotAndroidClank, .7
-		robotAndroidRalph, .7
-		robotAndroidEva, .7
-		robotAndroidOrion, .7
-		robotCyborgNova, .7
-		robotCyborgSpark, .7
-		robotCyborgTitan, .7
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeRadiated, .07
-		robotAndroidBoltRadiated, .07
-		robotAndroidAndromedaRadiated, .07
-		robotAndroidRexRadiated, .07
-		robotAndroidChronosRadiated, .07
-		robotAndroidAxlRadiated, .07
-		robotAndroidClankRadiated, .07
-		robotAndroidRalphRadiated, .07
-		robotAndroidEvaRadiated, .07
-		robotAndroidOrionRadiated, .07
-		robotCyborgNovaRadiated, .07
-		robotCyborgSparkRadiated, .07
-		robotCyborgTitanRadiated, .07		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS100']">
+	<e n="robotAndroidPrime" p=".7" />
+	<e n="robotAndroidBolt" p=".7" />
+	<e n="robotAndroidAndromeda" p=".7" />
+	<e n="robotAndroidRex" p=".7" />
+	<e n="robotAndroidChronos" p=".7" />
+	<e n="robotAndroidAxl" p=".7" />
+	<e n="robotAndroidClank" p=".7" />
+	<e n="robotAndroidRalph" p=".7" />
+	<e n="robotAndroidEva" p=".7" />
+	<e n="robotAndroidOrion" p=".7" />
+	<e n="robotCyborgNova" p=".7" />
+	<e n="robotCyborgSpark" p=".7" />
+	<e n="robotCyborgTitan" p=".7" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeRadiated" p=".07" />
+	<e n="robotAndroidBoltRadiated" p=".07" />
+	<e n="robotAndroidAndromedaRadiated" p=".07" />
+	<e n="robotAndroidRexRadiated" p=".07" />
+	<e n="robotAndroidChronosRadiated" p=".07" />
+	<e n="robotAndroidAxlRadiated" p=".07" />
+	<e n="robotAndroidClankRadiated" p=".07" />
+	<e n="robotAndroidRalphRadiated" p=".07" />
+	<e n="robotAndroidEvaRadiated" p=".07" />
+	<e n="robotAndroidOrionRadiated" p=".07" />
+	<e n="robotCyborgNovaRadiated" p=".07" />
+	<e n="robotCyborgSparkRadiated" p=".07" />
+	<e n="robotCyborgTitanRadiated" p=".07" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .55
-		robotAndroidBolt, .55
-		robotAndroidAndromeda, .55
-		robotAndroidRex, .55
-		robotAndroidChronos, .55
-		robotAndroidAxl, .55
-		robotAndroidClank, .55
-		robotAndroidRalph, .55
-		robotAndroidEva, .55
-		robotAndroidOrion, .55
-		robotCyborgNova, .55
-		robotCyborgSpark, .55
-		robotCyborgTitan, .55
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3
-		robotAndroidPrimeInferno, .1
-		robotAndroidBoltInferno, .1
-		robotAndroidAndromedaInferno, .1
-		robotAndroidRexInferno, .1
-		robotAndroidChronosInferno, .1
-		robotAndroidAxlInferno, .1
-		robotAndroidClankInferno, .1
-		robotAndroidRalphInferno, .1
-		robotAndroidEvaInferno, .1
-		robotAndroidOrionInferno, .1
-		robotCyborgNovaInferno, .1
-		robotCyborgSparkInferno, .1
-		robotCyborgTitanInferno, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS200']">
+	<e n="robotAndroidPrime" p=".55" />
+	<e n="robotAndroidBolt" p=".55" />
+	<e n="robotAndroidAndromeda" p=".55" />
+	<e n="robotAndroidRex" p=".55" />
+	<e n="robotAndroidChronos" p=".55" />
+	<e n="robotAndroidAxl" p=".55" />
+	<e n="robotAndroidClank" p=".55" />
+	<e n="robotAndroidRalph" p=".55" />
+	<e n="robotAndroidEva" p=".55" />
+	<e n="robotAndroidOrion" p=".55" />
+	<e n="robotCyborgNova" p=".55" />
+	<e n="robotCyborgSpark" p=".55" />
+	<e n="robotCyborgTitan" p=".55" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".1" />
+	<e n="robotAndroidBoltInferno" p=".1" />
+	<e n="robotAndroidAndromedaInferno" p=".1" />
+	<e n="robotAndroidRexInferno" p=".1" />
+	<e n="robotAndroidChronosInferno" p=".1" />
+	<e n="robotAndroidAxlInferno" p=".1" />
+	<e n="robotAndroidClankInferno" p=".1" />
+	<e n="robotAndroidRalphInferno" p=".1" />
+	<e n="robotAndroidEvaInferno" p=".1" />
+	<e n="robotAndroidOrionInferno" p=".1" />
+	<e n="robotCyborgNovaInferno" p=".1" />
+	<e n="robotCyborgSparkInferno" p=".1" />
+	<e n="robotCyborgTitanInferno" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4
-		robotAndroidPrimeShocker, .2
-		robotAndroidBoltShocker, .2
-		robotAndroidAndromedaShocker, .2
-		robotAndroidRexShocker, .2
-		robotAndroidChronosShocker, .2
-		robotAndroidAxlShocker, .2
-		robotAndroidClankShocker, .2
-		robotAndroidRalphShocker, .2
-		robotAndroidEvaShocker, .2
-		robotAndroidOrionShocker, .2
-		robotCyborgNovaShocker, .2
-		robotCyborgSparkShocker, .2
-		robotCyborgTitanShocker, .2		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS400']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+	<e n="robotAndroidPrimeShocker" p=".2" />
+	<e n="robotAndroidBoltShocker" p=".2" />
+	<e n="robotAndroidAndromedaShocker" p=".2" />
+	<e n="robotAndroidRexShocker" p=".2" />
+	<e n="robotAndroidChronosShocker" p=".2" />
+	<e n="robotAndroidAxlShocker" p=".2" />
+	<e n="robotAndroidClankShocker" p=".2" />
+	<e n="robotAndroidRalphShocker" p=".2" />
+	<e n="robotAndroidEvaShocker" p=".2" />
+	<e n="robotAndroidOrionShocker" p=".2" />
+	<e n="robotCyborgNovaShocker" p=".2" />
+	<e n="robotCyborgSparkShocker" p=".2" />
+	<e n="robotCyborgTitanShocker" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieJanitorGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .25
-		robotAndroidBolt, .25
-		robotAndroidAndromeda, .25
-		robotAndroidRex, .25
-		robotAndroidChronos, .25
-		robotAndroidAxl, .25
-		robotAndroidClank, .25
-		robotAndroidRalph, .25
-		robotAndroidEva, .25
-		robotAndroidOrion, .25
-		robotCyborgNova, .25
-		robotCyborgSpark, .25
-		robotCyborgTitan, .25
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5
-		robotAndroidPrimeRadiated, .4
-		robotAndroidBoltRadiated, .4
-		robotAndroidAndromedaRadiated, .4
-		robotAndroidRexRadiated, .4
-		robotAndroidChronosRadiated, .4
-		robotAndroidAxlRadiated, .4
-		robotAndroidClankRadiated, .4
-		robotAndroidRalphRadiated, .4
-		robotAndroidEvaRadiated, .4
-		robotAndroidOrionRadiated, .4
-		robotCyborgNovaRadiated, .4
-		robotCyborgSparkRadiated, .4
-		robotCyborgTitanRadiated, .4		
-		robotAndroidPrimeInferno, .4
-		robotAndroidBoltInferno, .4
-		robotAndroidAndromedaInferno, .4
-		robotAndroidRexInferno, .4
-		robotAndroidChronosInferno, .4
-		robotAndroidAxlInferno, .4
-		robotAndroidClankInferno, .4
-		robotAndroidRalphInferno, .4
-		robotAndroidEvaInferno, .4
-		robotAndroidOrionInferno, .4
-		robotCyborgNovaInferno, .4
-		robotCyborgSparkInferno, .4
-		robotCyborgTitanInferno, .4		
-		robotAndroidPrimeShocker, .4
-		robotAndroidBoltShocker, .4
-		robotAndroidAndromedaShocker, .4
-		robotAndroidRexShocker, .4
-		robotAndroidChronosShocker, .4
-		robotAndroidAxlShocker, .4
-		robotAndroidClankShocker, .4
-		robotAndroidRalphShocker, .4
-		robotAndroidEvaShocker, .4
-		robotAndroidOrionShocker, .4
-		robotCyborgNovaShocker, .4
-		robotCyborgSparkShocker, .4
-		robotCyborgTitanShocker, .4		
-</csv>
+<append xpath="//entitygroup[@name='zombieJanitorGroupGS800']">
+	<e n="robotAndroidPrime" p=".25" />
+	<e n="robotAndroidBolt" p=".25" />
+	<e n="robotAndroidAndromeda" p=".25" />
+	<e n="robotAndroidRex" p=".25" />
+	<e n="robotAndroidChronos" p=".25" />
+	<e n="robotAndroidAxl" p=".25" />
+	<e n="robotAndroidClank" p=".25" />
+	<e n="robotAndroidRalph" p=".25" />
+	<e n="robotAndroidEva" p=".25" />
+	<e n="robotAndroidOrion" p=".25" />
+	<e n="robotCyborgNova" p=".25" />
+	<e n="robotCyborgSpark" p=".25" />
+	<e n="robotCyborgTitan" p=".25" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+	<e n="robotAndroidPrimeRadiated" p=".4" />
+	<e n="robotAndroidBoltRadiated" p=".4" />
+	<e n="robotAndroidAndromedaRadiated" p=".4" />
+	<e n="robotAndroidRexRadiated" p=".4" />
+	<e n="robotAndroidChronosRadiated" p=".4" />
+	<e n="robotAndroidAxlRadiated" p=".4" />
+	<e n="robotAndroidClankRadiated" p=".4" />
+	<e n="robotAndroidRalphRadiated" p=".4" />
+	<e n="robotAndroidEvaRadiated" p=".4" />
+	<e n="robotAndroidOrionRadiated" p=".4" />
+	<e n="robotCyborgNovaRadiated" p=".4" />
+	<e n="robotCyborgSparkRadiated" p=".4" />
+	<e n="robotCyborgTitanRadiated" p=".4" />
+	<e n="robotAndroidPrimeInferno" p=".4" />
+	<e n="robotAndroidBoltInferno" p=".4" />
+	<e n="robotAndroidAndromedaInferno" p=".4" />
+	<e n="robotAndroidRexInferno" p=".4" />
+	<e n="robotAndroidChronosInferno" p=".4" />
+	<e n="robotAndroidAxlInferno" p=".4" />
+	<e n="robotAndroidClankInferno" p=".4" />
+	<e n="robotAndroidRalphInferno" p=".4" />
+	<e n="robotAndroidEvaInferno" p=".4" />
+	<e n="robotAndroidOrionInferno" p=".4" />
+	<e n="robotCyborgNovaInferno" p=".4" />
+	<e n="robotCyborgSparkInferno" p=".4" />
+	<e n="robotCyborgTitanInferno" p=".4" />
+	<e n="robotAndroidPrimeShocker" p=".4" />
+	<e n="robotAndroidBoltShocker" p=".4" />
+	<e n="robotAndroidAndromedaShocker" p=".4" />
+	<e n="robotAndroidRexShocker" p=".4" />
+	<e n="robotAndroidChronosShocker" p=".4" />
+	<e n="robotAndroidAxlShocker" p=".4" />
+	<e n="robotAndroidClankShocker" p=".4" />
+	<e n="robotAndroidRalphShocker" p=".4" />
+	<e n="robotAndroidEvaShocker" p=".4" />
+	<e n="robotAndroidOrionShocker" p=".4" />
+	<e n="robotCyborgNovaShocker" p=".4" />
+	<e n="robotCyborgSparkShocker" p=".4" />
+	<e n="robotCyborgTitanShocker" p=".4" />
+</append>
 
-<csv xpath="//entitygroup[@name='HospitalGroup']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-</csv>
+<append xpath="//entitygroup[@name='HospitalGroup']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime
-		robotAndroidBolt
-		robotAndroidAndromeda
-		robotAndroidRex
-		robotAndroidChronos
-		robotAndroidAxl
-		robotAndroidClank
-		robotAndroidRalph
-		robotAndroidEva
-		robotAndroidOrion
-		robotCyborgNova
-		robotCyborgSpark
-		robotCyborgTitan
-		robotAndroidPrimeOvercharged, 0
-		robotAndroidBoltOvercharged, 0
-		robotAndroidAndromedaOvercharged, 0
-		robotAndroidRexOvercharged, 0
-		robotAndroidChronosOvercharged, 0
-		robotAndroidAxlOvercharged, 0
-		robotAndroidClankOvercharged, 0
-		robotAndroidRalphOvercharged, 0
-		robotAndroidEvaOvercharged, 0
-		robotAndroidOrionOvercharged, 0
-		robotCyborgNovaOvercharged, 0
-		robotCyborgSparkOvercharged, 0
-		robotCyborgTitanOvercharged, 0		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS1']">
+	<e n="robotAndroidPrime" />
+	<e n="robotAndroidBolt" />
+	<e n="robotAndroidAndromeda" />
+	<e n="robotAndroidRex" />
+	<e n="robotAndroidChronos" />
+	<e n="robotAndroidAxl" />
+	<e n="robotAndroidClank" />
+	<e n="robotAndroidRalph" />
+	<e n="robotAndroidEva" />
+	<e n="robotAndroidOrion" />
+	<e n="robotCyborgNova" />
+	<e n="robotCyborgSpark" />
+	<e n="robotCyborgTitan" />
+	<e n="robotAndroidPrimeOvercharged" p="0" />
+	<e n="robotAndroidBoltOvercharged" p="0" />
+	<e n="robotAndroidAndromedaOvercharged" p="0" />
+	<e n="robotAndroidRexOvercharged" p="0" />
+	<e n="robotAndroidChronosOvercharged" p="0" />
+	<e n="robotAndroidAxlOvercharged" p="0" />
+	<e n="robotAndroidClankOvercharged" p="0" />
+	<e n="robotAndroidRalphOvercharged" p="0" />
+	<e n="robotAndroidEvaOvercharged" p="0" />
+	<e n="robotAndroidOrionOvercharged" p="0" />
+	<e n="robotCyborgNovaOvercharged" p="0" />
+	<e n="robotCyborgSparkOvercharged" p="0" />
+	<e n="robotCyborgTitanOvercharged" p="0" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .7
-		robotAndroidBolt, .7
-		robotAndroidAndromeda, .7
-		robotAndroidRex, .7
-		robotAndroidChronos, .7
-		robotAndroidAxl, .7
-		robotAndroidClank, .7
-		robotAndroidRalph, .7
-		robotAndroidEva, .7
-		robotAndroidOrion, .7
-		robotCyborgNova, .7
-		robotCyborgSpark, .7
-		robotCyborgTitan, .7
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2
-		robotAndroidPrimeRadiated, .07
-		robotAndroidBoltRadiated, .07
-		robotAndroidAndromedaRadiated, .07
-		robotAndroidRexRadiated, .07
-		robotAndroidChronosRadiated, .07
-		robotAndroidAxlRadiated, .07
-		robotAndroidClankRadiated, .07
-		robotAndroidRalphRadiated, .07
-		robotAndroidEvaRadiated, .07
-		robotAndroidOrionRadiated, .07
-		robotCyborgNovaRadiated, .07
-		robotCyborgSparkRadiated, .07
-		robotCyborgTitanRadiated, .07		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS100']">
+	<e n="robotAndroidPrime" p=".7" />
+	<e n="robotAndroidBolt" p=".7" />
+	<e n="robotAndroidAndromeda" p=".7" />
+	<e n="robotAndroidRex" p=".7" />
+	<e n="robotAndroidChronos" p=".7" />
+	<e n="robotAndroidAxl" p=".7" />
+	<e n="robotAndroidClank" p=".7" />
+	<e n="robotAndroidRalph" p=".7" />
+	<e n="robotAndroidEva" p=".7" />
+	<e n="robotAndroidOrion" p=".7" />
+	<e n="robotCyborgNova" p=".7" />
+	<e n="robotCyborgSpark" p=".7" />
+	<e n="robotCyborgTitan" p=".7" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+	<e n="robotAndroidPrimeRadiated" p=".07" />
+	<e n="robotAndroidBoltRadiated" p=".07" />
+	<e n="robotAndroidAndromedaRadiated" p=".07" />
+	<e n="robotAndroidRexRadiated" p=".07" />
+	<e n="robotAndroidChronosRadiated" p=".07" />
+	<e n="robotAndroidAxlRadiated" p=".07" />
+	<e n="robotAndroidClankRadiated" p=".07" />
+	<e n="robotAndroidRalphRadiated" p=".07" />
+	<e n="robotAndroidEvaRadiated" p=".07" />
+	<e n="robotAndroidOrionRadiated" p=".07" />
+	<e n="robotCyborgNovaRadiated" p=".07" />
+	<e n="robotCyborgSparkRadiated" p=".07" />
+	<e n="robotCyborgTitanRadiated" p=".07" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .55
-		robotAndroidBolt, .55
-		robotAndroidAndromeda, .55
-		robotAndroidRex, .55
-		robotAndroidChronos, .55
-		robotAndroidAxl, .55
-		robotAndroidClank, .55
-		robotAndroidRalph, .55
-		robotAndroidEva, .55
-		robotAndroidOrion, .55
-		robotCyborgNova, .55
-		robotCyborgSpark, .55
-		robotCyborgTitan, .55
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3
-		robotAndroidPrimeInferno, .1
-		robotAndroidBoltInferno, .1
-		robotAndroidAndromedaInferno, .1
-		robotAndroidRexInferno, .1
-		robotAndroidChronosInferno, .1
-		robotAndroidAxlInferno, .1
-		robotAndroidClankInferno, .1
-		robotAndroidRalphInferno, .1
-		robotAndroidEvaInferno, .1
-		robotAndroidOrionInferno, .1
-		robotCyborgNovaInferno, .1
-		robotCyborgSparkInferno, .1
-		robotCyborgTitanInferno, .1		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS200']">
+	<e n="robotAndroidPrime" p=".55" />
+	<e n="robotAndroidBolt" p=".55" />
+	<e n="robotAndroidAndromeda" p=".55" />
+	<e n="robotAndroidRex" p=".55" />
+	<e n="robotAndroidChronos" p=".55" />
+	<e n="robotAndroidAxl" p=".55" />
+	<e n="robotAndroidClank" p=".55" />
+	<e n="robotAndroidRalph" p=".55" />
+	<e n="robotAndroidEva" p=".55" />
+	<e n="robotAndroidOrion" p=".55" />
+	<e n="robotCyborgNova" p=".55" />
+	<e n="robotCyborgSpark" p=".55" />
+	<e n="robotCyborgTitan" p=".55" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+	<e n="robotAndroidPrimeInferno" p=".1" />
+	<e n="robotAndroidBoltInferno" p=".1" />
+	<e n="robotAndroidAndromedaInferno" p=".1" />
+	<e n="robotAndroidRexInferno" p=".1" />
+	<e n="robotAndroidChronosInferno" p=".1" />
+	<e n="robotAndroidAxlInferno" p=".1" />
+	<e n="robotAndroidClankInferno" p=".1" />
+	<e n="robotAndroidRalphInferno" p=".1" />
+	<e n="robotAndroidEvaInferno" p=".1" />
+	<e n="robotAndroidOrionInferno" p=".1" />
+	<e n="robotCyborgNovaInferno" p=".1" />
+	<e n="robotCyborgSparkInferno" p=".1" />
+	<e n="robotCyborgTitanInferno" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4
-		robotAndroidPrimeShocker, .2
-		robotAndroidBoltShocker, .2
-		robotAndroidAndromedaShocker, .2
-		robotAndroidRexShocker, .2
-		robotAndroidChronosShocker, .2
-		robotAndroidAxlShocker, .2
-		robotAndroidClankShocker, .2
-		robotAndroidRalphShocker, .2
-		robotAndroidEvaShocker, .2
-		robotAndroidOrionShocker, .2
-		robotCyborgNovaShocker, .2
-		robotCyborgSparkShocker, .2
-		robotCyborgTitanShocker, .2		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS400']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+	<e n="robotAndroidPrimeShocker" p=".2" />
+	<e n="robotAndroidBoltShocker" p=".2" />
+	<e n="robotAndroidAndromedaShocker" p=".2" />
+	<e n="robotAndroidRexShocker" p=".2" />
+	<e n="robotAndroidChronosShocker" p=".2" />
+	<e n="robotAndroidAxlShocker" p=".2" />
+	<e n="robotAndroidClankShocker" p=".2" />
+	<e n="robotAndroidRalphShocker" p=".2" />
+	<e n="robotAndroidEvaShocker" p=".2" />
+	<e n="robotAndroidOrionShocker" p=".2" />
+	<e n="robotCyborgNovaShocker" p=".2" />
+	<e n="robotCyborgSparkShocker" p=".2" />
+	<e n="robotCyborgTitanShocker" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='zombieHospitalGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .25
-		robotAndroidBolt, .25
-		robotAndroidAndromeda, .25
-		robotAndroidRex, .25
-		robotAndroidChronos, .25
-		robotAndroidAxl, .25
-		robotAndroidClank, .25
-		robotAndroidRalph, .25
-		robotAndroidEva, .25
-		robotAndroidOrion, .25
-		robotCyborgNova, .25
-		robotCyborgSpark, .25
-		robotCyborgTitan, .25
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5
-		robotAndroidPrimeRadiated, .45
-		robotAndroidBoltRadiated, .45
-		robotAndroidAndromedaRadiated, .45
-		robotAndroidRexRadiated, .45
-		robotAndroidChronosRadiated, .45
-		robotAndroidAxlRadiated, .45
-		robotAndroidClankRadiated, .45
-		robotAndroidRalphRadiated, .45
-		robotAndroidEvaRadiated, .45
-		robotAndroidOrionRadiated, .45
-		robotCyborgNovaRadiated, .45
-		robotCyborgSparkRadiated, .45
-		robotCyborgTitanRadiated, .45		
-		robotAndroidPrimeInferno, .45
-		robotAndroidBoltInferno, .45
-		robotAndroidAndromedaInferno, .45
-		robotAndroidRexInferno, .45
-		robotAndroidChronosInferno, .45
-		robotAndroidAxlInferno, .45
-		robotAndroidClankInferno, .45
-		robotAndroidRalphInferno, .45
-		robotAndroidEvaInferno, .45
-		robotAndroidOrionInferno, .45
-		robotCyborgNovaInferno, .45
-		robotCyborgSparkInferno, .45
-		robotCyborgTitanInferno, .45		
-		robotAndroidPrimeShocker, .45
-		robotAndroidBoltShocker, .45
-		robotAndroidAndromedaShocker, .45
-		robotAndroidRexShocker, .45
-		robotAndroidChronosShocker, .45
-		robotAndroidAxlShocker, .45
-		robotAndroidClankShocker, .45
-		robotAndroidRalphShocker, .45
-		robotAndroidEvaShocker, .45
-		robotAndroidOrionShocker, .45
-		robotCyborgNovaShocker, .45
-		robotCyborgSparkShocker, .45
-		robotCyborgTitanShocker, .45		
-</csv>
+<append xpath="//entitygroup[@name='zombieHospitalGroupGS800']">
+	<e n="robotAndroidPrime" p=".25" />
+	<e n="robotAndroidBolt" p=".25" />
+	<e n="robotAndroidAndromeda" p=".25" />
+	<e n="robotAndroidRex" p=".25" />
+	<e n="robotAndroidChronos" p=".25" />
+	<e n="robotAndroidAxl" p=".25" />
+	<e n="robotAndroidClank" p=".25" />
+	<e n="robotAndroidRalph" p=".25" />
+	<e n="robotAndroidEva" p=".25" />
+	<e n="robotAndroidOrion" p=".25" />
+	<e n="robotCyborgNova" p=".25" />
+	<e n="robotCyborgSpark" p=".25" />
+	<e n="robotCyborgTitan" p=".25" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+	<e n="robotAndroidPrimeRadiated" p=".45" />
+	<e n="robotAndroidBoltRadiated" p=".45" />
+	<e n="robotAndroidAndromedaRadiated" p=".45" />
+	<e n="robotAndroidRexRadiated" p=".45" />
+	<e n="robotAndroidChronosRadiated" p=".45" />
+	<e n="robotAndroidAxlRadiated" p=".45" />
+	<e n="robotAndroidClankRadiated" p=".45" />
+	<e n="robotAndroidRalphRadiated" p=".45" />
+	<e n="robotAndroidEvaRadiated" p=".45" />
+	<e n="robotAndroidOrionRadiated" p=".45" />
+	<e n="robotCyborgNovaRadiated" p=".45" />
+	<e n="robotCyborgSparkRadiated" p=".45" />
+	<e n="robotCyborgTitanRadiated" p=".45" />
+	<e n="robotAndroidPrimeInferno" p=".45" />
+	<e n="robotAndroidBoltInferno" p=".45" />
+	<e n="robotAndroidAndromedaInferno" p=".45" />
+	<e n="robotAndroidRexInferno" p=".45" />
+	<e n="robotAndroidChronosInferno" p=".45" />
+	<e n="robotAndroidAxlInferno" p=".45" />
+	<e n="robotAndroidClankInferno" p=".45" />
+	<e n="robotAndroidRalphInferno" p=".45" />
+	<e n="robotAndroidEvaInferno" p=".45" />
+	<e n="robotAndroidOrionInferno" p=".45" />
+	<e n="robotCyborgNovaInferno" p=".45" />
+	<e n="robotCyborgSparkInferno" p=".45" />
+	<e n="robotCyborgTitanInferno" p=".45" />
+	<e n="robotAndroidPrimeShocker" p=".45" />
+	<e n="robotAndroidBoltShocker" p=".45" />
+	<e n="robotAndroidAndromedaShocker" p=".45" />
+	<e n="robotAndroidRexShocker" p=".45" />
+	<e n="robotAndroidChronosShocker" p=".45" />
+	<e n="robotAndroidAxlShocker" p=".45" />
+	<e n="robotAndroidClankShocker" p=".45" />
+	<e n="robotAndroidRalphShocker" p=".45" />
+	<e n="robotAndroidEvaShocker" p=".45" />
+	<e n="robotAndroidOrionShocker" p=".45" />
+	<e n="robotCyborgNovaShocker" p=".45" />
+	<e n="robotCyborgSparkShocker" p=".45" />
+	<e n="robotCyborgTitanShocker" p=".45" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroup']/text()" delim="\n" op="add">
-		robotAndroidPrime, .45
-		robotAndroidBolt, .45
-		robotAndroidAndromeda, .45
-		robotAndroidRex, .45
-		robotAndroidChronos, .45
-		robotAndroidAxl, .45
-		robotAndroidClank, .45
-		robotAndroidRalph, .45
-		robotAndroidEva, .45
-		robotAndroidOrion, .45
-		robotCyborgNova, .45
-		robotCyborgSpark, .45
-		robotCyborgTitan, .45		
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroup']">
+	<e n="robotAndroidPrime" p=".45" />
+	<e n="robotAndroidBolt" p=".45" />
+	<e n="robotAndroidAndromeda" p=".45" />
+	<e n="robotAndroidRex" p=".45" />
+	<e n="robotAndroidChronos" p=".45" />
+	<e n="robotAndroidAxl" p=".45" />
+	<e n="robotAndroidClank" p=".45" />
+	<e n="robotAndroidRalph" p=".45" />
+	<e n="robotAndroidEva" p=".45" />
+	<e n="robotAndroidOrion" p=".45" />
+	<e n="robotCyborgNova" p=".45" />
+	<e n="robotCyborgSpark" p=".45" />
+	<e n="robotCyborgTitan" p=".45" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS1']/text()" delim="\n" op="add">
-		robotAndroidPrime, .45
-		robotAndroidBolt, .45
-		robotAndroidAndromeda, .45
-		robotAndroidRex, .45
-		robotAndroidChronos, .45
-		robotAndroidAxl, .45
-		robotAndroidClank, .45
-		robotAndroidRalph, .45
-		robotAndroidEva, .45
-		robotAndroidOrion, .45
-		robotCyborgNova, .45
-		robotCyborgSpark, .45
-		robotCyborgTitan, .45
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1	
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS1']">
+	<e n="robotAndroidPrime" p=".45" />
+	<e n="robotAndroidBolt" p=".45" />
+	<e n="robotAndroidAndromeda" p=".45" />
+	<e n="robotAndroidRex" p=".45" />
+	<e n="robotAndroidChronos" p=".45" />
+	<e n="robotAndroidAxl" p=".45" />
+	<e n="robotAndroidClank" p=".45" />
+	<e n="robotAndroidRalph" p=".45" />
+	<e n="robotAndroidEva" p=".45" />
+	<e n="robotAndroidOrion" p=".45" />
+	<e n="robotCyborgNova" p=".45" />
+	<e n="robotCyborgSpark" p=".45" />
+	<e n="robotCyborgTitan" p=".45" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS50']/text()" delim="\n" op="add">
-		robotAndroidPrime, .85
-		robotAndroidBolt, .85
-		robotAndroidAndromeda, .85
-		robotAndroidRex, .85
-		robotAndroidChronos, .85
-		robotAndroidAxl, .85
-		robotAndroidClank, .85
-		robotAndroidRalph, .85
-		robotAndroidEva, .85
-		robotAndroidOrion, .85
-		robotCyborgNova, .85
-		robotCyborgSpark, .85
-		robotCyborgTitan, .85
-		robotAndroidPrimeOvercharged, .1
-		robotAndroidBoltOvercharged, .1
-		robotAndroidAndromedaOvercharged, .1
-		robotAndroidRexOvercharged, .1
-		robotAndroidChronosOvercharged, .1
-		robotAndroidAxlOvercharged, .1
-		robotAndroidClankOvercharged, .1
-		robotAndroidRalphOvercharged, .1
-		robotAndroidEvaOvercharged, .1
-		robotAndroidOrionOvercharged, .1
-		robotCyborgNovaOvercharged, .1
-		robotCyborgSparkOvercharged, .1
-		robotCyborgTitanOvercharged, .1
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS50']">
+	<e n="robotAndroidPrime" p=".85" />
+	<e n="robotAndroidBolt" p=".85" />
+	<e n="robotAndroidAndromeda" p=".85" />
+	<e n="robotAndroidRex" p=".85" />
+	<e n="robotAndroidChronos" p=".85" />
+	<e n="robotAndroidAxl" p=".85" />
+	<e n="robotAndroidClank" p=".85" />
+	<e n="robotAndroidRalph" p=".85" />
+	<e n="robotAndroidEva" p=".85" />
+	<e n="robotAndroidOrion" p=".85" />
+	<e n="robotCyborgNova" p=".85" />
+	<e n="robotCyborgSpark" p=".85" />
+	<e n="robotCyborgTitan" p=".85" />
+	<e n="robotAndroidPrimeOvercharged" p=".1" />
+	<e n="robotAndroidBoltOvercharged" p=".1" />
+	<e n="robotAndroidAndromedaOvercharged" p=".1" />
+	<e n="robotAndroidRexOvercharged" p=".1" />
+	<e n="robotAndroidChronosOvercharged" p=".1" />
+	<e n="robotAndroidAxlOvercharged" p=".1" />
+	<e n="robotAndroidClankOvercharged" p=".1" />
+	<e n="robotAndroidRalphOvercharged" p=".1" />
+	<e n="robotAndroidEvaOvercharged" p=".1" />
+	<e n="robotAndroidOrionOvercharged" p=".1" />
+	<e n="robotCyborgNovaOvercharged" p=".1" />
+	<e n="robotCyborgSparkOvercharged" p=".1" />
+	<e n="robotCyborgTitanOvercharged" p=".1" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS100']/text()" delim="\n" op="add">
-		robotAndroidPrime, .6
-		robotAndroidBolt, .6
-		robotAndroidAndromeda, .6
-		robotAndroidRex, .6
-		robotAndroidChronos, .6
-		robotAndroidAxl, .6
-		robotAndroidClank, .6
-		robotAndroidRalph, .6
-		robotAndroidEva, .6
-		robotAndroidOrion, .6
-		robotCyborgNova, .6
-		robotCyborgSpark, .6
-		robotCyborgTitan, .6
-		robotAndroidPrimeOvercharged, .2
-		robotAndroidBoltOvercharged, .2
-		robotAndroidAndromedaOvercharged, .2
-		robotAndroidRexOvercharged, .2
-		robotAndroidChronosOvercharged, .2
-		robotAndroidAxlOvercharged, .2
-		robotAndroidClankOvercharged, .2
-		robotAndroidRalphOvercharged, .2
-		robotAndroidEvaOvercharged, .2
-		robotAndroidOrionOvercharged, .2
-		robotCyborgNovaOvercharged, .2
-		robotCyborgSparkOvercharged, .2
-		robotCyborgTitanOvercharged, .2	
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS100']">
+	<e n="robotAndroidPrime" p=".6" />
+	<e n="robotAndroidBolt" p=".6" />
+	<e n="robotAndroidAndromeda" p=".6" />
+	<e n="robotAndroidRex" p=".6" />
+	<e n="robotAndroidChronos" p=".6" />
+	<e n="robotAndroidAxl" p=".6" />
+	<e n="robotAndroidClank" p=".6" />
+	<e n="robotAndroidRalph" p=".6" />
+	<e n="robotAndroidEva" p=".6" />
+	<e n="robotAndroidOrion" p=".6" />
+	<e n="robotCyborgNova" p=".6" />
+	<e n="robotCyborgSpark" p=".6" />
+	<e n="robotCyborgTitan" p=".6" />
+	<e n="robotAndroidPrimeOvercharged" p=".2" />
+	<e n="robotAndroidBoltOvercharged" p=".2" />
+	<e n="robotAndroidAndromedaOvercharged" p=".2" />
+	<e n="robotAndroidRexOvercharged" p=".2" />
+	<e n="robotAndroidChronosOvercharged" p=".2" />
+	<e n="robotAndroidAxlOvercharged" p=".2" />
+	<e n="robotAndroidClankOvercharged" p=".2" />
+	<e n="robotAndroidRalphOvercharged" p=".2" />
+	<e n="robotAndroidEvaOvercharged" p=".2" />
+	<e n="robotAndroidOrionOvercharged" p=".2" />
+	<e n="robotCyborgNovaOvercharged" p=".2" />
+	<e n="robotCyborgSparkOvercharged" p=".2" />
+	<e n="robotCyborgTitanOvercharged" p=".2" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS200']/text()" delim="\n" op="add">
-		robotAndroidPrime, .4
-		robotAndroidBolt, .4
-		robotAndroidAndromeda, .4
-		robotAndroidRex, .4
-		robotAndroidChronos, .4
-		robotAndroidAxl, .4
-		robotAndroidClank, .4
-		robotAndroidRalph, .4
-		robotAndroidEva, .4
-		robotAndroidOrion, .4
-		robotCyborgNova, .4
-		robotCyborgSpark, .4
-		robotCyborgTitan, .4
-		robotAndroidPrimeOvercharged, .3
-		robotAndroidBoltOvercharged, .3
-		robotAndroidAndromedaOvercharged, .3
-		robotAndroidRexOvercharged, .3
-		robotAndroidChronosOvercharged, .3
-		robotAndroidAxlOvercharged, .3
-		robotAndroidClankOvercharged, .3
-		robotAndroidRalphOvercharged, .3
-		robotAndroidEvaOvercharged, .3
-		robotAndroidOrionOvercharged, .3
-		robotCyborgNovaOvercharged, .3
-		robotCyborgSparkOvercharged, .3
-		robotCyborgTitanOvercharged, .3
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS200']">
+	<e n="robotAndroidPrime" p=".4" />
+	<e n="robotAndroidBolt" p=".4" />
+	<e n="robotAndroidAndromeda" p=".4" />
+	<e n="robotAndroidRex" p=".4" />
+	<e n="robotAndroidChronos" p=".4" />
+	<e n="robotAndroidAxl" p=".4" />
+	<e n="robotAndroidClank" p=".4" />
+	<e n="robotAndroidRalph" p=".4" />
+	<e n="robotAndroidEva" p=".4" />
+	<e n="robotAndroidOrion" p=".4" />
+	<e n="robotCyborgNova" p=".4" />
+	<e n="robotCyborgSpark" p=".4" />
+	<e n="robotCyborgTitan" p=".4" />
+	<e n="robotAndroidPrimeOvercharged" p=".3" />
+	<e n="robotAndroidBoltOvercharged" p=".3" />
+	<e n="robotAndroidAndromedaOvercharged" p=".3" />
+	<e n="robotAndroidRexOvercharged" p=".3" />
+	<e n="robotAndroidChronosOvercharged" p=".3" />
+	<e n="robotAndroidAxlOvercharged" p=".3" />
+	<e n="robotAndroidClankOvercharged" p=".3" />
+	<e n="robotAndroidRalphOvercharged" p=".3" />
+	<e n="robotAndroidEvaOvercharged" p=".3" />
+	<e n="robotAndroidOrionOvercharged" p=".3" />
+	<e n="robotCyborgNovaOvercharged" p=".3" />
+	<e n="robotCyborgSparkOvercharged" p=".3" />
+	<e n="robotCyborgTitanOvercharged" p=".3" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS400']/text()" delim="\n" op="add">
-		robotAndroidPrime, .3
-		robotAndroidBolt, .3
-		robotAndroidAndromeda, .3
-		robotAndroidRex, .3
-		robotAndroidChronos, .3
-		robotAndroidAxl, .3
-		robotAndroidClank, .3
-		robotAndroidRalph, .3
-		robotAndroidEva, .3
-		robotAndroidOrion, .3
-		robotCyborgNova, .3
-		robotCyborgSpark, .3
-		robotCyborgTitan, .3
-		robotAndroidPrimeOvercharged, .4
-		robotAndroidBoltOvercharged, .4
-		robotAndroidAndromedaOvercharged, .4
-		robotAndroidRexOvercharged, .4
-		robotAndroidChronosOvercharged, .4
-		robotAndroidAxlOvercharged, .4
-		robotAndroidClankOvercharged, .4
-		robotAndroidRalphOvercharged, .4
-		robotAndroidEvaOvercharged, .4
-		robotAndroidOrionOvercharged, .4
-		robotCyborgNovaOvercharged, .4
-		robotCyborgSparkOvercharged, .4
-		robotCyborgTitanOvercharged, .4	
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS400']">
+	<e n="robotAndroidPrime" p=".3" />
+	<e n="robotAndroidBolt" p=".3" />
+	<e n="robotAndroidAndromeda" p=".3" />
+	<e n="robotAndroidRex" p=".3" />
+	<e n="robotAndroidChronos" p=".3" />
+	<e n="robotAndroidAxl" p=".3" />
+	<e n="robotAndroidClank" p=".3" />
+	<e n="robotAndroidRalph" p=".3" />
+	<e n="robotAndroidEva" p=".3" />
+	<e n="robotAndroidOrion" p=".3" />
+	<e n="robotCyborgNova" p=".3" />
+	<e n="robotCyborgSpark" p=".3" />
+	<e n="robotCyborgTitan" p=".3" />
+	<e n="robotAndroidPrimeOvercharged" p=".4" />
+	<e n="robotAndroidBoltOvercharged" p=".4" />
+	<e n="robotAndroidAndromedaOvercharged" p=".4" />
+	<e n="robotAndroidRexOvercharged" p=".4" />
+	<e n="robotAndroidChronosOvercharged" p=".4" />
+	<e n="robotAndroidAxlOvercharged" p=".4" />
+	<e n="robotAndroidClankOvercharged" p=".4" />
+	<e n="robotAndroidRalphOvercharged" p=".4" />
+	<e n="robotAndroidEvaOvercharged" p=".4" />
+	<e n="robotAndroidOrionOvercharged" p=".4" />
+	<e n="robotCyborgNovaOvercharged" p=".4" />
+	<e n="robotCyborgSparkOvercharged" p=".4" />
+	<e n="robotCyborgTitanOvercharged" p=".4" />
+</append>
 
-<csv xpath="//entitygroup[@name='ZombieNightClubGroupGS800']/text()" delim="\n" op="add">
-		robotAndroidPrime, .1
-		robotAndroidBolt, .1
-		robotAndroidAndromeda, .1
-		robotAndroidRex, .1
-		robotAndroidChronos, .1
-		robotAndroidAxl, .1
-		robotAndroidClank, .1
-		robotAndroidRalph, .1
-		robotAndroidEva, .1
-		robotAndroidOrion, .1
-		robotCyborgNova, .1
-		robotCyborgSpark, .1
-		robotCyborgTitan, .1
-		robotAndroidPrimeOvercharged, .5
-		robotAndroidBoltOvercharged, .5
-		robotAndroidAndromedaOvercharged, .5
-		robotAndroidRexOvercharged, .5
-		robotAndroidChronosOvercharged, .5
-		robotAndroidAxlOvercharged, .5
-		robotAndroidClankOvercharged, .5
-		robotAndroidRalphOvercharged, .5
-		robotAndroidEvaOvercharged, .5
-		robotAndroidOrionOvercharged, .5
-		robotCyborgNovaOvercharged, .5
-		robotCyborgSparkOvercharged, .5
-		robotCyborgTitanOvercharged, .5
-</csv>
+<append xpath="//entitygroup[@name='ZombieNightClubGroupGS800']">
+	<e n="robotAndroidPrime" p=".1" />
+	<e n="robotAndroidBolt" p=".1" />
+	<e n="robotAndroidAndromeda" p=".1" />
+	<e n="robotAndroidRex" p=".1" />
+	<e n="robotAndroidChronos" p=".1" />
+	<e n="robotAndroidAxl" p=".1" />
+	<e n="robotAndroidClank" p=".1" />
+	<e n="robotAndroidRalph" p=".1" />
+	<e n="robotAndroidEva" p=".1" />
+	<e n="robotAndroidOrion" p=".1" />
+	<e n="robotCyborgNova" p=".1" />
+	<e n="robotCyborgSpark" p=".1" />
+	<e n="robotCyborgTitan" p=".1" />
+	<e n="robotAndroidPrimeOvercharged" p=".5" />
+	<e n="robotAndroidBoltOvercharged" p=".5" />
+	<e n="robotAndroidAndromedaOvercharged" p=".5" />
+	<e n="robotAndroidRexOvercharged" p=".5" />
+	<e n="robotAndroidChronosOvercharged" p=".5" />
+	<e n="robotAndroidAxlOvercharged" p=".5" />
+	<e n="robotAndroidClankOvercharged" p=".5" />
+	<e n="robotAndroidRalphOvercharged" p=".5" />
+	<e n="robotAndroidEvaOvercharged" p=".5" />
+	<e n="robotAndroidOrionOvercharged" p=".5" />
+	<e n="robotCyborgNovaOvercharged" p=".5" />
+	<e n="robotCyborgSparkOvercharged" p=".5" />
+	<e n="robotCyborgTitanOvercharged" p=".5" />
+</append>
 
-<csv xpath="//entitygroup[starts-with(@name,'policeCarHordeStage')]/text()" delim="\n" op="add">
-		robotAndroidPrimeOvercharged
-		robotAndroidBoltOvercharged
-		robotAndroidAndromedaOvercharged
-		robotAndroidRexOvercharged
-		robotAndroidChronosOvercharged
-		robotAndroidAxlOvercharged
-		robotAndroidClankOvercharged
-		robotAndroidRalphOvercharged
-		robotAndroidEvaOvercharged
-		robotAndroidOrionOvercharged
-		robotCyborgNovaOvercharged
-		robotCyborgSparkOvercharged
-		robotCyborgTitanOvercharged
-		robotDroneNano, .2
-		robotDronePoliceNano, .2
-</csv>
+<append xpath="//entitygroup[starts-with(@name,'policeCarHordeStage')]">
+	<e n="robotAndroidPrimeOvercharged" />
+	<e n="robotAndroidBoltOvercharged" />
+	<e n="robotAndroidAndromedaOvercharged" />
+	<e n="robotAndroidRexOvercharged" />
+	<e n="robotAndroidChronosOvercharged" />
+	<e n="robotAndroidAxlOvercharged" />
+	<e n="robotAndroidClankOvercharged" />
+	<e n="robotAndroidRalphOvercharged" />
+	<e n="robotAndroidEvaOvercharged" />
+	<e n="robotAndroidOrionOvercharged" />
+	<e n="robotCyborgNovaOvercharged" />
+	<e n="robotCyborgSparkOvercharged" />
+	<e n="robotCyborgTitanOvercharged" />
+	<e n="robotDroneNano" p=".2" />
+	<e n="robotDronePoliceNano" p=".2" />
+</append>
 
 <!-- *** ANIMAL_POI_GROUPS -->
 <set xpath="//entitygroup[@name='GraceGroup']">
@@ -2210,14 +2138,20 @@
 		robotDroneNano, 10
 		robotDog, 5
 		none, 85
-</set>		
+</set>
+
+		<!-- *** ENEMY_VULTURE_BURNT_FOREST_NIGHT -->
+<set xpath="//entitygroup[@name='EnemyVultureBurntForestNight']">
+		robotDroneNano, 1
+		none, 99
+</set>
 	
 	<!-- *** DESERT -->
-		<!-- *** ENEMY_ANIMAL_DESERT -->	
+		<!-- *** ENEMY_ANIMAL_DESERT -->
 <set xpath="//entitygroup[@name='EnemyAnimalsDesert']">
 		robotSpiderBot, 30
 		robotDroneNano, 10
-		robotDronePoliceNano, 10		
+		robotDronePoliceNano, 10
 		none, 50
 </set>
 
@@ -2226,6 +2160,12 @@
 		robotDog, 10
 		robotDroidBomber, 5
 		none, 80
+</set>
+
+		<!-- *** ENEMY_VULTURE_DESERT -->
+<set xpath="//entitygroup[@name='EnemyVultureDesert']">
+		robotDroneNano, 1
+		none, 99
 </set>
 
 	<!-- *** SNOW -->

@@ -1,20 +1,20 @@
-<Zilox>
+﻿<Zilox>
 
 <append xpath="/worldglobal/environment">
 
-	<property name="bloodMoonFogDensity" value="0"/>
+	<property name="bloodMoonFogDensity" value="0" />
 	
-	<property name="Wind.Enabled" value="true"/> <!-- Enable or disable wind -->
-    <property name="Wind.Speed" value="40"/> <!-- Wind speed in kilometers per hour -->
-    <property name="Wind.Turbulence" value="0.4"/> <!-- Wind turbulence in percetnage of wind speed -->
-	<property name="Wind.NoiseTexture" value="#@modfolder:Resources/Decor.unity3d?3DNoise.png"/> <!-- Texture used for wind turbulence -->
-    <property name="Wind.FlexNoiseWorldSize" value="600"/> <!-- Size of one world tiling patch of the Noise Texture, for blending trees -->
-    <property name="Wind.ShiverNoiseWorldSize" value="400"/> <!-- Size of one world tiling patch of the Noise Texture, for leaf shivering -->
+	<property class="Wind"><property name="Enabled" value="true" /><property name="Speed" value="40" /><property name="Turbulence" value="0.4" /><property name="NoiseTexture" value="#@modfolder:Resources/Decor.unity3d?3DNoise.png" /><property name="FlexNoiseWorldSize" value="600" /><property name="ShiverNoiseWorldSize" value="400" /><property name="GustMaskTexture" value="#@modfolder:Resources/Decor.unity3d?GustNoise.png" /><property name="GustWorldSize" value="600" /><property name="GustSpeed" value="10" /><property name="GustScale" value="0.2" /></property> <!-- Enable or disable wind -->
+     <!-- Wind speed in kilometers per hour -->
+     <!-- Wind turbulence in percetnage of wind speed -->
+	 <!-- Texture used for wind turbulence -->
+     <!-- Size of one world tiling patch of the Noise Texture, for blending trees -->
+     <!-- Size of one world tiling patch of the Noise Texture, for leaf shivering -->
 
-	<property name="Wind.GustMaskTexture" value="#@modfolder:Resources/Decor.unity3d?GustNoise.png"/> <!-- Texture used for wind gusts -->
-    <property name="Wind.GustWorldSize" value="600"/> <!-- Size of one world tiling patch of the Gust Texture, for leaf shivering -->
-    <property name="Wind.GustSpeed" value="10"/> <!-- Wind gust speed in kilometers per hour -->
-    <property name="Wind.GustScale" value="0.2"/> <!-- Wind gust influence on trees -->
+	 <!-- Texture used for wind gusts -->
+     <!-- Size of one world tiling patch of the Gust Texture, for leaf shivering -->
+     <!-- Wind gust speed in kilometers per hour -->
+     <!-- Wind gust influence on trees -->
 
 </append>
 </Zilox>

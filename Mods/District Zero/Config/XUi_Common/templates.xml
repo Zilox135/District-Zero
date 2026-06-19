@@ -1,0 +1,8 @@
+<Zilox>
+
+<!-- INCREASE THE SIZE OF THE MESSAGE BOX (for notes like "A Note from The Resistance") -->
+<set xpath="//messagebox/window/@width">1000</set>
+<set xpath="//messagebox/window/@height">600</set>
+<set xpath="//messagebox/window/@pos">-500,190</set>
+
+</Zilox>
