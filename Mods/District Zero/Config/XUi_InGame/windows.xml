@@ -150,7 +150,7 @@
 		</rect>
 	</window>	
 	
-	<window name="windowOutputBlastFurnace" width="228" height="198" anchor="CenterTop" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" >
+	<window name="windowOutputBlastFurnace" width="228" height="198" anchor="Top" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" >
 		<panel style="header.panel" pos="0,-68">
 			<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
 			<label style="header.name" text="OUTPUT" text_key="xuiOutput" />
@@ -175,7 +175,7 @@
 		<remove xpath="/windows/window[@name='windowCompass']" />
 
 		<append xpath="/windows">
-			<window name="windowCompass" depth="1" pos="-150,491" size="300,43" controller="CompassWindow">
+			<window name="windowCompass" anchor="Top" depth="1" pos="-150,-9" size="300,43" controller="CompassWindow">
 				<sprite name="compassRightA" depth="3" pos="315,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
 				<sprite name="compassRightB" depth="2" pos="315,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
 				<sprite name="compassRightC" depth="2" pos="315,-33" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
@@ -204,7 +204,7 @@
 <!-- Day / Time HUD Display -->
 
 		<append xpath="/windows">
-			<window name="dayTimeHUD" depth="4" pos="-960,591" size="300,100" controller="CompassWindow" visible="{showtime}">
+			<window name="dayTimeHUD" anchor="TopLeft" depth="4" pos="0,91" size="300,100" controller="CompassWindow" visible="{showtime}">
 				<texture name="compassTexture" depth="8" pos="0,0" size="300,23" texture="Textures/UI/ui_game_compass" color="[iconColor]" rect_size="0.25,1" rect_offset=".8,0" />
 
 				<sprite name="dayLineRightA" depth="3" pos="240,-100" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
@@ -251,7 +251,7 @@
 <!-- Day / Time UI Display -->
 
 		<append xpath="/windows">
-			<window name="dayTimeUI" depth="4" pos="-960,591" size="300,100">
+			<window name="dayTimeUI" anchor="TopLeft" depth="4" pos="0,91" size="300,100">
 		
 				<rect controller="MapStats" visible="{showtime}">
 					<sprite name="dayLineRightA" depth="3" pos="240,-100" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
@@ -283,9 +283,8 @@
 		<remove xpath="/windows/window[@name='HUDLeftStatBars']" />
 
 		<append xpath="/windows">
-			<window name="HUDLeftStatBars" depth="3">
-
-				<rect name="hud" pos="-870,-392" controller="BuffPopoutList" side="left">
+			<window name="HUDLeftStatBars" anchor="BottomLeft" depth="3">
+				<rect name="hud" pos="100,98" controller="BuffPopoutList" side="left" pivot="BottomLeft">
 					<panel name="item" pos="0,0" width="72" height="72" disableautobackground="true" visible="false" style="press" sound="[recipe_click]" on_hover="true">
 						<sprite name="border" depth="3" size="47,47" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
 						<sprite name="Background" depth="4" size="45,45" sprite="menu_empty2px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
@@ -295,7 +294,8 @@
 						<label name="TextContent" depth="7" pos="-28,-20" size="72,30" color="[hudLabelSecondary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
 					</panel>
 				</rect>
-				
+
+				<rect name="hudAnchorOffset" pos="879,515">
 				<rect controller="HUDStatBar" visible="{statvisible}">
 					<sprite name="statXPDiamondA1" depth="3" pos="-805,-470" size="52,52" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
 					<sprite name="statXPDiamondA2" depth="4" pos="-805,-470" size="50,50" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
@@ -381,6 +381,7 @@
 <!--					<sprite name="statStaminaToToolbeltA" depth="1" pos="475,50" size="49,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />	-->			
 				</rect>
 
+				</rect>
 			</window>
 		</append>
 
@@ -389,7 +390,7 @@
 		<remove xpath="/windows/window[@name='windowToolbelt']" />
 	
 		<append xpath="/windows">
-			<window name="windowToolbelt" width="753" height="78" depth="5" anchor="CenterBottom" pos="-427, 85" backgroundcolor="[black]" controller="ToolbeltWindow" cursor_area="true">
+			<window name="windowToolbelt" width="753" height="78" depth="5" anchor="Bottom" pos="-376, 84" backgroundcolor="[black]" controller="ToolbeltWindow" cursor_area="true">
 		
 				<rect pos="3,-3" controller="Toolbelt">
 					<grid depth="10" name="inventory" rows="1" cols="12" pos="0,2" cell_width="75" cell_height="75" repeat_content="true">
@@ -425,8 +426,9 @@
 		<remove xpath="/windows/window[@name='HUDRightStatBars']" />
 
 		<append xpath="/windows">
-			<window name="HUDRightStatBars" depth="4">
-				<rect name="hud" pos="720,-425" controller="CollectedItemList" side="right">
+			<window name="HUDRightStatBars" anchor="BottomRight" depth="4">
+				<rect name="hudAnchorOffset" pos="-810,510">
+				<rect name="hud" pos="660,-425" controller="CollectedItemList" side="right">
 
 <!--					<sprite name="toolbeltToStatHungerA" depth="1" pos="-266,-40" size="47,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />-->
 
@@ -471,7 +473,7 @@
 					<sprite name="statWaterRightDiamondA2" depth="5" pos="-40,-40" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 					
 					<!-- UI Harvest Panel -->
-					<rect name="collectedItemPanel" pos="715,-280" controller="CollectedItemList" side="right">
+					<rect name="collectedItemPanel" pos="640,-280" controller="CollectedItemList" side="right">
 						<panel name="item" depth="3" pos="70,0" width="92" height="92" disableautobackground="true" pivot="right" visible="false">
 
 							<sprite name="border" depth="3" pos="130,0" size="62,62" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
@@ -488,7 +490,7 @@
 				</rect>
 				
 				<!-- Collected Items Panel -->				
-				<rect name="hud" pos="715,-290" controller="CollectedItemList" side="right">
+				<rect name="hud" pos="640,-290" controller="CollectedItemList" side="right">
 					<panel name="item" depth="3" pos="70,0" width="92" height="92" disableautobackground="true" pivot="right" visible="false">
 
 						<sprite name="border" depth="3" pos="130,0" size="62,62" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
@@ -503,7 +505,7 @@
 					</panel>
 				</rect>				
 
-				<grid name="hud" pos="720,-465" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+				<grid name="hud" pos="660,-465" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
 					<rect width="62" height="62" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
 						<sprite name="waterToActiveItemA" depth="1" pos="-69,0" size="35,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
@@ -534,7 +536,7 @@
 					</rect>
 				</grid>
 
-				<rect name="hud" pos="690,-465" rows="1" cols="2" width="168" side="right">
+				<rect name="hud" pos="630,-465" rows="1" cols="2" width="168" side="right">
 					<rect width="62" height="62" pos="30,0" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
 						<sprite name="waterToVehicleFuelA" depth="1" pos="-69,0" size="35,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
@@ -563,6 +565,7 @@
 						<label name="TextContent" depth="7" pos="-24,-24" size="62,20" text="{statcurrentwithmax}" color="[hudLabelSecondary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
 					</rect>
 				</rect>
+				</rect>
 			</window>
 		</append>
 
@@ -572,7 +575,7 @@
 		<remove xpath="/windows/window[@name='windowQuestTracker']" />
 
 		<append xpath="/windows">
-			<window name="windowQuestTracker" depth="-20" pos="685,420" size="300,100" controller="QuestTrackerWindow" visible="{showquest}">
+			<window name="windowQuestTracker" anchor="TopRight" depth="-20" pos="-255,-88" size="300,100" controller="QuestTrackerWindow" visible="{showquest}">
 
 				<sprite name="questTrackerDiamondA1" depth="3" pos="232,-16" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
 				<sprite name="questTrackerDiamondA2" depth="4" pos="232,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
@@ -622,7 +625,7 @@
 		<remove xpath="/windows/window[@name='windowTimer']" />
 
 		<append xpath="/windows">
-			<window name="windowTimer" anchor="CenterCenter">
+			<window name="windowTimer" anchor="Center">
 				<rect depth="15" size="68,68" style="hover" on_press="true" highlight_color="[lightGrey]" pivot="center" controller="Timer">
 					<!--label name="action" depth="3" pos="0,50" size="200,26" text="{caption}" font_size="24" justify="center" pivot="center" /-->
 					<sprite name="border" depth="3" pos="0,0" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
@@ -639,7 +642,7 @@
 		<remove xpath="/windows/window[@name='windowThrow']" />
 
 		<append xpath="/windows">
-			<window name="windowThrow" depth="6" anchor="CenterCenter" controller="ThrowPower">
+			<window name="windowThrow" depth="6" anchor="Center" controller="ThrowPower">
 				<rect pos="0,-60">
 					<sprite name="throwPowerRightDiamondA1" depth="4" pos="-166,0" size="11,11" sprite="menu_empty" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
 					<sprite name="throwPowerRightDiamondA2" depth="5" pos="-166,0" size="10,10" sprite="menu_empty" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
@@ -669,7 +672,7 @@
 		<remove xpath="/windows/window[@name='windowRadial']" />
 
 		<append xpath="/windows">
-			<window name="windowRadial" anchor="CenterCenter">
+			<window name="windowRadial" anchor="Center">
 			<rect name="radialPanel" repeat_content="true" repeat_count="20" pivot="center">
 				<radial_entry />
 			</rect>
@@ -682,8 +685,8 @@
 		<remove xpath="/windows/window[@name='windowGroupBars']" />
 
 		<append xpath="/windows">		
-			<window name="windowGroupBars" depth="3" controller="PartyWindow">
-				<grid name="hud" pos="100,-130" width="168" rows="7" cols="1" cell_width="168" cell_height="43" repeat_content="true" controller="PartyEntryList" side="left">
+			<window name="windowGroupBars" anchor="TopLeft" depth="3" controller="PartyWindow">
+				<grid name="hud" pos="133,-285" width="168" rows="7" cols="1" cell_width="168" cell_height="43" repeat_content="true" controller="PartyEntryList" side="left">
 					<Z2_party_entry />
 				</grid>
 			</window>
@@ -695,8 +698,8 @@
 		<remove xpath="/windows/window[@name='windowTargetBar']" />
 
 		<append xpath="/windows">
-			<window name="windowTargetBar" depth="4" controller="TargetBar" visibility="always">
-				<rect pos="0,405" size="400,36" visible="{visible}">
+			<window name="windowTargetBar" anchor="Top" depth="4" controller="TargetBar" visibility="always">
+				<rect pos="0,-85" size="400,36" visible="{visible}">
 					<sprite name="compassRightDiamondA1" depth="4" pos="165,50" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
 					<sprite name="compassRightDiamondA2" depth="5" pos="165,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
@@ -730,8 +733,8 @@
 		<remove xpath="/windows/window[@name='chatoutput']" />
 
 		<append xpath="/windows">
-			<window name="chatoutput" depth="10" pos="65,-350" size="500,250" anchor="LeftTop" controller="ChatOutput" fadeout_wait_time="5" fadeout_duration="2">
-				<textlist name="txtOutput" depth="2" pos="8,-214" size="484,210" color="[chatOutputText]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" list_style="chat" pivot="bottomleft" />
+			<window name="chatoutput" pos="20,-350" depth="10" width="500" height="250" anchor="TopLeft" controller="ChatOutput" fadeout_wait_time="5" fadeout_duration="2">
+				<textlist name="txtOutput" pos="8,-214" width="484" height="210" list_style="chat" pivot="bottomleft" depth="2" font_size="22" color="[chatOutputText]" crispness="Never" effect="outline" effect_distance="1,1" effect_color="[black]" on_press="true" prefix_first_line="   " support_urls="Chat,DiscordMessageButton" snap="false" gamepad_selectable="false" />
 			</window>
 		</append>
 
@@ -741,36 +744,35 @@
 		<remove xpath="/windows/window[@name='chat']" />
 
 		<append xpath="/windows">
-			<window name="chat" depth="10" pos="65,-350" size="500,250" anchor="LeftTop" controller="Chat" cursor_area="true">
-				<sprite name="chatLeftDiamondA1" depth="3" pos="-40,-30" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
-				<sprite name="chatLeftDiamondA2" depth="4" pos="-40,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
+			<window name="chat" pos="20,-350" width="500" height="250" anchor="TopLeft" controller="Chat" cursor_area="true">
 
-				<sprite name="diamondToDiamond" depth="2" pos="-32,-30" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="background" depth="1" pos="0,0" width="500" height="250" sprite="menu_empty2px" color="[darkGrey]" type="sliced" globalopacitymod="0.7" />
+				<sprite name="border" depth="2" pos="0,0" width="500" height="250" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
 
-				<sprite name="chatRightDiamondA1" depth="3" pos="-15,-30" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
-				<sprite name="chatRightDiamondA2" depth="4" pos="-15,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
+				<rect name="input" depth="10" pos="0,-216" height="34">
+					<sprite name="inputBorder" depth="1" pos="0,0" width="500" height="34" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
+					<label name="toLabel" pos="6,-18" width="96" height="22" pivot="left" justify="right" text_key="xuiChatTo" />
+					<combobox name="cbxTarget" type="ComboBoxList`1[XUiC_Chat+ChatTarget]" value_max="party" pos="108,-7" width="120" height="22" font_size="22" arrows_height="16" />
+					<textfield name="txtInput" backgroundcolor="[transparent]" depth="2" pos="236,-7" width="258" height="22" color="[chatInputText]" justify="left" effect="outline" effect_distance="1,1" overflow="ClampContent" character_limit="300" max_line_count="1" crispness="Never" focus_on_open="true" open_vk_on_open="false" ignore_up_down_keys="true" />
+				</rect>
 
-				<sprite name="diamondToDiamond" depth="2" pos="-15,-22" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
-				<sprite name="diamondToDiamond" depth="3" pos="-15,8" size="530,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
-				<sprite name="diamondToDiamond" depth="3" pos="515,8" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<rect name="decor" depth="5">
+					<sprite name="lineTop" depth="2" pos="6,-3" width="488" height="1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="lineBottom" depth="2" pos="6,-247" width="488" height="1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="lineLeft" depth="2" pos="3,-6" width="1" height="238" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+					<sprite name="lineRight" depth="2" pos="497,-6" width="1" height="238" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
 
-				<sprite name="chatLeftDiamondB1" depth="3" pos="515,-30" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
-				<sprite name="chatLeftDiamondB2" depth="4" pos="515,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
+					<sprite name="diamondTLa" depth="3" pos="0,0" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
+					<sprite name="diamondTLb" depth="4" pos="0,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
-				<sprite name="diamondToDiamond" depth="2" pos="-15,-37" size="1,225" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
-				<sprite name="diamondToDiamond" depth="3" pos="-15,-260" size="30,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="diamondTRa" depth="3" pos="500,0" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
+					<sprite name="diamondTRb" depth="4" pos="500,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
-				<sprite name="chatRightDiamondB1" depth="3" pos="22,-260" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
-				<sprite name="chatRightDiamondB2" depth="4" pos="22,-260" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
+					<sprite name="diamondBLa" depth="3" pos="0,-250" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
+					<sprite name="diamondBLb" depth="4" pos="0,-250" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
-				<sprite name="border" depth="8" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
-				<sprite color="[darkGrey]" type="sliced" globalopacitymod="0.7" />
-
-				<rect name="input" depth="2" pos="0,-218" height="32">
-					<sprite name="border" depth="8" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
-
-					<combobox name="cbxTarget" pos="2,-6" width="100" height="22" type="ComboBoxList`1[XUiC_Chat+ChatTarget]" value_max="party" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" localization_prefix="xuiChatTarget" />
-					<textfield name="txtInput" depth="2" pos="110,-16" width="386" height="28" backgroundcolor="[transparent]" color="[chatInputText]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="left" pivot="left" overflow="ClampContent" max_line_count="1" open_vk_on_open="true"/>
+					<sprite name="diamondBRa" depth="3" pos="500,-250" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
+					<sprite name="diamondBRb" depth="4" pos="500,-250" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 				</rect>
 			</window>
 		</append>
@@ -781,7 +783,7 @@
 		<remove xpath="/windows/window[@name='interactionPrompt']" />
 
 		<append xpath="/windows">
-			<window name="interactionPrompt" pos="0,55" width="800" height="30" anchor="CenterCenter" controller="InteractionPrompt" fade_delay="0.02">
+			<window name="interactionPrompt" pos="0,55" width="800" height="30" anchor="Center" controller="InteractionPrompt" fade_delay="0.02">
 
 				<sprite name="targetBarLeftA" depth="3" pos="-400,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 				<sprite name="targetBarLeftB" depth="2" pos="-400,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />

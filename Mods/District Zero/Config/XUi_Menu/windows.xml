@@ -7,7 +7,7 @@
 <!-- REMOVE 3.0 MAIN MENU BACKGROUND VIDEO -->
 <remove xpath="//window[@name='menuBackground']/video[@name='videoTexture']" />
 
-<set xpath="//window[@name='mainMenuPlayerName']/@anchor">LeftTop</set>
+<set xpath="//window[@name='mainMenuPlayerName']/@anchor">TopLeft</set>
 
 <!-- INCREASE THE SIZE OF THE MESSAGE BOX (for notes like "A Note from The Resistance") -->
 <!-- messageBox is now a <messagebox> template instance; patches moved to XUi_Common/templates.xml -->

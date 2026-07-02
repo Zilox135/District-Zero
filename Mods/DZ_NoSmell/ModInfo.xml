@@ -1,9 +1,9 @@
 <xml>
 	<Name value="DZNoSmell" />
 	<DisplayName value="DZ No Smell System" />
-	<Description value="Removes the vanilla smell system from the game" />
+	<Description value="Fixes smell system crashes from mod items with missing ItemClass definitions" />
 	<Author value="Zilox" />
-	<Version value="1.0.0" />
+	<Version value="1.0.2" />
 	<Website value="" />
 </xml>
 

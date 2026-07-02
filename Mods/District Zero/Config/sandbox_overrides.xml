@@ -1,0 +1,7 @@
+<Zilox>
+
+<append xpath="/sandbox_overrides">
+	<sandbox_override option="SmeltingType" />
+</append>
+
+</Zilox>

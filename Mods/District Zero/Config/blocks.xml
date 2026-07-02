@@ -321,6 +321,61 @@
 	<property name="TakeDelay" value=".5" />
 </append>
 
+<!-- PICKUP DOOR ITEM OVERRIDES -->
+<append xpath="//block[starts-with(@name,'ironDoorDouble')]">
+	<property name="TakeItemOverride" value="ironDoorDoubleBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'ironDoor')]">
+	<property name="TakeItemOverride" value="ironDoorBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'ironGarageDoor') and not (contains(@name,'Powered'))]">
+	<property name="TakeItemOverride" value="ironGarageDoorBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'steelGarageDoor') and not (contains(@name,'Powered'))]">
+	<property name="TakeItemOverride" value="steelGarageDoor3x3_PoweredBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'woodenGarageDoor') and not (contains(@name,'Powered'))]">
+	<property name="TakeItemOverride" value="woodenGarageDoor3x3_PoweredBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'rollUpDoor3x3')]">
+	<property name="TakeItemOverride" value="rollUpDoor3x3VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'rollUpDoor5x4')]">
+	<property name="TakeItemOverride" value="rollUpDoor5x4VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'rollUpDoor7x4')]">
+	<property name="TakeItemOverride" value="rollUpDoor7x4VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'rollUpDoor') or starts-with(@name,'rollUpGate')]">
+	<property name="TakeItemOverride" value="rollUpDoor3x3VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'ironHatch')]">
+	<property name="TakeItemOverride" value="ironHatchBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'chainlinkGate') or (starts-with(@name,'chainlinkFence') and contains(@name,'Door'))]">
+	<property name="TakeItemOverride" value="chainLinkFencePOIVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'jailDoor') or starts-with(@name,'vaultDoor')]">
+	<property name="TakeItemOverride" value="ironDoorBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'manholeHatch') or starts-with(@name,'woodHatch') or starts-with(@name,'cellarDoor')]">
+	<property name="TakeItemOverride" value="ironHatchBlockVariantHelper" />
+</append>
+
+<!-- Wood/interior POI doors: no variant helper — BlockHelpers falls back to the door block itself as the item -->
+
 <!-- CHANGE FARMING SO SEEDS STAY AFTER HARVEST -->
 <remove xpath="//block[starts-with(@name,'planted') and (contains(@name,'HarvestPlayer'))]/drop[@event='Destroy']" />
 
@@ -388,267 +443,461 @@
 
 <!-- PICKUP DECORATION -->
 <append xpath="//block[starts-with(@name,'commercialBlind')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="curtainVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntCabinet') and (contains(@name,'Open')) or (contains(@name,'Filler'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper2" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntCooler') and not (contains(@name,'Closed'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntCoolerVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntLuggage') and not (contains(@name,'Closed'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'metalPipe')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="pipeSmallBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'pipeLarge')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="pipeLargeBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntShoppingCartEmpty')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntRetroFridge') and (contains(@name,'Open'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntRetroFridgeVer1Closed_Player" />
 </append>
 
-<append xpath="//block[starts-with(@name,'cntMicrowaveOven') and (contains(@name,'Open'))]">
-	<property name="TakeDelay" value=".5" />		
+<append xpath="//block[starts-with(@name,'cntFridgeStainlessSteel') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntFridgeStainlessSteel_Player" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMicrowaveOvenVer1') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntMicrowaveOvenVer1Closed_Player" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMicrowaveOvenVer2') and (contains(@name,'Open'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntMicrowaveOvenVer2Closed_Player" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntCupboard') and (contains(@name,'Open'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper2" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntDryer') and not(contains(@name,'Closed'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntDryerClosed_Player" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntWasher') and not(contains(@name,'Closed'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWasherClosed_Player" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntBinTrashMetalEmpty')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntBinTrashPlasticEmpty')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntBarrelPlastic')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
-<append xpath="//block[starts-with(@name,'deco') and not (@name='decoCookingPot')]">
-	<property name="TakeDelay" value=".5" />			
+<!-- Mannequins: player-placeable variants defined below in /blocks append -->
+<append xpath="//block[@name='decoMannequinMale']">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="decoMannequinMale_Player" />
+</append>
+
+<append xpath="//block[@name='decoMannequinMaleBroken']">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="decoMannequinMaleBroken_Player" />
+</append>
+
+<append xpath="//block[@name='decoMannequinFemale']">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="decoMannequinFemale_Player" />
+</append>
+
+<append xpath="//block[@name='decoMannequinFemaleBroken']">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="decoMannequinFemaleBroken_Player" />
+</append>
+
+<append xpath="//block[@name='decoMannequinMilitaryCommando']">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="decoMannequinMilitaryCommando_Player" />
+</append>
+
+<append xpath="//block[starts-with(@name,'decoComputer') or @name='decoLaptop' or @name='decoMonitor' or @name='decoToaster' or @name='decoCoffeeMaker' or starts-with(@name,'decoServer') or starts-with(@name,'decoPrinter')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="appliancesVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'deco') and not (@name='decoCookingPot') and not (starts-with(@name,'decoMannequin')) and not (starts-with(@name,'decoComputer')) and not (@name='decoLaptop') and not (@name='decoMonitor') and not (@name='decoToaster') and not (@name='decoCoffeeMaker') and not (starts-with(@name,'decoServer')) and not (starts-with(@name,'decoPrinter')) and not (starts-with(@name,'decoPumpkin'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'wall') and not (@name='wallLight01') and not (starts-with(@name,'wallTorch')) and not (starts-with(@name,'wallMirror'))]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntBrute') and not (contains(@name,'Full'))]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cone')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="coneConstruction" />
 </append>
 
 <append xpath="//block[starts-with(@name,'dining')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'garbage')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
-<append xpath="//block[starts-with(@name,'sign') and not (starts-with(@name,'signTrader')) and not (contains(@name,'Light'))]">
-	<property name="TakeDelay" value=".5" />		
+<append xpath="//block[starts-with(@name,'signCanvas') or starts-with(@name,'signDecal') or starts-with(@name,'signPoster') or starts-with(@name,'signShop') or starts-with(@name,'signRoad') or starts-with(@name,'signStreet') or starts-with(@name,'signBillboard') or starts-with(@name,'signNeon')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="canvasSignBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'sign') and not (starts-with(@name,'signTrader')) and not (contains(@name,'Light')) and not (starts-with(@name,'signCanvas')) and not (starts-with(@name,'signDecal')) and not (starts-with(@name,'signPoster')) and not (starts-with(@name,'signShop')) and not (starts-with(@name,'signRoad')) and not (starts-with(@name,'signStreet')) and not (starts-with(@name,'signBillboard')) and not (starts-with(@name,'signNeon'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="woodSignBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'utility')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'counter')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper2" />
 </append>
 
 <append xpath="//block[starts-with(@name,'sink')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'pedestal')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'couch')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="couchUglySingleBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntDomedTrashCanEmpty')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntDomedTrashCanCornerEmpty')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'urinal')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntMedicineCabinetOpen')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntMedicineCabinetFaucetOpen')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntNightstandOpen')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntBookcaseEmpty')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper2" />
 </append>
 
 <append xpath="//block[starts-with(@name,'miniblind')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="curtainVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cinder')]">
-	<property name="TakeDelay" value=".5" />			
+	<property name="TakeDelay" value=".5" />
 </append>
 
 <append xpath="//block[starts-with(@name,'cntStove') and (contains(@name,'Open'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntStoveModernVer1Closed_Player" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntStoveOld') and (contains(@name,'Open'))]">
+	<property name="TakeItemOverride" value="cntStoveOldVer1Closed_Player" />
 </append>
 
 <append xpath="//block[starts-with(@name,'control')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'sandbag')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sandbagBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'fire')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="lanternOldBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'electrical')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'breaker')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'laundry')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'faucet')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'shower')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'drinkingfountain')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sinksToiletsBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'painting') or (starts-with(@name,'picture'))]">
-	<property name="TakeDelay" value=".5" />	
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="pictureVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'school')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'rusty')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'bar') and not (@name='barracksChair')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="barStoolVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'sectional')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="sectionalLeatherCouchSofaBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'tv') and not (contains(@name,'CRT'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="tvBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'mattress')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="bed02BlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'bird')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="plantPottedVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'hanging')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="plantPottedVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'satellite')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'airCondition')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="appliancesVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'umbrella')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'tableSaw')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="tableSaw" />
 </append>
 
 <append xpath="//block[starts-with(@name,'flag') and not (starts-with(@name,'flagPole'))]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="flagThick44BlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'restaurant')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'capChimney')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'candelabra')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="lanternOldBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'wheelchair')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="wheelchairWhite" />
 </append>
 
 <append xpath="//block[starts-with(@name,'standIV')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[starts-with(@name,'wineBarrel')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="wineBarrelPlayerSecure" />
 </append>
 
 <append xpath="//block[starts-with(@name,'trapSpikes')]">
-	<property name="TakeDelay" value=".5" />		
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="trapSpikesWoodDmg0" />
+</append>
+
+<append xpath="//block[starts-with(@name,'plantPotted')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="plantPottedVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'lantern') and not (contains(@name,'Light'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="lanternOldBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'chair') and not (contains(@name,'VariantHelper')) and not (@name='officeChair01') and not (starts-with(@name,'chairFolding')) and not (starts-with(@name,'chairCamping')) and not (@name='chairWood01') and not (starts-with(@name,'barStool'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="oldChair1VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'bed') and not (contains(@name,'VariantHelper')) and not (starts-with(@name,'bedroll'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="bed02BlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntMailBox') and not (contains(@name,'VariantHelper')) and not (contains(@name,'_Player'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntMailBox01VariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntFileCabinet') and not (contains(@name,'VariantHelper')) and not (contains(@name,'_Player'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntFileCabinetBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntDesk') and not (contains(@name,'VariantHelper')) and not (contains(@name,'_Player')) and not (contains(@name,'Safe'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntDeskMetalVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntLockers') and not (contains(@name,'_Player'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntStoreShelf') or starts-with(@name,'cntClothesShelf')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntToilet')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="toiletsBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'cntGasGrill') or starts-with(@name,'cntCharcoalGrill') or starts-with(@name,'cntGasRange') or starts-with(@name,'cntgasRange') or starts-with(@name,'cntDishwasher') or starts-with(@name,'cntwallOven') or starts-with(@name,'hoodRange') or starts-with(@name,'cntMiniBeverageCooler') or starts-with(@name,'cntCoffeeMaker') or starts-with(@name,'cntToaster')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="appliancesVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'shutters') and not (contains(@name,'VariantHelper'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="shuttersWoodBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'curtain') and not (contains(@name,'VariantHelper'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="curtainVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'calendar') and not (contains(@name,'VariantHelper'))]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="calendarVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'parkBench') or @name='decoPicnicTable' or starts-with(@name,'churchPew') or @name='endTable' or @name='woodChair1' or @name='chairWood01' or starts-with(@name,'pallet')]">
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="cntWoodFurnitureBlockVariantHelper" />
 </append>
 
 <append xpath="//block[@name='cntCollapsedSolarbank']">
@@ -722,7 +971,8 @@
 </append>
 
 <append xpath="//block[starts-with(@name,'wallMirror') and (contains(@name,'Broken'))]">
-	<property name="TakeDelay" value=".5" />	
+	<property name="TakeDelay" value=".5" />
+	<property name="TakeItemOverride" value="pictureVariantHelper" />
 </append>
 
 <append xpath="//block[contains(@name,'Concrete')]">
@@ -813,6 +1063,31 @@
 <append xpath="//block[starts-with(@name,'signTrafficLight') or (starts-with(@name,'fluorescentLight')) or (starts-with(@name,'hood')) or (starts-with(@name,'chandelierLight'))]">
 	<property name="RuntimeSwitch" value="true" />	
 	<property name="TakeDelay" value=".5" />
+</append>
+
+<!-- PICKUP LIGHT ITEM OVERRIDES -->
+<append xpath="//block[starts-with(@name,'tvCRT')]">
+	<property name="TakeItemOverride" value="tvBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'tableLamp') or starts-with(@name,'deskLamp') or starts-with(@name,'wallLight') or starts-with(@name,'porchLight') or starts-with(@name,'ceilingLight') or starts-with(@name,'recessedLight') or starts-with(@name,'chandelierLight') or starts-with(@name,'lanternDecor') or starts-with(@name,'lightPorch') or starts-with(@name,'industrialLight') or starts-with(@name,'workLight') or starts-with(@name,'ceilingFanLight') or starts-with(@name,'lightIndustrial') or starts-with(@name,'spotlight') or starts-with(@name,'fluorescentLight') or starts-with(@name,'lightDisplay') or (starts-with(@name,'light') and not (starts-with(@name,'lightning')) and not (@name='lightBlock'))]">
+	<property name="TakeItemOverride" value="lanternDecorLightBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'hoodRange') or starts-with(@name,'hood') and not (contains(@name,'VariantHelper'))]">
+	<property name="TakeItemOverride" value="appliancesVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'signNeon') or starts-with(@name,'signShopOpen') or starts-with(@name,'signPills') or starts-with(@name,'signExitLight') or starts-with(@name,'signTrafficLight') or starts-with(@name,'roadBarricadeLight')]">
+	<property name="TakeItemOverride" value="canvasSignBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'signTrader')]">
+	<property name="TakeItemOverride" value="woodSignBlockVariantHelper" />
+</append>
+
+<append xpath="//block[starts-with(@name,'plantHydroponic')]">
+	<property name="TakeItemOverride" value="farmPlotBlockVariantHelper" />
 </append>
 
 <append xpath="//block[@name='tvCRT']">
@@ -913,6 +1188,7 @@
 	<property name="OpenSound" value="chest_tier5_open" />
 	<property name="CloseSound" value="chest_tier5_close" />
 	<property name="TakeDelay" value="2" />
+	<property name="TakeItemOverride" value="autoMiner" />
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="25" />
 		<property name="resourceMechanicalParts" value="20" />
@@ -979,6 +1255,7 @@
 	<drop event="Destroy" count="0" />
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
 	<property name="TakeDelay" value="5" />
+	<property name="TakeItemOverride" value="blastFurnace" />
 	<property name="Group" value="Building,advBuilding" />
 	<property name="DescriptionKey" value="blastFurnaceDesc" />
 	<property name="EconomicValue" value="5000" />
@@ -1024,6 +1301,7 @@
 	<property name="OpenSound" value="chest_tier5_open" />
 	<property name="CloseSound" value="chest_tier5_close" />
 	<property name="TakeDelay" value="2" />
+	<property name="TakeItemOverride" value="fabricator" />
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="5" />
 	</property>
@@ -2639,6 +2917,37 @@
 	<property name="Extends" value="treeGrassMaster" />
 	<property name="CreativeMode" value="Dev" />
 	<property name="CanDecorateOnSlopes" value="true" />	
+</block>
+
+<!-- PLAYER PLACEABLE MANNEQUINS (for POI pickup) -->
+<block name="decoMannequinMale_Player">
+	<property name="Extends" value="decoMannequinMale" />
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="decoMannequinMale" />
+</block>
+
+<block name="decoMannequinMaleBroken_Player">
+	<property name="Extends" value="decoMannequinMaleBroken" />
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="decoMannequinMaleBroken" />
+</block>
+
+<block name="decoMannequinFemale_Player">
+	<property name="Extends" value="decoMannequinFemale" />
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="decoMannequinFemale" />
+</block>
+
+<block name="decoMannequinFemaleBroken_Player">
+	<property name="Extends" value="decoMannequinFemaleBroken" />
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="decoMannequinFemaleBroken" />
+</block>
+
+<block name="decoMannequinMilitaryCommando_Player">
+	<property name="Extends" value="decoMannequinMilitaryCommando" />
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="decoMannequinMilitaryCommando" />
 </block>
 
 </append>
