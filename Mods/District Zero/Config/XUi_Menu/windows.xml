@@ -1,15 +1,18 @@
-<Zilox>
+<configs>
 
-<remove xpath="//window[@name='mainMenuLogo']"/>
+	<!-- Point the main menu background video at the file inside this mod.
+	     No extension: the engine probes .webm (desktop) then .mp4. -->
+	<set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@uri">@modfolder:Video/DistrictZero</set>
 
-<set xpath="//window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Textures/UI/DistrictZeroMenu.jpg</set>
+	<!-- Replace the static background image shown around the video. -->
+	<set xpath="//window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Textures/UI/DistrictZeroBackground.jpg</set>
 
-<!-- REMOVE 3.0 MAIN MENU BACKGROUND VIDEO -->
-<remove xpath="//window[@name='menuBackground']/video[@name='videoTexture']" />
+	<!-- Optional tweaks (uncomment to use): -->
+	<!-- <set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@loop">true</set> -->
+	<!-- <set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@videoaspect">FitOutside</set> -->
 
-<set xpath="//window[@name='mainMenuPlayerName']/@anchor">TopLeft</set>
+	<!-- Remove the 2 news boxes from main menu -->
+	<remove xpath="//window[@name='mainMenuNews']/rect[@name='game']"/>
+	<remove xpath="//window[@name='mainMenuNews']/rect[@name='featured']"/>
 
-<!-- INCREASE THE SIZE OF THE MESSAGE BOX (for notes like "A Note from The Resistance") -->
-<!-- messageBox is now a <messagebox> template instance; patches moved to XUi_Common/templates.xml -->
-
-</Zilox>
+</configs>

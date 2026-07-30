@@ -1,5 +1,21 @@
 <Zilox>
 
+<!-- Zombie Reach Adjustments -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombieShort']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombieShortFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutatedCharged']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutatedInfernal']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>    
+<!--	<set xpath="/items/item[@name='meleeHandZombiePlagueSpitter']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandZombieFrostclaw']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>-->
+
 <!-- ADD COBALT AS AN OPTION TO REPAIR TOOLS -->
 <csv xpath="//property[@name='Allowed_upgrade_items']/@value" delim="," op="add">resourceForgedCobalt</csv>
 
@@ -141,6 +157,9 @@
 <!-- REMOVE LEGENDARY PARTS FROM ADMIN CRAFTING BUNDLE -->
 <csv xpath="//item[@name='craftingResourcesPackAdmin']/property[@class='Action0']/property[@name='Create_item']/@value" delim="," op="remove">resourceLegendaryParts</csv>
 <csv xpath="//item[@name='craftingResourcesPackAdmin']/property[@class='Action0']/property[@name='Create_item_count']/@value" delim="," op="remove">25</csv>
+
+<!-- CHANGE GROUP FOR FABRICATOR -->
+<set xpath="//item[@name='domesticatedChicken']/property[@name='Group']/@value">Science</set>
 
 <append xpath="/items">
 

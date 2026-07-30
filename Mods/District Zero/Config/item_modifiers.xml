@@ -18,10 +18,12 @@
 <set xpath="//item_modifier[@name='modGunMeleeTheHunter']/@modifier_tags">specialDamage1</set>
 
 <!-- MAKE EXTERMINATOR MOD WORK FOR DROIDS AND MECHS ONLY -->
-<set xpath="//item_modifier[@name='modGunMeleeTheHunter']/effect_group">			
-	<passive_effect name="EntityDamage" operation="perc_add" value=".25">
+<set xpath="//item_modifier[@name='modGunMeleeTheHunter']/effect_group[1]">			
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.1,.15,.2,.25,.3" tier="1,2,3,4,5,6">
 		<requirement name="EntityTagCompare" target="other" tags="mech,droid"/>				
 	</passive_effect>
+	
+	<display_value name="dAnimalDamage" value=".05,.1,.15,.2,.25,.3" tier="1,2,3,4,5,6"/>
 </set>
 
 <!-- HIDE IRON SIGHTS WHEN REFLEX SIGHT IS INSTALLED -->

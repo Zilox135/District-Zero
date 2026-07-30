@@ -1,4 +1,0 @@
-c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\DZ_NoSmell\src\obj\Release\DZNoSmell.csproj.AssemblyReference.cache
-c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\DZ_NoSmell\src\obj\Release\DZNoSmell.csproj.CoreCompileInputs.cache
-c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\DZ_NoSmell\src\obj\Release\DZNoSmell.dll
-c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\DZ_NoSmell\DZNoSmell.dll

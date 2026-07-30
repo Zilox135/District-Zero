@@ -44,7 +44,7 @@
 	</buff>
 
 	<!-- Grace period buff - warning before full detection -->
-	<buff name="buffDetectionGrace" name_key="buffDetectionGraceName" description_key="buffDetectionGraceDesc" icon="ui_game_symbol_Robot_Detection" icon_color="255,128,0">
+	<buff name="buffDetectionGrace" name_key="buffDetectionGraceName" description_key="buffDetectionGraceDesc" icon="ui_game_symbol_ai_detection" icon_color="255,128,0">
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 		<display_value value=".DetectionDisplay"/>
@@ -84,7 +84,7 @@
 	</buff>
 
 	<!-- Active detection buff - robots can sense you -->
-	<buff name="buffDetection" name_key="buffDetectionName" description_key="buffDetectionDesc" icon="ui_game_symbol_Robot_Detection" icon_color="255,0,0">
+	<buff name="buffDetection" name_key="buffDetectionName" description_key="buffDetectionDesc" icon="ui_game_symbol_ai_detection" icon_color="255,0,0">
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 		<display_value value="ElectronicSignature"/>

@@ -158,6 +158,9 @@ mineAirFilterDesc,Place mine and step back carefully. Turns robots into scrap me
 mineEMP,EMP Mine
 mineEMPDesc,Generates an electro-magnetic pulse disabling nearby enemies for a short period of time. Also disables weapons on mechs for a short period of time.
 forgeDesc,"Used to smelt metals to craft tools and weapons or stone to craft cement. Install tools to increase performance or unlock recipes.\n\nRepair with Scrap Iron."
+domesticatedChicken,Synthesized Chicken
+domesticatedChickenDesc,A fully synthesized chicken that's almost indistinguishable from the real thing.\n\nPlace it in a Chicken Coop to produce Eggs and Feathers. Can be scrapped for Raw Meat.
+cntChickenCoopDesc,"Slowly makes Eggs, Feathers, and Chickens when the Nesting Box is installed.\n\nSynthesize Chickens in the Fabricator and place them in the slots.\n\nFuel with Chicken Feed.\n\nWorks best outdoors or with 6 air blocks above them.\nRepair with Forged Iron."
 plantedCropsGroupDesc,Plant these seeds on a Farm Plot or fertile land to grow plants for you to harvest.
 burningBarrelPlayerDesc,Open flames provide some heat when nearby. Has no effect on the heat map.
 xuiTargetZombies,Target Enemies
@@ -191,6 +194,7 @@ statMiner69r,Miner 69'er
 statNeonaut,Neonaut
 statEntityDamageShock,Shock Damage
 statNerdDamage,Robotic/Baton Weapon Damage
+statAnimalDamage,Mech/Droid Damage
 buffNauseaName,Nausea
 buffNauseaDesc,You feel nauseous after consuming too many drugs.\nUse vitamins to cure this.\n\nYour max health and stamina are lowered by 25%. All attributes are lowered by 2.
 buffFlaregunAirdropName,Incoming Airdrop
@@ -522,7 +526,7 @@ perkRuleOneCardioDesc,Train your body in the number one tactic against the robot
 perkElectrocutionerRank3LongDesc,You're getting dangerous with batons. All batons deal 30% more damage. Stun batons electrify victims 60% longer. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more batons and parts in loot.
 perkPummelPeteRank5LongDesc,"Pummel Pete once took on 50 enemies with just a club and he would be proud of you. Clubs deal 50% more damage, attacks do 200% more damage to stunned enemies, and power attacks have a 100% chance to knock foes back down. Killing blows grant 30 stamina. 3 successive hits in a short time causes the last blow to do 100% extra damage. Find more clubs and parts in loot."
 perkSkullCrusherRank1LongDesc,"You're a bruiser! With a little luck, you can sometimes knock down enemies. Sledgehammers deal 10% more damage. 15% chance to knock down enemies with power attacks. Stamina costs are reduced by 8% and 15% for power attacks. Find more sledges and parts in loot."
-craftingBladesDesc,Reading [DECEA3]Knife Guy[-] will increase the quality of crafted blades.\nBoost loot odds with [DECEA3]Lethal Blade[-]
+craftingBladesDesc,Reading [008ADE]Knife Guy[-] will increase the quality of crafted blades.\nBoost loot odds with [008ADE]Lethal Blade[-]
 perkPistolPeteAPAmmoDesc,Craft AP ammunition.
 perkPistolPeteAPAmmoLongDesc,Armor Piercing Ammunition: Armor piercing rounds do considerable more damage against armored targets. Craft AP 9mm ammunition and AP Nano Energy Cells.
 perkPistolPeteCompleteDesc,Shots fired at point blank ignore armor. Bulk craft 9mm ammunition and Nano Energy Cells.
@@ -539,17 +543,17 @@ handgunsLaser,Laser Handguns
 handgunsPlasma,Plasma Handguns
 explosivesT2-2,Tier 2: Contact Grenade & EMP Grenade
 explosivesT2-3,Tier 2: Hubcap Landmine & EMP Landmine
-workstationsT1-1,Tier 1: Dew Collector and Fabricator
+workstationsT1-1,Tier 1: Fabricator & Dew Collector
 workstationsT1-2,Tier 1: Forge
-workstationsT2-1,Tier 2: Workbench
-workstationsT2-2,Tier 2: Lock Pick
-workstationsT2-3,Tier 2: Bellows
-workstationsT2-4,Tier 2: Anvil
-workstationsT3-1,Tier 3: Cement Mixer
-workstationsApiary-1,Tier 3: Apiary
-workstationsApiary-2,Tier 4: Apiary Extractor
-workstationsApiary-3,Tier 4: Apiary Brood Box
-workstationsApiary-4,Tier 5: Apiary Smoker
+workstationsT1-3,Tier 1: Water Filter & Tarp 
+workstationsT2-1,Tier 2: Workbench & Chicken Coop
+workstationsT2-2,Tier 2: Lock Pick & Brooding Lamp
+workstationsT2-3,Tier 2: Bellows & Chicken Run
+workstationsT2-4,Tier 2: Anvil & Nesting Box
+workstationsT3-1,Tier 3: Cement Mixer & Apiary
+workstationsT3-2,Tier 4: Apiary Extractor
+workstationsT3-3,Tier 4: Apiary Brood Box
+workstationsT3-4,Tier 5: Apiary Smoker
 workstationsT4,Tier 4: Chemistry Station
 workstationsT5,Tier 5: Forge Crucible
 workstationsT6,Tier 6: Blast Furnace
@@ -660,7 +664,7 @@ trader_rekt_by_MPLogue,Trader Luna (MPLogue)
 quest_BasicSurvival1,Basic Survival 1/1
 modGunMeleeTheHunterSchematic,The Exterminator Mod Schematic
 modGunMeleeTheHunter,The Exterminator Mod
-modGunMeleeTheHunterDesc,+25% more damage to Mechs and Droids (not Androids or Cyborgs).
+modGunMeleeTheHunterDesc,Do more damage to Mechs and Droids (not Androids or Cyborgs).
 modMeleeClubBarbedWireDesc,"20% chance to cause mechanical damage, 40% with power attacks.\nCan be installed in clubs."
 modMeleeSerratedBladeDesc,10% chance to cause a Mechanical Wound on a regular attack.
 modMeleeStunBatonRepulsorDesc,Install this mod into a stun baton and send enemies flying on the charged hit.
@@ -686,37 +690,36 @@ goMaxSpawnedAnimals,Max Robotic Animals
 goMaxSpawnedAnimalsDesc,How many robotic animals can be spawned in the world at once.
 goMaxSpawnedZombies,Max Enemies
 goMaxSpawnedZombiesDesc,This setting covers the entire map. There can only be this many enemies on the entire map at one time.\nChanging this setting has a huge impact on performance. Change at your own risk.
-gmZombieHorde,Robot Horde
-gmSurvivalMPDesc,::Survival MP::\nFight against other players or band together to survive the apocalypse earning land claims to protect your fort against other players. New players start with a Land Claim Block and additional ones can be crafted.
-gmSurvivalSPDesc,::Survival SP::\nPlay Solo against hordes of enemies exploring Navezgane County Arizona to uncover the truth behind what really happened.
+goAISmellMode,AI Detection Mode
+goAISmellModeDesc,"Enable or disable AI detection tracking, and sets how fast they move when they detect you."
 quest_clear_completion,Well I'll be danged. You really managed to pull through in a pinch. Thanks for killing all those enemies. Here's what I owe ya.
-quest_clear_description,Head to [DECEA3]{poi.name}[-] and clear out the enemies. This location could be useful to our cause.
-quest_clear_response,Clear Enemies ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_clear_description,Head to [008ADE]{poi.name}[-] and clear out the enemies. This location could be useful to our cause.
+quest_clear_response,Clear Enemies ([008ADE]{poi.distance} {poi.direction}[-])
 quest_clear_statement,Clear out the enemies in the area.
 quest_fetch_clear_completion,Well I'll be danged. You really managed to pull through in a pinch. Thanks for killing those enemies and retrieving the supplies. Here's what I owe ya.
-quest_fetch_clear_description,Head to [DECEA3]{poi.name}[-]. Kill all the enemies and retrieve the shipment.
+quest_fetch_clear_description,Head to [008ADE]{poi.name}[-]. Kill all the enemies and retrieve the shipment.
 quest_fetch_clear_statement,Bring back the shipment and destroy those enemies.
 quest_infestation_statement,Clear out the infested enemies in the area.
-quest_restore_power_description,"Head to [DECEA3]{poi.name}[-] and turn back on the generators. While you are there, clear out all the enemies you find inside."
-quest_tier1_clear_offer,Go prove that you have what it takes to be a part of White River Runners. We need you to clear out the enemies at [DECEA3]{poi.name}[-].
-quest_tier2_clear_offer,"You are ready for more, huh? Well this one will be a little harder but I'm sure you will manage. Go kill all the enemies at [DECEA3]{poi.name}[-]."
-quest_tier2_fetch_clear_offer,One of our Runners had to stash their shipment at [DECEA3]{poi.name}[-]. Go exterminate the enemies and retrieve the shipment.
-quest_tier1_restore_power_offer,We found a building that is well suited for a new outpost. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
-quest_tier2_restore_power_offer,We found a building that is well suited for a new outpost. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
-quest_tier3_restore_power_offer,Our community reported a good size structure that contains significant resources we badly need. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
-quest_tier4_restore_power_offer,We found a location that we believe is large enough to defend and accomodate our growing communities needs. Go to [DECEA3]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
-quest_tier2_infested_clear_offer,"We located a highly infested robot hideout nearby. The location is critical to the survival of our colony. Go clear out the enemies at [DECEA3]{poi.name}[-]. Remember, there’s more of them, they’re moving faster and they’re harder to kill. Good Luck!"
-quest_tier3_clear_offer,You did a great job on the last clearing but this one may be a bit tougher. I'm sure you can handle it. Go wipe out the enemies at [DECEA3]{poi.name}[-].
-quest_tier3_fetch_clear_offer,One of the boys were being overrun by enemies during a supply run. They told me exactly where to find the shipment at [DECEA3]{poi.name}[-]. Go destroy the enemies and retrieve the goods.
-quest_tier3_infested_clear_offer,We’ve caught word from one of our runners that our safehouse at [DECEA3]{poi.name}[-] has become infested with enemies. Clear the threat survivor!
-quest_tier4_clear_offer,You know the drill. Go exterminate all the enemies at [DECEA3]{poi.name}[-].
-quest_tier4_fetch_clear_offer,We need to retrieve our supplies at [DECEA3]{poi.name}[-]. We know where they stashed them. Go clear out the enemies and retrieve the supplies.
-quest_tier4_infested_clear_offer,We’ve just learned that a swarm of infested enemies has wiped out our team at [DECEA3]{poi.name}[-]. Gather up all your weapons and prepare for the worst.
-quest_tier5_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [DECEA3]{poi.name}[-].
-quest_tier6_clear_offer,"This may be the toughest clear job yet, but I know I can count on you. Go finish off the enemies at [DECEA3]{poi.name}[-]. Good luck."
-quest_tier6_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [DECEA3]{poi.name}[-].
+quest_restore_power_description,"Head to [008ADE]{poi.name}[-] and turn back on the generators. While you are there, clear out all the enemies you find inside."
+quest_tier1_clear_offer,Go prove that you have what it takes to be a part of White River Runners. We need you to clear out the enemies at [008ADE]{poi.name}[-].
+quest_tier2_clear_offer,"You are ready for more, huh? Well this one will be a little harder but I'm sure you will manage. Go kill all the enemies at [008ADE]{poi.name}[-]."
+quest_tier2_fetch_clear_offer,One of our Runners had to stash their shipment at [008ADE]{poi.name}[-]. Go exterminate the enemies and retrieve the shipment.
+quest_tier1_restore_power_offer,We found a building that is well suited for a new outpost. Go to [008ADE]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier2_restore_power_offer,We found a building that is well suited for a new outpost. Go to [008ADE]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier3_restore_power_offer,Our community reported a good size structure that contains significant resources we badly need. Go to [008ADE]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier4_restore_power_offer,We found a location that we believe is large enough to defend and accomodate our growing communities needs. Go to [008ADE]{poi.name}[-] and reset the generators. Clear out any enemies you find inside.
+quest_tier2_infested_clear_offer,"We located a highly infested robot hideout nearby. The location is critical to the survival of our colony. Go clear out the enemies at [008ADE]{poi.name}[-]. Remember, there’s more of them, they’re moving faster and they’re harder to kill. Good Luck!"
+quest_tier3_clear_offer,You did a great job on the last clearing but this one may be a bit tougher. I'm sure you can handle it. Go wipe out the enemies at [008ADE]{poi.name}[-].
+quest_tier3_fetch_clear_offer,One of the boys were being overrun by enemies during a supply run. They told me exactly where to find the shipment at [008ADE]{poi.name}[-]. Go destroy the enemies and retrieve the goods.
+quest_tier3_infested_clear_offer,We’ve caught word from one of our runners that our safehouse at [008ADE]{poi.name}[-] has become infested with enemies. Clear the threat survivor!
+quest_tier4_clear_offer,You know the drill. Go exterminate all the enemies at [008ADE]{poi.name}[-].
+quest_tier4_fetch_clear_offer,We need to retrieve our supplies at [008ADE]{poi.name}[-]. We know where they stashed them. Go clear out the enemies and retrieve the supplies.
+quest_tier4_infested_clear_offer,We’ve just learned that a swarm of infested enemies has wiped out our team at [008ADE]{poi.name}[-]. Gather up all your weapons and prepare for the worst.
+quest_tier5_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [008ADE]{poi.name}[-].
+quest_tier6_clear_offer,"This may be the toughest clear job yet, but I know I can count on you. Go finish off the enemies at [008ADE]{poi.name}[-]. Good luck."
+quest_tier6_infested_clear_offer,Holy Shit! A major settlement has been overrun by a group of infested enemies. Use extreme caution and clear the threat at [008ADE]{poi.name}[-].
 quest_tier1_restore_power,Tier 1 Restore Power
-quest_restore_power_response,Restore Power ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_restore_power_response,Restore Power ([008ADE]{poi.distance} {poi.direction}[-])
 questRewardFarmBundleDesc,"A bundle of farm plots, the farming multitool and random seeds."
 questStarterCapsule,Starter Capsule
 questStarterCapsuleDesc,"A capsule containing essential items for survival."
@@ -748,6 +751,8 @@ loadingTipHarvestingRobots,"Harvest robots with a salvage tool to gain useful ma
 loadingTipHarvestingRobots_title,Harvesting Robots
 loadingTipHarvestingNanoChips,Nano chips are small computing devices that can be harvested from robots and high tech vehicles with a salvage tool.
 loadingTipHarvestingNanoChips_title,Nano Chips
+loadingTipSmell_title,AI Detection
+loadingTipSmell,"Carrying any type of electrical or mechanical component can cause robots to detect and search for you. Store components in vehicles or storage containers to prevent detection."
 zombie_slayer_name_soldier,Soldier Slayer
 zombie_slayer_subtitle_soldier,Soldier Slayer
 exterminator_name,Exterminator
@@ -783,90 +788,90 @@ challengeGroupBasics,Basics
 challengeRewardBonusTraderQuest,Basics Reward
 challengeKillRobotAnimals,Kill Robotic Animals
 challengeKillRobotAnimalsShort,Kill robotic animals to harvest nano chips and other resources.
-challengeKillRobotAnimalsDesc,Killing [DECEA3]Robotic Animals[-] may require using [DECEA3]Stealth[-].\n\nAttacks while crouched on sleeping or un-alerted enemies apply a [DECEA3]Stealth Damage Bonus[-].\n\nThe [DECEA3]Stealth Damage Bonus[-] has a default cooldown of [DECEA3]10[-] seconds in PvE and [DECEA3]60[-] seconds in PvP.
+challengeKillRobotAnimalsDesc,Killing [008ADE]Robotic Animals[-] may require using [008ADE]Stealth[-].\n\nAttacks while crouched on sleeping or un-alerted enemies apply a [008ADE]Stealth Damage Bonus[-].\n\nThe [008ADE]Stealth Damage Bonus[-] has a default cooldown of [008ADE]10[-] seconds in PvE and [008ADE]60[-] seconds in PvP.
 challengeSalvageRobots,Salvage Robots
 challengeSalvageRobotsShort,Harvest resources from a destroyed Robot with a Salvage Tool.
-challengeSalvageRobotsDesc,Use a [DECEA3]Wrench[-] or other salvage tool to harvest resources.\n\n[DECEA3]Perks[-] can increase your harvest yield.\n\nTough [DECEA3]Enemies[-] will yield higher amounts and [DECEA3]Rare[-] resources.
+challengeSalvageRobotsDesc,Use a [008ADE]Wrench[-] or other salvage tool to harvest resources.\n\n[008ADE]Perks[-] can increase your harvest yield.\n\nTough [008ADE]Enemies[-] will yield higher amounts and [008ADE]Rare[-] resources.
 challengeMeetRekt,Meet Luna
 challengeMeetRektShort,Meet Trader Luna.
-challengeMeetRektDesc,"Talk to [DECEA3]Trader Luna[-] at her place of business in the [DECEA3]Pine Forest[-] biome. She normally has a stockpile of [DECEA3]Food[-] and [DECEA3]Farming[-] supplies for sale."
-challengeMeetJenDesc,You can find [DECEA3]Trader Jen[-] in the makeshift hospital at [DECEA3]Jen's Clinic[-] in the [DECEA3]Burnt Forest[-]. She may come across as friendly at first but I would watch your back around here. She deals mostly in [DECEA3]Medical[-] supplies.
+challengeMeetRektDesc,"Talk to [008ADE]Trader Luna[-] at her place of business in the [008ADE]Pine Forest[-] biome. She normally has a stockpile of [008ADE]Food[-] and [008ADE]Farming[-] supplies for sale."
+challengeMeetJenDesc,You can find [008ADE]Trader Jen[-] in the makeshift hospital at [008ADE]Jen's Clinic[-] in the [008ADE]Burnt Forest[-]. She may come across as friendly at first but I would watch your back around here. She deals mostly in [008ADE]Medical[-] supplies.
 challengeKillEnemies,Kill Enemies
 challengeKillEnemiesShort,Kill some enemies.
-challengeKillEnemiesDesc,"[DECEA3]Zombies[-] and [DECEA3]Robots[-] are the primary threat to your survival.\n\n[DECEA3]Normal[-] zombies and robots walk during the day but move faster at night.\n\n[FF6666]Feral[-] zombies and [FFEA00]Overcharged[-] robots run during the day, hit harder, and take more damage.\n\n[00FF00]Radiated[-] zombies and robots regenerate their health and deal severe damage, making them a stubborn threat until eliminated.\n\n[FFA500]Inferno[-] and [33CCFF]Shocker[-] robots are tough, run during the day and have a chance to electrocute the target or set them on fire depending on the type."
-challengePurchaseItemsJoelDesc,"[DECEA3]Traders[-] have a wide stock of [DECEA3]Items[-] available for sale in many [DECEA3]Categories[-]. As you progress, your [DECEA3]Trader Stage[-] will increase and [DECEA3]Traders[-] will stock more [DECEA3]Items[-] as well as offering new, higher [DECEA3]Quality[-] items for sale.\n\nEach [DECEA3]Trader[-] also [DECEA3]Specializes[-] in specific [DECEA3]Categories[-]. For instance, [DECEA3]Trader Luna[-] has a [DECEA3]Specialization[-] in [DECEA3]Food[-] and [DECEA3]Seeds[-] which means she has more [DECEA3]Meals[-] for sale, while [DECEA3]Trader Jen[-] is [DECEA3]Specialized[-] in [DECEA3]Medical[-] supplies and stocks more [DECEA3]Bandages[-].\n\nPrices at [DECEA3]Traders[-] are based on your [DECEA3]Barter[-] statistic, which can be modified by items like [DECEA3]Consumables[-] and some [DECEA3]Armor[-]."
-challengeQuestTraderToTraderCompleteDesc,"After completing [DECEA3]10[-] quests with a [DECEA3]Trader[-], a new category of [DECEA3]Special Jobs[-] will unlock.\n\nThis will enable an [DECEA3]Opening Trade Routes[-] quest, which allows you to find the next [DECEA3]Trader[-] to advance your [DECEA3]Progression[-]. The order is as follows:\n\n[DECEA3]Trader Luna[-] to [DECEA3]Trader Jen[-].\n\n[DECEA3]Trader Jen[-] to [DECEA3]Trader Bob[-].\n\n[DECEA3]Trader Bob[-] to [DECEA3]Trader Hugh[-].\n\n[DECEA3]Trader Hugh[-] to [DECEA3]Trader Joel[-]."
-challengeHarvestLeatherDesc,"[DECEA3]Leather[-] is an ingredient used primarily in [DECEA3]Armor[-] and [DECEA3]Armor Modification[-] recipes.\n\nIt can be harvested from furniture such as [DECEA3]Office Chairs[-], [DECEA3]Leather Couches[-], and [DECEA3]Leather Restaurant Booths[-]."
-challengeHarvestRottingFleshDesc,"[DECEA3]Rotting Flesh[-] is a component used to make [DECEA3]Farm Plots[-] and some [DECEA3]Food[-] items.\n\nIt can be harvested from things like [DECEA3]Corpses[-] and [DECEA3]Body Bags[-].\n\nHarvest some [DECEA3]Rotting Flesh[-] with any [DECEA3]Knife[-]."
-challengeHealerInfectionDesc,"Attacks from [DECEA3]Zombies[-] have a chance to cause an [DECEA3]Infection[-]. Wearing [DECEA3]Armor[-] reduces the chance of [DECEA3]Infection[-] and other [DECEA3]Critical Injuries.[-]\n\n[DECEA3]Honey[-], [DECEA3]Herbal Antibiotics[-], and [DECEA3]Antibiotics[-] are used to treat an [DECEA3]Infection[-]. Use one from your toolbelt by selecting it and pressing [action:local:Primary].\n\nTo use one from your inventory, select it and press the [DECEA3]Use[-] Quick Action [action:local:Left]."
-challengeEnterDesertDesc,"The [DECEA3]Desert[-] has always been a dry, lifeless place in Navezgane County.\n\nAfter the apocalypse, its abundant resources draw human scavengers searching for [DECEA3]Oil Shale[-] and [DECEA3]Yucca Fruit[-]. Watch out for [DECEA3]Nano Drones[-] that patrol high above, waiting to strike at any moment."
-challengeEnterSnowDesc,The [DECEA3]Snow[-] biome is a frigid part of the world that is home to merciless [DECEA3]Robot Dogs[-] and [DECEA3]Spider Bots[-] that hunt their prey with infrared systems.\n\n[DECEA3]Combat Dogs[-] with high-tech laser weapons also patrol the [DECEA3]Snow[-] during the night searching for signs of life to exterminate.
-challengeEnterWastelandDesc,"Once densely populated, the [DECEA3]Wasteland[-] has long since been reduced to rubble and twisted metal beams, with its many residents now deadly [DECEA3]Feral[-] and [DECEA3]Radiated Zombies[-].\n\nMany survivors who enter never return, falling victim to the heavy duty [DECEA3]Mechs[-] and [DECEA3]Droids[-] that prowl the ruined wastes with one goal in mind. Kill on sight. \n\nExplosions can be heard at varying distances as both friend and foe trip haphazardly hidden [DECEA3]Landmines[-] in the destroyed debris."
-challengeKillAnyZombiesDesc,"[DECEA3]Zombies[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [DECEA3]Blocks[-] and cause you to become [DECEA3]Infected[-].\n\nAs your [DECEA3]Gamestage[-] increases, stronger, faster, and more challenging [DECEA3]Zombies[-] will appear.\n\nNo place is safe, as [DECEA3]Zombies[-] inhabit all biomes, with [DECEA3]Downtown[-] and [DECEA3]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [DECEA3]Zombies[-]."
+challengeKillEnemiesDesc,"[008ADE]Zombies[-] and [008ADE]Robots[-] are the primary threat to your survival.\n\n[008ADE]Normal[-] zombies and robots walk during the day but move faster at night.\n\n[FF6666]Feral[-] zombies and [FFEA00]Overcharged[-] robots run during the day, hit harder, and take more damage.\n\n[00FF00]Radiated[-] zombies and robots regenerate their health and deal severe damage, making them a stubborn threat until eliminated.\n\n[FFA500]Inferno[-] and [33CCFF]Shocker[-] robots are tough, run during the day and have a chance to electrocute the target or set them on fire depending on the type."
+challengePurchaseItemsJoelDesc,"[008ADE]Traders[-] have a wide stock of [008ADE]Items[-] available for sale in many [008ADE]Categories[-]. As you progress, your [008ADE]Trader Stage[-] will increase and [008ADE]Traders[-] will stock more [008ADE]Items[-] as well as offering new, higher [008ADE]Quality[-] items for sale.\n\nEach [008ADE]Trader[-] also [008ADE]Specializes[-] in specific [008ADE]Categories[-]. For instance, [008ADE]Trader Luna[-] has a [008ADE]Specialization[-] in [008ADE]Food[-] and [008ADE]Seeds[-] which means she has more [008ADE]Meals[-] for sale, while [008ADE]Trader Jen[-] is [008ADE]Specialized[-] in [008ADE]Medical[-] supplies and stocks more [008ADE]Bandages[-].\n\nPrices at [008ADE]Traders[-] are based on your [008ADE]Barter[-] statistic, which can be modified by items like [008ADE]Consumables[-] and some [008ADE]Armor[-]."
+challengeQuestTraderToTraderCompleteDesc,"After completing [008ADE]10[-] quests with a [008ADE]Trader[-], a new category of [008ADE]Special Jobs[-] will unlock.\n\nThis will enable an [008ADE]Opening Trade Routes[-] quest, which allows you to find the next [008ADE]Trader[-] to advance your [008ADE]Progression[-]. The order is as follows:\n\n[008ADE]Trader Luna[-] to [008ADE]Trader Jen[-].\n\n[008ADE]Trader Jen[-] to [008ADE]Trader Bob[-].\n\n[008ADE]Trader Bob[-] to [008ADE]Trader Hugh[-].\n\n[008ADE]Trader Hugh[-] to [008ADE]Trader Joel[-]."
+challengeHarvestLeatherDesc,"[008ADE]Leather[-] is an ingredient used primarily in [008ADE]Armor[-] and [008ADE]Armor Modification[-] recipes.\n\nIt can be harvested from furniture such as [008ADE]Office Chairs[-], [008ADE]Leather Couches[-], and [008ADE]Leather Restaurant Booths[-]."
+challengeHarvestRottingFleshDesc,"[008ADE]Rotting Flesh[-] is a component used to make [008ADE]Farm Plots[-] and some [008ADE]Food[-] items.\n\nIt can be harvested from things like [008ADE]Corpses[-] and [008ADE]Body Bags[-].\n\nHarvest some [008ADE]Rotting Flesh[-] with any [008ADE]Knife[-]."
+challengeHealerInfectionDesc,"Attacks from [008ADE]Zombies[-] have a chance to cause an [008ADE]Infection[-]. Wearing [008ADE]Armor[-] reduces the chance of [008ADE]Infection[-] and other [008ADE]Critical Injuries.[-]\n\n[008ADE]Honey[-], [008ADE]Herbal Antibiotics[-], and [008ADE]Antibiotics[-] are used to treat an [008ADE]Infection[-]. Use one from your toolbelt by selecting it and pressing [action:local:Primary].\n\nTo use one from your inventory, select it and press the [008ADE]Use[-] Quick Action [action:local:Left]."
+challengeEnterDesertDesc,"The [008ADE]Desert[-] has always been a dry, lifeless place in Navezgane County.\n\nAfter the apocalypse, its abundant resources draw human scavengers searching for [008ADE]Oil Shale[-] and [008ADE]Yucca Fruit[-]. Watch out for [008ADE]Nano Drones[-] that patrol high above, waiting to strike at any moment."
+challengeEnterSnowDesc,The [008ADE]Snow[-] biome is a frigid part of the world that is home to merciless [008ADE]Robot Dogs[-] and [008ADE]Spider Bots[-] that hunt their prey with infrared systems.\n\n[008ADE]Combat Dogs[-] with high-tech laser weapons also patrol the [008ADE]Snow[-] during the night searching for signs of life to exterminate.
+challengeEnterWastelandDesc,"Once densely populated, the [008ADE]Wasteland[-] has long since been reduced to rubble and twisted metal beams, with its many residents now deadly [008ADE]Feral[-] and [008ADE]Radiated Zombies[-].\n\nMany survivors who enter never return, falling victim to the heavy duty [008ADE]Mechs[-] and [008ADE]Droids[-] that prowl the ruined wastes with one goal in mind. Kill on sight. \n\nExplosions can be heard at varying distances as both friend and foe trip haphazardly hidden [008ADE]Landmines[-] in the destroyed debris."
+challengeKillAnyZombiesDesc,"[008ADE]Zombies[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [008ADE]Blocks[-] and cause you to become [008ADE]Infected[-].\n\nAs your [008ADE]Gamestage[-] increases, stronger, faster, and more challenging [008ADE]Zombies[-] will appear.\n\nNo place is safe, as [008ADE]Zombies[-] inhabit all biomes, with [008ADE]Downtown[-] and [008ADE]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [008ADE]Zombies[-]."
 challengeKillSoldiers,Kill Soldier Zombies
 challengeKillSoldiersShort,Kill some Soldier Zombies.
-challengeKillSoldiersDesc,"[DECEA3]Soldier Zombies[-] are battle hardened undead with increased pain tolerance and heavy duty kevlar helmets, aiming for the head may not be the best choice to take them down.\n\nKill some [DECEA3]Soldier Zombies[-]."
+challengeKillSoldiersDesc,"[008ADE]Soldier Zombies[-] are battle hardened undead with increased pain tolerance and heavy duty kevlar helmets, aiming for the head may not be the best choice to take them down.\n\nKill some [008ADE]Soldier Zombies[-]."
 challengeKillRobots,Kill Any Robot
 challengeKillRobotsShort,Kill lots of Robots.
-challengeKillRobotsDesc,"[DECEA3]Robots[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [DECEA3]Blocks[-] and cause you to become [4EE44E]Irradiated[-].\n\nAs your [DECEA3]Gamestage[-] increases, stronger, faster, and more challenging [DECEA3]Robots[-] will appear.\n\nNo place is safe, as [DECEA3]Robots[-] patrol all biomes, with [DECEA3]Downtown[-] and [DECEA3]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [DECEA3]Robots[-]."
+challengeKillRobotsDesc,"[008ADE]Robots[-] are a constant threat to your day-to-day survival.\n\nNot only a direct danger, they can destroy [008ADE]Blocks[-] and cause you to become [4EE44E]Irradiated[-].\n\nAs your [008ADE]Gamestage[-] increases, stronger, faster, and more challenging [008ADE]Robots[-] will appear.\n\nNo place is safe, as [008ADE]Robots[-] patrol all biomes, with [008ADE]Downtown[-] and [008ADE]Commercial[-] areas hosting the highest concentrations, while other areas may be less populated. \n\nKill a lot of [008ADE]Robots[-]."
 challengeKillOverchargedRobots,Kill Overcharged Robots
 challengeKillOverchargedRobotsShort,Kill some Overcharged Robots
-challengeKillOverchargedRobotsDesc,"[DECEA3]Overcharged Robots[-] run during the day, hit harder and take more damage than regular robots. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Overcharged Robots[-]."
+challengeKillOverchargedRobotsDesc,"[008ADE]Overcharged Robots[-] run during the day, hit harder and take more damage than regular robots. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Overcharged Robots[-]."
 challengeKillRadiatedRobots,Kill Radiated Robots
 challengeKillRadiatedRobotsShort,Kill some Radiated Robots
-challengeKillRadiatedRobotsDesc,"[DECEA3]Radiated Robots[-] regenerate their health and deal AOE radiation causing nearby targets to become [4EE44E]Irradiated[-]. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Radiated Robots[-]."
+challengeKillRadiatedRobotsDesc,"[008ADE]Radiated Robots[-] regenerate their health and deal AOE radiation causing nearby targets to become [4EE44E]Irradiated[-]. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Radiated Robots[-]."
 challengeKillInfernoRobots,Kill Inferno Robots
 challengeKillInfernoRobotsShort,Kill some Inferno Robots
-challengeKillInfernoRobotsDesc,"[DECEA3]Inferno Robots[-] are tough, run during the day, and have a chance to set the target on [FFA500]Fire[-] with each hit. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Inferno Robots[-]."
+challengeKillInfernoRobotsDesc,"[008ADE]Inferno Robots[-] are tough, run during the day, and have a chance to set the target on [FFA500]Fire[-] with each hit. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Inferno Robots[-]."
 challengeKillShockerRobots,Kill Shocker Robots
 challengeKillShockerRobotsShort,Kill some Shocker Robots
-challengeKillShockerRobotsDesc,"[DECEA3]Shocker Robots[-] are very tough, run during the day, and have a chance to [33CCFF]Electrocute[-] the target with each hit. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Shocker Robots[-]."
+challengeKillShockerRobotsDesc,"[008ADE]Shocker Robots[-] are very tough, run during the day, and have a chance to [33CCFF]Electrocute[-] the target with each hit. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Shocker Robots[-]."
 challengeKillRobotDogs,Kill Robot Dogs
 challengeKillRobotDogsShort,Kill some Robot Dogs
-challengeKillRobotDogsDesc,"[DECEA3]Robot Dogs[-] are tough and fast, making them difficult to kill. Beware some versions may shoot back. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Robot Dogs[-]."
+challengeKillRobotDogsDesc,"[008ADE]Robot Dogs[-] are tough and fast, making them difficult to kill. Beware some versions may shoot back. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Robot Dogs[-]."
 challengeKillSpiderBots,Kill Spider Bots
 challengeKillSpiderBotsShort,Kill some Spider Bots
-challengeKillSpiderBotsDesc,"[DECEA3]Spider Bots[-] are weak but very fast and jump at the target from a distance. \n\nThey salvage for a small amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], and [DECEA3]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Spider Bots[-]."
+challengeKillSpiderBotsDesc,"[008ADE]Spider Bots[-] are weak but very fast and jump at the target from a distance. \n\nThey salvage for a small amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], and [008ADE]Nano Chips[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Spider Bots[-]."
 challengeKillDrones,Kill Drones
 challengeKillDronesShort,Kill some Drones
-challengeKillDronesDesc,"[DECEA3]Drones[-] scan the skies and stay hidden in plain sight, making them difficult to spot. Beware some versions may shoot back. \n\nThey self destruct in a critical state to protect the sensitive data they collect from falling into the wrong hands.\n\nKill some [DECEA3]Drones[-]."
+challengeKillDronesDesc,"[008ADE]Drones[-] scan the skies and stay hidden in plain sight, making them difficult to spot. Beware some versions may shoot back. \n\nThey self destruct in a critical state to protect the sensitive data they collect from falling into the wrong hands.\n\nKill some [008ADE]Drones[-]."
 challengeKillDroids,Kill Droids
 challengeKillDroidsShort,Kill some Droids
-challengeKillDroidsDesc,"[DECEA3]Droids[-] are heavy duty battle bots that patrol the streets of the wastes. Beware some versions may self destruct if you get too close. \n\nThey salvage for a moderate amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], [DECEA3]Nano Chips[-], [DECEA3]Forged Steel[-], and [DECEA3]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Droids[-]."
+challengeKillDroidsDesc,"[008ADE]Droids[-] are heavy duty battle bots that patrol the streets of the wastes. Beware some versions may self destruct if you get too close. \n\nThey salvage for a moderate amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], [008ADE]Nano Chips[-], [008ADE]Forged Steel[-], and [008ADE]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Droids[-]."
 challengeKillMechs,Kill Mechs
 challengeKillMechsShort,Kill some Mechs
-challengeKillMechsDesc,"[DECEA3]Mechs[-] are the toughest and most brutal machines in the wastelands and were designed for mass eradication. Beware most versions are equipped with deadly plasma cannons and will shoot on sight. \n\nThey salvage for a large amount of [DECEA3]Electrical Parts[-], [DECEA3]Mechanical Parts[-], [DECEA3]Springs[-], [DECEA3]Nano Chips[-], [DECEA3]Forged Steel[-], and [DECEA3]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [DECEA3]Mechs[-]."
+challengeKillMechsDesc,"[008ADE]Mechs[-] are the toughest and most brutal machines in the wastelands and were designed for mass eradication. Beware most versions are equipped with deadly plasma cannons and will shoot on sight. \n\nThey salvage for a large amount of [008ADE]Electrical Parts[-], [008ADE]Mechanical Parts[-], [008ADE]Springs[-], [008ADE]Nano Chips[-], [008ADE]Forged Steel[-], and [008ADE]Forged Cobalt[-] along with various other precious metals when disassembled.\n\nKill some [008ADE]Mechs[-]."
 challengeOpenStarterCapsule,Open Starter Capsule
 challengeOpenStarterCapsuleShort,Open the Starter Capsule.
-challengeOpenStarterCapsuleDesc,"The [DECEA3]Starter Capsule[-] will give you essential items for survival. You will need the [DECEA3]Wrench[-] it provides to harvest resources so you can build workstations to aid your survival.\n\nBasic [DECEA3]Food[-], [DECEA3]Water[-], and [DECEA3]Medical Supplies[-] are provided to help you survive the first few days.\n\nA basic [DECEA3]Flashlight[-] is also provided to help navigate dark areas."
+challengeOpenStarterCapsuleDesc,"The [008ADE]Starter Capsule[-] will give you essential items for survival. You will need the [008ADE]Wrench[-] it provides to harvest resources so you can build workstations to aid your survival.\n\nBasic [008ADE]Food[-], [008ADE]Water[-], and [008ADE]Medical Supplies[-] are provided to help you survive the first few days.\n\nA basic [008ADE]Flashlight[-] is also provided to help navigate dark areas."
 challengeReadForgeAheadMagazine,Read Forge Ahead Magazine
 challengeReadForgeAheadMagazineShort,Read a Forge Ahead magazine.
-challengeReadForgeAheadMagazineDesc,"[DECEA3]Crafting Skill Magazines[-] come in a wide range of topics. Reading them will increase your [DECEA3]Crafting Skill[-] which increases the [DECEA3]Quality[-] and/or [DECEA3]Technology Tier[-] of the item being crafted.\n\nReading the first [DECEA3]Forge Ahead[-] magazine will unlock essential workstations you will need to produce [DECEA3]Food[-] and [DECEA3]Clean Water[-].\n\n[DECEA3]Crafting Skill Magazines[-] can be found in various loot containers such as [DECEA3]Mailboxes[-], for sale at [DECEA3]Traders[-], or given as a [DECEA3]Quest Reward[-]."
+challengeReadForgeAheadMagazineDesc,"[008ADE]Crafting Skill Magazines[-] come in a wide range of topics. Reading them will increase your [008ADE]Crafting Skill[-] which increases the [008ADE]Quality[-] and/or [008ADE]Technology Tier[-] of the item being crafted.\n\nReading the first [008ADE]Forge Ahead[-] magazine will unlock essential workstations you will need to produce [008ADE]Food[-] and [008ADE]Clean Water[-].\n\n[008ADE]Crafting Skill Magazines[-] can be found in various loot containers such as [008ADE]Mailboxes[-], for sale at [008ADE]Traders[-], or given as a [008ADE]Quest Reward[-]."
 challengeGatherResourcesFabricator,Gather Fabricator Resources 
 challengeGatherResourcesFabricatorShort,Gather resources to craft a Fabricator
-challengeGatherResourcesFabricatorDesc,"The resources you will need are [DECEA3]Iron[-], [DECEA3]Scrap Polymers[-], [DECEA3]Duct Tape[-], [DECEA3]Nano Chips[-], and [DECEA3]Electrical Parts[-].\n\nMany of these can be salvaged from [DECEA3]Deactivated Robots[-] or [DECEA3]High-tech Vehicles[-].\n\n[DECEA3]Scrap Polymers[-] can be harvested from cardboard boxes and window blinds. [DECEA3]Duct Tape[-] can be crafted or found in loot."
+challengeGatherResourcesFabricatorDesc,"The resources you will need are [008ADE]Iron[-], [008ADE]Scrap Polymers[-], [008ADE]Duct Tape[-], [008ADE]Nano Chips[-], and [008ADE]Electrical Parts[-].\n\nMany of these can be salvaged from [008ADE]Deactivated Robots[-] or [008ADE]High-tech Vehicles[-].\n\n[008ADE]Scrap Polymers[-] can be harvested from cardboard boxes and window blinds. [008ADE]Duct Tape[-] can be crafted or found in loot."
 challengePlaceFabricator,Place Fabricator
 challengePlaceFabricatorShort,Craft and Place the Fabricator on the ground.
-challengePlaceFabricatorDesc,"[DECEA3]Fabricators[-] are used to craft [DECEA3]Raw Meat[-], [DECEA3]Eggs[-], [DECEA3]Animal Fat[-] and other advanced recipes.\n\nTo craft a recipe at the [DECEA3]Fabricator[-], crafting materials must be in your [DECEA3]Inventory[-].\n\nHold [action:local:Activate][action:permanent:Activate] to pick up Workstations within your [DECEA3]Land Claim[-] area."
+challengePlaceFabricatorDesc,"[008ADE]Fabricators[-] are used to craft [008ADE]Raw Meat[-], [008ADE]Eggs[-], [008ADE]Animal Fat[-] and other advanced recipes.\n\nTo craft a recipe at the [008ADE]Fabricator[-], crafting materials must be in your [008ADE]Inventory[-].\n\nHold [action:local:Activate][action:permanent:Activate] to pick up Workstations within your [008ADE]Land Claim[-] area."
 challengeCraftRawMeat,Synthesize Raw Meat
 challengeCraftRawMeatShort,Synthesize some Raw Meat.
-challengeCraftRawMeatDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Raw Meat[-].\n\n[DECEA3]Plant Fibers[-] and [DECEA3]Scrap Polymers[-] are the required ingredients.\n\n[DECEA3]Raw Meat[-] can be used in various cooking recipes."
-challengeCraftEggs,Synthesize Eggs
-challengeCraftEggsShort,Synthesize some Eggs.
-challengeCraftEggsDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Eggs[-].\n\n[DECEA3]Plant Fibers[-], [DECEA3]Scrap Polymers[-] and [DECEA3]Boiled Water[-] are the required ingredients.\n\n[DECEA3]Eggs[-] can be used in various cooking recipes."
+challengeCraftRawMeatDesc,"Use the [008ADE]Fabricator[-] to synthesize some [008ADE]Raw Meat[-].\n\n[008ADE]Plant Fibers[-] and [008ADE]Scrap Polymers[-] are the required ingredients.\n\n[008ADE]Raw Meat[-] can be used in various cooking recipes."
+challengeCraftChicken,Synthesize A Chicken
+challengeCraftChickenShort,Synthesize A Chicken
+challengeCraftChickenDesc,"Use the [008ADE]Fabricator[-] to synthesize a [008ADE]Chicken[-].\n\n[008ADE]Rotten Eggs[-], [008ADE]Scrap Polymers[-], [008ADE]Bones[-], [008ADE]Feathers[-] and [008ADE]Blood Bags[-] are the required ingredients.\n\n[008ADE]A Synthesized Chicken[-] can be used in the [008ADE]Chicken Coop[-] to produce eggs and feathers."
 challengeCraftLeather,Synthesize Leather
 challengeCraftLeatherShort,Synthesize some Leather.
-challengeCraftLeatherDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Leather[-].\n\n[DECEA3]Scrap Polymers[-] and [DECEA3]Glue[-] are the required ingredients.\n\n[DECEA3]Leather[-] can be used to make [DECEA3]Armor[-] and various other recipes."
+challengeCraftLeatherDesc,"Use the [008ADE]Fabricator[-] to synthesize some [008ADE]Leather[-].\n\n[008ADE]Scrap Polymers[-] and [008ADE]Glue[-] are the required ingredients.\n\n[008ADE]Leather[-] can be used to make [008ADE]Armor[-] and various other recipes."
 challengeCraftBones,Synthesize Bone
 challengeCraftBonesShort,Synthesize some Bones.
-challengeCraftBonesDesc,"Use the [DECEA3]Fabricator[-] to synthesize some [DECEA3]Bones[-].\n\n[DECEA3]Scrap Polymers[-], [DECEA3]Iron[-], and [DECEA3]Broken Glass[-] are the required ingredients.\n\n[DECEA3]Bones[-] can be used to make [DECEA3]Glue[-] and some other recipes."
+challengeCraftBonesDesc,"Use the [008ADE]Fabricator[-] to synthesize some [008ADE]Bones[-].\n\n[008ADE]Scrap Polymers[-], [008ADE]Iron[-], and [008ADE]Crushed Sand[-] are the required ingredients.\n\n[008ADE]Bones[-] can be used to make [008ADE]Glue[-] and some other recipes."
 challengeGroupCompleteShort,Redeem all the rewards earned by completing challenges in the Basics group.
-challengeGroupCompleteDesc,"After successfully completing every [DECEA3]Challenge[-] within the [DECEA3]Basics[-] category, it's time to claim your well-earned [DECEA3]Rewards[-].\n\nSelect each completed [DECEA3]Challenge[-] marked [00FF00]GREEN[-] and press the [DECEA3]Redeem[-] button below or use [action:local:Forward].\n\n[DECEA3]Redeeming[-] all of the [DECEA3]Challenges[-] in each group will award you with a [DECEA3]Group Completion Reward[-].\n\nThe [DECEA3]Advanced Challenges[-] will unlock after [DECEA3]Redeeming[-] this challenge."
+challengeGroupCompleteDesc,"After successfully completing every [008ADE]Challenge[-] within the [008ADE]Basics[-] category, it's time to claim your well-earned [008ADE]Rewards[-].\n\nSelect each completed [008ADE]Challenge[-] marked [00FF00]GREEN[-] and press the [008ADE]Redeem[-] button below or use [action:local:Forward].\n\n[008ADE]Redeeming[-] all of the [008ADE]Challenges[-] in each group will award you with a [008ADE]Group Completion Reward[-].\n\nThe [008ADE]Advanced Challenges[-] will unlock after [008ADE]Redeeming[-] this challenge."
 challengeGroupCompleteDesc_alt,"After successfully completing every challenge within the Basics category, it's time to claim your well-earned rewards.\n\nSelect each completed challenge marked [00FF00]GREEN[-] and click the Redeem button below or use the shortcut [action:gui:GUI Inspect].\n\nRedeeming all of the challenges in each group will award you with a group completion reward.\n\nThe Advanced Challenges will unlock after Redeeming this reward."
 challengeGroupCompleteHint2,[FFB400]Redeem all challenges in the\nBasics group.[-]
 challengeRedeemChallenge,Introduction Challenge
 challengeRedeemChallengeShort,Redeem this introduction challenge.
-challengeRedeemChallengeDesc,"[DECEA3]Challenges[-] aim to introduce you to the core gameplay systems.\n\nReview each [DECEA3]Challenge[-] description to understand your objectives and know where to find crucial information to help you survive.\n\nA [DECEA3]Challenge[-] can be tracked by selecting it and pressing [action:gui:GUI Action Left].\n\nOnce a [DECEA3]Challenge[-] has been completed, return to this window to [DECEA3]Redeem[-] your reward by selecting it and pressing [action:gui:GUI Action Up]. [DECEA3]Redeeming[-] all of the [DECEA3]Challenges[-] in each row will grant you a [DECEA3]Special Reward[-].\n\nThe [DECEA3]Trader Quest[-] will start after [DECEA3]Redeeming[-] this challenge."
+challengeRedeemChallengeDesc,"[008ADE]Challenges[-] aim to introduce you to the core gameplay systems.\n\nReview each [008ADE]Challenge[-] description to understand your objectives and know where to find crucial information to help you survive.\n\nA [008ADE]Challenge[-] can be tracked by selecting it and pressing [action:gui:GUI Action Left].\n\nOnce a [008ADE]Challenge[-] has been completed, return to this window to [008ADE]Redeem[-] your reward by selecting it and pressing [action:gui:GUI Action Up]. [008ADE]Redeeming[-] all of the [008ADE]Challenges[-] in each row will grant you a [008ADE]Special Reward[-].\n\nThe [008ADE]Trader Quest[-] will start after [008ADE]Redeeming[-] this challenge."
 
 perkPerceptionMasteryName,Empath Mastery
 perkStrengthMasteryName,Astrominer Mastery

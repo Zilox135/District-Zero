@@ -1,9 +1,9 @@
 Key,english
 
-buffDetectionGraceName,Robot sense
-buffDetectionGraceDesc,"You are carrying electronics parts, robots and mechs will be able to sense you."
-buffDetectionName,Robot Detection
-buffDetectionDesc,"You are carrying electronics parts,You are Detected by robots and mechs."
+buffDetectionGraceName,AI Detection
+buffDetectionGraceDesc,"You are carrying electronic components! AI will be able to detect you."
+buffDetectionName,AI Detection
+buffDetectionDesc,"You are carrying electronic components! You are now [FF0000]Detected[-] by AI."
 resourceElectricPartsBundle,Electric Parts Bundle
 resourceElectricPartsBundleDesc,"Bundle the electric parts in a bundle of 5."
 resourceMechanicalPartsBundle,Mechanical Parts Bundle

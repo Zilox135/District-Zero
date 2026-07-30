@@ -76,19 +76,19 @@
 		<objective type="Craft" item="foodRawMeat" count="5"/>
 	</challenge>
 
-	<challenge name="craftEggs" title_key="challengeCraftEggs" icon="ui_game_symbol_egg" group="Basics"
-		short_description_key="challengeCraftEggsShort" description_key="challengeCraftEggsDesc">
-		<objective type="Craft" item="foodEgg" count="5"/>
+	<challenge name="craftLeather" title_key="challengeCraftLeather" icon="ui_game_symbol_challenge_harvesting_leather" group="Basics"
+		short_description_key="challengeCraftLeatherShort" description_key="challengeCraftLeatherDesc">
+		<objective type="Craft" item="resourceLeather" count="1"/>
 	</challenge>
 	
 	<challenge name="craftBones" title_key="challengeCraftBones" icon="ui_game_symbol_bone" group="Basics"
 		short_description_key="challengeCraftBonesShort" description_key="challengeCraftBonesDesc">
-		<objective type="Craft" item="resourceBone" count="5"/>
+		<objective type="Craft" item="resourceBone" count="15"/>
 	</challenge>	
 
-	<challenge name="craftLeather" title_key="challengeCraftLeather" icon="ui_game_symbol_challenge_harvesting_leather" group="Basics"
-		short_description_key="challengeCraftLeatherShort" description_key="challengeCraftLeatherDesc">
-		<objective type="Craft" item="resourceLeather" count="5"/>
+	<challenge name="craftChicken" title_key="challengeCraftChicken" icon="ui_game_symbol_chicken" group="Basics"
+		short_description_key="challengeCraftChickenShort" description_key="challengeCraftChickenDesc">
+		<objective type="Craft" item="domesticatedChicken" count="1"/>
 	</challenge>	
 	
 </insertAfter>

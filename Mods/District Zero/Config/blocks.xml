@@ -50,9 +50,6 @@
 	<property name="MaxDamage" value="800" />
 </append>
 
-<!-- REDUCE ECONOMIC VALUE OF WHEELCHAIRS -->
-<set xpath="//block[starts-with(@name,'wheelchair')]/property[@name='EconomicValue']/@value">250</set>
-
 <!-- ALLOW BROKEN FORGE TO BE WRENCHED AND CHANGE ICON -->
 <append xpath="//block[@name='cntForgeWorkstationBroken']">
 	<property name="CustomIcon" value="forge" />
@@ -2950,5 +2947,53 @@
 	<property name="CustomIcon" value="decoMannequinMilitaryCommando" />
 </block>
 
+<!--======== Salvage Bells =========-->
+
+	<remove xpath="/blocks/block[@name='churchBell']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='churchBell']/drop[@event='Destroy']"/>
+	
+	<remove xpath="/blocks/block[@name='churchBellHanging']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='churchBellHanging']/drop[@event='Destroy']"/>
+	
+	<remove xpath="/blocks/block[@name='churchBell1x2x1']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='churchBell1x2x1']/drop[@event='Destroy']"/>
+	
+	<remove xpath="/blocks/block[@name='churchBellHanging1x2x1']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='churchBellHanging1x2x1']/drop[@event='Destroy']"/>
+	
+	<append xpath="/blocks/block[@name='churchBell']" >
+      	<drop event="Destroy" name="bellBlockVariantHelper" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='churchBellHanging']" >
+      	<drop event="Destroy" name="bellBlockVariantHelper" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='churchBell1x2x1']" >
+      	<drop event="Destroy" name="bellBlockVariantHelper" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='churchBellHanging1x2x1']" >
+      	<drop event="Destroy" name="bellBlockVariantHelper" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks">
+		<block name="bellBlockVariantHelper">
+			<property name="Extends" value="churchBell"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="churchBell"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value= "churchBell,churchBellHanging,churchBell1x2x1,churchBellHanging1x2x1"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+			<property name="CustomIcon" value="churchBell"/>
+		</block>
+	</append>
 </append>
 </Zilox>

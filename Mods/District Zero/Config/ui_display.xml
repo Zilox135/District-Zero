@@ -6,7 +6,13 @@
 			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
 			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
 			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
-		</crafting_category_list>	
+		</crafting_category_list>
+
+		<crafting_category_list display_type="fabricator">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+		</crafting_category_list>		
 </append>
 
 <!-- ADD NAUSEA CHANCE DISPLAY -->

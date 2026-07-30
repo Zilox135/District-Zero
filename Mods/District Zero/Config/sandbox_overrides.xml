@@ -4,4 +4,8 @@
 	<sandbox_override option="SmeltingType" />
 </append>
 
+<append xpath="/sandbox_overrides">
+	<sandbox_override option="AISmellMode"/>
+</append>
+
 </Zilox>

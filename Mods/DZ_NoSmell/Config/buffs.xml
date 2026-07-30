@@ -1,0 +1,8 @@
+<Zilox>
+
+<!-- REMOVE SMELL BUFF -->
+<remove xpath="//buff[@name='buffSmellCheck']"/>
+<remove xpath="//buff[@name='buffSmellGrace']"/>
+<remove xpath="//buff[@name='buffSmell']"/>
+
+</Zilox>
