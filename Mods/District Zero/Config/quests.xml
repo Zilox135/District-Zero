@@ -39,9 +39,6 @@
 	<reward type="Item" id="modArmorTreasureHunter" ischosen="true" isfixed="true" value="1"/>
 </append>
 
-<!-- SET AUTO TRACKING OF THE OPEN STARTER CAPSULE CHALLENGE AFTER TALKING TO THE TRADER -->
-<set xpath="//quest[@id='quest_whiteRiverCitizen1']/action[@type='TrackChallenge']/property[@name='challenge']/@value">openStarterCapsule</set>
-
 <!-- REMOVE unique_key property TO USE SIMPLE CLOSEST-POI LOGIC INSTEAD OF TraderArea VALIDATION -->
 <!-- unique_key="traderquest" causes chooseBestTrader() to be used which requires registered TraderAreas -->
 <remove xpath="//quest[@id='quest_whiteRiverCitizen1']/property[@name='unique_key']"/>

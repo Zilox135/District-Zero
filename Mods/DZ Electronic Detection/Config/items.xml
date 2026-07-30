@@ -21,6 +21,21 @@
     <property name="ElectronicSignature" value="1"/>
 </append>
 
+<!-- Batteries -->
+<append xpath="//item[@name='carBattery']">
+	<property name="ElectronicSignature" value="1"/>
+</append>
+
+<!-- Engines -->
+<append xpath="//item[@name='smallEngine']">
+	<property name="ElectronicSignature" value="1"/>
+</append>
+
+<!-- Solar Cells -->
+<append xpath="//item[@name='solarCell']">
+	<property name="ElectronicSignature" value="1"/>
+</append>
+
 <append xpath="/items">
 
 <item name="resourceElectricPartsBundle">
