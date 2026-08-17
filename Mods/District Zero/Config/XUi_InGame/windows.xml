@@ -72,10 +72,6 @@
 <!-- MOVE THE SEARCH BOX TO MAKE ROOM FOR THE EXTRA PERK ATTRIBUTES -->
 <set xpath="//window[@name='windowSkillList']/rect[@name='content']/rect[@name='categoryHeader']//rect[@console_enabled='false']/@pos">405,0</set>
 
-<!-- INCREASE DEW COLLECTOR TO 10 SLOTS -->
-<set xpath="//window[@name='windowDewCollector']/rect/grid/@cols">5</set>
-<set xpath="//window[@name='windowDewCollector']/rect/grid/@rows">2</set>
-
 <append xpath="/windows">
 
 	<window name="windowToolsBlastFurnace" width="228" height="121" panel="Right" cursor_area="true" >

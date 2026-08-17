@@ -10,16 +10,6 @@
 <remove xpath="//item[@name='modArmorAgility']"/>
 <remove xpath="//item[@name='modArmorIntellect']"/>
 
-<!-- SET TRADER PROTECTION (Set to true if you want traders to be protected) -->
-<setattribute xpath="/traders" name="trader_protection">false</setattribute>
-
-<!-- SET TRADER LAND CLAIM PLACEMENT RULES (Singleplayer or Multiplayer or both Singleplayer,Multiplayer) -->
-<setattribute xpath="/traders" name="land_claim_placement">Singleplayer</setattribute>
-
-<!-- REMOVE TRADER OPEN AND CLOSE TIMES -->
-<removeattribute xpath="//@open_time" />
-<removeattribute xpath="//@close_time" />
-
 <insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']">
 	<traderstage_template name="baseTier4"> <!-- Mech Tools|T4 Weapons -->
 		<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->

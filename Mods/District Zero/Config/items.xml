@@ -13,8 +13,6 @@
 	<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
 	<set xpath="/items/item[@name='meleeHandzombieMutatedCharged']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
 	<set xpath="/items/item[@name='meleeHandzombieMutatedInfernal']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>    
-<!--	<set xpath="/items/item[@name='meleeHandZombiePlagueSpitter']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandZombieFrostclaw']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>-->
 
 <!-- ADD COBALT AS AN OPTION TO REPAIR TOOLS -->
 <csv xpath="//property[@name='Allowed_upgrade_items']/@value" delim="," op="add">resourceForgedCobalt</csv>
@@ -2870,8 +2868,9 @@
 		<passive_effect name="EntityDamage" operation="perc_add" value="1.2" tags="secondary" />
 		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="26.4" tags="secondary" />
-	</effect_group>		
-	<effect_group name="apply damage buff, meleeWpnBatonT2LaserStunBaton">
+	</effect_group>
+	
+		<effect_group name="apply damage buff, meleeWpnBatonT2LaserStunBaton">
 		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
 			<requirement name="CompareItemMetaFloat" operation="GTE" value="4" key="charge" /></triggered_effect>
 			
@@ -3535,6 +3534,7 @@
 		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="26.4" tags="secondary" />
 	</effect_group>
+	
 	<effect_group name="apply damage buff, meleeWpnBatonT3PlasmaBaton">
 		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
 			<requirement name="CompareItemMetaFloat" operation="GTE" value="4" key="charge" /></triggered_effect>
@@ -4124,7 +4124,7 @@
 	<property name="DescriptionKey" value="questStarterCapsuleDesc" />
 	<property name="Candrop" value="false" />	
 	<property class="Action0">
-		<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolFlashlight02,meleeToolSalvageT1Wrench,resourceRepairKit,workstationSkillMagazine" />
+		<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolFlashlight02,modArmorHelmetLight,meleeToolSalvageT1Wrench,resourceRepairKit,workstationSkillMagazine" />
 		<property name="Create_item_count" value="2,1,1,1,1,1" />
 	</property>
 </item>

@@ -4,9 +4,6 @@
 <set xpath="//buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
 <set xpath="//buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
 
-<!-- REMOVE NEWBIE BUFF -->
-<remove xpath="//buff[@name='buffNewbieCoat']"/>
-
 <!-- FIX: Add check to buffDukeNote to remove itself when note is read (since buffNewbieCoat was removed) -->
 <append xpath="//buff[@name='buffDukeNote']/effect_group">
 	<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDukeNote">
@@ -26,7 +23,7 @@
 
 <!-- STOP ROBOTS FROM GIVING INFECTIONS -->
 <append xpath="//buff[@name='buffInfectionCatch']/effect_group">
-	<requirement name="!EntityTagCompare" target="other" tags="robot,mech"/>
+	<requirement name="!EntityTagCompare" target="other" tags="robot,mech,drone"/>
 </append>
 
 <!-- CORPSE BONUS FOR HARVESTING ROBOTS -->

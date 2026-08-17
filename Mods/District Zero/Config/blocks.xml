@@ -1,7 +1,5 @@
 ﻿<Zilox>
 
-
-
 <!-- DEFAULT LOCKPICK BREAK CHANCE IS 0.75 -->
 <set xpath="//property[@name='LockPickBreakChance']/@value">0.40</set>
 
@@ -64,17 +62,12 @@
 </append>
 
 <!-- ADD RADIATION BUFF TO RADIATED BARRELS -->
+<set xpath="//block[starts-with(@name,'cntBarrelRadiated')]/property[@name='ActiveRadiusEffects']/@value">buffRadiationSourceAOE,3</set>
+
+<!-- ADD ACID HARVEST TO RADIATED BARRELS -->
 <append xpath="//block[starts-with(@name,'cntBarrelRadiated')]">
-	<property name="Class" value="BuffAOE, DZCore" />
-	<property name="ActiveRadiusEffects" value="buffRadiationSourceAOE(3)" />
 	<property name="MaxDamage" value="1000" />	
 	<drop event="Harvest" name="resourceAcid" prob=".25" count="1" tag="WasteTreasuresAcidHarvest" tool_category="Disassemble" />
-</append>
-
-<!-- ADD CAMPFIRE BUFF TO BURNING BARREL -->
-<append xpath="//block[starts-with(@name,'burningBarrel')]">
-	<property name="Class" value="BuffAOE, DZCore" />
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)" />	
 </append>
 
 <!-- CHANGE PLAYER BURNING BARREL DESCRIPTION KEY -->
@@ -119,14 +112,20 @@
 	<property name="TakeItemOverride" value="officeChair01VariantHelper" />	
 </append>
 
-<!-- REMOVE HEAT FROM DEW COLLECTOR -->
-<remove xpath="//block[@name='cntDewCollector']/property[starts-with(@name,'HeatMap')]" />
-
-<!-- ADD ADVANCED ROTATION TO STORAGE -->
-<set xpath="//block[@name='cntWoodWritableCrate']/property[@name='AllowedRotations']/@value">All</set>
-<append xpath="/blocks/block[@name='cntWoodWritableCrate']">
-	<property name="OnlySimpleRotations" value="false" />
+<!-- ADD PICKUP OPTION TO STORAGE BOXES -->
+<append xpath="//block[starts-with(@name,'cnt') and (contains(@name,'WritableCrate'))]/property[@class='CompositeFeatures']">
+	<property class="TEFeaturePickup">
+		<property name="TakeDelay" value=".5" />
+	</property>
 </append>
+
+<!-- CHANGE TRADER REKT SIGN FOR TRADER LUNA (Can add a custom sign here later) -->
+<set xpath="//block[@name='signTraderRektExteriorLarge']/property[@name='Model']/@value">@:Entities/Signs/grocerySignPrefab.prefab</set>
+<set xpath="//block[@name='signTraderRektExteriorLarge']/property[@name='ModelOffset']/@value">0,0.5,-0.35</set>
+
+<!-- REMOVE TRADER REKT SIGN ABOVE TRADER LUNA -->
+<set xpath="//block[@name='signTraderRektExteriorSmall']/property[@name='Material']/@value">Mair</set>
+<set xpath="//block[@name='signTraderRektExteriorSmall']/property[@name='Shape']/@value">Invisible</set>
 
 <!-- MAKE POI SWITCHES MULTIUSE -->
 <set xpath="//block[@name='powerSwitch01']/property[@name='SingleUse']/@value">false</set>
@@ -134,244 +133,6 @@
 <set xpath="//block[starts-with(@name,'keyRack')]/property[@name='Class']/@value">Activate</set>
 <set xpath="//block[starts-with(@name,'pipeSmallWallValve') and (contains(@name,'Switch'))]/property[@name='SingleUse']/@value">false</set>
 <set xpath="//block[starts-with(@name,'pipeSmallWallValve') and (contains(@name,'Switch'))]/property[@name='Class']/@value">Activate</set>
-
-<!-- LOCKPICK DOORS -->
-<append xpath="//block[starts-with(@name,'commercial') and (contains(@name,'Door'))]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'interiorHouseDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'interiorDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'pantryDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'woodenFenceDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'exteriorHouseDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'exteriorScreenDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'frenchDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'jailDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="15" />
-	<property name="LockPickBreakChance" value="0.45" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'rollUpDoor') or (starts-with(@name,'rollUpGate'))]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironGarageDoor') or (starts-with(@name,'steelGarageDoor')) or (starts-with(@name,'woodenGarageDoor')) and not (contains(@name,'Powered'))]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="30" />
-	<property name="LockPickBreakChance" value="0.75" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'vaultDoor') and not (contains(@name,'Powered'))]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="30" />
-	<property name="LockPickBreakChance" value="0.75" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'chainlinkGate')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="20" />
-	<property name="LockPickBreakChance" value="0.45" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'chainlinkFence') and (contains(@name,'Door'))]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'oldWoodDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'closetDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'bathroomStallDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'manholeHatch')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'woodHatch')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironHatch')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'cellarDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'trailerDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'elevatorDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'tallCabinetDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<append xpath="//block[starts-with(@name,'houseSlidingDoor')]">
-	<property name="LockPickItem" value="resourceLockPick" />
-	<property name="LockPickTime" value="10" />
-	<property name="LockPickBreakChance" value="0.30" />	
-	<property name="TakeDelay" value=".5" />
-</append>
-
-<!-- PICKUP DOOR ITEM OVERRIDES -->
-<append xpath="//block[starts-with(@name,'ironDoorDouble')]">
-	<property name="TakeItemOverride" value="ironDoorDoubleBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironDoor')]">
-	<property name="TakeItemOverride" value="ironDoorBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironGarageDoor') and not (contains(@name,'Powered'))]">
-	<property name="TakeItemOverride" value="ironGarageDoorBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'steelGarageDoor') and not (contains(@name,'Powered'))]">
-	<property name="TakeItemOverride" value="steelGarageDoor3x3_PoweredBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'woodenGarageDoor') and not (contains(@name,'Powered'))]">
-	<property name="TakeItemOverride" value="woodenGarageDoor3x3_PoweredBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'rollUpDoor3x3')]">
-	<property name="TakeItemOverride" value="rollUpDoor3x3VariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'rollUpDoor5x4')]">
-	<property name="TakeItemOverride" value="rollUpDoor5x4VariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'rollUpDoor7x4')]">
-	<property name="TakeItemOverride" value="rollUpDoor7x4VariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'rollUpDoor') or starts-with(@name,'rollUpGate')]">
-	<property name="TakeItemOverride" value="rollUpDoor3x3VariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'ironHatch')]">
-	<property name="TakeItemOverride" value="ironHatchBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'chainlinkGate') or (starts-with(@name,'chainlinkFence') and contains(@name,'Door'))]">
-	<property name="TakeItemOverride" value="chainLinkFencePOIVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'jailDoor') or starts-with(@name,'vaultDoor')]">
-	<property name="TakeItemOverride" value="ironDoorBlockVariantHelper" />
-</append>
-
-<append xpath="//block[starts-with(@name,'manholeHatch') or starts-with(@name,'woodHatch') or starts-with(@name,'cellarDoor')]">
-	<property name="TakeItemOverride" value="ironHatchBlockVariantHelper" />
-</append>
-
-<!-- Wood/interior POI doors: no variant helper — BlockHelpers falls back to the door block itself as the item -->
 
 <!-- CHANGE FARMING SO SEEDS STAY AFTER HARVEST -->
 <remove xpath="//block[starts-with(@name,'planted') and (contains(@name,'HarvestPlayer'))]/drop[@event='Destroy']" />
@@ -524,7 +285,6 @@
 	<property name="TakeItemOverride" value="metalFurnitureBlockVariantHelper" />
 </append>
 
-<!-- Mannequins: player-placeable variants defined below in /blocks append -->
 <append xpath="//block[@name='decoMannequinMale']">
 	<property name="TakeDelay" value=".5" />
 	<property name="TakeItemOverride" value="decoMannequinMale_Player" />
@@ -832,11 +592,6 @@
 	<property name="TakeItemOverride" value="lanternOldBlockVariantHelper" />
 </append>
 
-<append xpath="//block[starts-with(@name,'chair') and not (contains(@name,'VariantHelper')) and not (@name='officeChair01') and not (starts-with(@name,'chairFolding')) and not (starts-with(@name,'chairCamping')) and not (@name='chairWood01') and not (starts-with(@name,'barStool'))]">
-	<property name="TakeDelay" value=".5" />
-	<property name="TakeItemOverride" value="oldChair1VariantHelper" />
-</append>
-
 <append xpath="//block[starts-with(@name,'bed') and not (contains(@name,'VariantHelper')) and not (starts-with(@name,'bedroll'))]">
 	<property name="TakeDelay" value=".5" />
 	<property name="TakeItemOverride" value="bed02BlockVariantHelper" />
@@ -908,15 +663,6 @@
 	<property name="TakeItemOverride" value="cntSecureStorageWallSafeClosed" />	
 </append>
 
-<conditional>
-    <if cond="mod_loaded('MPLogue_Prefabs_7D2D_V1_0')">
-		<append xpath="//block[starts-with(@name,'MPL_OrbSafe')]">
-			<property name="TakeDelay" value=".5" />
-			<property name="TakeItemOverride" value="MPL_SecureOrbSafeClosed" />	
-		</append>
-    </if>
-</conditional>
-
 <append xpath="//block[starts-with(@name,'cntDeskSafe')]">
 	<property name="TakeDelay" value=".5" />
 	<property name="TakeItemOverride" value="cntSecureStorageDeskSafeClosed" />	
@@ -970,10 +716,6 @@
 <append xpath="//block[starts-with(@name,'wallMirror') and (contains(@name,'Broken'))]">
 	<property name="TakeDelay" value=".5" />
 	<property name="TakeItemOverride" value="pictureVariantHelper" />
-</append>
-
-<append xpath="//block[contains(@name,'Concrete')]">
-	<property name="TakeDelay" value="0" />
 </append>
 
 <!-- MAKE WALL MIRROR LOOTABLE -->
@@ -1092,57 +834,6 @@
     <property name="DisplayNameOff" value="useTVOff" />      
 </append>
 
-<!-- NON INTERACTABLE LIGHTS -->
-<append xpath="//block[starts-with(@name,'lantern') or (starts-with(@name,'candle')) or (starts-with(@name,'emberPileLight')) or (starts-with(@name,'burningBarrel'))]">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />
-</append>
-
-<append xpath="//block[@name='wallTorchLight']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />
-</append>
-
-<append xpath="//block[@name='candleWallLight']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />		
-</append>
-
-<append xpath="//block[@name='candleTableLight']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />		
-</append>
-
-<append xpath="//block[@name='emberPileLightPOI1']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />	
-</append>
-
-<append xpath="//block[@name='emberPileLightPOI2']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />		
-</append>
-
-<append xpath="//block[@name='cntWoodBurningStove']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />		
-</append>
-
-<append xpath="//block[@name='burningBarrel']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />	
-</append>
-
-<append xpath="//block[@name='decoPumpkinJackOLantern']">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />
-</append>
-
-<append xpath="//block[starts-with(@name,'streetLight')]">
-	<property name="RuntimeSwitch" value="false" />	
-	<property name="TakeDelay" value="0" />   
-</append>
-
 <append xpath="/blocks">	
 
 <!-- WORKSTATIONS -->
@@ -1228,7 +919,7 @@
 	<property name="HeatMapStrength" value="6" />
 	<property name="HeatMapTime" value="5000" />
 	<property name="HeatMapFrequency" value="1000" />
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)" />
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,5" />
 	<property name="TraderStageTemplate" value="midTier3" />	
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="blastfurnace" />
@@ -1584,8 +1275,7 @@
 <block name="cntBarrelRadiationSingle">
 	<property name="Extends" value="cntBarrelMetalMaster" param1="ModelOffset,CustomIcon" />
 	<property name="Model" value="#@modfolder:Resources/Decor.unity3d?RadiationBarrel.prefab" />		
-	<property name="Class" value="BuffAOE, DZCore" />
-	<property name="ActiveRadiusEffects" value="buffRadiationSourceAOE(3)" />
+	<property name="ActiveRadiusEffects" value="buffRadiationSourceAOE,3" />
 	<property name="MaxDamage" value="1000" />		
 	<property name="UsePrefabNameForIcon" value="true" />	
 	<property name="MultiBlockDim" value="2,1,1" />

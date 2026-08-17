@@ -13,9 +13,6 @@
 <!-- REMOVE LEGENDARY PARTS -->
 <remove xpath="//item[@name='resourceLegendaryParts']"/>
 
-<!-- INCREASE CHANCE OF FINDING ANTIBIOTICS -->
-<set xpath="//item[starts-with(@name,'drugAntibiotics') or (contains(@name,'Antibiotics'))]/@loot_prob_template">low</set>
-
 <!-- ADJUST THE SIZE OF THE PLAYER DROPPED BACKPACK -->
 <set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">11,11</set>
 
@@ -26,10 +23,6 @@
 <set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupSmallAmmoMedMed']/@loot_prob_template">guaranteed</set>
 <set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupSmallAmmoLowHigh']/@loot_prob_template">guaranteed</set>
 <set xpath="//lootgroup[@name='groupAmmoPileMed']/item[@group='groupWeaponsMedMedMed']/@loot_prob_template">guaranteed</set>
-
-<!-- INCREASE BIRD NEST FEATHER LOOT -->
-<set xpath="//lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">10,15</set>
-<set xpath="//lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">4,6</set>
 
 <!-- REPLACE EGG WITH ROTTEN EGG -->
 <set xpath="//lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@name">foodEggRotten</set>

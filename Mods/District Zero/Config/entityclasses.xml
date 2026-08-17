@@ -43,8 +43,7 @@
 	<property name="TintShaderProperties" value="_EmissiveColor" />
 </append>
 
-
-<!-- ADD EXTRA HP TO ZOMBIES BASED ON DIFFICULTIES   -->
+<!-- ADD EXTRA HP TO ZOMBIES BASED ON DIFFICULTIES -->
 <append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
 	<effect_group name="Base Effects">
 
@@ -75,9 +74,6 @@
 </effect_group>	
 </append>
 
-
-	
-
 <!-- MAKE CHUCK USE RADIATED MODEL FOR NORMAL AND FERAL VERSIONS -->
 <set xpath="//entity_class[@name='zombieChuck']/property[@name='Mesh']/@value">@:Entities/Zombies/Chuck/ZChuckRadiated.prefab</set>
 <set xpath="//entity_class[@name='zombieChuckFeral']/property[@name='Mesh']/@value">@:Entities/Zombies/Chuck/ZChuckRadiated.prefab</set>
@@ -94,8 +90,23 @@
 </append>
 
 <!-- CHANGE TRADER MODELS -->
+
+<!-- *** Trader Luna (replaces Rekt) *** -->
+<set xpath="//entity_class[@name='npcTraderRekt']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot04</set>
+<set xpath="//entity_class[@name='npcTraderRekt']/property[@name='DanceType']/@value">2</set>
+
+<append xpath="//entity_class[@name='npcTraderRekt']">
+	<property name="AvatarController" value="AvatarZombieController" />	
+    <property name="ModelType" value="Standard" />
+	<property name="PhysicsBody" value="MixamoStandardHumanoid" />
+	<property name="HasRagdoll" value="false" />	
+	<property name="LookAtAngle" value="0" />
+</append>
+
+<!-- *** Trader Jen *** -->
 <set xpath="//entity_class[@name='npcTraderJen']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot01</set>
 <csv xpath="//entity_class[@name='npcTraderJen']/property[@name='Tags']/@value" delim="," op="add">traderJen</csv>
+
 <append xpath="//entity_class[@name='npcTraderJen']">
 	<property name="AvatarController" value="AvatarZombieController" />	
     <property name="ModelType" value="Standard" />
@@ -103,16 +114,10 @@
 	<property name="LookAtAngle" value="0" />
 </append>
 
-<set xpath="//entity_class[@name='npcTraderJoel']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot02</set>
-<csv xpath="//entity_class[@name='npcTraderJoel']/property[@name='Tags']/@value" delim="," op="add">traderJoel</csv>
-<append xpath="//entity_class[@name='npcTraderJoel']">
-	<property name="AvatarController" value="AvatarZombieController" />	
-    <property name="ModelType" value="Standard" />
-	<property name="HasRagdoll" value="false" />
-	<property name="LookAtAngle" value="0" />
-</append>
 
+<!-- *** Trader Bob *** -->
 <set xpath="//entity_class[@name='npcTraderBob']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot03</set>
+
 <append xpath="//entity_class[@name='npcTraderBob']">
 	<property name="AvatarController" value="AvatarZombieController" />	
     <property name="ModelType" value="Standard" />
@@ -120,23 +125,26 @@
 	<property name="LookAtAngle" value="0" />
 </append>
 
-<set xpath="//entity_class[@name='npcTraderRekt']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot04</set>
-<set xpath="//entity_class[@name='npcTraderRekt']/property[@name='DanceType']/@value">2</set>
-<set xpath="//entity_class[@name='npcTraderRekt']/property[@name='NPCID']/@value">traderluna</set>
-<append xpath="//entity_class[@name='npcTraderRekt']">
-	<property name="AvatarController" value="AvatarZombieController" />	
-    <property name="ModelType" value="Standard" />
-	<property name="PhysicsBody" value="MixamoStandardHumanoid" />
-	<property name="LookAtAngle" value="0" />
-</append>
-
+<!-- *** Trader Hugh *** -->
 <set xpath="//entity_class[@name='npcTraderHugh']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot05</set>
+
 <append xpath="//entity_class[@name='npcTraderHugh']">
 	<property name="AvatarController" value="AvatarZombieController" />	
     <property name="ModelType" value="Standard" />
 	<property name="PhysicsBody" value="MixamoStandardHumanoid" />
 	<property name="LookAtAngle" value="0" />
 	<property name="SizeScale" value="1.1" />
+</append>
+
+<!-- *** Trader Joel *** -->
+<set xpath="//entity_class[@name='npcTraderJoel']/property[@name='Mesh']/@value">#@modfolder:Resources/Entities.unity3d?TraderRobot02</set>
+<csv xpath="//entity_class[@name='npcTraderJoel']/property[@name='Tags']/@value" delim="," op="add">traderJoel</csv>
+
+<append xpath="//entity_class[@name='npcTraderJoel']">
+	<property name="AvatarController" value="AvatarZombieController" />	
+    <property name="ModelType" value="Standard" />
+	<property name="HasRagdoll" value="false" />
+	<property name="LookAtAngle" value="0" />
 </append>
 
 <!-- RESTORE ZOMBIES BACK TO A21 HEALTH -->
@@ -250,7 +258,6 @@
 	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->	
 	
 	<property name="MoveSpeedAggro" value="0.3, 3.25" /> <!-- Chasing a target min/max (like day or night)-->
-	<property name="CanRage" value="false" />
 	<property name="CanOpenDoors" value="true" /> <!-- Open unlocked doors -->	
 
 	<property name="TimeStayAfterDeath" value="180" />
@@ -323,9 +330,7 @@
 	<property name="SoundFootstep" value="steprobotanimal" />	
 	
 	<property name="SoundSleeperBackToSleep" value="" /> <!-- Sleeping sounds, we don't need these -->	
-	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->
-
-	<property name="CanRage" value="true" />		
+	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->		
 
 	<property name="TimeStayAfterDeath" value="300" />
 	<property name="ExperienceGain" value="750" />
@@ -387,8 +392,6 @@
 	
 	<property name="SoundSleeperBackToSleep" value="" /> <!-- Sleeping sounds, we don't need these -->
 	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->
-
-	<property name="CanRage" value="true" />	
 
 	<property name="SightRange" value="50" />
 	<property name="JumpMaxDistance" value="6, 7" />	
@@ -462,9 +465,7 @@
 	
 	<property name="SoundDismember" value="robot_dismember" />
 	<property name="SoundSleeperBackToSleep" value="" /> <!-- Sleeping sounds, we don't need these -->
-	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->
-
-	<property name="CanRage" value="true" />	
+	<property name="SoundSleeperSense" value="" /> <!-- Snoring sounds, we don't need these -->	
 
 	<property name="TimeStayAfterDeath" value="300" />
 	<property name="ExperienceGain" value="600" />
