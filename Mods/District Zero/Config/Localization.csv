@@ -42,6 +42,7 @@ cntSecureStorageOldWestChestClosed,Secure Old West Chest
 cntSecureStorageWoodenChestMilitaryClosed,Secure Military Chest
 cntSecureStorageToolBoxClosedWhite,Secure Toolbox
 cntSecureStorageRollingToolBoxClosedWhite,Secure Rolling Toolbox
+
 treeForestBeech00A,Beech Tree 00 A
 treeForestBeech00B,Beech Tree 00 B
 treeForestBeech00C,Beech Tree 00 C
@@ -86,6 +87,7 @@ treePlantedWinterFir00,Planted Fir Tree Winter 00
 treePlantedWinterFir01,Planted Fir Tree Winter 01
 treePlantedWinterFir02,Planted Fir Tree Winter 02
 treePlantedWinterFir03,Planted Fir Tree Winter 03
+
 plantBeech00,Beech Plant 00
 plantBeech01,Beech Plant 01
 plantBeech02,Beech Plant 02
@@ -116,6 +118,7 @@ plantLeaves04,Leaves 04
 plantLeaves05,Leaves 05
 plantMoss00,Moss 00
 plantMoss01,Moss 01
+
 boulderResource00,Resource Boulder 00
 boulderResource01,Resource Boulder 01
 boulderResource02,Resource Boulder 02
@@ -130,6 +133,7 @@ rockSmallResource00,Small Rock 00
 rockSmallResource01,Small Rock 01
 rockSmallResource02,Small Rock 02
 rockSmallResource03,Small Rock 03
+
 branch00,Branch 00
 branch01,Branch 01
 branch02,Branch 02
@@ -139,18 +143,17 @@ branch05,Branch 05
 branch06,Branch 06
 branch07,Branch 07
 branch08,Branch 08
+
 treeStump00,Tree Stump 00
 treeStump01,Tree Stump 01
 treeStump02,Tree Stump 02
 treeStump03,Tree Stump 03
 treeStump04,Tree Stump 04
+
 decoRoadRandomHelper,Deco Road Random Helper
 treeLog00,Tree Log 00
 treeLog01,Tree Log 01
-cntBarrelGroupDesc,Barrels can be looted and will explode if hit by enemies or destroyed by tools without harvest tags such as guns.\nThe player may catch an AOE debuff based on the barrel type.
-decoPumpkinJackOLanternDesc,A must-have for scaring those enemies right back.
-fakeCabinetDoorTrapGroupDesc,Enemies can see through this block. The intended use is that a hidden enemy can see the player and bust out of a closet.
-fencesGroupDesc,Fences and railings can keep the neighbors out. Still useful for not falling from high places.
+
 fabricator,Fabricator
 fabricatorDesc,Synthesises organic material into useable items over time.\n\nRepair with Forged Iron.
 bladeTrapDesc,Used to dismantle enemies into many pieces.\n\nRepair with Forged Steel.
@@ -163,6 +166,7 @@ domesticatedChickenDesc,A fully synthesized chicken that's almost indistinguisha
 cntChickenCoopDesc,"Slowly makes Eggs, Feathers, and Chickens when the Nesting Box is installed.\n\nSynthesize Chickens in the Fabricator and place them in the slots.\n\nFuel with Chicken Feed.\n\nWorks best outdoors or with 6 air blocks above them.\nRepair with Forged Iron."
 plantedCropsGroupDesc,Plant these seeds on a Farm Plot or fertile land to grow plants for you to harvest.
 burningBarrelPlayerDesc,Open flames provide some heat when nearby. Has no effect on the heat map.
+
 xuiTargetZombies,Target Enemies
 xuiZombieKills,Enemy Kills
 xuiRoboticAnimals,Robotic Animals
@@ -178,6 +182,7 @@ xuiDrones,Drones
 xuiDroids,Droids
 xuiMechs,Mechs
 xuiForgeAheadMagazine,Forge Ahead Magazine
+
 statCraftingSmeltTimeBlastFurnace,Blast Furnace Smelting Speed
 statCraftingTimeBlastFurnace,Blast Furnace Crafting Speed
 statNausea,Nausea Chance
@@ -195,6 +200,7 @@ statNeonaut,Neonaut
 statEntityDamageShock,Shock Damage
 statNerdDamage,Robotic/Baton Weapon Damage
 statAnimalDamage,Mech/Droid Damage
+
 buffNauseaName,Nausea
 buffNauseaDesc,You feel nauseous after consuming too many drugs.\nUse vitamins to cure this.\n\nYour max health and stamina are lowered by 25%. All attributes are lowered by 2.
 buffFlaregunAirdropName,Incoming Airdrop
@@ -220,6 +226,7 @@ buffInfection01GetBetterDesc,You have a treated mild infection. Continue medicat
 buffInfection01UntreatedDesc,You have a mild infection.\nIt will get worse until treated by antibiotics.\nGetting hit by zombies will make an infection worse.
 buffInfection02GetBetterDesc,You have a treated serious infection. Continue medication and keep an eye on the wound.\nGetting hit by zombies will make an infection worse.\n\nStamina Regeneration -12.5%
 buffInfection02UntreatedDesc,You have a serious infection. If left untreated it could lead to severe infection which can cause death. Take antibiotics as soon as possible.\nGetting hit by zombies will make an infection worse.\n\nStamina Regeneration -25%
+
 drugAntiRadiation,Anti-Radiation Pills
 drugAntiRadiationDesc,Anti-Radiation Pills can lower your radiation exposure and cure acute radiation sickness. It also protects you from further radiation exposure for some time\n\nCan be crafted in a beaker at a campfire.
 drugAdvancedAntiRadiation,Advanced Anti-Radiation Pills
@@ -227,17 +234,22 @@ drugAdvancedAntiRadiationDesc,Advanced Anti-Radiation Pills completely remove an
 drugDevRadiation,Radiation Tester
 drugDevRadiationDesc,A radiation dev drug that increases your radiation amount.
 drugVitaminsDesc,"These vitamins cure Nausea and Fatigue, and prevent you from catching ailments like Infection, Dysentery, Nausea or Fatigue."
+
 foodEggRotten,Rotten Egg
 foodEggRottenDesc,Rotten Eggs smell awful. You probably shouldn't eat this thing.
+
 drinkJarEmpty,Empty Water Jar
 drinkJarEmptyDesc,An empty glass jar can be filled at water sources using the secondary action or used in other recipes.
+
 torchPlayerGroupDesc,Open flames and flickering lights like with torches (less so with candles) will attract unwanted attention.
 lanternLight_playerDesc,This oil powered lantern will provide light without the flickering that tends to attract unwanted attention.
 candleDesc,A candle can be carried as a light source or placed on walls. This might attract unwanted attention.
+
 toolBustlePipe,Bustle Pipe
 toolBustlePipeDesc,A tool that can be installed in a Blast Furnace. It increases air flow and so the smelting speed of the furnace.
 toolPreHeater,Pre Heater
 toolPreHeaterDesc,A tool that can be installed in a Blast Furnace. It increases the crafting speed of that furnace.
+
 resourceCobalt,Raw Cobalt
 resourceCobaltDesc,"A core resource for crafting, forging, repairing & upgrading walls. Much stronger than steel."
 resourceForgedCobalt,Forged Cobalt
@@ -258,6 +270,7 @@ resourceClayLumpBundle,Stack of Clay Soil (6000)
 resourceClayLumpBundleDesc,This is a compact stack of clay soil. Use this item to open and unpack it.
 resourceCrushedSandBundle,Stack of Crushed Sand (6000)
 resourceCrushedSandBundleDesc,This is a compact stack of crushed sand. Use this item to open and unpack it.
+
 gunBowT0PrimitiveBowDesc,Good for sneaking and killing enemies from a distance. Uses arrows for ammunition.\nHold reload to use alternate ammo.\n\nRepair with Wood.\nScrap to Wood.
 gunBowT1WoodenBowDesc,Good for sneaking and killing enemies from a distance. Uses arrows for ammunition.\nHold reload to use alternate ammo.\n\nRepair with a Repair Kit.\nScrap to Bow / Crossbow Parts.
 gunHandgunT1Flaregun,Emergency Flare Gun
@@ -292,8 +305,7 @@ gunExplosivesT3PlasmaGrenadeLauncher,Plasma Grenade Launcher
 gunExplosivesT3PlasmaGrenadeLauncherDesc,A Plasma Grenade Launcher shoots grenade energy cells.\n\nRepair with a Repair Kit.\nScrap to Launcher Parts.
 gunExplosivesT3PlasmaRocketLauncher,Plasma Rocket Launcher
 gunExplosivesT3PlasmaRocketLauncherDesc,A Plasma Rocket Launcher shoots rocket energy cells.\n\nRepair with a Repair Kit.\nScrap to Launcher Parts.
-gunHandgunPistolDev,Dev: Instant Death Nearby Pistol
-gunHandgunPistolDevDesc,A dev pistol that kills all nearby enemies when fired.
+
 ammoFlareRound,Flare Round (Ammo)
 ammoFlareRoundDesc,A flare round that has a 30% chance to spawn an airdrop when fired outdoors. Airdrops will not be sent during Horde Night. Beware it may also attract unwanted attention. Can be crafted at a workbench.
 ammoNanoEnergyCell,Nano Energy Cell (Ammo)
@@ -321,6 +333,7 @@ ammoBundleHeavyEnergyCell,Box of Heavy Energy Cell Ammo (100)
 ammoBundleHeavyEnergyCellAP,Box of AP Heavy Energy Cell Ammo (100)
 ammoBundleShotgunEnergyCell,Box of Shotgun Energy Cell Ammo (100)
 ammoBundleShotgunEnergyCellAP,Box of AP Shotgun Energy Cell Ammo (100)
+
 meleeWpnClubT2LaserClub,Laser Club
 meleeWpnClubT2LaserClubDesc,Laser clubs are very durable and hard-hitting.\n\nRepair with a Repair Kit.\nScrap to Club Parts.
 meleeWpnBladeT2LaserKnife,Laser Knife
@@ -359,6 +372,7 @@ meleeWpnBladeT1HuntingKnifeDesc,Great for harvesting plants and slashing enemies
 meleeWpnBladeT1CandyKnifeDesc,Time to get into a festive and stabby mood!\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\n\nRepair with a Repair Kit.
 meleeWpnBladeT3MacheteDesc,Great for slashing enemies and harvesting plants.\nRegular attacks cause 1 Mechanical Wound and power attacks at least 2.\nRepair with a Repair Kit.\nScrap to Blade Parts.
 meleeToolTorchDesc,This torch can be used as a light source or weapon with a chance to catch enemies on fire. Place with secondary action. May attract unwanted attention.
+
 gunExplosivesT3RocketLauncherParts,Launcher Parts
 meleeWpnBladeT3MacheteParts,Blade Parts
 meleeWpnSpearT3SteelSpearParts,Spear Parts
@@ -366,6 +380,7 @@ meleeWpnClubT3SteelClubParts,Club Parts
 meleeWpnKnucklesT3SteelKnucklesParts,Knuckle Parts
 meleeWpnSledgeT3SteelSledgehammerParts,Sledgehammer Parts
 meleeToolAllSteelParts,Tool Parts
+
 vehicleMuscleCarPlaceable,Muscle Car
 vehicleMuscleCarChassis,Muscle Car Chassis
 vehiclePickupTruckPlaceable,Pickup Truck
@@ -374,10 +389,12 @@ vehicleLuxurySedanPlaceable,Luxury Sedan
 vehicleLuxurySedanChassis,Luxury Sedan Chassis
 vehicleHoverCarPlaceable,Hover Car
 vehicleHoverCarChassis,Hover Car Chassis
+
 armorNerdGlovesDesc,Heavy Armor\nProtect those cold clammy soft hands from the elements and become an intellectual badass. Deal more damage with robotic weapons and stun batons.\n\nFull Set Bonus: Tools and Weapons degrade slower.
 foodShamChowderDesc,Sham Chowder tastes great and grows chest hair!
 resourceTestosteroneExtract,Synthesized Testosterone
 resourceTestosteroneExtractDesc,An artificial compound used to create steroids.
+
 attuniversalperks,Universal Perks
 attUniversalPerksName,Universal Perks
 attUniversalPerksDesc,Universal perks contain a wide variety of skills that one can learn.
@@ -386,22 +403,25 @@ attUniversalPerksRank2Desc,Rank 2
 attUniversalPerksRank3Desc,Rank 3
 attUniversalPerksRank4Desc,Rank 4
 attUniversalPerksRank5Desc,Rank 5
+
 attempath,Empath
 attEmpathName,Empath
-attEmpathDesc,The Empath is widely known as an intellectual for their mental ability and charismatic nature. Increasing Empath improves headshot damage with empath governed weapons such as rifles and stun batons.
+attEmpathDesc,The Empath is widely known as an intellectual for their mental ability and charismatic nature. Increasing Empath improves headshot damage with empath governed weapons such as rifles and spears.
 attEmpathRank1Desc,Rank 1
 attEmpathRank2Desc,Rank 2
 attEmpathRank3Desc,Rank 3
 attEmpathRank4Desc,Rank 4
 attEmpathRank5Desc,Rank 5
+
 attcybernetician,Cybernetician
 attCyberneticianName,Cybernetician
-attCyberneticianDesc,The cybernetician specializes in the manufacture and repair of heavy duty weapons and robots. Increasing Cybernetician improves headshot damage with cybernetician governed weapons such as machine guns and knuckles.
+attCyberneticianDesc,"The cybernetician specializes in the manufacture and repair of heavy duty weapons and robots. Increasing Cybernetician improves headshot damage with cybernetician governed weapons such as machine guns, robotic weapons and stun batons."
 attCyberneticianRank1Desc,Rank 1
 attCyberneticianRank2Desc,Rank 2
 attCyberneticianRank3Desc,Rank 3
 attCyberneticianRank4Desc,Rank 4
 attCyberneticianRank5Desc,Rank 5
+
 attcosmotech,Cosmotech
 attCosmotechName,Cosmotech
 attCosmotechDesc,The cosmotech specializes in the repair and creation of vehicles and salvage of materials. Increasing Cosmotech improves headshot damage with cosmotech governed weapons such as clubs and shotguns.
@@ -410,14 +430,16 @@ attCosmotechRank02Desc,Rank 2
 attCosmotechRank03Desc,Rank 3
 attCosmotechRank04Desc,Rank 4
 attCosmotechRank05Desc,Rank 5
+
 attexomedic,Exomedic
 attExomedicName,Exomedic
-attExomedicDesc,The exomedic specializes in fitness and treating injuries. Increasing Exomedic improves headshot damage with exomedic governed weapons such as blades and handguns. 
+attExomedicDesc,The exomedic specializes in fitness and treating injuries. Increasing Exomedic improves headshot damage with exomedic governed weapons such as knuckles.
 attExomedicRank01Desc,Rank 1
 attExomedicRank02Desc,Rank 2
 attExomedicRank03Desc,Rank 3
 attExomedicRank04Desc,Rank 4
 attExomedicRank05Desc,Rank 5
+
 attastrominer,Astrominer
 attAstrominerName,Astrominer
 attAstrominerDesc,The astrominer specializes in mining and resource extraction. Increasing Astrominer improves headshot damage with astrominer governed weapons such as sledgehammers and explosives.
@@ -426,80 +448,93 @@ attAstrominerRank02Desc,Rank 2
 attAstrominerRank03Desc,Rank 3
 attAstrominerRank04Desc,Rank 4
 attAstrominerRank05Desc,Rank 5
+
 attneonaut,Neonaut
 attNeonautName,Neonaut
-attNeonautDesc,The neonaut specializes in multiplanetary exploration and the discovery of new species. Increasing Neonaut improves headshot damage with neonaut governed weapons such as bows and spears.
+attNeonautDesc,"The neonaut specializes in multiplanetary exploration and the discovery of new species. Increasing Neonaut improves headshot damage with neonaut governed weapons such as handguns, bows and blades."
 attNeonautRank01Desc,Rank 1
 attNeonautRank02Desc,Rank 2
 attNeonautRank03Desc,Rank 3
 attNeonautRank04Desc,Rank 4
 attNeonautRank05Desc,Rank 5
-reqUniversalPerksLevel01,Universal Perks Level 1
-reqUniversalPerksLevel02,Universal Perks Level 2
-reqUniversalPerksLevel03,Universal Perks Level 3
-reqUniversalPerksLevel04,Universal Perks Level 4
-reqUniversalPerksLevel05,Universal Perks Level 5
-reqEmpathLevel01,Empth Level 1
-reqEmpathLevel02,Empth Level 2
-reqEmpathLevel03,Empth Level 3
-reqEmpathLevel04,Empth Level 4
-reqEmpathLevel05,Empth Level 5
-reqCyberneticianLevel01,Cybernetician Level 1
-reqCyberneticianLevel02,Cybernetician Level 2
-reqCyberneticianLevel03,Cybernetician Level 3
-reqCyberneticianLevel04,Cybernetician Level 4
-reqCyberneticianLevel05,Cybernetician Level 5
-reqCosmotechLevel01,Cosmotech Level 1
-reqCosmotechLevel02,Cosmotech Level 2
-reqCosmotechLevel03,Cosmotech Level 3
-reqCosmotechLevel04,Cosmotech Level 4
-reqCosmotechLevel05,Cosmotech Level 5
-reqExomedicLevel01,Exomedic Level 1
-reqExomedicLevel02,Exomedic Level 2
-reqExomedicLevel03,Exomedic Level 3
-reqExomedicLevel04,Exomedic Level 4
-reqExomedicLevel05,Exomedic Level 5
-reqAstrominerLevel01,Astrominer Level 1
-reqAstrominerLevel02,Astrominer Level 2
-reqAstrominerLevel03,Astrominer Level 3
-reqAstrominerLevel04,Astrominer Level 4
-reqAstrominerLevel05,Astrominer Level 5
-reqNeonautLevel01,Neonaut Level 1
-reqNeonautLevel02,Neonaut Level 2
-reqNeonautLevel03,Neonaut Level 3
-reqNeonautLevel04,Neonaut Level 4
-reqNeonautLevel05,Neonaut Level 5
 
-attEmpathRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with rifles and stun batons"
-attEmpathRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with rifles and stun batons"
-attEmpathRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with rifles and stun batons"
-attEmpathRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with rifles and stun batons"
-attEmpathRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with rifles and stun batons"
-attCyberneticianRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with machine guns and robotic turrets"
-attCyberneticianRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with machine guns and robotic turrets"
-attCyberneticianRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with machine guns and robotic turrets"
-attCyberneticianRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with machine guns and robotic turrets"
-attCyberneticianRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with machine guns and robotic turrets"
+attEmpathRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with rifles and spears"
+attEmpathRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with rifles and spears"
+attEmpathRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with rifles and spears"
+attEmpathRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with rifles and spears"
+attEmpathRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with rifles and spears"
+
+attCyberneticianRank1LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with machine guns, robotic weapons and stun batons"
+attCyberneticianRank2LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with machine guns, robotic weapons and stun batons"
+attCyberneticianRank3LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with machine guns, robotic weapons and stun batons"
+attCyberneticianRank4LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with machine guns, robotic weapons and stun batons"
+attCyberneticianRank5LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with machine guns, robotic weapons and stun batons"
+
 attCosmotechRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with clubs and shotguns"
 attCosmotechRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with clubs and shotguns"
 attCosmotechRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with clubs and shotguns"
 attCosmotechRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with clubs and shotguns"
 attCosmotechRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with clubs and shotguns"
-attExomedicRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with blades and handguns"
-attExomedicRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with blades and handguns"
-attExomedicRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with blades and handguns"
-attExomedicRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with blades and handguns"
-attExomedicRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with blades and handguns"
+
+attExomedicRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with knuckles"
+attExomedicRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with knuckles"
+attExomedicRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with knuckles"
+attExomedicRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with knuckles"
+attExomedicRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with knuckles"
+
 attAstrominerRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with sledgehammers and explosives"
 attAstrominerRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with sledgehammers and explosives"
 attAstrominerRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with sledgehammers and explosives"
 attAstrominerRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with sledgehammers and explosives"
 attAstrominerRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with sledgehammers and explosives"
-attNeonautRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with bows and spears"
-attNeonautRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with bows and spears"
-attNeonautRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with bows and spears"
-attNeonautRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with bows and spears"
-attNeonautRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with bows and spears"
+
+attNeonautRank01LongDesc,"Deal 200% headshot damage and have a 5% chance to dismember with handguns, bows and blades"
+attNeonautRank02LongDesc,"Deal 210% headshot damage and have a 10% chance to dismember with handguns, bows and blades"
+attNeonautRank03LongDesc,"Deal 220% headshot damage and have a 15% chance to dismember with handguns, bows and blades"
+attNeonautRank04LongDesc,"Deal 230% headshot damage and have a 20% chance to dismember with handguns, bows and blades"
+attNeonautRank05LongDesc,"Deal 240% headshot damage and have a 25% chance to dismember with handguns, bows and blades"
+
+reqUniversalPerksLevel01,Universal Perks Level 1
+reqUniversalPerksLevel02,Universal Perks Level 2
+reqUniversalPerksLevel03,Universal Perks Level 3
+reqUniversalPerksLevel04,Universal Perks Level 4
+reqUniversalPerksLevel05,Universal Perks Level 5
+
+reqEmpathLevel01,Empth Level 1
+reqEmpathLevel02,Empth Level 2
+reqEmpathLevel03,Empth Level 3
+reqEmpathLevel04,Empth Level 4
+reqEmpathLevel05,Empth Level 5
+
+reqCyberneticianLevel01,Cybernetician Level 1
+reqCyberneticianLevel02,Cybernetician Level 2
+reqCyberneticianLevel03,Cybernetician Level 3
+reqCyberneticianLevel04,Cybernetician Level 4
+reqCyberneticianLevel05,Cybernetician Level 5
+
+reqCosmotechLevel01,Cosmotech Level 1
+reqCosmotechLevel02,Cosmotech Level 2
+reqCosmotechLevel03,Cosmotech Level 3
+reqCosmotechLevel04,Cosmotech Level 4
+reqCosmotechLevel05,Cosmotech Level 5
+
+reqExomedicLevel01,Exomedic Level 1
+reqExomedicLevel02,Exomedic Level 2
+reqExomedicLevel03,Exomedic Level 3
+reqExomedicLevel04,Exomedic Level 4
+reqExomedicLevel05,Exomedic Level 5
+
+reqAstrominerLevel01,Astrominer Level 1
+reqAstrominerLevel02,Astrominer Level 2
+reqAstrominerLevel03,Astrominer Level 3
+reqAstrominerLevel04,Astrominer Level 4
+reqAstrominerLevel05,Astrominer Level 5
+
+reqNeonautLevel01,Neonaut Level 1
+reqNeonautLevel02,Neonaut Level 2
+reqNeonautLevel03,Neonaut Level 3
+reqNeonautLevel04,Neonaut Level 4
+reqNeonautLevel05,Neonaut Level 5
 
 perkGreatHeistCompleteDesc,Lockpicking is always successful. Break into locks 20% faster.
 perkGreatHeistCompleteLongDesc,"Lock Picking: If there were still laws you would be breaking them! Master the skill of lockpicking, break into locks 20% faster. Lock picks never break."
@@ -538,6 +573,7 @@ perkSniperCompleteDesc,You can craft a ghillie suit. Bulk craft all 7.62mm ammo 
 perkShotgunMessiahSlugsDesc,You can craft shotgun slugs and AP Shotgun Energy Cells.
 perkShotgunMessiahSlugsLongDesc,Slugs and AP rounds can penetrate multiple targets. You can craft shotgun slugs and AP Shotgun Energy Cells.
 perkShotgunMessiahCompleteDesc,You can one shot most wood blocks. Bulk craft all shotgun ammo and Shotgun Energy Cells.
+perkPhysicianRank5LongDesc,"Use your knowledge of medicine to save lives, or end them.\nEach blow landed with a stun baton has a 10% chance for instant death on any living organism.\n\n[FF0000]It does not affect robots.[-]"
 
 harvestToolsPlasma,Plasma Tools
 handgunsPrimitive,Primitive Handguns

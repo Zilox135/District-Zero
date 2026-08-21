@@ -1531,17 +1531,19 @@
 <block name="mineEMP">
 	<property name="Extends" value="mineCandyTin" />
 	<property name="DisplayType" value="blockLandmine" />
-	<property class="Explosion"><property name="ParticleIndex" value="18" /><property name="IgnoreHeatMap" value="true" /><property name="Duration" value="5" /><property name="RadiusBlocks" value="2" /><property name="BlockDamage" value="10" /><property name="RadiusEntities" value="10" /><property name="EntityDamage" value="30" /><property name="Buff" value="buffEMP,buffDisableLauncher" /></property>
-	
-	
-	
-		
-	
-	
-	
-	
-	 <!-- damage for entities in the center of the explosion. -->
-		
+	<property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$mineEMP" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="AudioName" value="plasma_explosion"/>
+		<property name="AudioDuration" value="3"/>
+		<property name="SyncOnConnect" value="false"/>		
+		<property name="RadiusBlocks" value="2" />
+		<property name="BlockDamage" value="10" />
+		<property name="RadiusEntities" value="10" />
+		<property name="EntityDamage" value="30" />
+		<property name="Buff" value="buffEMP,buffDisableLauncher" />
+	</property>
+
 	<property name="UnlockedBy" value="craftingExplosives" />
 	<property name="Stacknumber" value="20" /> <!-- STK explosives -->
 	<property name="DescriptionKey" value="mineEMPDesc" />	

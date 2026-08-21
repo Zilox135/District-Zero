@@ -1165,7 +1165,10 @@
 <set xpath="//perk[@name='perkPhysician']/level_requirements[@level='4']/requirement/@desc_key">reqExomedicLevel04</set>
 <set xpath="//perk[@name='perkPhysician']/level_requirements[@level='5']/requirement/@desc_key">reqExomedicLevel05</set>
 
-<csv xpath="//perk[@name='perkPhysician']/effect_group[2]/requirement[@name='EntityTagCompare']/@tags" delim="," op="add">robot,mech</csv>
+<!-- Exclude robots from Physician Euthanizer (instant death chance) -->
+<append xpath="//perk[@name='perkPhysician']//triggered_effect[@buff='buffPhysicianEuthanizer']">
+	<requirement name="!EntityTagCompare" target="other" tags="robot,mech,droid,drone"/>	
+</append>
 
 	<!-- *** ADVANCED_ENGINEERING -->
 <setattribute xpath="//perk[@name='perkAdvancedEngineering']" name="parent">attCybernetician</setattribute>

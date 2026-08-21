@@ -2507,17 +2507,26 @@
 	
 	<property name="HandItem" value="meleeHandDroneNano" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="18" /><property name="AudioName" value="combat_explosion_electricity" /><property name="AudioDuration" value="1.1" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="2" /><property name="EntityDamage" value="5" /><property name="Buff" value="buffShocked" /><property name="Duration" value="1" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-	
-		
-			
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?EnergyExplosion$robotDroneNano" />
+		<property name="AudioName" value="combat_explosion_electricity" />
+		<property name="AudioDuration" value="1.1" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="6" />
+		<property name="BlockDamage" value="2" />
+		<property name="EntityDamage" value="5" />
+		<property name="Buff" value="buffShocked" />
+		<property name="Duration" value="1" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="120" />
@@ -2564,17 +2573,26 @@
 	
 	<property name="HandItem" value="meleeHandDroneNano" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="18" /><property name="AudioName" value="combat_explosion_electricity" /><property name="AudioDuration" value="1.1" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="4" /><property name="BlockDamage" value="1" /><property name="EntityDamage" value="2" /><property name="Buff" value="buffShocked" /><property name="Duration" value="1" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-	
-		
-			
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?EnergyExplosion$robotDronePoliceNano" />
+		<property name="AudioName" value="combat_explosion_electricity" />
+		<property name="AudioDuration" value="1.1" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="4" />
+		<property name="BlockDamage" value="1" />
+		<property name="EntityDamage" value="2" />
+		<property name="Buff" value="buffShocked" />
+		<property name="Duration" value="1" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="140" />
@@ -2621,16 +2639,25 @@
 	
 	<property name="HandItem" value="meleeHandRobotStandard" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="13" /><property name="AudioName" value="explosion_small" /><property name="AudioDuration" value="1.7" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="10" /><property name="EntityDamage" value="20" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-		
-			
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionSmallSparks$robotDroneRacing" />
+		<property name="AudioName" value="explosion_small" />
+		<property name="AudioDuration" value="1.7" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="6" />
+		<property name="BlockDamage" value="10" />
+		<property name="EntityDamage" value="20" />
+		<property name="Duration" value="5" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="350" />		
@@ -2676,16 +2703,25 @@
 	
 	<property name="HandItem" value="meleeHandDroneHostile" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="13" /><property name="AudioName" value="explosion_small" /><property name="AudioDuration" value="1.7" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="10" /><property name="EntityDamage" value="20" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-		
-	
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionSmallSparks$robotDronePolice" />
+		<property name="AudioName" value="explosion_small" />
+		<property name="AudioDuration" value="1.7" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="6" />
+		<property name="BlockDamage" value="10" />
+		<property name="EntityDamage" value="20" />
+		<property name="Duration" value="5" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="400" />		
@@ -2731,16 +2767,25 @@
 	
 	<property name="HandItem" value="meleeHandDroneHostile" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="14" /><property name="AudioName" value="explosion_small" /><property name="AudioDuration" value="1.7" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="10" /><property name="EntityDamage" value="20" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-		
-			
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionLargeSparks$robotDroneSecurity" />
+		<property name="AudioName" value="explosion_small" />
+		<property name="AudioDuration" value="1.7" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="6" />
+		<property name="BlockDamage" value="10" />
+		<property name="EntityDamage" value="20" />
+		<property name="Duration" value="5" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="450" />	
@@ -2786,16 +2831,25 @@
 	
 	<property name="HandItem" value="meleeHandDroneHostile" />
 	
-    <property class="Explosion"><property name="ParticleIndex" value="14" /><property name="AudioName" value="explosion_small" /><property name="AudioDuration" value="1.7" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="10" /><property name="EntityDamage" value="20" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-	
-	
-	
-		
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-		
-	
+    <property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?ExplosionLargeSparks$robotDroneMothership" />
+		<property name="AudioName" value="explosion_small" />
+		<property name="AudioDuration" value="1.7" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="6" />
+		<property name="BlockDamage" value="10" />
+		<property name="EntityDamage" value="20" />
+		<property name="Duration" value="5" />
+		<property class="DamageBonus">
+			<property name="stone" value=".1" />
+			<property name="metal" value=".05" />
+			<property name="earth" value="0" />
+			<property name="wood" value=".5" />
+			<property name="water" value="0" />
+		</property>
+	</property>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="500" />	
@@ -2865,7 +2919,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />
 	
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="350" />
+		<passive_effect name="HealthMax" operation="base_set" value="250" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />		
 		<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffRadiationPool" />		
 	</effect_group>
@@ -2936,7 +2990,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />
 	
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="700" />
+		<passive_effect name="HealthMax" operation="base_set" value="1200" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />		
 		<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffRadiationPool" />		
 	</effect_group>
@@ -2964,7 +3018,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="8" />
 	
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="2000" />
+		<passive_effect name="HealthMax" operation="base_set" value="4000" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />		
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 		<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffRadiationPool" />		
@@ -3152,7 +3206,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="8" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="900" />
+		<passive_effect name="HealthMax" operation="base_set" value="1200" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 		
@@ -3211,7 +3265,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="10" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="1200" />
+		<passive_effect name="HealthMax" operation="base_set" value="2500" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 	</effect_group>
@@ -3262,28 +3316,25 @@
 	<property name="PainResistPerHit" value="1" />		
 	<property name="MoveSpeedAggro" value="2, 2.1" />
 	
-	<property name="HandItem" value="meleeHandDroidStrong" />	
-
-    <property class="Explosion"><property name="ParticleIndex" value="5" /><property name="SyncOnConnect" value="false" /><property name="RadiusBlocks" value="6" /><property name="RadiusEntities" value="10" /><property name="BlockDamage" value="5000" /><property name="EntityDamage" value="200" /><property name="Duration" value="10" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-			
-	 <!-- damage radius for blocks -->
-	 <!-- damage radius for entities -->
-	
-		
-	
+	<property name="HandItem" value="meleeHandDroidStrong" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="1700" />
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />				
 	</effect_group>
 	
-	<effect_group name="Death Effects">	
-		<triggered_effect trigger="onOtherEnteredRange" action="ModifyStats" stat="Health" operation="set" value="0"> <!-- Self destruct when the player gets near, explosion is triggered on death -->
-			<requirement name="IsOtherFacingSelf, DZCore" />		
-		</triggered_effect>	
+	<effect_group name="Bomb Effects">	
+		<!-- Self destruct when in range of the player -->
+		<triggered_effect trigger="onOtherEnteredRange" action="Explode" blast_power="100" block_damage="5000" block_radius="5" entity_damage="150" entity_radius="10" damage_type="Special">
+			<requirement name="IsOtherFacingSelf, DZCore" />
+		</triggered_effect>
 		
-		<triggered_effect trigger="onSelfDied" action="DespawnEntity, DZCore" delay="0.1" />	
+		<triggered_effect trigger="onOtherEnteredRange" action="ModifyStats" stat="Health" operation="set" value="0"> 
+			<requirement name="IsOtherFacingSelf, DZCore" />		
+		</triggered_effect>		
+		
+		<triggered_effect trigger="onSelfDied" action="DespawnEntity, DZCore" delay="0.1" /> <!-- Despawn after explosion -->	
 	</effect_group>
 
 	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />		
@@ -3350,74 +3401,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="15" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="3000" />
-		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
-		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
-	</effect_group>
-	
-	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />	
-</entity_class>
-
-<entity_class name="robotMechHeavyBiped" extends="mechTemplateHostile">	
-	<property name="UserSpawnType" value="Menu" />
-	<property name="Tags" value="entity,animal,mech,hostile" />
-	<property name="Class" value="EntityRanged, DZCore" />	
-	<property name="Mesh" value="#@modfolder:Resources/Entities.unity3d?MechRobot04" />
-	<property name="AvatarController" value="AvatarAnimalController" />
-	<property name="ModelType" value="Standard" />
-	<property name="HasRagdoll" value="false" />
-	<property name="HasDeathAnim" value="true" />
-	<property name="RootMotion" value="false" />
-	<property name="RagdollOnDeathChance" value="0" />
-	<property name="Mass" value="600" />
-	<property name="LookAtAngle" value="0" />
-	<property name="CollideWhileDead" value="true" />
-
-	<property name="DismemberMultiplierHead" value="0" />
-	<property name="DismemberMultiplierArms" value="0" />
-	<property name="DismemberMultiplierLegs" value="0" />
-	<property name="LegCrawlerThreshold" value="0" />
-	<property name="LegCrippleThreshold" value="0" />
-	<property name="KnockdownProneDamageThreshold" value="0" />
-	<property name="KnockdownKneelDamageThreshold" value="0" />	
-
-	<property name="AITask-1" value="BreakBlock" />
-	<property name="AITask-2" value="DestroyArea" />
-	<property name="AITask-3" value="Territorial" />
-	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,25,EntityBandit,25,EntityAnimalStag,40,EntityZombie,30" />
-	<property name="AITask-5" value="ApproachSpot" />
-	<property name="AITask-6" value="Look" />
-	<property name="AITask-7" value="Wander" />
-	<property name="AITask-8" value="" />
-	<property name="AITarget-1" value="SetAsTargetIfHurt" />
-	<property name="AITarget-2" value="BlockingTargetTask" />
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,65,40,EntityBandit,0,-6,EntityAnimalStag,0,0,EntityZombie,0,-6" />
-	<property name="AITarget-4" value="" />
-
-	<!-- Gameplay  -->
-	<property name="PainResistPerHit" value="1" />
-	<property name="MoveSpeed" value=".8" />	
-	
-	<!-- Turret Rotation -->
-	<property name="CanRotate" value="false" />	
-	
-	<property name="HandItem" value="gunMechRocketLauncher" />	
-	<property name="HandItemDropOnDeath" value="false" />
-	
-	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
-	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="15" />
-	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="9" />
-	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="9" />
-	<drop event="Harvest" name="resourceForgedSteel" tag="salvageHarvest" count="9" />
-	<drop event="Harvest" name="resourceForgedCobalt" tag="salvageHarvest" count="5" prob="0.5" />	
-	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="45" />
-	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="45" />
-	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="45" />
-	<drop event="Harvest" name="resourceCobalt" tag="salvageHarvest" count="45" />
-	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="15" />
-
-	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="3200" />
+		<passive_effect name="HealthMax" operation="base_set" value="10000" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 	</effect_group>
@@ -3489,7 +3473,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="15" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="3500" />
+		<passive_effect name="HealthMax" operation="base_set" value="8500" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 	</effect_group>
@@ -3504,6 +3488,73 @@
 			<requirement name="EntityTagCompare" target="other" tags="player" />			
 		</triggered_effect>		
 	</effect_group>	
+	
+	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />	
+</entity_class>
+
+<entity_class name="robotMechHeavyBiped" extends="mechTemplateHostile">	
+	<property name="UserSpawnType" value="Menu" />
+	<property name="Tags" value="entity,animal,mech,hostile" />
+	<property name="Class" value="EntityRanged, DZCore" />	
+	<property name="Mesh" value="#@modfolder:Resources/Entities.unity3d?MechRobot04" />
+	<property name="AvatarController" value="AvatarAnimalController" />
+	<property name="ModelType" value="Standard" />
+	<property name="HasRagdoll" value="false" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="RootMotion" value="false" />
+	<property name="RagdollOnDeathChance" value="0" />
+	<property name="Mass" value="600" />
+	<property name="LookAtAngle" value="0" />
+	<property name="CollideWhileDead" value="true" />
+
+	<property name="DismemberMultiplierHead" value="0" />
+	<property name="DismemberMultiplierArms" value="0" />
+	<property name="DismemberMultiplierLegs" value="0" />
+	<property name="LegCrawlerThreshold" value="0" />
+	<property name="LegCrippleThreshold" value="0" />
+	<property name="KnockdownProneDamageThreshold" value="0" />
+	<property name="KnockdownKneelDamageThreshold" value="0" />	
+
+	<property name="AITask-1" value="BreakBlock" />
+	<property name="AITask-2" value="DestroyArea" />
+	<property name="AITask-3" value="Territorial" />
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,25,EntityBandit,25,EntityAnimalStag,40,EntityZombie,30" />
+	<property name="AITask-5" value="ApproachSpot" />
+	<property name="AITask-6" value="Look" />
+	<property name="AITask-7" value="Wander" />
+	<property name="AITask-8" value="" />
+	<property name="AITarget-1" value="SetAsTargetIfHurt" />
+	<property name="AITarget-2" value="BlockingTargetTask" />
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,65,40,EntityBandit,0,-6,EntityAnimalStag,0,0,EntityZombie,0,-6" />
+	<property name="AITarget-4" value="" />
+
+	<!-- Gameplay  -->
+	<property name="PainResistPerHit" value="1" />
+	<property name="MoveSpeed" value=".8" />	
+	
+	<!-- Turret Rotation -->
+	<property name="CanRotate" value="false" />	
+	
+	<property name="HandItem" value="gunMechRocketLauncher" />	
+	<property name="HandItemDropOnDeath" value="false" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="9" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="9" />
+	<drop event="Harvest" name="resourceForgedSteel" tag="salvageHarvest" count="9" />
+	<drop event="Harvest" name="resourceForgedCobalt" tag="salvageHarvest" count="5" prob="0.5" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="45" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="45" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="45" />
+	<drop event="Harvest" name="resourceCobalt" tag="salvageHarvest" count="45" />
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="15" />
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="12000" />
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
+	</effect_group>
 	
 	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />	
 </entity_class>
@@ -3566,7 +3617,7 @@
 	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="20" />
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="4000" />
+		<passive_effect name="HealthMax" operation="base_set" value="15000" />
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		<passive_effect name="DismemberChance" operation="base_set" value="0" />		
 	</effect_group>
@@ -3585,11 +3636,15 @@
 	<property name="IgnoreTrigger" value="true" />
 	<property name="LootList" value="vehicleMuscleCar" />
 	<property name="IsEnemyEntity" value="false" />
-	<property class="Explosion"><property name="ParticleIndex" value="5" /><property name="RadiusBlocks" value="5" /><property name="RadiusEntities" value="5" /><property name="BlockDamage" value="100" /><property name="EntityDamage" value="100" /></property>
 	
-	
-	
-	
+	<property class="Explosion">
+		<property name="ParticleIndex" value="5" />
+		<property name="RadiusBlocks" value="5" />
+		<property name="RadiusEntities" value="5" />
+		<property name="BlockDamage" value="100" />
+		<property name="EntityDamage" value="100" />
+	</property>
+
 	<property name="RotateToGround" value="true" />
 	<property name="Faction" value="none" />
 	<property name="MapIcon" value="ui_game_symbol_musclecar" />
@@ -3606,10 +3661,14 @@
 	<property name="IgnoreTrigger" value="true" />
 	<property name="LootList" value="vehiclePickupTruck" />
 	<property name="IsEnemyEntity" value="false" />
-	<property class="Explosion"><property name="ParticleIndex" value="5" /><property name="RadiusBlocks" value="5" /><property name="RadiusEntities" value="5" /><property name="BlockDamage" value="100" /><property name="EntityDamage" value="100" /></property>
 	
-	
-	
+	<property class="Explosion">
+		<property name="ParticleIndex" value="5" />
+		<property name="RadiusBlocks" value="5" />
+		<property name="RadiusEntities" value="5" />
+		<property name="BlockDamage" value="100" />
+		<property name="EntityDamage" value="100" />
+	</property>
 	
 	<property name="RotateToGround" value="true" />
 	<property name="Faction" value="none" />
@@ -3627,10 +3686,14 @@
 	<property name="IgnoreTrigger" value="true" />
 	<property name="LootList" value="vehicleLuxurySedan" />
 	<property name="IsEnemyEntity" value="false" />
-	<property class="Explosion"><property name="ParticleIndex" value="5" /><property name="RadiusBlocks" value="5" /><property name="RadiusEntities" value="5" /><property name="BlockDamage" value="100" /><property name="EntityDamage" value="100" /></property>
 	
-	
-	
+	<property class="Explosion">
+		<property name="ParticleIndex" value="5" />	
+		<property name="RadiusBlocks" value="5" />
+		<property name="RadiusEntities" value="5" />
+		<property name="BlockDamage" value="100" />
+		<property name="EntityDamage" value="100" />
+	</property>
 	
 	<property name="RotateToGround" value="true" />
 	<property name="Faction" value="none" />
@@ -3648,10 +3711,14 @@
 	<property name="IgnoreTrigger" value="true" />
 	<property name="LootList" value="vehicleHoverCar" />
 	<property name="IsEnemyEntity" value="false" />
-	<property class="Explosion"><property name="ParticleIndex" value="5" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="3" /><property name="BlockDamage" value="30" /><property name="EntityDamage" value="30" /></property>
 	
-	
-	
+	<property class="Explosion">
+		<property name="ParticleIndex" value="5" />
+		<property name="RadiusBlocks" value="3" />
+		<property name="RadiusEntities" value="3" />
+		<property name="BlockDamage" value="30" />
+		<property name="EntityDamage" value="30" />
+	</property>
 	
 	<property name="RotateToGround" value="true" />
 	<property name="Faction" value="none" />

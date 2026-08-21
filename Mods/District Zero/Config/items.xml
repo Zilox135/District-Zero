@@ -1,18 +1,23 @@
 <Zilox>
 
 <!-- Zombie Reach Adjustments -->
-	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombieShort']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombieShortFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
-	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandzombieMutated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandzombieMutatedCharged']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
-	<set xpath="/items/item[@name='meleeHandzombieMutatedInfernal']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>    
+<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombieShort']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombieShortFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>
+<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+<set xpath="/items/item[@name='meleeHandzombieMutated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedCharged']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedInfernal']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+
+<!-- Prevent starter note from being dropped -->
+<append xpath="//item[@name='noteDuke01']">
+	<property name="Candrop" value="false" />
+</append>    
 
 <!-- ADD COBALT AS AN OPTION TO REPAIR TOOLS -->
 <csv xpath="//property[@name='Allowed_upgrade_items']/@value" delim="," op="add">resourceForgedCobalt</csv>
@@ -37,19 +42,20 @@
 <csv xpath="//item[starts-with(@name,'melee')]/property[@name='Tags']/@value" delim="," op="add">perkFlurryOfBlows</csv>
 <csv xpath="//item[starts-with(@name,'melee')]/effect_group/passive_effect[@name='AttacksPerMinute']/@tags" delim="," op="add">perkFlurryOfBlows</csv>
 
-<csv xpath="//item[starts-with(@name,'meleeWpnBaton')]/property[@name='Tags']/@value" delim="," op="add">attEmpath</csv>
 <csv xpath="//item[starts-with(@name,'gunRifle')]/property[@name='Tags']/@value" delim="," op="add">attEmpath</csv>
+<csv xpath="//item[starts-with(@name,'meleeWpnSpear')]/property[@name='Tags']/@value" delim="," op="add">attEmpath</csv>
+<csv xpath="//item[starts-with(@name,'meleeWpnBaton')]/property[@name='Tags']/@value" delim="," op="add">attCybernetician</csv>
 <csv xpath="//item[starts-with(@name,'gunBot')]/property[@name='Tags']/@value" delim="," op="add">attCybernetician</csv>
 <csv xpath="//item[starts-with(@name,'gunMG')]/property[@name='Tags']/@value" delim="," op="add">attCybernetician</csv>
 <csv xpath="//item[starts-with(@name,'meleeToolSalvage')]/property[@name='Tags']/@value" delim="," op="add">attCosmotech</csv>
+<csv xpath="//item[starts-with(@name,'meleeWpnClub')]/property[@name='Tags']/@value" delim="," op="add">attCosmotech</csv>
 <csv xpath="//item[starts-with(@name,'gunShotgun')]/property[@name='Tags']/@value" delim="," op="add">attCosmotech</csv>
-<csv xpath="//item[starts-with(@name,'meleeWpnBlade')]/property[@name='Tags']/@value" delim="," op="add">attExomedic</csv>
-<csv xpath="//item[starts-with(@name,'gunHandgun')]/property[@name='Tags']/@value" delim="," op="add">attExomedic</csv>
+<csv xpath="//item[starts-with(@name,'meleeWpnBlade')]/property[@name='Tags']/@value" delim="," op="add">attNeonaut</csv>
+<csv xpath="//item[starts-with(@name,'gunHandgun')]/property[@name='Tags']/@value" delim="," op="add">attNeonaut</csv>
+<csv xpath="//item[starts-with(@name,'gunBow')]/property[@name='Tags']/@value" delim="," op="add">attNeonaut</csv>
 <csv xpath="//item[starts-with(@name,'thrown')]/property[@name='Tags']/@value" delim="," op="add">attAstrominer</csv>
 <csv xpath="//item[starts-with(@name,'meleeWpnSledge')]/property[@name='Tags']/@value" delim="," op="add">attAstrominer</csv>
 <csv xpath="//item[starts-with(@name,'meleeTool')]/property[@name='Tags']/@value" delim="," op="add">attAstrominer</csv>
-<csv xpath="//item[starts-with(@name,'gunBow')]/property[@name='Tags']/@value" delim="," op="add">attNeonaut</csv>
-<csv xpath="//item[starts-with(@name,'meleeWpnSpear')]/property[@name='Tags']/@value" delim="," op="add">attNeonaut</csv>
 
 <!-- REMOVE WASTELAND TREASURES COMPLETION TAG -->
 <csv xpath="//item[@name='resourceLegendaryParts']/property[@name='Tags']/@value" delim="," op="remove">WasteTreasuresCompleteHarvest</csv>
@@ -457,7 +463,7 @@
 
 <!-- GUNS -->
 <item name="gunHandgunT1Flaregun">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attExomedic,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
+	<property name="Tags" value="T1,weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attNeonaut,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
 	<property name="DisplayType" value="Flaregun" />
 	<property name="HoldType" value="1" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserFlaregun.prefab" />
@@ -488,9 +494,8 @@
 		<property name="Sound_loop" value="flare_fire" />
 		<property name="Sound_end" value="" />
 		<property name="Sound_empty" value="flare_dryfire" />
-		<property name="AutoReload" value="false" />		
-		<property name="Particles_muzzle_fire" value="gunfire_pistol" />
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv" />
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_pipe"/>
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98" />
 	</property>
 	<property class="Action1">
@@ -548,7 +553,7 @@
 </item>
 
 <item name="gunHandgunFarmT1LaserFarmingTool">
-	<property name="Tags" value="tool,sideAttachments,repairTool,perkLivingOffTheLandCrafting,canHaveCosmetic,noMods,handgunSkill" />
+	<property name="Tags" value="T1,tool,sideAttachments,repairTool,perkLivingOffTheLandCrafting,canHaveCosmetic,noMods,handgunSkill" />
 	<property name="HoldType" value="37" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserFarmingTool.prefab" />
 	<property name="Material" value="MMotorToolParts" />
@@ -628,7 +633,8 @@
 </item>
 
 <item name="gunHandgunT2LaserPistol">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attExomedic,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attNeonaut,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage" />
+	<property name="PreviousTechItem" value="gunHandgunT1Pistol"/>
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="1" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserPistol.prefab" />
@@ -718,7 +724,7 @@
 </item>
 
 <item name="gunHandgunT2LaserMagnum">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,44enforcer,barrelAttachments,sideAttachments,smallTopAttachments,attExomedic,perkGunslinger,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage,enforcerReload" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,44enforcer,barrelAttachments,sideAttachments,smallTopAttachments,attNeonaut,perkGunslinger,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage,enforcerReload" />	
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="44" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserMagnum.prefab" />
@@ -813,7 +819,7 @@
 </item>
 
 <item name="gunHandgunT2LaserSMG">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noHolosight,magazine,drumMagazine,firingMode,bottomAttachments,attExomedic,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noHolosight,magazine,drumMagazine,firingMode,bottomAttachments,attNeonaut,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="6" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserSMG.prefab" />
@@ -900,7 +906,7 @@
 </item>
 
 <item name="gunShotgunT2LaserShotgun">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,laserShotgunSight,stock,bottomAttachments,attCosmotech,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic,shotgunSkill" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,laserShotgunSight,stock,bottomAttachments,attCosmotech,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic,shotgunSkill" />
 	<property name="DisplayType" value="rangedShotgun" />
 	<property name="HoldType" value="5" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserShotgun.prefab" />
@@ -983,7 +989,7 @@
 </item>
 
 <item name="gunMGT2LaserAssaultRifle">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attCybernetician,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attCybernetician,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill" />
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="48" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserAssaultRifle.prefab" />
@@ -1067,9 +1073,9 @@
 </item>
 
 <item name="gunRifleT2LaserSniperRifle">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attNeonaut,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill" />
+	<property name="Tags" value="T2,weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attEmpath,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill" />
 	<property name="DisplayType" value="rangedGun" />
-	<property name="HoldType" value="77" />
+	<property name="HoldType" value="11" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?LaserSniperRifle.prefab" />
 	<property name="Material" value="MRifleParts" />
 	<property name="Weight" value="1" />
@@ -1161,7 +1167,8 @@
 </item>
 
 <item name="gunHandgunT3PlasmaPistol">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attExomedic,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attNeonaut,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage" />
+	<property name="PreviousTechItem" value="gunHandgunT2LaserPistol"/>
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="1" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaPistol.prefab" />
@@ -1249,7 +1256,8 @@
 </item>
 
 <item name="gunHandgunT3PlasmaMagnum">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,44enforcer,barrelAttachments,sideAttachments,smallTopAttachments,attExomedic,perkGunslinger,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage,enforcerReload" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,44enforcer,barrelAttachments,sideAttachments,smallTopAttachments,attNeonaut,perkGunslinger,attachmentsIncluded,canHaveCosmetic,handgunSkill,rangerDamage,enforcerReload" />
+	<property name="PreviousTechItem" value="gunHandgunT2LaserMagnum"/>
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="44" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaMagnum.prefab" />
@@ -1344,7 +1352,8 @@
 </item>
 
 <item name="gunHandgunT3PlasmaSMG">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noHolosight,magazine,drumMagazine,firingMode,bottomAttachments,attExomedic,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noHolosight,magazine,drumMagazine,firingMode,bottomAttachments,attNeonaut,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill" />
+	<property name="PreviousTechItem" value="gunHandgunT2LaserSMG"/>
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="6" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaSMG.prefab" />
@@ -1431,7 +1440,8 @@
 </item>
 
 <item name="gunShotgunT3PlasmaShotgun">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,plasmaShotgunSight,stock,bottomAttachments,attCosmotech,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic,shotgunSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,plasmaShotgunSight,stock,bottomAttachments,attCosmotech,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic,shotgunSkill" />
+	<property name="PreviousTechItem" value="gunShotgunT2LaserShotgun"/>	
 	<property name="DisplayType" value="rangedShotgun" />
 	<property name="HoldType" value="5" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaShotgun.prefab" />
@@ -1514,7 +1524,8 @@
 </item>
 
 <item name="gunMGT3PlasmaAssaultRifle">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,plasmaARSight,stock,magazine,drumMagazine,firingMode,bottomAttachments,attCybernetician,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,plasmaARSight,stock,magazine,drumMagazine,firingMode,bottomAttachments,attCybernetician,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill" />
+	<property name="PreviousTechItem" value="gunMGT2LaserAssaultRifle"/>
 	<property name="DisplayType" value="rangedGun" />
 	<property name="HoldType" value="48" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaAssaultRifle.prefab" />
@@ -1598,9 +1609,10 @@
 </item>
 
 <item name="gunRifleT3PlasmaSniperRifle">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attNeonaut,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attEmpath,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill" />
+	<property name="PreviousTechItem" value="gunRifleT2LaserSniperRifle"/>	
 	<property name="DisplayType" value="rangedGun" />
-	<property name="HoldType" value="77" />
+	<property name="HoldType" value="11" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaSniperRifle.prefab" />
 	<property name="Material" value="MRifleParts" />
 	<property name="Weight" value="1" />
@@ -1692,7 +1704,7 @@
 </item>
 
 <item name="gunExplosivesT3PlasmaGrenadeLauncher">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,sideAttachments,smallTopAttachments,attachmentsIncluded,explosivesSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attAstrominer,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,sideAttachments,smallTopAttachments,attachmentsIncluded,explosivesSkill" />
 	<property name="DisplayType" value="rangedLauncher" />
 	<property name="HoldType" value="76" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaGrenadeLauncher.prefab" />
@@ -1777,7 +1789,8 @@
 </item>
 
 <item name="gunExplosivesT3PlasmaRocketLauncher">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,noHolosight,sideAttachments,smallTopAttachments,attachmentsIncluded,explosivesSkill" />
+	<property name="Tags" value="T3,weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attAstrominer,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,noHolosight,sideAttachments,smallTopAttachments,attachmentsIncluded,explosivesSkill" />
+	<property name="PreviousTechItem" value="gunExplosivesT3RocketLauncher"/>	
 	<property name="DisplayType" value="rangedLauncher" />
 	<property name="HoldType" value="10" />
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?PlasmaRocketLauncher.prefab" />
@@ -1861,73 +1874,6 @@
 	</effect_group>
 </item>
 
-<!-- ADMIN GUNS -->
-<item name="gunHandgunPistolDev">
-	<property name="CreativeMode" value="Dev" />
-	<property name="Tags" value="weapon,ranged,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attExomedic,perkGunslinger,9mmGun,admin,noMods" />
-	<property name="DisplayType" value="adminRanged" />
-	<property name="HoldType" value="1" />
-	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pistol/PistolPrefab.prefab" />
-	<Property name="TintColor" value="ff00ff" />
-	<property name="CustomIcon" value="gunHandgunT1Pistol" />
-	<property name="CustomIconTint" value="0,0,255" />
-	<property name="ItemTypeIcon" value="computer" />
-	<property name="Material" value="Morganic" />
-	<property name="Stacknumber" value="1" />
-	<property name="DegradationBreaksAfter" value="false" />
-	<property name="SoundJammed" value="weapon_jam" />
-	<property name="CrosshairUpAfterShot" value="true" />
-	<property name="CrosshairOnAim" value="true" />
-	<property name="ShowQuality" value="false" />
-	<property name="Group" value="Special Items" />
-	<property name="TraderStageTemplate" value="baseTier0" />	
-	<property class="Action0">
-		<property name="Class" value="Ranged" />
-		<property name="Magazine_items" value="ammo9mmBulletBall" />
-		<property name="Sound_start" value="smg_s_fire" />
-		<property name="Sound_repeat" value="" />
-		<property name="Sound_end" value="" />
-		<property name="Sound_empty" value="dryfire" />
-		<property name="Sound_reload" value="pistol_reload" />
-		<property name="Particles_muzzle_fire" value="gunfire_pistol" />
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv" />
-		<property name="Single_magazine_usage" value="true" />
-		<property name="Infinite_ammo" value="true" />
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Zoom" />
-		<property name="Zoom_max_out" value="40" />
-		<property name="Zoom_max_in" value="10" />
-	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
-	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
-	</property>
-	<effect_group name="gunHandgunPistolDev" tiered="false">
-		<passive_effect name="MaxRange" operation="base_set" value="200" />
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="200" />
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="450" />
-		<passive_effect name="RoundRayCount" operation="base_set" value="8" />
-		<passive_effect name="BurstRoundCount" operation="base_set" value="0" />
-		<passive_effect name="EntityDamage" operation="base_set" value="5000" />
-		<passive_effect name="BlockDamage" operation="base_set" value="0" />
-
-		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="0" />
-		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="0" />
-		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="0" />
-		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="0" />
-
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0" />
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0" />
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".05" />
-		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" />
-		<passive_effect name="WeaponHandling" operation="base_set" value="1.2" />
-		<passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin" />
-		<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin" />
-		<passive_effect name="ModSlots" operation="base_set" value="0" />
-		
-		<triggered_effect trigger="onSelfRangedBurstShotStart" action="ExecuteConsoleCommand, DZCore" command="killall alive" />			
-	</effect_group>
-</item>
-
 <!-- AMMO -->
 <item name="ammoSuperthermalCell">
 	<property name="Tags" value="ammo,perkLivingOffTheLandCrafting" />
@@ -1944,18 +1890,21 @@
 	<property name="TraderStageTemplate" value="ammoTier1" />	
 	<property class="Action1">
 		<property name="Class" value="Projectile" />
-        <property class="Explosion"><property name="ParticleIndex" value="13" /><property name="AudioName" value="Leaves_explosion" /><property name="AudioDuration" value="3" /><property name="SyncOnConnect" value="false" /><property name="RadiusBlocks" value="15" /><property name="RadiusEntities" value="0" /><property name="BlockDamage" value="1" /><property name="EntityDamage" value="0" /><property name="BlastPower" value="0" /><property name="Duration" value="4" /><property name="BlockTags" value="grass" /><property name="IgnoreHeatMap" value="true" /></property>
-		
-		
-					
-		
-		
-		
-		
-		
-		
-		
-				
+			<property class="Explosion">
+				<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_Leaves" />
+				<property name="AudioName" value="Leaves_explosion" />
+				<property name="AudioDuration" value="3" />
+				<property name="SyncOnConnect" value="false" />
+				<property name="RadiusBlocks" value="15" />
+				<property name="RadiusEntities" value="0" />
+				<property name="BlockDamage" value="1" />
+				<property name="EntityDamage" value="0" />
+				<property name="BlastPower" value="0" />
+				<property name="Duration" value="4" />
+				<property name="BlockTags" value="grass" />
+				<property name="IgnoreHeatMap" value="true" />
+		</property>
+			
 		<property name="Gravity" value="-7.5" />
 		<property name="Velocity" value="10" />
 		<property name="FlyTime" value="0" />
@@ -1984,9 +1933,15 @@
 
 	<property class="Action1">
 		<property name="Class" value="Projectile" />
-        <property class="Explosion"><property name="ParticleIndex" value="14" /><property name="RadiusBlocks" value="5" /><property name="RadiusEntities" value="4" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="water" value="0" /></property></property>
-		
-		
+			<property class="Explosion">
+				<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_Fireball" />
+				<property name="RadiusBlocks" value="5" />
+				<property name="RadiusEntities" value="4" />
+				<property name="Duration" value="5" />
+				<property class="DamageBonus">
+				<property name="water" value="0" />
+			</property>
+		</property>	
 				
 		<property name="Gravity" value="-6" />
 		<property name="FlyTime" value=".2" />
@@ -2046,9 +2001,7 @@
 		<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkGunslinger" />
 		<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive" />
 		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger" /><display_value name="dTargetArmor" value="-.5" />
-		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger" />
-		<display_value name="dTargetPenetration" value="1" />
-		<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/><display_value name="dDegradationPerUse" value=".3"/> -->
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger" /><display_value name="dTargetPenetration" value="1" />
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth" />
 		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood" />
 	</effect_group>
@@ -2196,15 +2149,24 @@
 	<property name="EconomicValue" value="70" />	
 	
 	<property class="Action1">
-        <property class="Explosion"><property name="ParticleIndex" value="18" /><property name="BlockDamage" value="20" /><property name="EntityDamage" value="425" /><property name="AudioName" value="plasma_explosion" /><property name="AudioDuration" value="3" /><property name="SyncOnConnect" value="false" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-		
-				
-		
-		
-				
-		 <!-- damage radius for blocks -->
-		 <!-- damage radius for entities -->
-				
+        <property class="Explosion">
+			<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$ammoGrenadePlasmaCell" />
+			<property name="BlockDamage" value="20" />
+			<property name="EntityDamage" value="425" />
+			<property name="AudioName" value="plasma_explosion" />
+			<property name="AudioDuration" value="3" />
+			<property name="SyncOnConnect" value="false" />
+			<property name="RadiusBlocks" value="3" />
+			<property name="RadiusEntities" value="6" />
+			<property name="Duration" value="5" />
+			<property class="DamageBonus">
+				<property name="stone" value=".1" />
+				<property name="metal" value=".05" />
+				<property name="earth" value="0" />
+				<property name="wood" value=".5" />
+				<property name="water" value="0" />
+			</property>
+		</property>		
 	</property>
 
 	<effect_group name="ammoGrenadeEnergyCell" tiered="false">
@@ -2224,15 +2186,24 @@
 	<property name="EconomicValue" value="70" />	
 	
 	<property class="Action1">
-        <property class="Explosion"><property name="ParticleIndex" value="18" /><property name="BlockDamage" value="20" /><property name="EntityDamage" value="850" /><property name="AudioName" value="plasma_explosion" /><property name="AudioDuration" value="3" /><property name="SyncOnConnect" value="false" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value=".5" /><property name="water" value="0" /></property></property>
-		
-				
-		
-		
-				
-		 <!-- damage radius for blocks -->
-		 <!-- damage radius for entities -->
-				
+        <property class="Explosion">
+			<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$ammoRocketPlasmaCell" />
+			<property name="BlockDamage" value="20" />
+			<property name="EntityDamage" value="850" />
+			<property name="AudioName" value="plasma_explosion" />
+			<property name="AudioDuration" value="3" />
+			<property name="SyncOnConnect" value="false" />
+			<property name="RadiusBlocks" value="3" />
+			<property name="RadiusEntities" value="6" />
+			<property name="Duration" value="5" />
+			<property class="DamageBonus">
+				<property name="stone" value=".1" />
+				<property name="metal" value=".05" />
+				<property name="earth" value="0" />
+				<property name="wood" value=".5" />
+				<property name="water" value="0" />
+			</property>
+		</property>			
 	</property>
 
 	<effect_group name="ammoRocketEnergyCell" tiered="false">
@@ -2250,13 +2221,16 @@
 	<property name="DisplayType" value="ammoGrenadeShock" />	
 	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?EMPGrenade" />
 	<property name="UnlockedBy" value="craftingExplosives" />
-	<property class="Explosion"><property name="ParticleIndex" value="18" /><property name="BlockDamage" value="0" /><property name="EntityDamage" value="0" /><property name="AudioName" value="plasma_explosion" /><property name="AudioDuration" value="3" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="Duration" value="5" /></property>
-	
-		
-	
-	
-	
-		
+	<property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?GLPlasmaExplosion$thrownGrenadeEMP" />
+		<property name="BlockDamage" value="0" />
+		<property name="EntityDamage" value="0" />
+		<property name="AudioName" value="plasma_explosion" />
+		<property name="AudioDuration" value="3" />
+		<property name="SyncOnConnect" value="false" />
+		<property name="IgnoreHeatMap" value="true" />
+		<property name="Duration" value="5" />
+	</property>
 		
 	<property name="TraderStageTemplate" value="ammoTier1" />
 	<property name="UsableUnderwater" value="false" />	
@@ -2279,12 +2253,15 @@
 	
 	<property class="Action1">
 		<property name="Class" value="Projectile" />
-		<property class="Explosion"><property name="ParticleIndex" value="18" /><property name="BlockDamage" value="0" /><property name="EntityDamage" value="5" /><property name="AudioName" value="explosion_plasma_small" /><property name="IgnoreHeatMap" value="true" /><property name="Duration" value="2" /></property>
-		
-				
-				
-				
-				
+		<property class="Explosion">
+			<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?BlasterImpact$ammoProjectileLaser" />
+			<property name="BlockDamage" value="0" />
+			<property name="EntityDamage" value="5" />
+			<property name="AudioName" value="explosion_plasma_small" />
+			<property name="IgnoreHeatMap" value="true" />
+			<property name="Duration" value="2" />
+		</property>
+			
 		<property name="Velocity" value="30" />
 		<property name="Gravity" value="1" />		
 		<property name="FlyTime" value="5" />
@@ -2305,15 +2282,21 @@
 	
 	<property class="Action1">
 		<property name="Class" value="Projectile" />	
-		<property class="Explosion"><property name="ParticleIndex" value="18" /><property name="AudioName" value="combat_explosion_electricity" /><property name="SyncOnConnect" value="false" /><property name="IgnoreHeatMap" value="true" /><property name="BlockDamage" value="50" /><property name="EntityDamage" value="10" /><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="3" /><property name="Duration" value="5" /><property class="DamageBonus"><property name="wood" value="50" /></property></property>
-				
-		
-		
-		
-				
-		 <!-- damage radius for blocks -->
-		 <!-- damage radius for entities -->
-				
+		<property class="Explosion">
+			<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?PlasmaImpact$ammoProjectilePlasma" />
+			<property name="AudioName" value="combat_explosion_electricity" />
+			<property name="SyncOnConnect" value="false" />
+			<property name="IgnoreHeatMap" value="true" />
+			<property name="BlockDamage" value="50" />
+			<property name="EntityDamage" value="10" />
+			<property name="RadiusBlocks" value="3" />
+			<property name="RadiusEntities" value="3" />
+			<property name="Duration" value="5" />
+			<property class="DamageBonus">
+				<property name="wood" value="50" />
+			</property>
+		</property>
+
 		<property name="Gravity" value="0" />		
 	</property>
 
@@ -2331,12 +2314,15 @@
 	
 	<property class="Action1">
 		<property name="Class" value="Projectile" />	
-		<property class="Explosion"><property name="ParticleIndex" value="13" /><property name="BlockDamage" value="5" /><property name="EntityDamage" value="5" /><property name="AudioName" value="laser_explosion" /><property name="IgnoreHeatMap" value="true" /><property name="Duration" value="2" /></property>
-		
-				
-				
-				
-				
+		<property class="Explosion">
+			<property name="ParticleIndex" value="#@modfolder(District_Zero):Resources/Particles.unity3d?vfx_Hit_BulletRed$ammoProjectileLaserBullet" />
+			<property name="BlockDamage" value="5" />
+			<property name="EntityDamage" value="5" />
+			<property name="AudioName" value="laser_explosion" />
+			<property name="IgnoreHeatMap" value="true" />
+			<property name="Duration" value="2" />
+		</property>
+	
 		<property name="Gravity" value="0" />		
 	</property>
 	
@@ -2353,7 +2339,20 @@
 	
 	<property class="Action1">
 		<property name="Class" value="Projectile" />	
-		<property class="Explosion"><property name="RadiusBlocks" value="3" /><property name="RadiusEntities" value="6" /><property name="BlockDamage" value="20" /><property name="EntityDamage" value="15" /><property name="IgnoreHeatMap" value="true" /><property class="DamageBonus"><property name="stone" value=".1" /><property name="metal" value=".05" /><property name="earth" value="0" /><property name="wood" value="50" /><property name="water" value="0" /></property></property>
+		<property class="Explosion">
+			<property name="RadiusBlocks" value="3" />
+			<property name="RadiusEntities" value="6" />
+			<property name="BlockDamage" value="20" />
+			<property name="EntityDamage" value="15" />
+			<property name="IgnoreHeatMap" value="true" />
+			<property class="DamageBonus">
+				<property name="stone" value=".1" />
+				<property name="metal" value=".05" />
+				<property name="earth" value="0" />
+				<property name="wood" value="50" />
+				<property name="water" value="0" />
+			</property>
+		</property>
 	</property>
 
 	<effect_group name="ammoProjectileRocketFrag" tiered="false">
@@ -2434,7 +2433,8 @@
 
 <!-- MELEE WEAPONS -->
 <item name="meleeWpnClubT2LaserClub">
-	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill" />
+	<property name="Tags" value="T2,blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attCosmotech,perkPummelPete,canHaveCosmetic,clubSkill" />
+	<property name="PreviousTechItem" value="meleeWpnClubT1BaseballBat"/>
 	<property name="DisplayType" value="melee" />
 	<property name="Group" value="Ammo/Weapons,Melee Weapons" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserClub.prefab" />
@@ -2518,7 +2518,8 @@
 </item>
 
 <item name="meleeWpnBladeT2LaserKnife">
-	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attExomedic,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="Tags" value="T2,knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attNeonaut,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="PreviousTechItem" value="meleeWpnBladeT1HuntingKnife"/>
 	<property name="DisplayType" value="meleeKnife" />
 	<property name="HoldType" value="36" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserKnife.prefab" />
@@ -2614,7 +2615,8 @@
 </item>
 
 <item name="meleeWpnSledgeT2LaserSledgehammer">
-	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attAstrominer,perkFlurryOfBlows,perkSkullCrusher,canHaveCosmetic,sledgeSkill" />
+	<property name="Tags" value="T2,blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attAstrominer,perkFlurryOfBlows,perkSkullCrusher,canHaveCosmetic,sledgeSkill" />
+	<property name="PreviousTechItem" value="meleeWpnSledgeT1IronSledgehammer"/>
 	<property name="DisplayType" value="meleeHeavy" />
 	<property name="HoldType" value="33" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserSledgeHammer.prefab" />
@@ -2696,7 +2698,7 @@
 </item>
 
 <item name="meleeWpnBladeT2LaserSword">
-	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attExomedic,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="Tags" value="T2,machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attNeonaut,perkDeepCuts,canHaveCosmetic,bladeSkill" />
 	<property name="DisplayType" value="meleeKnife" />
 	<property name="HoldType" value="47" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserSword.prefab" />
@@ -2788,7 +2790,8 @@
 </item>
 
 <item name="meleeWpnBatonT2LaserStunBaton">
-	<property name="Tags" value="melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attEmpath,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton,meleeIntellect,batonJunkie" />
+	<property name="Tags" value="T2,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attCybernetician,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton,meleeIntellect,batonJunkie" />
+	<property name="PreviousTechItem" value="meleeWpnBatonT2StunBaton"/>
 	<property name="DisplayType" value="melee" />
 	<property name="HoldType" value="58" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserStunBaton.prefab" />
@@ -2872,7 +2875,8 @@
 	
 		<effect_group name="apply damage buff, meleeWpnBatonT2LaserStunBaton">
 		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
-			<requirement name="CompareItemMetaFloat" operation="GTE" value="4" key="charge" /></triggered_effect>
+			<requirement name="CompareItemMetaFloat" operation="GTE" value="4" key="charge" />
+		</triggered_effect>
 			
 		<!-- set shock duration -->
 		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="stunBatonDuration" operation="set" value="4.8">
@@ -3051,6 +3055,8 @@
 
 <item name="meleeWpnSpearT2LaserSpear">
 	<property name="Extends" value="meleeWpnSpearT1IronSpear" param1="TintColor" />
+	<property name="Tags" value="T2,melee,grunting,medium,weapon,meleeWeapon,longShaft,attEmpath,perkJavelinMaster,perkFlurryOfBlows,canHaveCosmetic,spearSkill"/>
+	<property name="PreviousTechItem" value="meleeWpnSpearT1IronSpear"/>	
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?LaserSpear.prefab" />
 	<property name="Material" value="MmeleeWpnSpearParts" />
 	<property name="Weight" value="1" />
@@ -3064,7 +3070,9 @@
 		<property name="Class" value="DynamicMelee" />
 		<property name="Sphere" value=".05" />   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
 		<property name="Sound_start" value="spear_fire" />
-		<property class="ToolCategory"><property name="harvestingTools" value="1" param1="1" /></property>
+		<property class="ToolCategory">
+			<property name="harvestingTools" value="1" param1="1" />
+		</property>
 		<property name="UsePowerAttackAnimation" value="true" />
 	</property>
 	
@@ -3104,7 +3112,8 @@
 </item>
 
 <item name="meleeWpnClubT3PlasmaClub">
-	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill" />
+	<property name="Tags" value="T3,blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attCosmotech,perkPummelPete,canHaveCosmetic,clubSkill" />
+	<property name="PreviousTechItem" value="meleeWpnClubT2LaserClub"/>
 	<property name="DisplayType" value="melee" />
 	<property name="Group" value="Ammo/Weapons,Melee Weapons" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaClub.prefab" />
@@ -3188,7 +3197,8 @@
 </item>
 
 <item name="meleeWpnBladeT3PlasmaKnife">
-	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attExomedic,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="Tags" value="T3,knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attNeonaut,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="PreviousTechItem" value="meleeWpnBladeT2LaserKnife"/>
 	<property name="DisplayType" value="meleeKnife" />
 	<property name="HoldType" value="36" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaKnife.prefab" />
@@ -3280,7 +3290,8 @@
 </item>
 
 <item name="meleeWpnSledgeT3PlasmaSledgehammer">
-	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attAstrominer,perkFlurryOfBlows,perkSkullCrusher,canHaveCosmetic,sledgeSkill" />
+	<property name="Tags" value="T3,blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attAstrominer,perkFlurryOfBlows,perkSkullCrusher,canHaveCosmetic,sledgeSkill" />
+	<property name="PreviousTechItem" value="meleeWpnSledgeT2LaserSledgehammer"/>	
 	<property name="DisplayType" value="meleeHeavy" />
 	<property name="HoldType" value="33" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaSledgeHammer.prefab" />
@@ -3361,7 +3372,8 @@
 </item>
 
 <item name="meleeWpnBladeT3PlasmaSword">
-	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attExomedic,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="Tags" value="T3,machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attNeonaut,perkDeepCuts,canHaveCosmetic,bladeSkill" />
+	<property name="PreviousTechItem" value="meleeWpnBladeT2LaserSword"/>	
 	<property name="DisplayType" value="meleeKnife" />
 	<property name="HoldType" value="47" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaSword.prefab" />
@@ -3453,7 +3465,8 @@
 </item>
 
 <item name="meleeWpnBatonT3PlasmaBaton">
-	<property name="Tags" value="melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attEmpath,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton,meleeIntellect,batonJunkie" />
+	<property name="Tags" value="T3,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attCybernetician,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton,meleeIntellect,batonJunkie" />
+	<property name="PreviousTechItem" value="meleeWpnBatonT2LaserStunBaton"/>	
 	<property name="DisplayType" value="melee" />
 	<property name="HoldType" value="58" />
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaBaton.prefab" />
@@ -3715,7 +3728,9 @@
 </item>
 
 <item name="meleeWpnSpearT3PlasmaSpear">
-	<property name="Extends" value="meleeWpnSpearT0StoneSpear" param1="TintColor" />
+	<property name="Extends" value="meleeWpnSpearT1IronSpear" param1="TintColor" />
+	<property name="Tags" value="T3,melee,grunting,medium,weapon,meleeWeapon,longShaft,attEmpath,perkJavelinMaster,perkFlurryOfBlows,canHaveCosmetic,spearSkill"/>
+	<property name="PreviousTechItem" value="meleeWpnSpearT2LaserSpear"/>	
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeWeapons.unity3d?PlasmaSpear.prefab" />
 	<property name="Material" value="Mmetal" />
 	<property name="ScrapTimeOverride" value="10.0" />	
@@ -3730,11 +3745,13 @@
 		<property name="Class" value="DynamicMelee" />
 		<property name="Sphere" value=".05" />   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
 		<property name="Sound_start" value="spear_fire" />
-		<property class="ToolCategory"><property name="harvestingTools" value="1" param1="1" /></property>
+		<property class="ToolCategory">
+			<property name="harvestingTools" value="1" param1="1" />
+		</property>
 		<property name="UsePowerAttackAnimation" value="true" />
 	</property>
 	
-	<effect_group name="meleeWpnSpearT2PlasmaSpear">
+	<effect_group name="meleeWpnSpearT3PlasmaSpear">
 		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkJavelinMaster" /><display_value name="dTargetArmor" value="-.5" />
 		<passive_effect name="BlockDamage" operation="base_set" value="9" tags="perkJavelinMaster" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkJavelinMaster,perkFlurryOfBlows" />
@@ -3772,6 +3789,8 @@
 <!-- TOOLS -->
 <item name="meleeToolAxeT3PlasmaFireaxe">
 	<property name="Extends" value="meleeToolAxeT1IronFireaxe" param1="TintColor" />
+	<property name="Tags" value="T3,axe,melee,grunting,medium,tool,longShaft,attAstrominer,perkMiner69r,perkMotherLode,perkFlurryOfBlows,canHaveCosmetic,harvestingSkill,corpseRemoval"/>
+	<property name="PreviousTechItem" value="meleeToolAxeT2SteelAxe"/>	
 	<property name="Meshfile" value="#@modfolder:Resources/Tools.unity3d?PlasmaFireaxe.prefab" />
 	<property name="EconomicValue" value="700" />
 	<property name="TraderStageTemplate" value="baseTier4" />
@@ -3782,7 +3801,7 @@
 	<property name="Group" value="Tools/Traps" />	
 
 	<effect_group name="meleeToolAxeT3PlasmaFireaxe">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="56.4" tags="perkMiner69r,axe" />
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="56.4" tags="perkMiner69r,axe,perkFlurryOfBlows" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="34.9" tags="primary" />
 		<passive_effect name="DegradationMax" operation="base_set" value="2000,3000" tier="1,6" tags="perkMiner69r" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r" />
@@ -3812,6 +3831,8 @@
 
 <item name="meleeToolPickT3PlasmaPickaxe">
 	<property name="Extends" value="meleeToolPickT1IronPickaxe" param1="TintColor" />
+	<property name="Tags" value="T3,axe,melee,grunting,medium,tool,longShaft,attAstrominer,perkMiner69r,perkMotherLode,perkFlurryOfBlows,canHaveCosmetic,harvestingSkill,corpseRemoval"/>
+	<property name="PreviousTechItem" value="meleeToolPickT2SteelPickaxe"/>	
 	<property name="DisplayType" value="melee" />
 	<property name="HoldType" value="4" />
 	<property name="Meshfile" value="#@modfolder:Resources/Tools.unity3d?PlasmaPickaxe.prefab" />
@@ -3840,7 +3861,7 @@
 		<property name="SwingAngle" value="90" />
 	</property>
 	<effect_group name="meleeToolPickT3PlasmaPickaxe">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="66" tags="perkMiner69r" />
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="66" tags="perkMiner69r,axe,perkFlurryOfBlows" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="28.4" tags="primary" />
 		<passive_effect name="DegradationMax" operation="base_set" value="2000,3000" tier="1,6" tags="perkMiner69r" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r" />
@@ -3870,7 +3891,8 @@
 
 <item name="meleeToolShovelT3PlasmaShovel">
 	<property name="Extends" value="meleeToolShovelT1IronShovel" param1="TintColor" />
-	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill" />
+	<property name="Tags" value="T3,melee,grunting,medium,tool,longShaft,shovel,attAstrominer,perkMiner69r,perkMotherLode,perkFlurryOfBlows,canHaveCosmetic,harvestingSkill" />
+	<property name="PreviousTechItem" value="meleeToolShovelT2SteelShovel"/>		
 	<property name="Meshfile" value="#@modfolder:Resources/Tools.unity3d?PlasmaShovel.prefab" />
 	<property name="RepairTools" value="resourceRepairKit" />
 	<property name="EconomicValue" value="1000" />
@@ -3882,7 +3904,7 @@
 	<property name="Group" value="Tools/Traps" />
 
 	<effect_group name="meleeToolShovelT3PlasmaShovel">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r" />
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r,perkFlurryOfBlows" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="26.7" tags="primary" />
 		<passive_effect name="DegradationMax" operation="base_set" value="2000,3000" tier="1,6" tags="perkMiner69r" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r" />
@@ -3910,7 +3932,8 @@
 </item>
 
 <item name="meleeToolPickT3PlasmaMiningTool">
-	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill" />
+	<property name="Tags" value="T3,melee,heavy,tool,motorTool,attAstrominer,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill" />
+	<property name="PreviousTechItem" value="meleeToolPickT3Auger"/>	
 	<property name="DisplayType" value="motorTool" />
 	<property name="HoldType" value="37" />
 	<property name="Meshfile" value="#@modfolder:Resources/Tools.unity3d?LaserMiningTool.prefab" />
@@ -3926,6 +3949,11 @@
 	<property name="TraderStageTemplate" value="baseTier4" />
 	<property name="UnlockedBy" value="craftingHarvestingTools" />
 	<property name="ShowQuality" value="true" />
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="SoundPickup" value="powertool_big_grab"/>
+	<property name="SoundPlace" value="powertool_big_place"/>	
+	<property name="HasReloadAnim" value="false"/>	
 	
 	<property class="Action0">
 		<property name="Class" value="Ranged" />
@@ -4037,7 +4065,7 @@
 	<property name="Tags" value="vehiclesSkill" />
 	<property name="EconomicValue" value="9000" />
 	<property name="TraderStageTemplate" value="vehicleTier3" />
-	<property name="UnlockedBy" value="craftingVehicles" /><!-- perkGreaseMonkey,vehicle4x4TruckChassisSchematic, -->
+	<property name="UnlockedBy" value="craftingVehicles" />
 </item>
 
 <item name="vehiclePickupTruckPlaceable">
