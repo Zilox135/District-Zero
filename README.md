@@ -16,15 +16,10 @@
 - Overhauled forest biome: new trees, rocks, stumps, logs, sticks and branches
 - Updated snow biome: new trees
 - Added many new sci-fi vehicles on roads
-- Removed trader protection and invisible walls
-- Land claim blocks placeable at traders in single-player
-- Traders always open for easier questing
 - Added new driveable sci-fi vehicles, including land and air vehicles
 - Overhauled HUD with a sci-fi look
 - Backpack increased to 96 slots and crafting queue to 10 slots
-- POI doors can be lockpicked
-- Many decorative blocks can be picked up and moved for base decoration
-- Doors can be picked up and relocated for convenience
+- Many decorative blocks can be picked up by holding "E"
 
 # Contributors
 - Scrubo - POI Builder
