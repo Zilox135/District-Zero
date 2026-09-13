@@ -35,6 +35,7 @@
 		<property name="hornSound" value="suv_horn"/>
 
 		<property name="recipeName" value="vehicleMuscleCarPlaceable"/>
+		<property name="honkEvent" value="honk_trader_doors" />		
 
 		<property class="chassis">
 			<property name="class" value="Chassis"/>
@@ -75,6 +76,8 @@
 			<property name="sound_start" value="Vehicles/Suv/suv_startup"/>
 			<property name="sound_shut_off" value="Vehicles/Suv/suv_shutoff"/>
 			<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+	
+			<property name="mod" value="speed"/>	
 		</property>
 
 		<property class="fuelTank">
@@ -113,7 +116,8 @@
 			<property name="IKFootLPosition" value="-.34, .9, .37"/>
 			<property name="IKFootRPosition" value=".34, .9, .37"/>			
 			<property name="IKFootLRotation" value="-30, 0, 0"/>
-			<property name="IKFootRRotation" value="-30, 0, 0"/>		
+			<property name="IKFootRRotation" value="-30, 0, 0"/>
+			<property name="mod" value="1"/>			
 		</property>
 
 		<property class="wheel0">
@@ -147,9 +151,16 @@
 			<property name="transform" value="Origin/headlight"/>
 			<property name="bright" value=".75"/>			
 		</property>
+		
+		<property class="armor">
+			<property name="class" value="VehiclePart"/>
+			<property name="mod" value="armor"/>
+			<property name="TODOmodRBT" value="Armor"/>
+		</property>
 
 		<property class="storage">
 			<property name="class" value="Storage"/>
+			<property name="mod" value="storage"/>			
 		</property>
 
 	</vehicle>
@@ -182,6 +193,7 @@
 		<property name="hornSound" value="suv_horn"/>
 
 		<property name="recipeName" value="vehiclePickupTruckPlaceable"/>
+		<property name="honkEvent" value="honk_trader_doors" />
 
 		<property class="chassis">
 			<property name="class" value="Chassis"/>
@@ -221,6 +233,8 @@
 			<property name="sound_start" value="Vehicles/Suv/suv_startup"/>
 			<property name="sound_shut_off" value="Vehicles/Suv/suv_shutoff"/>
 			<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+			
+			<property name="mod" value="speed"/>			
 		</property>
 
 		<property class="fuelTank">
@@ -311,9 +325,16 @@
 			<property name="transform" value="Origin/headlight"/>
 			<property name="bright" value=".75"/>
 		</property>
+		
+		<property class="plow">
+			<property name="class" value="VehiclePart"/>
+			<property name="mod" value="plow"/>
+			<property name="modRBT" value="Plow"/>
+		</property>		
 
 		<property class="storage">
 			<property name="class" value="Storage"/>
+			<property name="mod" value="storage"/>			
 		</property>
 
 	</vehicle>
@@ -346,6 +367,7 @@
 		<property name="hornSound" value="suv_horn"/>
 
 		<property name="recipeName" value="vehicleLuxurySedanPlaceable"/>
+		<property name="honkEvent" value="honk_trader_doors" />		
 
 		<property class="chassis">
 			<property name="class" value="Chassis"/>
@@ -384,6 +406,8 @@
 			<property name="sound_start" value="Vehicles/Suv/suv_startup"/>
 			<property name="sound_shut_off" value="Vehicles/Suv/suv_shutoff"/>
 			<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+			
+			<property name="mod" value="speed"/>			
 		</property>
 
 		<property class="fuelTank">
@@ -482,9 +506,16 @@
 			<property name="transform" value="Origin/headlight"/>
 			<property name="bright" value=".75"/>
 		</property>
+		
+		<property class="armor">
+			<property name="class" value="VehiclePart"/>
+			<property name="mod" value="armor"/>
+			<property name="TODOmodRBT" value="Armor"/>
+		</property>
 
 		<property class="storage">
 			<property name="class" value="Storage"/>
+			<property name="mod" value="storage"/>			
 		</property>
 
 	</vehicle>
@@ -517,6 +548,7 @@
 		<property name="hornSound" value="gyrocopter_horn"/>
 
 		<property name="recipeName" value="vehicleHoverCarPlaceable" />
+		<property name="honkEvent" value="honk_trader_doors" />		
 		
 		<property class="chassis">
 			<property name="class" value="Chassis"/>
@@ -539,7 +571,9 @@
 			<property name="sound_start" value="hover_startup"/>
 			<property name="sound_shut_off" value="hover_shutoff"/>
 			<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
-			<property name="sound_particle_on" value="hover_engine_thruster_lp"/>				
+			<property name="sound_particle_on" value="hover_engine_thruster_lp"/>
+
+			<property name="mod" value="speed"/>			
 		</property>
 
 		<property class="fuelTank">
@@ -586,6 +620,7 @@
 			<property name="position" value="0, -.2, -.1"/>
 			<property name="rotation" value="-45, 0, 0"/>
 			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+			<property name="mod" value="1"/>			
 		</property>
 
 		<property class="seat4">
@@ -594,6 +629,7 @@
 			<property name="position" value="0, -.2, -.1"/>
 			<property name="rotation" value="-45, 0, 0"/>
 			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+			<property name="mod" value="1"/>			
 		</property>
 
 		<property class="seat5">
@@ -602,6 +638,7 @@
 			<property name="position" value="0, -.2, -.1"/>
 			<property name="rotation" value="-45, 0, 0"/>
 			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+			<property name="mod" value="1"/>			
 		</property>
 
 		<property class="seat6">
@@ -610,6 +647,7 @@
 			<property name="position" value="0, -.2, -.1"/>
 			<property name="rotation" value="-45, 0, 0"/>
 			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+			<property name="mod" value="1"/>			
 		</property>
 
 		<property class="seat7">
@@ -618,6 +656,7 @@
 			<property name="position" value="0, -.2, -.1"/>
 			<property name="rotation" value="-45, 0, 0"/>
 			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+			<property name="mod" value="1"/>			
 		</property>		
 
 		<property class="motor0">
@@ -685,10 +724,17 @@
 			<property name="class" value="Headlight"/>
 			<property name="transform" value="Origin/headlight"/>
 			<property name="bright" value=".75"/>
-		</property>	
+		</property>
+
+		<property class="armor">
+			<property name="class" value="VehiclePart"/>
+			<property name="mod" value="armor"/>
+			<property name="TODOmodRBT" value="Armor"/>
+		</property>		
 
 		<property class="storage">
 			<property name="class" value="Storage"/>
+			<property name="mod" value="storage"/>			
 		</property>
   </vehicle>
 

@@ -1001,6 +1001,7 @@
 </recipe>
 
 <recipe name="meleeWpnBladeT3PlasmaKnife" count="1" craft_area="workbench" tags="learnable,perkDeepCuts,workbenchCrafting">
+	<ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
 	<ingredient name="resourceForgedCobalt" count="8"/>
 	<ingredient name="resourceElectricParts" count="4"/>
 	<ingredient name="resourceLeather" count="2"/>

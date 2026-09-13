@@ -683,7 +683,7 @@
 </lootcontainer>
 
 <!-- VEHICLE CONTAINERS -->
-<lootcontainer name="vehicleHoverCar" count="0" size="9,12" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleHoverCar" count="0" size="9,11" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <lootcontainer name="vehiclePickupTruck" count="0" size="9,10" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">

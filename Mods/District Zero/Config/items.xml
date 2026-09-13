@@ -506,6 +506,57 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />		
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
 
 	<effect_group name="gunHandgunT1Flaregun">
 		<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkGunslinger,9mmGun" />
@@ -595,7 +646,59 @@
 		<property name="Requireditem" value="resourceFertilizerCell" />		
 		<property name="Adjacentblock" value="terrFarmland" />
 		<requirement name="!HasBuff" buff="buffWeaponOverheatCooldown" />		
-	</property>	
+	</property>
+
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+	
 	<effect_group name="gunHandgunFarmT1LaserFarmingTool" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="0" tags="perkLivingOffTheLandCrafting" />
 		<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkLivingOffTheLandCrafting" />
@@ -679,6 +782,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunHandgunT2LaserPistol">
 		<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkGunslinger,9mmGun" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="18" tags="perkGunslinger,9mmGun" />
@@ -770,6 +925,57 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
 
 	<effect_group name="gunHandgunT2LaserMagnum">
 		<passive_effect name="MaxRange" operation="base_set" value="70" tags="perkGunslinger" />
@@ -862,6 +1068,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunHandgunT2LaserSMG">
 		<passive_effect name="MaxRange" operation="base_set" value="65" tags="perkGunslinger,9mmGun" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="30" tags="perkGunslinger,9mmGun" />
@@ -954,6 +1212,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunShotgunT2LaserShotgun">
 		<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkBoomstick" />
 		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick" />
@@ -1029,6 +1339,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="RifleZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunMGT2LaserAssaultRifle">
 		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="50" tags="perkMachineGunner" />
@@ -1121,6 +1483,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunRifleT2LaserSniperRifle">
 		<passive_effect name="MaxRange" operation="base_set" value="150" tags="perkDeadEye" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDeadEye" />
@@ -1213,6 +1627,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunHandgunT3PlasmaPistol">
 		<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkGunslinger,9mmGun" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="18" tags="perkGunslinger,9mmGun" />
@@ -1303,6 +1769,57 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
 
 	<effect_group name="gunHandgunT3PlasmaMagnum">
 		<passive_effect name="MaxRange" operation="base_set" value="70" tags="perkGunslinger" />
@@ -1396,6 +1913,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunHandgunT3PlasmaSMG">
 		<passive_effect name="MaxRange" operation="base_set" value="65" tags="perkGunslinger,9mmGun" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="30" tags="perkGunslinger,9mmGun" />
@@ -1489,6 +2058,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunShotgunT3PlasmaShotgun">
 		<passive_effect name="RoundsPerMinute" operation="base_set" value="80" tags="perkBoomstick" />
 		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick" />
@@ -1565,6 +2186,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="RifleZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunMGT3PlasmaAssaultRifle">
 		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="50" tags="perkMachineGunner" />
@@ -1658,6 +2331,58 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunRifleT3PlasmaSniperRifle">
 		<passive_effect name="MaxRange" operation="base_set" value="150" tags="perkDeadEye" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDeadEye" />
@@ -1745,6 +2470,34 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunExplosivesT3PlasmaGrenadeLauncher">
 		<passive_effect name="MaxRange" operation="base_set" value="100" tags="perkDemolitionsExpert" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDemolitionsExpert" />
@@ -1831,6 +2584,34 @@
 	    <property name="zoomTriggerEffectPullDualsense" value="PistolZoom" />
 	    <property name="zoomTriggerEffectPullXb" value="PistolZoom" />			
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="gunExplosivesT3PlasmaRocketLauncher">
 		<passive_effect name="MaxRange" operation="base_set" value="100" tags="perkDemolitionsExpert" />
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDemolitionsExpert" />
@@ -2485,8 +3266,60 @@
 	</property>
 	<property class="GrazeSounds">
 		<property name="Override0" value="organic" param1="woodgrazeorganic" />
+	</property>	
 	</property>
-	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnClubT2LaserClub">
 		<passive_effect name="BlockDamage" operation="base_set" value="19.1" tags="perkPummelPete" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="52" tags="perkPummelPete,perkFlurryOfBlows" />
@@ -2576,6 +3409,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBladeT2LaserKnife">
 		<passive_effect name="BlockDamage" operation="base_set" value="16" tags="perkDeepCuts" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="120" tags="perkDeepCuts,perkFlurryOfBlows" />
@@ -2668,6 +3553,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnSledgeT2LaserSledgehammer">
 		<passive_effect name="BlockDamage" operation="base_set" value="64.3" tags="perkSkullCrusher" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="34" tags="perkSkullCrusher,perkFlurryOfBlows" />
@@ -2754,6 +3691,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBladeT2LaserSword">
 		<passive_effect name="BlockDamage" operation="base_set" value="27" tags="perkDeepCuts" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkDeepCuts,perkFlurryOfBlows" />
@@ -2844,6 +3833,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBatonT2LaserStunBaton">
 		<passive_effect name="BlockDamage" operation="base_set" value="12" tags="perkElectrocutioner" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="75" tags="perkElectrocutioner,perkFlurryOfBlows" />
@@ -3076,6 +4117,57 @@
 		<property name="UsePowerAttackAnimation" value="true" />
 	</property>
 	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnSpearT2LaserSpear">
 		<passive_effect name="TargetArmor" operation="perc_add" value="-.4" tags="perkJavelinMaster" /><display_value name="dTargetArmor" value="-.4" />
 		<passive_effect name="BlockDamage" operation="base_set" value="10" tags="perkJavelinMaster" />
@@ -3166,6 +4258,58 @@
 		<property name="Override0" value="organic" param1="woodgrazeorganic" />
 	</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnClubT3PlasmaClub">
 		<passive_effect name="BlockDamage" operation="base_set" value="22.1" tags="perkPummelPete" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="52" tags="perkPummelPete,perkFlurryOfBlows" />
@@ -3254,6 +4398,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBladeT3PlasmaKnife">
 		<passive_effect name="BlockDamage" operation="base_set" value="21" tags="perkDeepCuts" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="120" tags="perkDeepCuts,perkFlurryOfBlows" />
@@ -3342,6 +4538,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnSledgeT3PlasmaSledgehammer">
 		<passive_effect name="BlockDamage" operation="base_set" value="85" tags="perkSkullCrusher" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="34" tags="perkSkullCrusher,perkFlurryOfBlows" />
@@ -3429,6 +4677,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBladeT3PlasmaSword">
 		<passive_effect name="BlockDamage" operation="base_set" value="29" tags="perkDeepCuts" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkDeepCuts,perkFlurryOfBlows" />
@@ -3519,6 +4819,58 @@
 			<property name="Override0" value="organic" param1="metalgrazeorganic" />
 		</property>
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnBatonT3PlasmaBaton">
 		<passive_effect name="BlockDamage" operation="base_set" value="14" tags="perkElectrocutioner" />
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="80" tags="perkElectrocutioner,perkFlurryOfBlows" />
@@ -3751,6 +5103,57 @@
 		<property name="UsePowerAttackAnimation" value="true" />
 	</property>
 	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>	
+	
 	<effect_group name="meleeWpnSpearT3PlasmaSpear">
 		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkJavelinMaster" /><display_value name="dTargetArmor" value="-.5" />
 		<passive_effect name="BlockDamage" operation="base_set" value="9" tags="perkJavelinMaster" />
@@ -3798,7 +5201,58 @@
 	<property name="Material" value="MmeleeToolAllSteel" />
 	<property name="Weight" value="1" />
 	<property name="ScrapTimeOverride" value="10.0" />	
-	<property name="Group" value="Tools/Traps" />	
+	<property name="Group" value="Tools/Traps" />
+
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.1,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.04,.05"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.5,-.4"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.1,.5"/>
+	</stats>	
 
 	<effect_group name="meleeToolAxeT3PlasmaFireaxe">
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="56.4" tags="perkMiner69r,axe,perkFlurryOfBlows" />
@@ -3826,6 +5280,44 @@
 		<passive_effect name="EntityDamage" operation="perc_add" value="1.5" tags="secondary" />
 		<passive_effect name="BlockDamage" operation="perc_add" value="1.5" tags="secondary" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="64.7" tags="secondary" />
+	</effect_group>
+	<!--Strength Mastery-->
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerFlag" operation="LTE" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
 	</effect_group>
 </item>
 
@@ -3860,6 +5352,58 @@
 		<property name="SwingDegrees" value="110" />
 		<property name="SwingAngle" value="90" />
 	</property>
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.1,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.04,.05"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.5,-.4"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.1,.5"/>
+	</stats>	
+	
 	<effect_group name="meleeToolPickT3PlasmaPickaxe">
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="66" tags="perkMiner69r,axe,perkFlurryOfBlows" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="28.4" tags="primary" />
@@ -3887,6 +5431,44 @@
 		<passive_effect name="BlockDamage" operation="perc_add" value="1.5" tags="secondary" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="56.7" tags="secondary" />
 	</effect_group>
+	<!--Strength Mastery-->
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerFlag" operation="LTE" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+	</effect_group>
 </item>
 
 <item name="meleeToolShovelT3PlasmaShovel">
@@ -3902,6 +5484,57 @@
 	<property name="ScrapTimeOverride" value="10.0" />	
 	<property name="UnlockedBy" value="craftingHarvestingTools" />
 	<property name="Group" value="Tools/Traps" />
+	
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="StaminaLoss" 			value="0,0,1,-.1,0"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.1,1"/>
+		<stat name="AttacksPerMinute" 		value="6,20,.3,.04,.05"/>
+		<stat name="StaminaLoss" 			value="6,20,.3,-.5,-.4"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.1,.5"/>
+	</stats>	
 
 	<effect_group name="meleeToolShovelT3PlasmaShovel">
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r,perkFlurryOfBlows" />
@@ -3928,6 +5561,44 @@
 		<passive_effect name="EntityDamage" operation="perc_add" value="1.5" tags="secondary" />
 		<passive_effect name="BlockDamage" operation="perc_add" value="1.5" tags="secondary" />
 		<passive_effect name="StaminaLoss" operation="base_set" value="53.3" tags="secondary" />
+	</effect_group>
+	<!--Strength Mastery-->
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerFlag" operation="LTE" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
 	</effect_group>
 </item>
 
@@ -3975,7 +5646,58 @@
 	        <property name="triggerEffectTriggerPullXbox" value="PistolTrigger" />
 	        <property name="triggerEffectTriggerShootDualsense" value="PistolShoot" />
 	        <property name="triggerEffectTriggerShootXbox" value="PistolShoot" />
-	</property>	
+	</property>
+
+	<stats>
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="5,14,.3,.1,1"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,16,.3,.1,1"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.1,.5"/>
+		<stat name="BlockDamage" 			value="6,20,.3,.1,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.02,.1"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.1,.5"/>
+	</stats>	
 	
 	<effect_group name="meleeToolPickT3PlasmaMiningTool">
 		<passive_effect name="RoundsPerMinute" operation="base_set" value="300" tags="perkMiner69r" />
@@ -4040,12 +5762,50 @@
 		<!-- disable particle transform when unequipped -->
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Laser" />
 	</effect_group>	
+	<!--Strength Mastery-->
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerFlag" operation="LTE" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+	</effect_group>
 </item>
 
 <!-- VEHICLES -->
 <item name="vehicleMuscleCarPlaceable">
 	<property name="Extends" value="vehicleMinibikePlaceable" />
-	<property name="Tags" value="vehicle,vengine,vfuel,vlight,canHaveCosmetic" />
+	<property name="Tags" value="T4,vehicle,varmor,vengine,vfuel,vlight,vseat,vstorage,canHaveCosmetic"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Vehicles.unity3d?FutureMuscleCar.prefab" />
 	<property name="EconomicValue" value="30000" />
 	<property name="TraderStageTemplate" value="vehicleTier4" />
@@ -4070,7 +5830,7 @@
 
 <item name="vehiclePickupTruckPlaceable">
 	<property name="Extends" value="vehicleMinibikePlaceable" />
-	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vplow,vseat,canHaveCosmetic" />
+	<property name="Tags" value="T3,vehicle,vengine,vfuel,vlight,vplow,vseat,vstorage,canHaveCosmetic"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Vehicles.unity3d?FuturePickupTruck.prefab" />
 	<property name="EconomicValue" value="30000" />
 	<property name="TraderStageTemplate" value="vehicleTier4" />
@@ -4095,7 +5855,7 @@
 
 <item name="vehicleLuxurySedanPlaceable">
 	<property name="Extends" value="vehicleMinibikePlaceable" />
-	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic" />
+	<property name="Tags" value="T4,vehicle,varmor,vengine,vfuel,vlight,vseat,vstorage,canHaveCosmetic"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Vehicles.unity3d?FutureSedan1.prefab" />
 	<property name="EconomicValue" value="30000" />
 	<property name="TraderStageTemplate" value="vehicleTier4" />
@@ -4120,7 +5880,7 @@
 
 <item name="vehicleHoverCarPlaceable">
 	<property name="Extends" value="vehicleMinibikePlaceable" />
-	<property name="Tags" value="vehicle,vengine,vfuel,vlight,canHaveCosmetic" />
+	<property name="Tags" value="T5,vehicle,varmor,vengine,vfuel,vlight,vseat,vstorage,canHaveCosmetic"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Vehicles.unity3d?FutureHoverCar.prefab" />
 	<property name="EconomicValue" value="50000" />
 	<property name="TraderStageTemplate" value="vehicleTier5" />
@@ -4129,7 +5889,7 @@
 		<property name="VehicleSize" value="2.5, 2.5, 5.5" />
 	</property>
 	<effect_group name="vehicleHoverCarPlaceable" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="4" />
+		<passive_effect name="ModSlots" operation="base_set" value="5" />
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue" />
 		<passive_effect name="DegradationMax" operation="base_set" value="50000" />
 	</effect_group>

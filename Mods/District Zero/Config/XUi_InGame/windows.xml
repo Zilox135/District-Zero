@@ -63,14 +63,17 @@
 <set xpath="//window[@name='craftingInfoPanel']/rect/rect[@name='description']/rect/label[@name='descriptionText']/@width">630</set>
 
 <!-- INCREASE SIZE OF WINDOW LOOTING -->
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>	
+<set xpath="//window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
+<set xpath="//window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>	
 
 <!-- INCREASE PERK WINDOW GRID SIZE -->
 <set xpath="//window[@name='windowSkillList']/rect[@name='content']/rect[@name='categoryHeader']//grid[@name='categories']/@cols">14</set>
 
 <!-- MOVE THE SEARCH BOX TO MAKE ROOM FOR THE EXTRA PERK ATTRIBUTES -->
 <set xpath="//window[@name='windowSkillList']/rect[@name='content']/rect[@name='categoryHeader']//rect[@console_enabled='false']/@pos">405,0</set>
+
+<!-- INCREASE MAX SIZE OF VEHICLE STORAGE CONTAINER -->
+<set xpath="//window[@name='windowBagStorage']/grid[@name='queue']/@cols">13</set>
 
 <append xpath="/windows">
 

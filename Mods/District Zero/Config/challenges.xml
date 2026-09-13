@@ -3,6 +3,10 @@
 <!-- REMOVE TRADER QUEST FROM BASICS CHALLENGE GROUP -->
 <removeattribute xpath="//challenge_group[@name='Basics']/@reward_event"/>
 
+<!-- ADVANCED & BIOME CHALLENGES NOT HIDDEN BY THE BASIC ONES -->
+<removeattribute xpath="//challenge_group[@category='Advanced']/@hidden_by"/>
+<removeattribute xpath="//challenge_group[@category='Biome Progression']/@hidden_by"/>
+
 <!-- ADD TRADER QUEST TO REDEEM CHALLENGE -->
 <setattribute xpath="//challenge[@name='redeemChallenge']" name="reward_event">challenge_group_reward_basics</setattribute>
 
@@ -97,7 +101,7 @@
 
 	<!-- *** CHALLENGE_REWARDS_PAGE_01 -->
 	<challenge_group category="Advanced" name="Exterminator" title_key="challengeGroupExterminator"
-	reward_text_key="challengeRewardBonusExterminatorReward" reward_event="challenge_group_reward_exterminator" hidden_by="Basics"/>	
+	reward_text_key="challengeRewardBonusExterminatorReward" reward_event="challenge_group_reward_exterminator"/>	
 	
 	<!-- *** Advanced -->	
 	<challenge name="killRobotAnimals" title_key="challengeKillRobotAnimals"  icon="ui_game_symbol_robot_animal" group="AdvancedSurvival"
