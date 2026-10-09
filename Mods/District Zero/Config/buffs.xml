@@ -1,7 +1,7 @@
 <Zilox>
 
 <!-- ADJUST ENCUMBRANCE FOR BIGGER BACKPACK -->
-<set xpath="//buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
+<set xpath="//buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@operation='multiply']/@value">0.013</set>
 <set xpath="//buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
 
 <!-- FIX: Add check to buffDukeNote to remove itself when note is read (since buffNewbieCoat was removed) -->

@@ -1,0 +1,1024 @@
+<configs>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS19']">
+	<e n="robotSpiderBotNano" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS23']">
+	<e n="robotSpiderBotNano" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS27']">
+	<e n="robotSpiderBotNano" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS31']">
+	<e n="robotSpiderBotNano" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS35']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS40']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS44']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS49']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS54']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS59']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS64']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS69']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS74']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS85']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS91']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS97']">
+	<e n="robotSpiderBotNano" />
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS103']">
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS109']">
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS115']">
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS121']">
+	<e n="robotDog" />
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS127']">
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS133']">
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS140']">
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS147']">
+	<e n="robotSpiderBot" />	
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS153']">
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS160']">
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS167']">
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS174']">
+	<e n="robotCombatDog" />
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS181']">
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS188']">
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS195']">
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS202']">
+	<e n="robotAdvancedCombatDog" />	
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS210']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS217']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS225']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS232']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS240']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />		
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS247']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS255']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS263']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS271']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS279']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS287']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS295']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS304']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS312']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS320']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS329']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS337']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS346']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS354']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS363']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS372']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS381']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS389']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS398']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS407']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS417']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS426']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS435']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS444']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS453']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS463']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS472']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS482']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS491']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS501']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS510']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS520']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS530']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS540']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS550']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS560']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS570']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS580']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS590']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS600']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS610']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS620']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS631']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS641']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS651']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS662']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS672']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS683']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS693']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS704']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS715']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS726']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS736']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS747']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS758']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS769']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS780']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS791']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS802']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS813']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS824']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS836']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS847']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS858']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS870']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS881']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS893']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS904']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS916']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS927']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS939']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS951']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS962']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS974']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS986']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS998']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+<append xpath="//entitygroup[@name='feralHordeStageGS1010']">
+	<e n="robotDroidBomber" />	
+	<e n="robotDroidSoldier" />	
+	<e n="robotDroidCombat" />	
+	<e n="robotMechMining" />	
+	<e n="robotMechLightBiped" />	
+	<e n="robotMechQuadruped" />
+	<e n="robotMechHeavyBiped" />	
+</append>
+
+</configs>
+

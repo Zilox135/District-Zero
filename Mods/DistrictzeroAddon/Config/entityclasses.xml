@@ -1,0 +1,773 @@
+<configs>
+<append xpath="/entity_classes">
+<entity_class name="robotDZOmegaprime" extends="robotTemplateHostile">
+	<property name="Tags" value="entity,zombie,walker,robot" />
+	<property name="Mesh" value="#@modfolder:Resources/dz_omegaprime_bundle.unity3d?DZ_Omegaprime" />
+	<property name="AltMats" value="#@modfolder:Resources/dz_omegaprime_bundle.unity3d?M_Robot1_Skin 2,#@modfolder:Resources/dz_omegaprime_bundle.unity3d?M_Robot1_Skin 3,#@modfolder:Resources/dz_omegaprime_bundle.unity3d?M_Robot1_Skin 4" />
+	<property name="PhysicsBody" value="robotDZOmegaprimeBody" />
+	<property name="Mass" value="200" />
+	<property name="ModelType" value="Standard" />
+	<property name="RootMotion" value="true" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="WalkType" value="7" />
+	<property name="LookAtAngle" value="0"/>
+	<property name="CrouchType" value="0" />
+	
+	<property name="HandItem" value="meleeHandRobotStandard" />
+	
+	<property name="MoveSpeedAggro" value="0.3, 1.25" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200" />		
+	</effect_group>
+</entity_class>
+
+
+<entity_class name="robotDZOmegaprimeOvercharged" extends="robotDZOmegaprime">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,overcharged" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7" /><property name="DismemberMultiplierArms" value=".7" /><property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+	<property name="PainResistPerHit" value=".7" /><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.5, 1.35" />
+	<property name="HandItem" value="meleeHandRobotOvercharged" />
+	<property name="ExperienceGain" value="750" /><!-- XP grunt feral -->
+	<property name="LootDropProb" value=".03" /> <!-- Feral -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="400" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyOvercharged">
+			<requirement name="EntityTagCompare" tags="overcharged" />		
+		</triggered_effect>	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZOmegaprimeRadiated" extends="robotDZOmegaprimeOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,radiated,radiatedrobot" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+	<property name="ExperienceGain" value="1200" /><!-- XP grunt radiated -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyRad" />
+
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />		
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZOmegaprimeInferno" extends="robotDZOmegaprimeOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,inferno" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Inferno -->
+	<property name="PainResistPerHit" value=".9" /><!-- Inferno -->
+	<property name="ExperienceGain" value="1500" /><!-- XP grunt inferno -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="900" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyInferno" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZOmegaprimeShocker" extends="robotDZOmegaprimeOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,shocker" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Shocker -->
+	<property name="PainResistPerHit" value=".9" /><!-- Shocker -->
+	<property name="ExperienceGain" value="2000" /><!-- XP grunt shocker -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyShock" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZAlphacentaurus" extends="robotTemplateHostile">
+	<property name="Tags" value="entity,zombie,walker,robot" />
+	<property name="Mesh" value="#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?DZ_Alphacentaurus" />
+	<property name="AltMats" value="#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 2,#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 3,#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 4,#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 5,#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 6,#@modfolder:Resources/dz_alphacentaurus_bundle.unity3d?M_Robot2_Skin 7" />
+	<property name="PhysicsBody" value="robotDZAlphacentaurusBody" />
+	<property name="Mass" value="200" />
+	<property name="ModelType" value="Standard" />
+	<property name="RootMotion" value="true" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="WalkType" value="7" />
+	<property name="LookAtAngle" value="0"/>
+	<property name="CrouchType" value="0" />
+	
+	<property name="HandItem" value="meleeHandRobotStandard" />
+	
+	<property name="MoveSpeedAggro" value="0.3, 1.25" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200" />		
+	</effect_group>
+</entity_class>
+
+<entity_class name="robotDZAlphacentaurusOvercharged" extends="robotDZAlphacentaurus">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,overcharged" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7" /><property name="DismemberMultiplierArms" value=".7" /><property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+	<property name="PainResistPerHit" value=".7" /><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.5, 1.35" />
+	<property name="HandItem" value="meleeHandRobotOvercharged" />
+	<property name="ExperienceGain" value="750" /><!-- XP grunt feral -->
+	<property name="LootDropProb" value=".03" /> <!-- Feral -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="400" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyOvercharged">
+			<requirement name="EntityTagCompare" tags="overcharged" />		
+		</triggered_effect>	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZAlphacentaurusRadiated" extends="robotDZAlphacentaurusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,radiated,radiatedrobot" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+	<property name="ExperienceGain" value="1200" /><!-- XP grunt radiated -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyRad" />
+
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />		
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZAlphacentaurusInferno" extends="robotDZAlphacentaurusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,inferno" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Inferno -->
+	<property name="PainResistPerHit" value=".9" /><!-- Inferno -->
+	<property name="ExperienceGain" value="1500" /><!-- XP grunt inferno -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="900" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyInferno" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZAlphacentaurusShocker" extends="robotDZAlphacentaurusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,shocker" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Shocker -->
+	<property name="PainResistPerHit" value=".9" /><!-- Shocker -->
+	<property name="ExperienceGain" value="2000" /><!-- XP grunt shocker -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyShock" />	
+	</effect_group>	
+</entity_class>
+
+
+<entity_class name="robotDZBetaprimus" extends="robotTemplateHostile">
+	<property name="Tags" value="entity,zombie,walker,robot" />
+	<property name="Mesh" value="#@modfolder:Resources/dz_betaprimus_bundle.unity3d?DZ_Betaprimus" />
+	<property name="AltMats" value="#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 2,#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 3,#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 4,#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 5,#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 6,#@modfolder:Resources/dz_betaprimus_bundle.unity3d?M_Robot3_Skin 7" />
+	<property name="PhysicsBody" value="robotDZBetaprimusBody" />
+	<property name="Mass" value="200" />
+	<property name="ModelType" value="Standard" />
+	<property name="RootMotion" value="true" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="WalkType" value="7" />
+	<property name="LookAtAngle" value="0"/>
+	<property name="CrouchType" value="0" />
+	
+	<property name="HandItem" value="meleeHandRobotStandard" />
+	
+	<property name="MoveSpeedAggro" value="0.3, 1.25" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200" />		
+	</effect_group>
+</entity_class>
+
+<entity_class name="robotDZBetaprimusOvercharged" extends="robotDZBetaprimus">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,overcharged" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7" /><property name="DismemberMultiplierArms" value=".7" /><property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+	<property name="PainResistPerHit" value=".7" /><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.5, 1.35" />
+	<property name="HandItem" value="meleeHandRobotOvercharged" />
+	<property name="ExperienceGain" value="750" /><!-- XP grunt feral -->
+	<property name="LootDropProb" value=".03" /> <!-- Feral -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="400" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyOvercharged">
+			<requirement name="EntityTagCompare" tags="overcharged" />		
+		</triggered_effect>	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZBetaprimusRadiated" extends="robotDZBetaprimusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,radiated,radiatedrobot" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+	<property name="ExperienceGain" value="1200" /><!-- XP grunt radiated -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyRad" />
+
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />		
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZBetaprimusInferno" extends="robotDZBetaprimusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,inferno" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Inferno -->
+	<property name="PainResistPerHit" value=".9" /><!-- Inferno -->
+	<property name="ExperienceGain" value="1500" /><!-- XP grunt inferno -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="900" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyInferno" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZBetaprimusShocker" extends="robotDZBetaprimusOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,shocker" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Shocker -->
+	<property name="PainResistPerHit" value=".9" /><!-- Shocker -->
+	<property name="ExperienceGain" value="2000" /><!-- XP grunt shocker -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyShock" />	
+	</effect_group>	
+</entity_class>
+
+
+<entity_class name="robotDZJAX" extends="robotTemplateHostile">
+	<property name="Tags" value="entity,zombie,walker,robot" />
+	<property name="Mesh" value="#@modfolder:Resources/dz_j_a_x_bundle.unity3d?DZ_J_A_X" />
+	<property name="AltMats" value="#@modfolder:Resources/dz_j_a_x_bundle.unity3d?M_Robot4_Skin 2,#@modfolder:Resources/dz_j_a_x_bundle.unity3d?M_Robot4_Skin 3,#@modfolder:Resources/dz_j_a_x_bundle.unity3d?M_Robot4_Skin 4,#@modfolder:Resources/dz_j_a_x_bundle.unity3d?M_Robot4_Skin 5" />
+	<property name="PhysicsBody" value="robotDZJAXBody" />
+	<property name="Mass" value="200" />
+	<property name="ModelType" value="Standard" />
+	<property name="RootMotion" value="true" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="WalkType" value="7" />
+	<property name="LookAtAngle" value="0"/>
+	<property name="CrouchType" value="0" />
+	
+	<property name="HandItem" value="meleeHandRobotStandard" />
+	
+	<property name="MoveSpeedAggro" value="0.3, 1.25" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200" />		
+	</effect_group>
+</entity_class>
+
+<entity_class name="robotDZJAXOvercharged" extends="robotDZJAX">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,overcharged" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7" /><property name="DismemberMultiplierArms" value=".7" /><property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+	<property name="PainResistPerHit" value=".7" /><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.5, 1.35" />
+	<property name="HandItem" value="meleeHandRobotOvercharged" />
+	<property name="ExperienceGain" value="750" /><!-- XP grunt feral -->
+	<property name="LootDropProb" value=".03" /> <!-- Feral -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="400" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyOvercharged">
+			<requirement name="EntityTagCompare" tags="overcharged" />		
+		</triggered_effect>	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZJAXRadiated" extends="robotDZJAXOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,radiated,radiatedrobot" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+	<property name="ExperienceGain" value="1200" /><!-- XP grunt radiated -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyRad" />
+
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />		
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZJAXInferno" extends="robotDZJAXOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,inferno" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Inferno -->
+	<property name="PainResistPerHit" value=".9" /><!-- Inferno -->
+	<property name="ExperienceGain" value="1500" /><!-- XP grunt inferno -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="900" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyInferno" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZJAXShocker" extends="robotDZJAXOvercharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,shocker" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Shocker -->
+	<property name="PainResistPerHit" value=".9" /><!-- Shocker -->
+	<property name="ExperienceGain" value="2000" /><!-- XP grunt shocker -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyShock" />	
+	</effect_group>	
+</entity_class>
+
+
+<entity_class name="robotDZUnit7" extends="robotTemplateHostile">
+	<property name="Tags" value="entity,zombie,walker,robot" />
+	<property name="Mesh" value="#@modfolder:Resources/dz_unit_7_bundle.unity3d?DZ_Unit_7" />
+	<property name="AltMats" value="#@modfolder:Resources/dz_unit_7_bundle.unity3d?M_Robot5_Skin 2,#@modfolder:Resources/dz_unit_7_bundle.unity3d?M_Robot5_Skin 3" />
+	<property name="PhysicsBody" value="robotDZUnit7Body" />
+	<property name="Mass" value="200" />
+	<property name="ModelType" value="Standard" />
+	<property name="RootMotion" value="true" />
+	<property name="HasDeathAnim" value="true" />
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="WalkType" value="7" />
+	<property name="LookAtAngle" value="0"/>
+	<property name="CrouchType" value="0" />
+	
+	<property name="HandItem" value="meleeHandRobotStandard" />
+	
+	<property name="MoveSpeedAggro" value="0.3, 1.25" />
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200" />		
+	</effect_group>
+</entity_class>
+
+<entity_class name="robotDZUnit7Overcharged" extends="robotDZUnit7">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,overcharged" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".7" /><property name="DismemberMultiplierArms" value=".7" /><property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+	<property name="PainResistPerHit" value=".7" /><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.5, 1.35" />
+	<property name="HandItem" value="meleeHandRobotOvercharged" />
+	<property name="ExperienceGain" value="750" /><!-- XP grunt feral -->
+	<property name="LootDropProb" value=".03" /> <!-- Feral -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="1" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="1" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="400" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyOvercharged">
+			<requirement name="EntityTagCompare" tags="overcharged" />		
+		</triggered_effect>	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZUnit7Radiated" extends="robotDZUnit7Overcharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,radiated,radiatedrobot" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+	<property name="ExperienceGain" value="1200" /><!-- XP grunt radiated -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="800" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyRad" />
+
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />		
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZUnit7Inferno" extends="robotDZUnit7Overcharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,inferno" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Inferno -->
+	<property name="PainResistPerHit" value=".9" /><!-- Inferno -->
+	<property name="ExperienceGain" value="1500" /><!-- XP grunt inferno -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="900" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyInferno" />	
+	</effect_group>	
+</entity_class>
+
+<entity_class name="robotDZUnit7Shocker" extends="robotDZUnit7Overcharged">
+	<property name="Tags" value="entity,zombie,walker,robot,feral,shocker" />
+	<property name="UserSpawnType" value="Menu"/>
+
+	<!-- Gameplay -->
+	<property name="DismemberMultiplierHead" value=".4" /><property name="DismemberMultiplierArms" value=".4" /><property name="DismemberMultiplierLegs" value=".4" /><!-- Shocker -->
+	<property name="PainResistPerHit" value=".9" /><!-- Shocker -->
+	<property name="ExperienceGain" value="2000" /><!-- XP grunt shocker -->
+	
+	<drop event="Harvest" name="resourceElectricParts" count="0" tool_category="Disassemble" />
+	<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="5" />
+	<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceSpring" tag="salvageHarvest" count="3" />
+	<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapBrass" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceScrapLead" tag="salvageHarvest" count="15" />
+	<drop event="Harvest" name="resourceNanoChip" tag="salvageHarvest" count="2" />	
+	<drop event="Harvest" name="resourceScrapIron" tag="allToolsHarvest" count="5" />	
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000" />
+	</effect_group>
+	
+	<effect_group name="Extra Effects">			
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffEnemyShock" />	
+	</effect_group>	
+</entity_class>
+
+</append>
+</configs>

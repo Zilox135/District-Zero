@@ -134,7 +134,7 @@
 				<property name="type" value="Detail"/>
 				<property name="flags" value="collision;ragdoll"/>
 			</collider>
-		</body>	
-		
-	</append>
+		</body>
+
+</append>
 </bodies>
