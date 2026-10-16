@@ -2,7 +2,7 @@
 
 	<!-- Point the main menu background video at the file inside this mod.
 	     No extension: the engine probes .webm (desktop) then .mp4. -->
-	<set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@uri">@modfolder:Video/DistrictZero</set>
+	<set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@uri">@modfolder:Video/MenuBackground</set>
 
 	<!-- Replace the static background image shown around the video. -->
 	<set xpath="//window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Textures/UI/DistrictZeroBackground.jpg</set>

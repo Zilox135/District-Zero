@@ -53,7 +53,7 @@
 	<!-- *** Basics -->	
 	<challenge name="openStarterCapsule" title_key="challengeOpenStarterCapsule" icon="ui_game_symbol_capsule" group="Basics"
 		short_description_key="challengeOpenStarterCapsuleShort" description_key="challengeOpenStarterCapsuleDesc">
-		<objective type="OpenBundle, DZCore" item="questStarterCapsule" count="1"/>
+		<objective type="UseItem" item="questStarterCapsule" count="1"/>
 	</challenge>
 
 	<challenge name="readForgeAheadMagazine" title_key="challengeReadForgeAheadMagazine" icon="ui_game_symbol_magazine" group="Basics"
